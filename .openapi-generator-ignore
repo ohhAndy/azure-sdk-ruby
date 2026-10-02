@@ -35,13 +35,17 @@ lib/azure_sdk/storage/client.rb
 lib/azure_sdk/key_vault/client.rb
 lib/azure_sdk/container_service/client.rb
 lib/azure_sdk/sql/client.rb
-lib/azure_sdk/mariadb/client.rb
+lib/azure_sdk/maria_db/client.rb
 lib/azure_sdk/my_sql/client.rb
 lib/azure_sdk/postgre_sql/client.rb
 lib/azure_sdk/authorization/client.rb
 lib/azure_sdk/insights/client.rb
 lib/azure_sdk/hd_insight/client.rb
 lib/azure_sdk/commerce/client.rb
+
+# Generator CI configs — kept for GitLab/Tavis CI removal
+.travis.yml
+.gitlab-ci.yml
 
 # Generator tooling and scripts
 bin/openapi-generate

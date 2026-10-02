@@ -27,23 +27,9 @@ gem install azure_sdk
 ```ruby
 require "azure_sdk"
 
-# Configure your OAuth2 bearer token (e.g. from MSAL or azure-identity)
-AzureSDK.configure do |config|
-  config.access_token = "YOUR_AZURE_AD_ACCESS_TOKEN"
-end
-
 # Example: list usage aggregates via the Commerce namespace
-api = AzureSDK::UsageAggregatesApi.new
+api    = AzureSDK::Commerce::UsageAggregatesApi.new(api_client)
 result = api.usage_aggregates_list(api_version, subscription_id, start_time, end_time)
-```
-
-Error handling:
-
-```ruby
-rescue AzureSDK::ApiError => e
-  puts "Status: #{e.code}"
-  puts "Body:   #{e.response_body}"
-end
 ```
 
 ## Namespaces

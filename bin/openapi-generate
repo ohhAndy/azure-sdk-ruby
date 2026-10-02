@@ -70,7 +70,8 @@ download() {
 if [ -z "${OPENAPI_GENERATOR_JAR:-}" ]; then
   info "Fetching latest openapi-generator-cli version from Maven Central..."
   MAVEN_META="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/maven-metadata.xml"
-  LATEST_VERSION=$(fetch "$MAVEN_META" | grep -o '<latest>[^<]*</latest>' | sed 's/<[^>]*>//g')
+  LATEST_VERSION=$(fetch "$MAVEN_META" | grep -o '<latest>[^<]*</latest>' | sed 's/<[^>]*>//g' || true)
+  [ -n "$LATEST_VERSION" ] || error "Could not determine latest openapi-generator-cli version"
 
   OPENAPI_GENERATOR_JAR="${REPO_ROOT}/openapi-generator-cli-${LATEST_VERSION}.jar"
 
@@ -258,6 +259,34 @@ gen() {
   move_new_files_plain "$before_spec_api"    "$after_spec_api"    "$dest_spec_api"
   move_new_files_plain "$before_spec_models" "$after_spec_models" "$dest_spec_models"
 
+  # Generate per-namespace loader file: lib/azure_sdk/<ns_lower>.rb
+  local loader="${REPO_ROOT}/lib/azure_sdk/${ns_lower}.rb"
+  {
+    echo "# frozen_string_literal: true"
+    echo ""
+    echo "module AzureSDK"
+    echo "  module ${namespace}"
+    find "$dest_models" "$dest_api" -name "*.rb" 2>/dev/null | sort | while IFS= read -r f; do
+      [ -f "$f" ] || continue
+      local const
+      const=$(python3 - "$f" << 'PYEOF'
+import sys, re
+with open(sys.argv[1]) as fh:
+    for line in fh:
+        m = re.match(r'^\s*class\s+([A-Za-z0-9_]+)', line)
+        if m and m.group(1) != "EnumAttributeValidator" and m.group(1)[0].isupper():
+            print(m.group(1))
+            break
+PYEOF
+      )
+      if [ -n "$const" ]; then
+        echo "    autoload :${const}, \"${f#${REPO_ROOT}/lib/}\""
+      fi
+    done
+    echo "  end"
+    echo "end"
+  } > "$loader"
+
   success "${namespace} done (-> lib/azure_sdk/${ns_lower}/, docs/${ns_lower}/, spec/*/${ns_lower}/)"
 }
 
@@ -265,7 +294,8 @@ gen() {
 info "Clearing previously generated files..."
 for ns in compute network resources storage key_vault container_service \
            sql maria_db my_sql postgre_sql authorization insights hd_insight commerce; do
-  rm -rf "${REPO_ROOT}/lib/azure_sdk/${ns}"
+  rm -rf "${REPO_ROOT}/lib/azure_sdk/${ns}/api"
+  rm -rf "${REPO_ROOT}/lib/azure_sdk/${ns}/models"
   rm -rf "${REPO_ROOT}/docs/${ns}"
   rm -rf "${REPO_ROOT}/spec/api/${ns}"
   rm -rf "${REPO_ROOT}/spec/models/${ns}"
