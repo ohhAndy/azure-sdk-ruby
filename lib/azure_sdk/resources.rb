@@ -2,6 +2,11 @@
 
 module AzureSDK
   module Resources
+    autoload :OperationsApi, "azure_sdk/resources/api/operations_api.rb"
+    autoload :ProvidersApi, "azure_sdk/resources/api/providers_api.rb"
+    autoload :ResourceGroupsApi, "azure_sdk/resources/api/resource_groups_api.rb"
+    autoload :ResourcesApi, "azure_sdk/resources/api/resources_api.rb"
+    autoload :TagsApi, "azure_sdk/resources/api/tags_api.rb"
     autoload :AliasPath, "azure_sdk/resources/models/alias_path.rb"
     autoload :AliasPathAttributes, "azure_sdk/resources/models/alias_path_attributes.rb"
     autoload :AliasPathMetadata, "azure_sdk/resources/models/alias_path_metadata.rb"
@@ -61,10 +66,5 @@ module AzureSDK
     autoload :TagsResource, "azure_sdk/resources/models/tags_resource.rb"
     autoload :TrackedResource, "azure_sdk/resources/models/tracked_resource.rb"
     autoload :ZoneMapping, "azure_sdk/resources/models/zone_mapping.rb"
-    autoload :OperationsApi, "azure_sdk/resources/api/operations_api.rb"
-    autoload :ProvidersApi, "azure_sdk/resources/api/providers_api.rb"
-    autoload :ResourceGroupsApi, "azure_sdk/resources/api/resource_groups_api.rb"
-    autoload :ResourcesApi, "azure_sdk/resources/api/resources_api.rb"
-    autoload :TagsApi, "azure_sdk/resources/api/tags_api.rb"
   end
 end

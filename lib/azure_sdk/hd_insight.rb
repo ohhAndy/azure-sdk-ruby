@@ -2,6 +2,7 @@
 
 module AzureSDK
   module HDInsight
+    autoload :ClustersApi, "azure_sdk/hd_insight/api/clusters_api.rb"
     autoload :AsyncOperationResult, "azure_sdk/hd_insight/models/async_operation_result.rb"
     autoload :Autoscale, "azure_sdk/hd_insight/models/autoscale.rb"
     autoload :AutoscaleCapacity, "azure_sdk/hd_insight/models/autoscale_capacity.rb"
@@ -66,6 +67,5 @@ module AzureSDK
     autoload :UpdateGatewaySettingsParameters, "azure_sdk/hd_insight/models/update_gateway_settings_parameters.rb"
     autoload :UserAssignedIdentity, "azure_sdk/hd_insight/models/user_assigned_identity.rb"
     autoload :VirtualNetworkProfile, "azure_sdk/hd_insight/models/virtual_network_profile.rb"
-    autoload :ClustersApi, "azure_sdk/hd_insight/api/clusters_api.rb"
   end
 end

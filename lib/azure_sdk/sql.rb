@@ -2,6 +2,7 @@
 
 module AzureSDK
   module Sql
+    autoload :ServersApi, "azure_sdk/sql/api/servers_api.rb"
     autoload :AdministratorType, "azure_sdk/sql/models/administrator_type.rb"
     autoload :CheckNameAvailabilityReason, "azure_sdk/sql/models/check_name_availability_reason.rb"
     autoload :CheckNameAvailabilityRequest, "azure_sdk/sql/models/check_name_availability_request.rb"
@@ -44,6 +45,5 @@ module AzureSDK
     autoload :SystemData, "azure_sdk/sql/models/system_data.rb"
     autoload :TrackedResource, "azure_sdk/sql/models/tracked_resource.rb"
     autoload :UserIdentity, "azure_sdk/sql/models/user_identity.rb"
-    autoload :ServersApi, "azure_sdk/sql/api/servers_api.rb"
   end
 end

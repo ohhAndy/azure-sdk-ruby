@@ -2,6 +2,8 @@
 
 module AzureSDK
   module Commerce
+    autoload :RateCardApi, "azure_sdk/commerce/api/rate_card_api.rb"
+    autoload :UsageAggregatesApi, "azure_sdk/commerce/api/usage_aggregates_api.rb"
     autoload :AggregationGranularity, "azure_sdk/commerce/models/aggregation_granularity.rb"
     autoload :ErrorObjectResponse, "azure_sdk/commerce/models/error_object_response.rb"
     autoload :ErrorResponse, "azure_sdk/commerce/models/error_response.rb"
@@ -16,7 +18,5 @@ module AzureSDK
     autoload :UsageAggregation, "azure_sdk/commerce/models/usage_aggregation.rb"
     autoload :UsageAggregationListResult, "azure_sdk/commerce/models/usage_aggregation_list_result.rb"
     autoload :UsageSample, "azure_sdk/commerce/models/usage_sample.rb"
-    autoload :RateCardApi, "azure_sdk/commerce/api/rate_card_api.rb"
-    autoload :UsageAggregatesApi, "azure_sdk/commerce/api/usage_aggregates_api.rb"
   end
 end

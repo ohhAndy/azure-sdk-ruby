@@ -2,6 +2,7 @@
 
 module AzureSDK
   module Insights
+    autoload :ScheduledQueryRulesApi, "azure_sdk/insights/api/scheduled_query_rules_api.rb"
     autoload :Actions, "azure_sdk/insights/models/actions.rb"
     autoload :Condition, "azure_sdk/insights/models/condition.rb"
     autoload :ConditionFailingPeriods, "azure_sdk/insights/models/condition_failing_periods.rb"
@@ -18,6 +19,5 @@ module AzureSDK
     autoload :ScheduledQueryRuleResourcePatch, "azure_sdk/insights/models/scheduled_query_rule_resource_patch.rb"
     autoload :SystemData, "azure_sdk/insights/models/system_data.rb"
     autoload :UserIdentityProperties, "azure_sdk/insights/models/user_identity_properties.rb"
-    autoload :ScheduledQueryRulesApi, "azure_sdk/insights/api/scheduled_query_rules_api.rb"
   end
 end

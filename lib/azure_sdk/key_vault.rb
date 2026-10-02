@@ -2,6 +2,19 @@
 
 module AzureSDK
   module KeyVault
+    autoload :DefaultApi, "azure_sdk/key_vault/api/default_api.rb"
+    autoload :DeletedManagedHsmsApi, "azure_sdk/key_vault/api/deleted_managed_hsms_api.rb"
+    autoload :DeletedVaultsApi, "azure_sdk/key_vault/api/deleted_vaults_api.rb"
+    autoload :KeyOperationGroupApi, "azure_sdk/key_vault/api/key_operation_group_api.rb"
+    autoload :KeysApi, "azure_sdk/key_vault/api/keys_api.rb"
+    autoload :ManagedHsmKeyOperationGroupApi, "azure_sdk/key_vault/api/managed_hsm_key_operation_group_api.rb"
+    autoload :ManagedHsmKeysApi, "azure_sdk/key_vault/api/managed_hsm_keys_api.rb"
+    autoload :ManagedHsmsApi, "azure_sdk/key_vault/api/managed_hsms_api.rb"
+    autoload :MhsmPrivateEndpointConnectionsApi, "azure_sdk/key_vault/api/mhsm_private_endpoint_connections_api.rb"
+    autoload :OperationsApi, "azure_sdk/key_vault/api/operations_api.rb"
+    autoload :PrivateEndpointConnectionsApi, "azure_sdk/key_vault/api/private_endpoint_connections_api.rb"
+    autoload :SecretsApi, "azure_sdk/key_vault/api/secrets_api.rb"
+    autoload :VaultsApi, "azure_sdk/key_vault/api/vaults_api.rb"
     autoload :AccessPolicyEntry, "azure_sdk/key_vault/models/access_policy_entry.rb"
     autoload :Action, "azure_sdk/key_vault/models/action.rb"
     autoload :ActionsRequired, "azure_sdk/key_vault/models/actions_required.rb"
@@ -129,18 +142,5 @@ module AzureSDK
     autoload :VaultProperties, "azure_sdk/key_vault/models/vault_properties.rb"
     autoload :VaultProvisioningState, "azure_sdk/key_vault/models/vault_provisioning_state.rb"
     autoload :VirtualNetworkRule, "azure_sdk/key_vault/models/virtual_network_rule.rb"
-    autoload :DefaultApi, "azure_sdk/key_vault/api/default_api.rb"
-    autoload :DeletedManagedHsmsApi, "azure_sdk/key_vault/api/deleted_managed_hsms_api.rb"
-    autoload :DeletedVaultsApi, "azure_sdk/key_vault/api/deleted_vaults_api.rb"
-    autoload :KeyOperationGroupApi, "azure_sdk/key_vault/api/key_operation_group_api.rb"
-    autoload :KeysApi, "azure_sdk/key_vault/api/keys_api.rb"
-    autoload :ManagedHsmKeyOperationGroupApi, "azure_sdk/key_vault/api/managed_hsm_key_operation_group_api.rb"
-    autoload :ManagedHsmKeysApi, "azure_sdk/key_vault/api/managed_hsm_keys_api.rb"
-    autoload :ManagedHsmsApi, "azure_sdk/key_vault/api/managed_hsms_api.rb"
-    autoload :MhsmPrivateEndpointConnectionsApi, "azure_sdk/key_vault/api/mhsm_private_endpoint_connections_api.rb"
-    autoload :OperationsApi, "azure_sdk/key_vault/api/operations_api.rb"
-    autoload :PrivateEndpointConnectionsApi, "azure_sdk/key_vault/api/private_endpoint_connections_api.rb"
-    autoload :SecretsApi, "azure_sdk/key_vault/api/secrets_api.rb"
-    autoload :VaultsApi, "azure_sdk/key_vault/api/vaults_api.rb"
   end
 end

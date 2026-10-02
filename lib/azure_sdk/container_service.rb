@@ -2,6 +2,17 @@
 
 module AzureSDK
   module ContainerService
+    autoload :AgentPoolsApi, "azure_sdk/container_service/api/agent_pools_api.rb"
+    autoload :IdentityBindingsApi, "azure_sdk/container_service/api/identity_bindings_api.rb"
+    autoload :MachinesApi, "azure_sdk/container_service/api/machines_api.rb"
+    autoload :MaintenanceConfigurationsApi, "azure_sdk/container_service/api/maintenance_configurations_api.rb"
+    autoload :ManagedClustersApi, "azure_sdk/container_service/api/managed_clusters_api.rb"
+    autoload :ManagedNamespacesApi, "azure_sdk/container_service/api/managed_namespaces_api.rb"
+    autoload :PrivateEndpointConnectionsApi, "azure_sdk/container_service/api/private_endpoint_connections_api.rb"
+    autoload :PrivateLinkResourcesApi, "azure_sdk/container_service/api/private_link_resources_api.rb"
+    autoload :ResolvePrivateLinkServiceIdApi, "azure_sdk/container_service/api/resolve_private_link_service_id_api.rb"
+    autoload :SnapshotsApi, "azure_sdk/container_service/api/snapshots_api.rb"
+    autoload :TrustedAccessApi, "azure_sdk/container_service/api/trusted_access_api.rb"
     autoload :AbsoluteMonthlySchedule, "azure_sdk/container_service/models/absolute_monthly_schedule.rb"
     autoload :AccessProfile, "azure_sdk/container_service/models/access_profile.rb"
     autoload :AdoptionPolicy, "azure_sdk/container_service/models/adoption_policy.rb"
@@ -271,16 +282,5 @@ module AzureSDK
     autoload :WeeklySchedule, "azure_sdk/container_service/models/weekly_schedule.rb"
     autoload :WindowsGmsaProfile, "azure_sdk/container_service/models/windows_gmsa_profile.rb"
     autoload :WorkloadRuntime, "azure_sdk/container_service/models/workload_runtime.rb"
-    autoload :AgentPoolsApi, "azure_sdk/container_service/api/agent_pools_api.rb"
-    autoload :IdentityBindingsApi, "azure_sdk/container_service/api/identity_bindings_api.rb"
-    autoload :MachinesApi, "azure_sdk/container_service/api/machines_api.rb"
-    autoload :MaintenanceConfigurationsApi, "azure_sdk/container_service/api/maintenance_configurations_api.rb"
-    autoload :ManagedClustersApi, "azure_sdk/container_service/api/managed_clusters_api.rb"
-    autoload :ManagedNamespacesApi, "azure_sdk/container_service/api/managed_namespaces_api.rb"
-    autoload :PrivateEndpointConnectionsApi, "azure_sdk/container_service/api/private_endpoint_connections_api.rb"
-    autoload :PrivateLinkResourcesApi, "azure_sdk/container_service/api/private_link_resources_api.rb"
-    autoload :ResolvePrivateLinkServiceIdApi, "azure_sdk/container_service/api/resolve_private_link_service_id_api.rb"
-    autoload :SnapshotsApi, "azure_sdk/container_service/api/snapshots_api.rb"
-    autoload :TrustedAccessApi, "azure_sdk/container_service/api/trusted_access_api.rb"
   end
 end

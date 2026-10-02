@@ -2,6 +2,7 @@
 
 module AzureSDK
   module Authorization
+    autoload :RoleAssignmentsApi, "azure_sdk/authorization/api/role_assignments_api.rb"
     autoload :ErrorAdditionalInfo, "azure_sdk/authorization/models/error_additional_info.rb"
     autoload :ErrorDetail, "azure_sdk/authorization/models/error_detail.rb"
     autoload :ErrorResponse, "azure_sdk/authorization/models/error_response.rb"
@@ -12,6 +13,5 @@ module AzureSDK
     autoload :RoleAssignmentListResult, "azure_sdk/authorization/models/role_assignment_list_result.rb"
     autoload :RoleAssignmentProperties, "azure_sdk/authorization/models/role_assignment_properties.rb"
     autoload :SystemData, "azure_sdk/authorization/models/system_data.rb"
-    autoload :RoleAssignmentsApi, "azure_sdk/authorization/api/role_assignments_api.rb"
   end
 end
