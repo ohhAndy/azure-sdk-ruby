@@ -1,0 +1,20 @@
+# AzureSDK::ListContainerItems
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;ListContainerItem&gt;**](ListContainerItem.md) | The ListContainerItem items on this page | [readonly] |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ListContainerItems.new(
+  value: null,
+  next_link: null
+)
+```
+

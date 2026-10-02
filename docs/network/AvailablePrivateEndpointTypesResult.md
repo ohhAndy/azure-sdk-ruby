@@ -1,0 +1,20 @@
+# AzureSDK::AvailablePrivateEndpointTypesResult
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;AvailablePrivateEndpointType&gt;**](AvailablePrivateEndpointType.md) | The AvailablePrivateEndpointType items on this page |  |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::AvailablePrivateEndpointTypesResult.new(
+  value: null,
+  next_link: null
+)
+```
+

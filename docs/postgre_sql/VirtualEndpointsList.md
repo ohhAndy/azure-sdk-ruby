@@ -1,0 +1,20 @@
+# AzureSDK::VirtualEndpointsList
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;VirtualEndpoint&gt;**](VirtualEndpoint.md) | The VirtualEndpoint items on this page |  |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::VirtualEndpointsList.new(
+  value: null,
+  next_link: null
+)
+```
+

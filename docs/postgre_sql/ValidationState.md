@@ -1,0 +1,15 @@
+# AzureSDK::ValidationState
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ValidationState.new()
+```
+

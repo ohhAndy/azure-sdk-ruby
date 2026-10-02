@@ -1,0 +1,20 @@
+# AzureSDK::ReachabilityAnalysisIntentListResult
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;ReachabilityAnalysisIntent&gt;**](ReachabilityAnalysisIntent.md) | The ReachabilityAnalysisIntent items on this page |  |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ReachabilityAnalysisIntentListResult.new(
+  value: null,
+  next_link: null
+)
+```
+

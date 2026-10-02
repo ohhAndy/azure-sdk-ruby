@@ -1,0 +1,18 @@
+# AzureSDK::NatGatewaySku
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | [**NatGatewaySkuName**](NatGatewaySkuName.md) |  | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::NatGatewaySku.new(
+  name: null
+)
+```
+

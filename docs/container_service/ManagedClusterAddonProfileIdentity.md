@@ -1,0 +1,22 @@
+# AzureSDK::ManagedClusterAddonProfileIdentity
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **resource_id** | **String** | The resource ID of the user assigned identity. | [optional] |
+| **client_id** | **String** | The client ID of the user assigned identity. | [optional] |
+| **object_id** | **String** | The object ID of the user assigned identity. | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ManagedClusterAddonProfileIdentity.new(
+  resource_id: null,
+  client_id: null,
+  object_id: null
+)
+```
+

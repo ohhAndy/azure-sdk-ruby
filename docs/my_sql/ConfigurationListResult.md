@@ -1,0 +1,20 @@
+# AzureSDK::ConfigurationListResult
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;Configuration&gt;**](Configuration.md) | The Configuration items on this page | [optional] |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ConfigurationListResult.new(
+  value: null,
+  next_link: null
+)
+```
+

@@ -1,0 +1,18 @@
+# AzureSDK::ResilientVMCreationPolicy
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **enabled** | **Boolean** | Specifies whether resilient VM creation should be enabled on the virtual machine scale set. The default value is false. | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::ResilientVMCreationPolicy.new(
+  enabled: null
+)
+```
+

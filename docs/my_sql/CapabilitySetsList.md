@@ -1,0 +1,20 @@
+# AzureSDK::CapabilitySetsList
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **value** | [**Array&lt;Capability&gt;**](Capability.md) | The CapabilitySetsList items on this page | [optional][readonly] |
+| **next_link** | **String** | The link to the next page of items | [optional] |
+
+## Example
+
+```ruby
+require 'azure_sdk'
+
+instance = AzureSDK::CapabilitySetsList.new(
+  value: null,
+  next_link: null
+)
+```
+

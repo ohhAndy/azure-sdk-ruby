@@ -1,0 +1,50 @@
+# Files listed here will not be overwritten by openapi-generator on any run.
+# Hand-written files that must survive regeneration.
+
+# Top-level gem files — maintained by hand
+azure_sdk.gemspec
+Rakefile
+Gemfile
+README.md
+CHANGELOG.md
+.rspec
+.rubocop.yml
+
+# Shared scaffolding — written once from the first gen run, never overwritten again.
+# If you need to regenerate these, delete them manually first.
+lib/azure_sdk/configuration.rb
+lib/azure_sdk/api_client.rb
+lib/azure_sdk/api_error.rb
+lib/azure_sdk/api_model_base.rb
+lib/azure_sdk/version.rb
+lib/azure_sdk.rb
+
+# Hand-written façade and supporting classes
+lib/azure_sdk/client.rb
+lib/azure_sdk/auth/**
+lib/azure_sdk/profiles/**
+lib/azure_sdk/http/version_resolver.rb
+lib/azure_sdk/http/paginator.rb
+
+# Per-namespace hand-written façade clients
+# e.g. lib/azure_sdk/compute/client.rb
+lib/azure_sdk/compute/client.rb
+lib/azure_sdk/network/client.rb
+lib/azure_sdk/resources/client.rb
+lib/azure_sdk/storage/client.rb
+lib/azure_sdk/key_vault/client.rb
+lib/azure_sdk/container_service/client.rb
+lib/azure_sdk/sql/client.rb
+lib/azure_sdk/mariadb/client.rb
+lib/azure_sdk/my_sql/client.rb
+lib/azure_sdk/postgre_sql/client.rb
+lib/azure_sdk/authorization/client.rb
+lib/azure_sdk/insights/client.rb
+lib/azure_sdk/hd_insight/client.rb
+lib/azure_sdk/commerce/client.rb
+
+# Generator tooling and scripts
+bin/openapi-generate
+openapi-generator-cli-*.jar
+.openapi-config.json
+.openapi-generator-ignore
