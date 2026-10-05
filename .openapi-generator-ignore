@@ -2,7 +2,7 @@
 # Hand-written files that must survive regeneration.
 
 # Top-level gem files — maintained by hand
-azure_sdk.gemspec
+azure_rest.gemspec
 Rakefile
 Gemfile
 README.md
@@ -12,38 +12,38 @@ CHANGELOG.md
 
 # Shared scaffolding — written once from the first gen run, never overwritten again.
 # If you need to regenerate these, delete them manually first.
-lib/azure_sdk/configuration.rb
-lib/azure_sdk/api_client.rb
-lib/azure_sdk/api_error.rb
-lib/azure_sdk/api_model_base.rb
-lib/azure_sdk/version.rb
-lib/azure_sdk.rb
+lib/azure_rest/configuration.rb
+lib/azure_rest/api_client.rb
+lib/azure_rest/api_error.rb
+lib/azure_rest/api_model_base.rb
+lib/azure_rest/version.rb
+lib/azure_rest.rb
 
 # Hand-written façade and supporting classes
-lib/azure_sdk/client.rb
-lib/azure_sdk/auth/**
-lib/azure_sdk/profiles/**
-lib/azure_sdk/http/version_resolver.rb
-lib/azure_sdk/http/paginator.rb
+lib/azure_rest/client.rb
+lib/azure_rest/auth/**
+lib/azure_rest/profiles/**
+lib/azure_rest/http/version_resolver.rb
+lib/azure_rest/http/paginator.rb
 
 # Per-namespace hand-written façade clients
-# e.g. lib/azure_sdk/compute/client.rb
-lib/azure_sdk/compute/client.rb
-lib/azure_sdk/network/client.rb
-lib/azure_sdk/resources/client.rb
-lib/azure_sdk/storage/client.rb
-lib/azure_sdk/key_vault/client.rb
-lib/azure_sdk/container_service/client.rb
-lib/azure_sdk/sql/client.rb
-lib/azure_sdk/maria_db/client.rb
-lib/azure_sdk/my_sql/client.rb
-lib/azure_sdk/postgre_sql/client.rb
-lib/azure_sdk/authorization/client.rb
-lib/azure_sdk/insights/client.rb
-lib/azure_sdk/hd_insight/client.rb
-lib/azure_sdk/commerce/client.rb
+# e.g. lib/azure_rest/compute/client.rb
+lib/azure_rest/compute/client.rb
+lib/azure_rest/network/client.rb
+lib/azure_rest/resources/client.rb
+lib/azure_rest/storage/client.rb
+lib/azure_rest/key_vault/client.rb
+lib/azure_rest/container_service/client.rb
+lib/azure_rest/sql/client.rb
+lib/azure_rest/maria_db/client.rb
+lib/azure_rest/my_sql/client.rb
+lib/azure_rest/postgre_sql/client.rb
+lib/azure_rest/authorization/client.rb
+lib/azure_rest/insights/client.rb
+lib/azure_rest/hd_insight/client.rb
+lib/azure_rest/commerce/client.rb
 
-# Generator CI configs — kept for GitLab/Tavis CI removal
+# Generator CI configs — kept for GitLab/Travis CI removal
 .travis.yml
 .gitlab-ci.yml
 

@@ -266,7 +266,7 @@ gen() {
     echo ""
     echo "module AzureRest"
     echo "  module ${namespace}"
-    find "$dest_models" "$dest_api" -name "*.rb" 2>/dev/null | sort | while IFS= read -r f; do
+    { find "$dest_models" -name "*.rb" 2>/dev/null | sort; find "$dest_api" -name "*.rb" 2>/dev/null | sort; } | while IFS= read -r f; do
       [ -f "$f" ] || continue
       local const
       const=$(python3 - "$f" << 'PYEOF'
