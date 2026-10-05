@@ -43,11 +43,23 @@ jobs:
           distribution: temurin
           java-version: '21'
 
+      - name: Resolve generator version
+        id: gen_version
+        run: |
+          if [ -n "${{ inputs.openapi_generator_version }}" ]; then
+            echo "version=${{ inputs.openapi_generator_version }}" >> "$GITHUB_OUTPUT"
+          else
+            LATEST=$(curl --silent --fail \
+              "https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/maven-metadata.xml" \
+              | grep -o '<latest>[^<]*</latest>' | sed 's/<[^>]*>//g')
+            echo "version=${LATEST}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Cache generator JAR
         uses: actions/cache@v4
         with:
           path: openapi-generator-cli-*.jar
-          key: openapi-generator-${{ inputs.openapi_generator_version || 'latest' }}
+          key: openapi-generator-${{ steps.gen_version.outputs.version }}
 
       - name: Pin generator version (if specified)
         if: inputs.openapi_generator_version != ''
@@ -55,8 +67,9 @@ jobs:
           VERSION="${{ inputs.openapi_generator_version }}"
           JAR="openapi-generator-cli-${VERSION}.jar"
           if [ ! -f "$JAR" ]; then
-            wget "https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/${VERSION}/openapi-generator-cli-${VERSION}.jar" \
-              -O "$JAR"
+            curl --silent --location --fail \
+              "https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/${VERSION}/openapi-generator-cli-${VERSION}.jar" \
+              -o "$JAR"
           fi
           echo "OPENAPI_GENERATOR_JAR=${JAR}" >> "$GITHUB_ENV"
 
