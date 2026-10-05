@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Azure Resource Manager Ruby client"
   spec.description   = "Ruby client for the Azure Resource Manager REST API, generated from the official OpenAPI specs."
-  spec.homepage      = "https://github.com/ManageIQ/azure_rest"
+  spec.homepage      = "https://github.com/ManageIQ/azure_rest-sdk-ruby"
   spec.license       = "Apache-2.0"
   spec.required_ruby_version = ">= 2.7"
 
