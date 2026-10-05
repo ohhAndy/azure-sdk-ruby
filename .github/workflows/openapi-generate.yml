@@ -94,7 +94,7 @@ jobs:
           commit-message: 'chore: regenerate SDK from latest Azure OpenAPI specs'
           title: 'chore: regenerate SDK from latest Azure OpenAPI specs'
           body: |
-            Automated regeneration of the `azure_sdk` Ruby gem from the latest
+            Automated regeneration of the `azure_rest` Ruby gem from the latest
             stable Azure REST API OpenAPI specs sourced from
             https://github.com/Azure/azure-rest-api-specs
 

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # bin/openapi-generate
 #
-# Generates the azure_sdk Ruby gem API and model classes from the official
+# Generates the azure_rest Ruby gem API and model classes from the official
 # Azure REST API OpenAPI specs hosted at:
 #   https://github.com/Azure/azure-rest-api-specs
 #
 # Each ARM namespace is generated into its own subdirectory:
-#   lib/azure_sdk/{namespace}/api/
-#   lib/azure_sdk/{namespace}/models/
+#   lib/azure_rest/{namespace}/api/
+#   lib/azure_rest/{namespace}/models/
 #
 # Shared scaffolding (ApiClient, Configuration, ApiError) is written once
 # from the Resources spec and then protected by .openapi-generator-ignore.
@@ -108,7 +108,7 @@ stable_path = "${stable_path}"
 preferred = "${preferred}"
 
 token = os.environ.get("GITHUB_TOKEN", "")
-headers = {"User-Agent": "azure-sdk-generate/1.0"}
+headers = {"User-Agent": "azure-rest-generate/1.0"}
 if token:
     headers["Authorization"] = "token " + token
 
@@ -161,7 +161,7 @@ to_snake() {
 }
 
 # ── Helper: move new files from flat dirs into namespace subdir ───────────────
-# Rewrites "module AzureSDK" -> "module AzureSDK\n  module <Namespace>" and
+# Rewrites "module AzureRest" -> "module AzureRest\n  module <Namespace>" and
 # closes the extra module at the end of each file.
 move_new_files() {
   local before="$1" after="$2" dest="$3" ns="$4"
@@ -173,7 +173,7 @@ import sys
 path, ns = sys.argv[1], sys.argv[2]
 with open(path) as fh:
     src = fh.read()
-src = src.replace("module AzureSDK\n", "module AzureSDK\n  module " + ns + "\n", 1)
+src = src.replace("module AzureRest\n", "module AzureRest\n  module " + ns + "\n", 1)
 idx = src.rfind("\nend")
 if idx != -1:
     src = src[:idx] + "\n  end\nend"
@@ -224,8 +224,8 @@ gen() {
 
   # Snapshot existing flat files before generation
   local before_api before_models before_docs before_spec_api before_spec_models
-  before_api=$(find "${REPO_ROOT}/lib/azure_sdk/api"    -name "*.rb"  2>/dev/null | sort || true)
-  before_models=$(find "${REPO_ROOT}/lib/azure_sdk/models" -name "*.rb"  2>/dev/null | sort || true)
+  before_api=$(find "${REPO_ROOT}/lib/azure_rest/api"    -name "*.rb"  2>/dev/null | sort || true)
+  before_models=$(find "${REPO_ROOT}/lib/azure_rest/models" -name "*.rb"  2>/dev/null | sort || true)
   before_docs=$(find "${REPO_ROOT}/docs"                 -name "*.md"  2>/dev/null | sort || true)
   before_spec_api=$(find "${REPO_ROOT}/spec/api"         -name "*_spec.rb" 2>/dev/null | sort || true)
   before_spec_models=$(find "${REPO_ROOT}/spec/models"   -name "*_spec.rb" 2>/dev/null | sort || true)
@@ -239,16 +239,16 @@ gen() {
     2>&1 | grep -v "^$" | grep -v "^\[main\]" || true
 
   # Move new files into scoped namespace dirs
-  local dest_api="${REPO_ROOT}/lib/azure_sdk/${ns_lower}/api"
-  local dest_models="${REPO_ROOT}/lib/azure_sdk/${ns_lower}/models"
+  local dest_api="${REPO_ROOT}/lib/azure_rest/${ns_lower}/api"
+  local dest_models="${REPO_ROOT}/lib/azure_rest/${ns_lower}/models"
   local dest_docs="${REPO_ROOT}/docs/${ns_lower}"
   local dest_spec_api="${REPO_ROOT}/spec/api/${ns_lower}"
   local dest_spec_models="${REPO_ROOT}/spec/models/${ns_lower}"
   mkdir -p "$dest_api" "$dest_models" "$dest_docs" "$dest_spec_api" "$dest_spec_models"
 
   local after_api after_models after_docs after_spec_api after_spec_models
-  after_api=$(find "${REPO_ROOT}/lib/azure_sdk/api"    -name "*.rb"  2>/dev/null | sort || true)
-  after_models=$(find "${REPO_ROOT}/lib/azure_sdk/models" -name "*.rb"  2>/dev/null | sort || true)
+  after_api=$(find "${REPO_ROOT}/lib/azure_rest/api"    -name "*.rb"  2>/dev/null | sort || true)
+  after_models=$(find "${REPO_ROOT}/lib/azure_rest/models" -name "*.rb"  2>/dev/null | sort || true)
   after_docs=$(find "${REPO_ROOT}/docs"                 -name "*.md"  2>/dev/null | sort || true)
   after_spec_api=$(find "${REPO_ROOT}/spec/api"         -name "*_spec.rb" 2>/dev/null | sort || true)
   after_spec_models=$(find "${REPO_ROOT}/spec/models"   -name "*_spec.rb" 2>/dev/null | sort || true)
@@ -259,12 +259,12 @@ gen() {
   move_new_files_plain "$before_spec_api"    "$after_spec_api"    "$dest_spec_api"
   move_new_files_plain "$before_spec_models" "$after_spec_models" "$dest_spec_models"
 
-  # Generate per-namespace loader file: lib/azure_sdk/<ns_lower>.rb
-  local loader="${REPO_ROOT}/lib/azure_sdk/${ns_lower}.rb"
+  # Generate per-namespace loader file: lib/azure_rest/<ns_lower>.rb
+  local loader="${REPO_ROOT}/lib/azure_rest/${ns_lower}.rb"
   {
     echo "# frozen_string_literal: true"
     echo ""
-    echo "module AzureSDK"
+    echo "module AzureRest"
     echo "  module ${namespace}"
     find "$dest_models" "$dest_api" -name "*.rb" 2>/dev/null | sort | while IFS= read -r f; do
       [ -f "$f" ] || continue
@@ -287,21 +287,21 @@ PYEOF
     echo "end"
   } > "$loader"
 
-  success "${namespace} done (-> lib/azure_sdk/${ns_lower}/, docs/${ns_lower}/, spec/*/${ns_lower}/)"
+  success "${namespace} done (-> lib/azure_rest/${ns_lower}/, docs/${ns_lower}/, spec/*/${ns_lower}/)"
 }
 
 # ── Wipe all previously generated directories ─────────────────────────────────
 info "Clearing previously generated files..."
 for ns in compute network resources storage key_vault container_service \
            sql maria_db my_sql postgre_sql authorization insights hd_insight commerce; do
-  rm -rf "${REPO_ROOT}/lib/azure_sdk/${ns}/api"
-  rm -rf "${REPO_ROOT}/lib/azure_sdk/${ns}/models"
+  rm -rf "${REPO_ROOT}/lib/azure_rest/${ns}/api"
+  rm -rf "${REPO_ROOT}/lib/azure_rest/${ns}/models"
   rm -rf "${REPO_ROOT}/docs/${ns}"
   rm -rf "${REPO_ROOT}/spec/api/${ns}"
   rm -rf "${REPO_ROOT}/spec/models/${ns}"
 done
-rm -rf "${REPO_ROOT}/lib/azure_sdk/api"
-rm -rf "${REPO_ROOT}/lib/azure_sdk/models"
+rm -rf "${REPO_ROOT}/lib/azure_rest/api"
+rm -rf "${REPO_ROOT}/lib/azure_rest/models"
 rm -rf "${REPO_ROOT}/docs"
 rm -rf "${REPO_ROOT}/spec/api"
 rm -rf "${REPO_ROOT}/spec/models"
@@ -385,8 +385,8 @@ gen "Commerce" --url \
   "https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/commerce/resource-manager/Microsoft.Commerce/Commerce/preview/2015-06-01-preview/commerce.json"
 
 # ── Remove empty flat dirs left behind by the generator ──────────────────────
-rmdir "${REPO_ROOT}/lib/azure_sdk/api"    2>/dev/null || true
-rmdir "${REPO_ROOT}/lib/azure_sdk/models" 2>/dev/null || true
+rmdir "${REPO_ROOT}/lib/azure_rest/api"    2>/dev/null || true
+rmdir "${REPO_ROOT}/lib/azure_rest/models" 2>/dev/null || true
 rmdir "${REPO_ROOT}/spec/api"             2>/dev/null || true
 rmdir "${REPO_ROOT}/spec/models"          2>/dev/null || true
 
@@ -395,11 +395,11 @@ echo ""
 success "Generation complete."
 echo ""
 info "Files per namespace:"
-find "${REPO_ROOT}/lib/azure_sdk" -name "*.rb" \
+find "${REPO_ROOT}/lib/azure_rest" -name "*.rb" \
   | grep -E "/(api|models)/" \
-  | sed "s|${REPO_ROOT}/lib/azure_sdk/||" \
+  | sed "s|${REPO_ROOT}/lib/azure_rest/||" \
   | awk -F'/' '{print $1}' \
   | sort | uniq -c | sort -rn \
   | awk '{printf "  %-20s %s files\n", $2, $1}'
 echo ""
-info "Total: $(find "${REPO_ROOT}/lib/azure_sdk" -name "*.rb" | grep -E "/(api|models)/" | wc -l | tr -d ' ') files"
+info "Total: $(find "${REPO_ROOT}/lib/azure_rest" -name "*.rb" | grep -E "/(api|models)/" | wc -l | tr -d ' ') files"
