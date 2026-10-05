@@ -48,6 +48,7 @@ lib/azure_rest/commerce/client.rb
 .gitlab-ci.yml
 
 # Generator tooling and scripts
+.gitignore
 bin/openapi-generate
 openapi-generator-cli-*.jar
 .openapi-config.json

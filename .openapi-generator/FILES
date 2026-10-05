@@ -1,5 +1,4 @@
 .gitignore
-azure_rest.gemspec
 docs/AggregationGranularity.md
 docs/ErrorObjectResponse.md
 docs/ErrorResponse.md
@@ -17,13 +16,8 @@ docs/UsageAggregation.md
 docs/UsageAggregationListResult.md
 docs/UsageSample.md
 git_push.sh
-lib/azure_rest.rb
 lib/azure_rest/api/rate_card_api.rb
 lib/azure_rest/api/usage_aggregates_api.rb
-lib/azure_rest/api_client.rb
-lib/azure_rest/api_error.rb
-lib/azure_rest/api_model_base.rb
-lib/azure_rest/configuration.rb
 lib/azure_rest/models/aggregation_granularity.rb
 lib/azure_rest/models/error_object_response.rb
 lib/azure_rest/models/error_response.rb
@@ -38,7 +32,6 @@ lib/azure_rest/models/resource_rate_card_info.rb
 lib/azure_rest/models/usage_aggregation.rb
 lib/azure_rest/models/usage_aggregation_list_result.rb
 lib/azure_rest/models/usage_sample.rb
-lib/azure_rest/version.rb
 spec/api/rate_card_api_spec.rb
 spec/api/usage_aggregates_api_spec.rb
 spec/models/aggregation_granularity_spec.rb
