@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAppRoutingIstio
+# AzureRest::ManagedClusterAppRoutingIstio
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAppRoutingIstio.new(
+instance = AzureRest::ManagedClusterAppRoutingIstio.new(
   mode: null
 )
 ```

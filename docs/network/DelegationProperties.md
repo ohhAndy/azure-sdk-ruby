@@ -1,4 +1,4 @@
-# AzureSDK::DelegationProperties
+# AzureRest::DelegationProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DelegationProperties.new(
+instance = AzureRest::DelegationProperties.new(
   service_name: null,
   provisioning_state: null
 )

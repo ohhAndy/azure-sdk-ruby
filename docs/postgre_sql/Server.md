@@ -1,4 +1,4 @@
-# AzureSDK::Server
+# AzureRest::Server
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Server.new(
+instance = AzureRest::Server.new(
   id: null,
   name: null,
   type: null,

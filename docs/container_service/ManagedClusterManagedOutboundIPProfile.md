@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterManagedOutboundIPProfile
+# AzureRest::ManagedClusterManagedOutboundIPProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterManagedOutboundIPProfile.new(
+instance = AzureRest::ManagedClusterManagedOutboundIPProfile.new(
   count: null,
   count_ipv6: null
 )

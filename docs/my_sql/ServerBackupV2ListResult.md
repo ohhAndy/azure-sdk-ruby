@@ -1,4 +1,4 @@
-# AzureSDK::ServerBackupV2ListResult
+# AzureRest::ServerBackupV2ListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerBackupV2ListResult.new(
+instance = AzureRest::ServerBackupV2ListResult.new(
   value: null,
   next_link: null
 )

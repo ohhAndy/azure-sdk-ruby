@@ -1,4 +1,4 @@
-# AzureSDK::FileServiceUsageOperationGroupApi
+# AzureRest::FileServiceUsageOperationGroupApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,14 +20,14 @@ Gets the usage of file service in storage account including account limits, file
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileServiceUsageOperationGroupApi.new
+api_instance = AzureRest::FileServiceUsageOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -37,7 +37,7 @@ begin
   
   result = api_instance.file_services_get_service_usage(api_version, subscription_id, resource_group_name, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileServiceUsageOperationGroupApi->file_services_get_service_usage: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FileServiceUsage>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileServiceUsageOperationGroupApi->file_services_get_service_usage_with_http_info: #{e}"
 end
 ```
@@ -95,14 +95,14 @@ Gets the usages of file service in storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileServiceUsageOperationGroupApi.new
+api_instance = AzureRest::FileServiceUsageOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -115,7 +115,7 @@ begin
   
   result = api_instance.file_services_list_service_usages(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileServiceUsageOperationGroupApi->file_services_list_service_usages: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FileServiceUsages>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileServiceUsageOperationGroupApi->file_services_list_service_usages_with_http_info: #{e}"
 end
 ```

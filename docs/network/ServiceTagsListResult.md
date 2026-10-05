@@ -1,4 +1,4 @@
-# AzureSDK::ServiceTagsListResult
+# AzureRest::ServiceTagsListResult
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceTagsListResult.new(
+instance = AzureRest::ServiceTagsListResult.new(
   name: null,
   id: null,
   type: null,

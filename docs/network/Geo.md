@@ -1,4 +1,4 @@
-# AzureSDK::Geo
+# AzureRest::Geo
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Geo.new()
+instance = AzureRest::Geo.new()
 ```
 

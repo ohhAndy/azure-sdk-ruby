@@ -1,4 +1,4 @@
-# AzureSDK::ApiErrorBase
+# AzureRest::ApiErrorBase
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApiErrorBase.new(
+instance = AzureRest::ApiErrorBase.new(
   code: null,
   target: null,
   message: null

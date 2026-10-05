@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostGroupListResult
+# AzureRest::DedicatedHostGroupListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostGroupListResult.new(
+instance = AzureRest::DedicatedHostGroupListResult.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostsApi
+# AzureRest::DedicatedHostsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Create or update a dedicated host .
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DedicatedHostsApi.new
+api_instance = AzureRest::DedicatedHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 host_group_name = 'host_group_name_example' # String | The name of the dedicated host group.
 host_name = 'host_name_example' # String | The name of the dedicated host.
-parameters = AzureSDK::DedicatedHost.new({location: 'location_example', sku: AzureSDK::Sku.new}) # DedicatedHost | Parameters supplied to the Create Dedicated Host.
+parameters = AzureRest::DedicatedHost.new({location: 'location_example', sku: AzureRest::Sku.new}) # DedicatedHost | Parameters supplied to the Create Dedicated Host.
 
 begin
   
   result = api_instance.dedicated_hosts_create_or_update(api_version, subscription_id, resource_group_name, host_group_name, host_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DedicatedHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Delete a dedicated host.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DedicatedHostsApi.new
+api_instance = AzureRest::DedicatedHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ host_name = 'host_name_example' # String | The name of the dedicated host.
 begin
   
   api_instance.dedicated_hosts_delete(api_version, subscription_id, resource_group_name, host_group_name, host_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Retrieves information about a dedicated host.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DedicatedHostsApi.new
+api_instance = AzureRest::DedicatedHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ begin
   
   result = api_instance.dedicated_hosts_get(api_version, subscription_id, resource_group_name, host_group_name, host_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_get: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DedicatedHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_get_with_http_info: #{e}"
 end
 ```
@@ -258,26 +258,26 @@ Update a dedicated host .
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DedicatedHostsApi.new
+api_instance = AzureRest::DedicatedHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 host_group_name = 'host_group_name_example' # String | The name of the dedicated host group.
 host_name = 'host_name_example' # String | The name of the dedicated host.
-parameters = AzureSDK::DedicatedHostUpdate.new # DedicatedHostUpdate | Parameters supplied to the Update Dedicated Host operation.
+parameters = AzureRest::DedicatedHostUpdate.new # DedicatedHostUpdate | Parameters supplied to the Update Dedicated Host operation.
 
 begin
   
   result = api_instance.dedicated_hosts_update(api_version, subscription_id, resource_group_name, host_group_name, host_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_update: #{e}"
 end
 ```
@@ -295,7 +295,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DedicatedHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DedicatedHostsApi->dedicated_hosts_update_with_http_info: #{e}"
 end
 ```

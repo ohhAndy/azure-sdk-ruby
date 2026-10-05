@@ -1,4 +1,4 @@
-# AzureSDK::CloudErrorBody
+# AzureRest::CloudErrorBody
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CloudErrorBody.new(
+instance = AzureRest::CloudErrorBody.new(
   code: null,
   message: null,
   target: null,

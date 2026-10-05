@@ -1,4 +1,4 @@
-# AzureSDK::AutomaticOSUpgradePolicy
+# AzureRest::AutomaticOSUpgradePolicy
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutomaticOSUpgradePolicy.new(
+instance = AzureRest::AutomaticOSUpgradePolicy.new(
   enable_automatic_os_upgrade: null,
   disable_automatic_rollback: null,
   use_rolling_upgrade_policy: null,

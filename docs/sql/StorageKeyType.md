@@ -1,4 +1,4 @@
-# AzureSDK::StorageKeyType
+# AzureRest::StorageKeyType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageKeyType.new()
+instance = AzureRest::StorageKeyType.new()
 ```
 

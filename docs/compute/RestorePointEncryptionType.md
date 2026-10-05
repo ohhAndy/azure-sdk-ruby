@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointEncryptionType
+# AzureRest::RestorePointEncryptionType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointEncryptionType.new()
+instance = AzureRest::RestorePointEncryptionType.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::CreationData
+# AzureRest::CreationData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CreationData.new(
+instance = AzureRest::CreationData.new(
   source_resource_id: null
 )
 ```

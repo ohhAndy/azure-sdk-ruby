@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineInstanceView
+# AzureRest::VirtualMachineInstanceView
 
 ## Properties
 
@@ -27,9 +27,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineInstanceView.new(
+instance = AzureRest::VirtualMachineInstanceView.new(
   platform_update_domain: null,
   platform_fault_domain: null,
   computer_name: null,

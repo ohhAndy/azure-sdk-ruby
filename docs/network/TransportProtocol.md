@@ -1,4 +1,4 @@
-# AzureSDK::TransportProtocol
+# AzureRest::TransportProtocol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TransportProtocol.new()
+instance = AzureRest::TransportProtocol.new()
 ```
 

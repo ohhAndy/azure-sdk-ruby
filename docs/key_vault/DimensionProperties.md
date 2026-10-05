@@ -1,4 +1,4 @@
-# AzureSDK::DimensionProperties
+# AzureRest::DimensionProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DimensionProperties.new(
+instance = AzureRest::DimensionProperties.new(
   name: null,
   display_name: null,
   to_be_exported_for_shoebox: null

@@ -1,4 +1,4 @@
-# AzureSDK::DscpConfigurationsApi
+# AzureRest::DscpConfigurationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,14 +20,14 @@ Gets a DSCP Configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DscpConfigurationsApi.new
+api_instance = AzureRest::DscpConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -36,7 +36,7 @@ begin
   
   result = api_instance.dscp_configuration_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationsApi->dscp_configuration_list: #{e}"
 end
 ```
@@ -54,7 +54,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DscpConfigurationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationsApi->dscp_configuration_list_with_http_info: #{e}"
 end
 ```
@@ -93,14 +93,14 @@ Gets all dscp configurations in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DscpConfigurationsApi.new
+api_instance = AzureRest::DscpConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -108,7 +108,7 @@ begin
   
   result = api_instance.dscp_configuration_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationsApi->dscp_configuration_list_all: #{e}"
 end
 ```
@@ -126,7 +126,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DscpConfigurationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationsApi->dscp_configuration_list_all_with_http_info: #{e}"
 end
 ```

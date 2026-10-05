@@ -1,4 +1,4 @@
-# AzureSDK::ComputeOperationsApi
+# AzureRest::ComputeOperationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,21 +19,21 @@ List the operations for the provider
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ComputeOperationsApi.new
+api_instance = AzureRest::ComputeOperationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
 begin
   
   result = api_instance.operations_list(api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ComputeOperationsApi->operations_list: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OperationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ComputeOperationsApi->operations_list_with_http_info: #{e}"
 end
 ```

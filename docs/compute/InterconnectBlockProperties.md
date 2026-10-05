@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectBlockProperties
+# AzureRest::InterconnectBlockProperties
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectBlockProperties.new(
+instance = AzureRest::InterconnectBlockProperties.new(
   virtual_machines_associated: null,
   interconnect_group: null,
   interconnect_block_id: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSKUName
+# AzureRest::ManagedClusterSKUName
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSKUName.new()
+instance = AzureRest::ManagedClusterSKUName.new()
 ```
 

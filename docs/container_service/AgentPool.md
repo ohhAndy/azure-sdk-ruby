@@ -1,4 +1,4 @@
-# AzureSDK::AgentPool
+# AzureRest::AgentPool
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPool.new(
+instance = AzureRest::AgentPool.new(
   id: null,
   name: null,
   type: null,

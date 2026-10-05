@@ -1,4 +1,4 @@
-# AzureSDK::BootDiagnostics
+# AzureRest::BootDiagnostics
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BootDiagnostics.new(
+instance = AzureRest::BootDiagnostics.new(
   enabled: null,
   storage_uri: null
 )

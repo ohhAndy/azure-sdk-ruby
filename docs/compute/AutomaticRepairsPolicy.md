@@ -1,4 +1,4 @@
-# AzureSDK::AutomaticRepairsPolicy
+# AzureRest::AutomaticRepairsPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutomaticRepairsPolicy.new(
+instance = AzureRest::AutomaticRepairsPolicy.new(
   enabled: null,
   grace_period: null,
   repair_action: null

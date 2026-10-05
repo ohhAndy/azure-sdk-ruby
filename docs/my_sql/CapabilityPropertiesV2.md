@@ -1,4 +1,4 @@
-# AzureSDK::CapabilityPropertiesV2
+# AzureRest::CapabilityPropertiesV2
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapabilityPropertiesV2.new(
+instance = AzureRest::CapabilityPropertiesV2.new(
   supported_geo_backup_regions: null,
   supported_flexible_server_editions: null,
   supported_server_versions: null,

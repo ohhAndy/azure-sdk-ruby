@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountCheckNameAvailabilityParameters
+# AzureRest::StorageAccountCheckNameAvailabilityParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountCheckNameAvailabilityParameters.new(
+instance = AzureRest::StorageAccountCheckNameAvailabilityParameters.new(
   name: null,
   type: null
 )

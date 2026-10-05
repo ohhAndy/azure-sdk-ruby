@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveNetworkSecurityRule
+# AzureRest::EffectiveNetworkSecurityRule
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveNetworkSecurityRule.new(
+instance = AzureRest::EffectiveNetworkSecurityRule.new(
   name: null,
   protocol: null,
   source_port_range: null,

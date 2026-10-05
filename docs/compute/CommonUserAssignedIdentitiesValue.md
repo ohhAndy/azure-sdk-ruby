@@ -1,4 +1,4 @@
-# AzureSDK::CommonUserAssignedIdentitiesValue
+# AzureRest::CommonUserAssignedIdentitiesValue
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonUserAssignedIdentitiesValue.new(
+instance = AzureRest::CommonUserAssignedIdentitiesValue.new(
   principal_id: null,
   client_id: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::WindowsVMGuestPatchMode
+# AzureRest::WindowsVMGuestPatchMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WindowsVMGuestPatchMode.new()
+instance = AzureRest::WindowsVMGuestPatchMode.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::Office365PolicyProperties
+# AzureRest::Office365PolicyProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Office365PolicyProperties.new(
+instance = AzureRest::Office365PolicyProperties.new(
   break_out_categories: null
 )
 ```

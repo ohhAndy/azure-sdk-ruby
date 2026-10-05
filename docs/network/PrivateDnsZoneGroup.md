@@ -1,4 +1,4 @@
-# AzureSDK::PrivateDnsZoneGroup
+# AzureRest::PrivateDnsZoneGroup
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateDnsZoneGroup.new(
+instance = AzureRest::PrivateDnsZoneGroup.new(
   id: null,
   name: null,
   etag: null,

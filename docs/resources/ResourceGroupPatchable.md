@@ -1,4 +1,4 @@
-# AzureSDK::ResourceGroupPatchable
+# AzureRest::ResourceGroupPatchable
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceGroupPatchable.new(
+instance = AzureRest::ResourceGroupPatchable.new(
   name: null,
   properties: null,
   managed_by: null,

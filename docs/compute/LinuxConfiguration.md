@@ -1,4 +1,4 @@
-# AzureSDK::LinuxConfiguration
+# AzureRest::LinuxConfiguration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxConfiguration.new(
+instance = AzureRest::LinuxConfiguration.new(
   disable_password_authentication: null,
   ssh: null,
   provision_vm_agent: null,

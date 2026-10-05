@@ -1,4 +1,4 @@
-# AzureSDK::ExecutionTrigger
+# AzureRest::ExecutionTrigger
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExecutionTrigger.new(
+instance = AzureRest::ExecutionTrigger.new(
   type: null,
   parameters: null
 )

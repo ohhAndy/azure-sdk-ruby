@@ -1,4 +1,4 @@
-# AzureSDK::AutomaticOSUpgradeProperties
+# AzureRest::AutomaticOSUpgradeProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutomaticOSUpgradeProperties.new(
+instance = AzureRest::AutomaticOSUpgradeProperties.new(
   automatic_os_upgrade_supported: null
 )
 ```

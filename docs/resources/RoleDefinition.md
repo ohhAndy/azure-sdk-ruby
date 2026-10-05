@@ -1,4 +1,4 @@
-# AzureSDK::RoleDefinition
+# AzureRest::RoleDefinition
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoleDefinition.new(
+instance = AzureRest::RoleDefinition.new(
   id: null,
   name: null,
   is_service_role: null,

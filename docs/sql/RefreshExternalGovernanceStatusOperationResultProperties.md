@@ -1,4 +1,4 @@
-# AzureSDK::RefreshExternalGovernanceStatusOperationResultProperties
+# AzureRest::RefreshExternalGovernanceStatusOperationResultProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RefreshExternalGovernanceStatusOperationResultProperties.new(
+instance = AzureRest::RefreshExternalGovernanceStatusOperationResultProperties.new(
   request_id: null,
   request_type: null,
   queued_time: null,

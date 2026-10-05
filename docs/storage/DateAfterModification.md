@@ -1,4 +1,4 @@
-# AzureSDK::DateAfterModification
+# AzureRest::DateAfterModification
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DateAfterModification.new(
+instance = AzureRest::DateAfterModification.new(
   days_after_modification_greater_than: null,
   days_after_last_access_time_greater_than: null,
   days_after_last_tier_change_greater_than: null,

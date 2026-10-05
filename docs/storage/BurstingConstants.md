@@ -1,4 +1,4 @@
-# AzureSDK::BurstingConstants
+# AzureRest::BurstingConstants
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BurstingConstants.new(
+instance = AzureRest::BurstingConstants.new(
   burst_floor_iops: null,
   burst_io_scalar: null,
   burst_timeframe_seconds: null

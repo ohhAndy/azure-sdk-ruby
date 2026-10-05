@@ -1,4 +1,4 @@
-# AzureSDK::ServiceEndpointPropertiesFormat
+# AzureRest::ServiceEndpointPropertiesFormat
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceEndpointPropertiesFormat.new(
+instance = AzureRest::ServiceEndpointPropertiesFormat.new(
   service: null,
   network_identifier: null,
   locations: null,

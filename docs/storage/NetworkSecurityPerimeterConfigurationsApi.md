@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityPerimeterConfigurationsApi
+# AzureRest::NetworkSecurityPerimeterConfigurationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,14 +21,14 @@ Gets effective NetworkSecurityPerimeterConfiguration for association
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityPerimeterConfigurationsApi.new
+api_instance = AzureRest::NetworkSecurityPerimeterConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -39,7 +39,7 @@ begin
   
   result = api_instance.network_security_perimeter_configurations_get(api_version, subscription_id, resource_group_name, account_name, network_security_perimeter_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_get: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityPerimeterConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_get_with_http_info: #{e}"
 end
 ```
@@ -98,14 +98,14 @@ Gets list of effective NetworkSecurityPerimeterConfiguration for storage account
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityPerimeterConfigurationsApi.new
+api_instance = AzureRest::NetworkSecurityPerimeterConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -115,7 +115,7 @@ begin
   
   result = api_instance.network_security_perimeter_configurations_list(api_version, subscription_id, resource_group_name, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_list: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityPerimeterConfigurationList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_list_with_http_info: #{e}"
 end
 ```
@@ -173,14 +173,14 @@ Refreshes any information about the association.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityPerimeterConfigurationsApi.new
+api_instance = AzureRest::NetworkSecurityPerimeterConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -190,7 +190,7 @@ network_security_perimeter_configuration_name = 'network_security_perimeter_conf
 begin
   
   api_instance.network_security_perimeter_configurations_reconcile(api_version, subscription_id, resource_group_name, account_name, network_security_perimeter_configuration_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_reconcile: #{e}"
 end
 ```
@@ -208,7 +208,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityPerimeterConfigurationsApi->network_security_perimeter_configurations_reconcile_with_http_info: #{e}"
 end
 ```

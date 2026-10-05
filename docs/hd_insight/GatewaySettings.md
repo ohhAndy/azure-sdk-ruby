@@ -1,4 +1,4 @@
-# AzureSDK::GatewaySettings
+# AzureRest::GatewaySettings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GatewaySettings.new(
+instance = AzureRest::GatewaySettings.new(
   rest_auth_credential_is_enabled: null,
   rest_auth_credential_username: null,
   rest_auth_credential_password: null

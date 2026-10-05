@@ -1,4 +1,4 @@
-# AzureSDK::ServerSku
+# AzureRest::ServerSku
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerSku.new(
+instance = AzureRest::ServerSku.new(
   name: null,
   tier: null
 )

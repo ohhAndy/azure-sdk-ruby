@@ -1,4 +1,4 @@
-# AzureSDK::SslMode
+# AzureRest::SslMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SslMode.new()
+instance = AzureRest::SslMode.new()
 ```
 

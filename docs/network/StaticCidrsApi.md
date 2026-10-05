@@ -1,4 +1,4 @@
-# AzureSDK::StaticCidrsApi
+# AzureRest::StaticCidrsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,14 +22,14 @@ Creates/Updates the Static CIDR resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StaticCidrsApi.new
+api_instance = AzureRest::StaticCidrsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -37,14 +37,14 @@ network_manager_name = 'network_manager_name_example' # String |
 pool_name = 'pool_name_example' # String | The name of the IPAM pool.
 static_cidr_name = 'static_cidr_name_example' # String | Name for the static CIDR.
 opts = {
-  body: AzureSDK::StaticCidr.new # StaticCidr | StaticCidr resource object to create/update.
+  body: AzureRest::StaticCidr.new # StaticCidr | StaticCidr resource object to create/update.
 }
 
 begin
   # Creates/Updates the Static CIDR resource.
   result = api_instance.static_cidrs_create(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, static_cidr_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_create: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StaticCidr>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_create_with_http_info: #{e}"
 end
 ```
@@ -105,14 +105,14 @@ Delete the Static CIDR resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StaticCidrsApi.new
+api_instance = AzureRest::StaticCidrsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -123,7 +123,7 @@ static_cidr_name = 'static_cidr_name_example' # String | StaticCidr resource nam
 begin
   # Delete the Static CIDR resource.
   api_instance.static_cidrs_delete(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, static_cidr_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_delete: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_delete_with_http_info: #{e}"
 end
 ```
@@ -183,14 +183,14 @@ Gets the specific Static CIDR resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StaticCidrsApi.new
+api_instance = AzureRest::StaticCidrsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -202,7 +202,7 @@ begin
   # Gets the specific Static CIDR resource.
   result = api_instance.static_cidrs_get(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, static_cidr_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_get: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StaticCidr>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_get_with_http_info: #{e}"
 end
 ```
@@ -262,14 +262,14 @@ Gets list of Static CIDR resources at Network Manager level.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StaticCidrsApi.new
+api_instance = AzureRest::StaticCidrsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -287,7 +287,7 @@ begin
   # Gets list of Static CIDR resources at Network Manager level.
   result = api_instance.static_cidrs_list(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_list: #{e}"
 end
 ```
@@ -305,7 +305,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StaticCidrList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StaticCidrsApi->static_cidrs_list_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationType
+# AzureRest::CapacityReservationType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationType.new()
+instance = AzureRest::CapacityReservationType.new()
 ```
 

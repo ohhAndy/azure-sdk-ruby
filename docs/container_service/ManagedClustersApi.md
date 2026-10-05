@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClustersApi
+# AzureRest::ManagedClustersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -45,14 +45,14 @@ Aborts the currently running operation on the managed cluster. The Managed Clust
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -61,7 +61,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   # Aborts last operation running on managed cluster.
   api_instance.managed_clusters_abort_latest_operation(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_abort_latest_operation: #{e}"
 end
 ```
@@ -79,7 +79,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_abort_latest_operation_with_http_info: #{e}"
 end
 ```
@@ -119,19 +119,19 @@ Creates or updates a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::ManagedCluster.new({location: 'location_example'}) # ManagedCluster | The managed cluster to create or update.
+parameters = AzureRest::ManagedCluster.new({location: 'location_example'}) # ManagedCluster | The managed cluster to create or update.
 opts = {
   if_match: 'if_match_example', # String | The request should only proceed if an entity matches this string.
   if_none_match: 'if_none_match_example' # String | The request should only proceed if no entity matches this string.
@@ -141,7 +141,7 @@ begin
   
   result = api_instance.managed_clusters_create_or_update(api_version, subscription_id, resource_group_name, resource_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_create_or_update: #{e}"
 end
 ```
@@ -159,7 +159,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedCluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -202,14 +202,14 @@ Deletes a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -221,7 +221,7 @@ opts = {
 begin
   
   api_instance.managed_clusters_delete(api_version, subscription_id, resource_group_name, resource_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_delete: #{e}"
 end
 ```
@@ -239,7 +239,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_delete_with_http_info: #{e}"
 end
 ```
@@ -280,14 +280,14 @@ Gets a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -297,7 +297,7 @@ begin
   
   result = api_instance.managed_clusters_get(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get: #{e}"
 end
 ```
@@ -315,7 +315,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedCluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_with_http_info: #{e}"
 end
 ```
@@ -355,14 +355,14 @@ Gets an access profile of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -373,7 +373,7 @@ begin
   # Gets an access profile of a managed cluster.
   result = api_instance.managed_clusters_get_access_profile(api_version, subscription_id, resource_group_name, resource_name, role_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_access_profile: #{e}"
 end
 ```
@@ -391,7 +391,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedClusterAccessProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_access_profile_with_http_info: #{e}"
 end
 ```
@@ -432,14 +432,14 @@ Gets the results of a command which has been run on the Managed Cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -450,7 +450,7 @@ begin
   
   result = api_instance.managed_clusters_get_command_result(api_version, subscription_id, resource_group_name, resource_name, command_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_command_result: #{e}"
 end
 ```
@@ -468,7 +468,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunCommandResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_command_result_with_http_info: #{e}"
 end
 ```
@@ -509,14 +509,14 @@ Contains extra metadata on the revision, including supported revisions, cluster 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -526,7 +526,7 @@ begin
   # Gets a mesh revision profile for a specified mesh in the specified location.
   result = api_instance.managed_clusters_get_mesh_revision_profile(api_version, subscription_id, location, mode)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_mesh_revision_profile: #{e}"
 end
 ```
@@ -544,7 +544,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MeshRevisionProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_mesh_revision_profile_with_http_info: #{e}"
 end
 ```
@@ -584,14 +584,14 @@ Gets available upgrades for a service mesh in a cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -602,7 +602,7 @@ begin
   
   result = api_instance.managed_clusters_get_mesh_upgrade_profile(api_version, subscription_id, resource_group_name, resource_name, mode)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_mesh_upgrade_profile: #{e}"
 end
 ```
@@ -620,7 +620,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MeshUpgradeProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_mesh_upgrade_profile_with_http_info: #{e}"
 end
 ```
@@ -661,14 +661,14 @@ Gets the upgrade profile of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -678,7 +678,7 @@ begin
   
   result = api_instance.managed_clusters_get_upgrade_profile(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_upgrade_profile: #{e}"
 end
 ```
@@ -696,7 +696,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedClusterUpgradeProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_get_upgrade_profile_with_http_info: #{e}"
 end
 ```
@@ -736,14 +736,14 @@ Gets a list of managed clusters in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -751,7 +751,7 @@ begin
   
   result = api_instance.managed_clusters_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list: #{e}"
 end
 ```
@@ -769,7 +769,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedClusterListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_with_http_info: #{e}"
 end
 ```
@@ -807,14 +807,14 @@ Lists managed clusters in the specified subscription and resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -823,7 +823,7 @@ begin
   
   result = api_instance.managed_clusters_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_by_resource_group: #{e}"
 end
 ```
@@ -841,7 +841,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedClusterListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -880,14 +880,14 @@ Lists the admin credentials of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -900,7 +900,7 @@ begin
   
   result = api_instance.managed_clusters_list_cluster_admin_credentials(api_version, subscription_id, resource_group_name, resource_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_admin_credentials: #{e}"
 end
 ```
@@ -918,7 +918,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CredentialResults>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_admin_credentials_with_http_info: #{e}"
 end
 ```
@@ -959,14 +959,14 @@ Lists the cluster monitoring user credentials of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -979,7 +979,7 @@ begin
   
   result = api_instance.managed_clusters_list_cluster_monitoring_user_credentials(api_version, subscription_id, resource_group_name, resource_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_monitoring_user_credentials: #{e}"
 end
 ```
@@ -997,7 +997,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CredentialResults>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_monitoring_user_credentials_with_http_info: #{e}"
 end
 ```
@@ -1038,14 +1038,14 @@ Lists the user credentials of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1059,7 +1059,7 @@ begin
   
   result = api_instance.managed_clusters_list_cluster_user_credentials(api_version, subscription_id, resource_group_name, resource_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_user_credentials: #{e}"
 end
 ```
@@ -1077,7 +1077,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CredentialResults>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_cluster_user_credentials_with_http_info: #{e}"
 end
 ```
@@ -1119,14 +1119,14 @@ Contains extra metadata on the version, including supported patch versions, capa
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -1135,7 +1135,7 @@ begin
   # Gets a list of supported Kubernetes versions in the specified subscription.
   result = api_instance.managed_clusters_list_kubernetes_versions(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_kubernetes_versions: #{e}"
 end
 ```
@@ -1153,7 +1153,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <KubernetesVersionListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_kubernetes_versions_with_http_info: #{e}"
 end
 ```
@@ -1192,14 +1192,14 @@ Contains extra metadata on each revision, including supported revisions, cluster
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -1208,7 +1208,7 @@ begin
   # Lists mesh revision profiles for all meshes in the specified location.
   result = api_instance.managed_clusters_list_mesh_revision_profiles(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_mesh_revision_profiles: #{e}"
 end
 ```
@@ -1226,7 +1226,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MeshRevisionProfileList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_mesh_revision_profiles_with_http_info: #{e}"
 end
 ```
@@ -1265,14 +1265,14 @@ Lists available upgrades for all service meshes in a specific cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1282,7 +1282,7 @@ begin
   
   result = api_instance.managed_clusters_list_mesh_upgrade_profiles(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_mesh_upgrade_profiles: #{e}"
 end
 ```
@@ -1300,7 +1300,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MeshUpgradeProfileList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_mesh_upgrade_profiles_with_http_info: #{e}"
 end
 ```
@@ -1340,14 +1340,14 @@ Gets a list of egress endpoints (network endpoints of all outbound dependencies)
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1357,7 +1357,7 @@ begin
   # Gets a list of egress endpoints (network endpoints of all outbound dependencies) in the specified managed cluster.
   result = api_instance.managed_clusters_list_outbound_network_dependencies_endpoints(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_outbound_network_dependencies_endpoints: #{e}"
 end
 ```
@@ -1375,7 +1375,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OutboundEnvironmentEndpointCollection>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_list_outbound_network_dependencies_endpoints_with_http_info: #{e}"
 end
 ```
@@ -1415,24 +1415,24 @@ Reset the AAD Profile of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::ManagedClusterAADProfile.new # ManagedClusterAADProfile | The AAD profile to set on the Managed Cluster
+parameters = AzureRest::ManagedClusterAADProfile.new # ManagedClusterAADProfile | The AAD profile to set on the Managed Cluster
 
 begin
   # Reset the AAD Profile of a managed cluster.
   api_instance.managed_clusters_reset_aad_profile(api_version, subscription_id, resource_group_name, resource_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_reset_aad_profile: #{e}"
 end
 ```
@@ -1450,7 +1450,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_reset_aad_profile_with_http_info: #{e}"
 end
 ```
@@ -1491,24 +1491,24 @@ This action cannot be performed on a cluster that is not using a service princip
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::ManagedClusterServicePrincipalProfile.new({client_id: 'client_id_example'}) # ManagedClusterServicePrincipalProfile | The service principal profile to set on the managed cluster.
+parameters = AzureRest::ManagedClusterServicePrincipalProfile.new({client_id: 'client_id_example'}) # ManagedClusterServicePrincipalProfile | The service principal profile to set on the managed cluster.
 
 begin
   # Reset the Service Principal Profile of a managed cluster.
   api_instance.managed_clusters_reset_service_principal_profile(api_version, subscription_id, resource_group_name, resource_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_reset_service_principal_profile: #{e}"
 end
 ```
@@ -1526,7 +1526,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_reset_service_principal_profile_with_http_info: #{e}"
 end
 ```
@@ -1567,14 +1567,14 @@ See [Certificate rotation](https://docs.microsoft.com/azure/aks/certificate-rota
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1583,7 +1583,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   # Rotates the certificates of a managed cluster.
   api_instance.managed_clusters_rotate_cluster_certificates(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_rotate_cluster_certificates: #{e}"
 end
 ```
@@ -1601,7 +1601,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_rotate_cluster_certificates_with_http_info: #{e}"
 end
 ```
@@ -1641,14 +1641,14 @@ Rotates the service account signing keys of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1657,7 +1657,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   
   api_instance.managed_clusters_rotate_service_account_signing_keys(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_rotate_service_account_signing_keys: #{e}"
 end
 ```
@@ -1675,7 +1675,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_rotate_service_account_signing_keys_with_http_info: #{e}"
 end
 ```
@@ -1715,25 +1715,25 @@ AKS will create a pod to run the command. This is primarily useful for private c
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-request_payload = AzureSDK::RunCommandRequest.new({command: 'command_example'}) # RunCommandRequest | The run command request
+request_payload = AzureRest::RunCommandRequest.new({command: 'command_example'}) # RunCommandRequest | The run command request
 
 begin
   # Submits a command to run against the Managed Cluster.
   result = api_instance.managed_clusters_run_command(api_version, subscription_id, resource_group_name, resource_name, request_payload)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_run_command: #{e}"
 end
 ```
@@ -1751,7 +1751,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunCommandResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_run_command_with_http_info: #{e}"
 end
 ```
@@ -1792,14 +1792,14 @@ See [starting a cluster](https://docs.microsoft.com/azure/aks/start-stop-cluster
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1808,7 +1808,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   # Starts a previously stopped Managed Cluster
   api_instance.managed_clusters_start(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_start: #{e}"
 end
 ```
@@ -1826,7 +1826,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_start_with_http_info: #{e}"
 end
 ```
@@ -1866,14 +1866,14 @@ This can only be performed on Azure Virtual Machine Scale set backed clusters. S
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1882,7 +1882,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   # Stops a Managed Cluster
   api_instance.managed_clusters_stop(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_stop: #{e}"
 end
 ```
@@ -1900,7 +1900,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_stop_with_http_info: #{e}"
 end
 ```
@@ -1940,19 +1940,19 @@ Updates tags on a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to the Update Managed Cluster Tags operation.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to the Update Managed Cluster Tags operation.
 opts = {
   if_match: 'if_match_example' # String | The request should only proceed if an entity matches this string.
 }
@@ -1961,7 +1961,7 @@ begin
   
   result = api_instance.managed_clusters_update_tags(api_version, subscription_id, resource_group_name, resource_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_update_tags: #{e}"
 end
 ```
@@ -1979,7 +1979,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedCluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->managed_clusters_update_tags_with_http_info: #{e}"
 end
 ```
@@ -2021,21 +2021,21 @@ Gets a list of operations.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedClustersApi.new
+api_instance = AzureRest::ManagedClustersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
 begin
   
   result = api_instance.operations_list(api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->operations_list: #{e}"
 end
 ```
@@ -2053,7 +2053,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <OperationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedClustersApi->operations_list_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::IPAllocationMethod
+# AzureRest::IPAllocationMethod
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPAllocationMethod.new()
+instance = AzureRest::IPAllocationMethod.new()
 ```
 

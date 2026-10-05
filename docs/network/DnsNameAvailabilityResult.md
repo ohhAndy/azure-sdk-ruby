@@ -1,4 +1,4 @@
-# AzureSDK::DnsNameAvailabilityResult
+# AzureRest::DnsNameAvailabilityResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DnsNameAvailabilityResult.new(
+instance = AzureRest::DnsNameAvailabilityResult.new(
   available: null
 )
 ```

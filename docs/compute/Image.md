@@ -1,4 +1,4 @@
-# AzureSDK::Image
+# AzureRest::Image
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Image.new(
+instance = AzureRest::Image.new(
   id: null,
   name: null,
   type: null,

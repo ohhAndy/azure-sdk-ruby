@@ -1,4 +1,4 @@
-# AzureSDK::BlobInventoryCreationTime
+# AzureRest::BlobInventoryCreationTime
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobInventoryCreationTime.new(
+instance = AzureRest::BlobInventoryCreationTime.new(
   last_n_days: null
 )
 ```

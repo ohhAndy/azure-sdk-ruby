@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityGroupsApi
+# AzureRest::NetworkSecurityGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates a network security group in the specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_security_group_name = 'network_security_group_name_example' # String | The name of the network security group.
-parameters = AzureSDK::NetworkSecurityGroup.new # NetworkSecurityGroup | Parameters supplied to the create or update network security group operation.
+parameters = AzureRest::NetworkSecurityGroup.new # NetworkSecurityGroup | Parameters supplied to the create or update network security group operation.
 
 begin
   
   result = api_instance.network_security_groups_create_or_update(api_version, subscription_id, resource_group_name, network_security_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified network security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ network_security_group_name = 'network_security_group_name_example' # String | T
 begin
   
   api_instance.network_security_groups_delete(api_version, subscription_id, resource_group_name, network_security_group_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets the specified network security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.network_security_groups_get(api_version, subscription_id, resource_group_name, network_security_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all network security groups in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.network_security_groups_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_list: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_list_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Gets all network security groups in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -342,7 +342,7 @@ begin
   
   result = api_instance.network_security_groups_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_list_all: #{e}"
 end
 ```
@@ -360,7 +360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_list_all_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Updates a network security group tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkSecurityGroupsApi.new
+api_instance = AzureRest::NetworkSecurityGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_security_group_name = 'network_security_group_name_example' # String | The name of the network security group.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update network security group tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update network security group tags.
 
 begin
   
   result = api_instance.network_security_groups_update_tags(api_version, subscription_id, resource_group_name, network_security_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_update_tags: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkSecurityGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkSecurityGroupsApi->network_security_groups_update_tags_with_http_info: #{e}"
 end
 ```

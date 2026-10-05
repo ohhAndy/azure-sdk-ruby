@@ -1,4 +1,4 @@
-# AzureSDK::OperationProgressResponseType
+# AzureRest::OperationProgressResponseType
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OperationProgressResponseType.new(
+instance = AzureRest::OperationProgressResponseType.new(
   object_type: null
 )
 ```

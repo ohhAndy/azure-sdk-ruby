@@ -1,4 +1,4 @@
-# AzureSDK::NetworkIntentPolicy
+# AzureRest::NetworkIntentPolicy
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkIntentPolicy.new(
+instance = AzureRest::NetworkIntentPolicy.new(
   id: null,
   name: null,
   type: null,

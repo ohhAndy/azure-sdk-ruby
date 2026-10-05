@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPAddressPropertiesFormat
+# AzureRest::PublicIPAddressPropertiesFormat
 
 ## Properties
 
@@ -25,9 +25,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPAddressPropertiesFormat.new(
+instance = AzureRest::PublicIPAddressPropertiesFormat.new(
   public_ip_allocation_method: null,
   public_ip_address_version: null,
   ip_configuration: null,

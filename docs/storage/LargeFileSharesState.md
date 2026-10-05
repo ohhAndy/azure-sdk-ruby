@@ -1,4 +1,4 @@
-# AzureSDK::LargeFileSharesState
+# AzureRest::LargeFileSharesState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LargeFileSharesState.new()
+instance = AzureRest::LargeFileSharesState.new()
 ```
 

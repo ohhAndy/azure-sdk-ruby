@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineStatusCodeCount
+# AzureRest::VirtualMachineStatusCodeCount
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineStatusCodeCount.new(
+instance = AzureRest::VirtualMachineStatusCodeCount.new(
   code: null,
   count: null
 )

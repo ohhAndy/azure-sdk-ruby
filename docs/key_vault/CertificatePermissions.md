@@ -1,4 +1,4 @@
-# AzureSDK::CertificatePermissions
+# AzureRest::CertificatePermissions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CertificatePermissions.new()
+instance = AzureRest::CertificatePermissions.new()
 ```
 

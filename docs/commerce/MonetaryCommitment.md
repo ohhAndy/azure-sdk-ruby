@@ -1,4 +1,4 @@
-# AzureSDK::MonetaryCommitment
+# AzureRest::MonetaryCommitment
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MonetaryCommitment.new(
+instance = AzureRest::MonetaryCommitment.new(
   tiered_discount: null,
   excluded_meter_ids: null
 )

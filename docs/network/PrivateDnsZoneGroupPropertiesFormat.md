@@ -1,4 +1,4 @@
-# AzureSDK::PrivateDnsZoneGroupPropertiesFormat
+# AzureRest::PrivateDnsZoneGroupPropertiesFormat
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateDnsZoneGroupPropertiesFormat.new(
+instance = AzureRest::PrivateDnsZoneGroupPropertiesFormat.new(
   provisioning_state: null,
   private_dns_zone_configs: null
 )

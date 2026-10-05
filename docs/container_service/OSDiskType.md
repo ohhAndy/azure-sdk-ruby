@@ -1,4 +1,4 @@
-# AzureSDK::OSDiskType
+# AzureRest::OSDiskType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OSDiskType.new()
+instance = AzureRest::OSDiskType.new()
 ```
 

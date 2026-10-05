@@ -1,4 +1,4 @@
-# AzureSDK::MachineListResult
+# AzureRest::MachineListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MachineListResult.new(
+instance = AzureRest::MachineListResult.new(
   value: null,
   next_link: null
 )

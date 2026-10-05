@@ -1,4 +1,4 @@
-# AzureSDK::LocalUserOperationGroupApi
+# AzureRest::LocalUserOperationGroupApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,26 +24,26 @@ Create or update the properties of a local user associated with the storage acco
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 username = 'username_example' # String | The name of local user. The username must contain lowercase letters and numbers only. It must be unique only within the storage account.
-properties = AzureSDK::LocalUser.new # LocalUser | The local user associated with a storage account.
+properties = AzureRest::LocalUser.new # LocalUser | The local user associated with a storage account.
 
 begin
   
   result = api_instance.local_users_create_or_update(api_version, subscription_id, resource_group_name, account_name, username, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_create_or_update: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LocalUser>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -103,14 +103,14 @@ Deletes the local user associated with the specified storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -120,7 +120,7 @@ username = 'username_example' # String | The name of local user. The username mu
 begin
   
   api_instance.local_users_delete(api_version, subscription_id, resource_group_name, account_name, username)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_delete: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_delete_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Get the local user of the storage account by username.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.local_users_get(api_version, subscription_id, resource_group_name, account_name, username)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LocalUser>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ List the local users associated with the storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -278,7 +278,7 @@ begin
   
   result = api_instance.local_users_list(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_list: #{e}"
 end
 ```
@@ -296,7 +296,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LocalUsers>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_list_with_http_info: #{e}"
 end
 ```
@@ -339,14 +339,14 @@ List SSH authorized keys and shared key of the local user.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -357,7 +357,7 @@ begin
   
   result = api_instance.local_users_list_keys(api_version, subscription_id, resource_group_name, account_name, username)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_list_keys: #{e}"
 end
 ```
@@ -375,7 +375,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LocalUserKeys>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_list_keys_with_http_info: #{e}"
 end
 ```
@@ -416,14 +416,14 @@ Regenerate the local user SSH password.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocalUserOperationGroupApi.new
+api_instance = AzureRest::LocalUserOperationGroupApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -434,7 +434,7 @@ begin
   
   result = api_instance.local_users_regenerate_password(api_version, subscription_id, resource_group_name, account_name, username)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_regenerate_password: #{e}"
 end
 ```
@@ -452,7 +452,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LocalUserRegeneratePasswordResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocalUserOperationGroupApi->local_users_regenerate_password_with_http_info: #{e}"
 end
 ```

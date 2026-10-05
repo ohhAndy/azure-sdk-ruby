@@ -1,4 +1,4 @@
-# AzureSDK::Snapshot
+# AzureRest::Snapshot
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Snapshot.new(
+instance = AzureRest::Snapshot.new(
   id: null,
   name: null,
   type: null,

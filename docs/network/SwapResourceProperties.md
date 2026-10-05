@@ -1,4 +1,4 @@
-# AzureSDK::SwapResourceProperties
+# AzureRest::SwapResourceProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SwapResourceProperties.new(
+instance = AzureRest::SwapResourceProperties.new(
   slot_type: null
 )
 ```

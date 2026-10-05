@@ -1,4 +1,4 @@
-# AzureSDK::VMGuestPatchClassificationLinux
+# AzureRest::VMGuestPatchClassificationLinux
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMGuestPatchClassificationLinux.new()
+instance = AzureRest::VMGuestPatchClassificationLinux.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ServerExternalAdministrator
+# AzureRest::ServerExternalAdministrator
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerExternalAdministrator.new(
+instance = AzureRest::ServerExternalAdministrator.new(
   administrator_type: null,
   principal_type: null,
   login: null,

@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServiceApi
+# AzureRest::PrivateLinkServiceApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,25 +19,25 @@ Creates or updates an private link service in the specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServiceApi.new
+api_instance = AzureRest::PrivateLinkServiceApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 service_name = 'service_name_example' # String | The name of the private link service.
-parameters = AzureSDK::PrivateLinkService.new # PrivateLinkService | Parameters supplied to the create or update private link service operation.
+parameters = AzureRest::PrivateLinkService.new # PrivateLinkService | Parameters supplied to the create or update private link service operation.
 
 begin
   
   result = api_instance.private_link_services_create_or_update(api_version, subscription_id, resource_group_name, service_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServiceApi->private_link_services_create_or_update: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkService>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServiceApi->private_link_services_create_or_update_with_http_info: #{e}"
 end
 ```

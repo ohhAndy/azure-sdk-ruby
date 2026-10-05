@@ -1,4 +1,4 @@
-# AzureSDK::RestartParameter
+# AzureRest::RestartParameter
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestartParameter.new(
+instance = AzureRest::RestartParameter.new(
   restart_with_failover: null,
   failover_mode: null
 )

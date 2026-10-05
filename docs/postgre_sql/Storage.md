@@ -1,4 +1,4 @@
-# AzureSDK::Storage
+# AzureRest::Storage
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Storage.new(
+instance = AzureRest::Storage.new(
   storage_size_gb: null,
   auto_grow: null,
   tier: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DiskControllerTypes
+# AzureRest::DiskControllerTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskControllerTypes.new()
+instance = AzureRest::DiskControllerTypes.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::Subnet2
+# AzureRest::Subnet2
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Subnet2.new(
+instance = AzureRest::Subnet2.new(
   id: null,
   name: null,
   type: null,

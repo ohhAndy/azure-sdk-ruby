@@ -1,4 +1,4 @@
-# AzureSDK::EventGridAndResourceGraph
+# AzureRest::EventGridAndResourceGraph
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EventGridAndResourceGraph.new(
+instance = AzureRest::EventGridAndResourceGraph.new(
   enable: null,
   scheduled_events_api_version: null
 )

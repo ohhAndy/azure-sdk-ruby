@@ -1,4 +1,4 @@
-# AzureSDK::KafkaRestProperties
+# AzureRest::KafkaRestProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KafkaRestProperties.new(
+instance = AzureRest::KafkaRestProperties.new(
   client_group_info: null,
   configuration_override: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandResult
+# AzureRest::RunCommandResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandResult.new(
+instance = AzureRest::RunCommandResult.new(
   value: null
 )
 ```

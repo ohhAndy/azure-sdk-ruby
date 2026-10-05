@@ -1,4 +1,4 @@
-# AzureSDK::LogFileProperties
+# AzureRest::LogFileProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LogFileProperties.new(
+instance = AzureRest::LogFileProperties.new(
   size_in_kb: null,
   created_time: null,
   type: null,

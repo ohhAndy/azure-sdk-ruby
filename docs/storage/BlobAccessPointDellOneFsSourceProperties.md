@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointDellOneFsSourceProperties
+# AzureRest::BlobAccessPointDellOneFsSourceProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointDellOneFsSourceProperties.new(
+instance = AzureRest::BlobAccessPointDellOneFsSourceProperties.new(
   connection: null,
   auth: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedNetworkingPerformance
+# AzureRest::AdvancedNetworkingPerformance
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedNetworkingPerformance.new(
+instance = AzureRest::AdvancedNetworkingPerformance.new(
   acceleration_mode: null
 )
 ```

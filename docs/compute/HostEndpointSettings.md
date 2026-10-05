@@ -1,4 +1,4 @@
-# AzureSDK::HostEndpointSettings
+# AzureRest::HostEndpointSettings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HostEndpointSettings.new(
+instance = AzureRest::HostEndpointSettings.new(
   mode: null,
   in_vm_access_control_profile_reference_id: null,
   use_local_file_rules: null

@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountSkuConversionStatus
+# AzureRest::StorageAccountSkuConversionStatus
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountSkuConversionStatus.new(
+instance = AzureRest::StorageAccountSkuConversionStatus.new(
   sku_conversion_status: null,
   target_sku_name: null,
   start_time: null,

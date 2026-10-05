@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetVMProtectionPolicy
+# AzureRest::VirtualMachineScaleSetVMProtectionPolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetVMProtectionPolicy.new(
+instance = AzureRest::VirtualMachineScaleSetVMProtectionPolicy.new(
   protect_from_scale_in: null,
   protect_from_scale_set_actions: null
 )

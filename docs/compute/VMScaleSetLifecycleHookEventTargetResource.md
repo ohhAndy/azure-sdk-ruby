@@ -1,4 +1,4 @@
-# AzureSDK::VMScaleSetLifecycleHookEventTargetResource
+# AzureRest::VMScaleSetLifecycleHookEventTargetResource
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMScaleSetLifecycleHookEventTargetResource.new(
+instance = AzureRest::VMScaleSetLifecycleHookEventTargetResource.new(
   resource: null,
   action_state: null
 )

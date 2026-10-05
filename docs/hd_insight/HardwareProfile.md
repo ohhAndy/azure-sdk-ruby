@@ -1,4 +1,4 @@
-# AzureSDK::HardwareProfile
+# AzureRest::HardwareProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HardwareProfile.new(
+instance = AzureRest::HardwareProfile.new(
   vm_size: null
 )
 ```

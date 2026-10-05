@@ -1,4 +1,4 @@
-# AzureSDK::NatGatewayPropertiesFormat
+# AzureRest::NatGatewayPropertiesFormat
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NatGatewayPropertiesFormat.new(
+instance = AzureRest::NatGatewayPropertiesFormat.new(
   idle_timeout_in_minutes: null,
   public_ip_addresses: null,
   public_ip_addresses_v6: null,

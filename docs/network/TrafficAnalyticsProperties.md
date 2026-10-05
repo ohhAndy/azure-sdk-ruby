@@ -1,4 +1,4 @@
-# AzureSDK::TrafficAnalyticsProperties
+# AzureRest::TrafficAnalyticsProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrafficAnalyticsProperties.new(
+instance = AzureRest::TrafficAnalyticsProperties.new(
   network_watcher_flow_analytics_configuration: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::NamespaceProvisioningState
+# AzureRest::NamespaceProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NamespaceProvisioningState.new()
+instance = AzureRest::NamespaceProvisioningState.new()
 ```
 

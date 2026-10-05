@@ -1,4 +1,4 @@
-# AzureSDK::LeaseShareAction
+# AzureRest::LeaseShareAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LeaseShareAction.new()
+instance = AzureRest::LeaseShareAction.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkProtocol
+# AzureRest::NetworkProtocol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkProtocol.new()
+instance = AzureRest::NetworkProtocol.new()
 ```
 

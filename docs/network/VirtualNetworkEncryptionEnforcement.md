@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkEncryptionEnforcement
+# AzureRest::VirtualNetworkEncryptionEnforcement
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkEncryptionEnforcement.new()
+instance = AzureRest::VirtualNetworkEncryptionEnforcement.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheContainerListResult
+# AzureRest::ContextCacheContainerListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContextCacheContainerListResult.new(
+instance = AzureRest::ContextCacheContainerListResult.new(
   value: null,
   next_link: null
 )

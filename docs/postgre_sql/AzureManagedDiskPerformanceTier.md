@@ -1,4 +1,4 @@
-# AzureSDK::AzureManagedDiskPerformanceTier
+# AzureRest::AzureManagedDiskPerformanceTier
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureManagedDiskPerformanceTier.new()
+instance = AzureRest::AzureManagedDiskPerformanceTier.new()
 ```
 

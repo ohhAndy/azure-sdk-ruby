@@ -1,4 +1,4 @@
-# AzureSDK::ReserveCloudServicePublicIpAddressRequest
+# AzureRest::ReserveCloudServicePublicIpAddressRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReserveCloudServicePublicIpAddressRequest.new(
+instance = AzureRest::ReserveCloudServicePublicIpAddressRequest.new(
   is_rollback: null
 )
 ```

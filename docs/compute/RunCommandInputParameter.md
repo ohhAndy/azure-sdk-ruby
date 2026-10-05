@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandInputParameter
+# AzureRest::RunCommandInputParameter
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandInputParameter.new(
+instance = AzureRest::RunCommandInputParameter.new(
   name: null,
   value: null
 )

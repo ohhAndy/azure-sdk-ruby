@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkSubnetUsageParameter
+# AzureRest::VirtualNetworkSubnetUsageParameter
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkSubnetUsageParameter.new(
+instance = AzureRest::VirtualNetworkSubnetUsageParameter.new(
   virtual_network_arm_resource_id: null
 )
 ```

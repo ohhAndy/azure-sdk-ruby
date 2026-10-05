@@ -1,4 +1,4 @@
-# AzureSDK::BackupsLongTermRetentionResponseProperties
+# AzureRest::BackupsLongTermRetentionResponseProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupsLongTermRetentionResponseProperties.new(
+instance = AzureRest::BackupsLongTermRetentionResponseProperties.new(
   number_of_containers: null
 )
 ```

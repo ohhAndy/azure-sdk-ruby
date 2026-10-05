@@ -1,4 +1,4 @@
-# AzureSDK::ProtocolTypes
+# AzureRest::ProtocolTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProtocolTypes.new()
+instance = AzureRest::ProtocolTypes.new()
 ```
 

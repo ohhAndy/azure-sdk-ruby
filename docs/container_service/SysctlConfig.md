@@ -1,4 +1,4 @@
-# AzureSDK::SysctlConfig
+# AzureRest::SysctlConfig
 
 ## Properties
 
@@ -36,9 +36,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SysctlConfig.new(
+instance = AzureRest::SysctlConfig.new(
   net_core_somaxconn: null,
   net_core_netdev_max_backlog: null,
   net_core_rmem_default: null,

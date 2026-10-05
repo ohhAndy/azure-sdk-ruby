@@ -1,4 +1,4 @@
-# AzureSDK::SnapshotListResult
+# AzureRest::SnapshotListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SnapshotListResult.new(
+instance = AzureRest::SnapshotListResult.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::PublicIpDdosProtectionStatusResult
+# AzureRest::PublicIpDdosProtectionStatusResult
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIpDdosProtectionStatusResult.new(
+instance = AzureRest::PublicIpDdosProtectionStatusResult.new(
   public_ip_address_id: null,
   public_ip_address: null,
   is_workload_protected: null,

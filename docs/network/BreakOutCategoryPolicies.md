@@ -1,4 +1,4 @@
-# AzureSDK::BreakOutCategoryPolicies
+# AzureRest::BreakOutCategoryPolicies
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BreakOutCategoryPolicies.new(
+instance = AzureRest::BreakOutCategoryPolicies.new(
   allow: null,
   optimize: null,
   default: null

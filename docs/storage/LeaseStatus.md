@@ -1,4 +1,4 @@
-# AzureSDK::LeaseStatus
+# AzureRest::LeaseStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LeaseStatus.new()
+instance = AzureRest::LeaseStatus.new()
 ```
 

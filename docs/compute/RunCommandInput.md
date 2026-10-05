@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandInput
+# AzureRest::RunCommandInput
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandInput.new(
+instance = AzureRest::RunCommandInput.new(
   command_id: null,
   script: null,
   parameters: null

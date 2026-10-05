@@ -1,4 +1,4 @@
-# AzureSDK::TagsListResult
+# AzureRest::TagsListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TagsListResult.new(
+instance = AzureRest::TagsListResult.new(
   value: null,
   next_link: null
 )

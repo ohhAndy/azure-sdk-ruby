@@ -1,4 +1,4 @@
-# AzureSDK::ConnectorsApi
+# AzureRest::ConnectorsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,26 +24,26 @@ Create a Storage Connector if it does not already exist; otherwise, error out. T
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 connector_name = 'connector_name_example' # String | The name of the Storage Connector.
-resource = AzureSDK::Connector.new({location: 'location_example', properties: AzureSDK::StorageConnectorProperties.new({data_source_type: AzureSDK::StorageConnectorDataSourceType::AZURE_DATA_SHARE, source: AzureSDK::StorageConnectorSource.new({type: AzureSDK::StorageConnectorSourceType::DATA_SHARE})})}) # Connector | Create a Storage Connector if it does not already exist; otherwise, error out. This API will not allow you to replace an already existing resource.
+resource = AzureRest::Connector.new({location: 'location_example', properties: AzureRest::StorageConnectorProperties.new({data_source_type: AzureRest::StorageConnectorDataSourceType::AZURE_DATA_SHARE, source: AzureRest::StorageConnectorSource.new({type: AzureRest::StorageConnectorSourceType::DATA_SHARE})})}) # Connector | Create a Storage Connector if it does not already exist; otherwise, error out. This API will not allow you to replace an already existing resource.
 
 begin
   
   result = api_instance.connectors_create(api_version, subscription_id, resource_group_name, account_name, connector_name, resource)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_create: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Connector>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_create_with_http_info: #{e}"
 end
 ```
@@ -103,14 +103,14 @@ Delete a Storage Connector.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -120,7 +120,7 @@ connector_name = 'connector_name_example' # String | The name of the Storage Con
 begin
   
   api_instance.connectors_delete(api_version, subscription_id, resource_group_name, account_name, connector_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_delete: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_delete_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Get the specified Storage Connector.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.connectors_get(api_version, subscription_id, resource_group_name, account_name, connector_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Connector>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ List all Storage Connectors in a Storage Account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -273,7 +273,7 @@ begin
   
   result = api_instance.connectors_list_by_storage_account(api_version, subscription_id, resource_group_name, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_list_by_storage_account: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ConnectorListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_list_by_storage_account_with_http_info: #{e}"
 end
 ```
@@ -331,26 +331,26 @@ This method is used to verify that the connection to the backing data store work
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 connector_name = 'connector_name_example' # String | The name of the Storage Connector.
-body = AzureSDK::TestExistingConnectionRequest.new({unique_id: 'unique_id_example'}) # TestExistingConnectionRequest | This method is used to verify that the connection to the backing data store works. This API is designed to be used for monitoring and debugging purposes. From the caller’s perspective, this method does the following: Calls List on the backing data store, attempting to list up to one blob/object/etc. If the above succeeds, and if a blob/object/etc is found, calls Get on that object, attempting to download one byte.
+body = AzureRest::TestExistingConnectionRequest.new({unique_id: 'unique_id_example'}) # TestExistingConnectionRequest | This method is used to verify that the connection to the backing data store works. This API is designed to be used for monitoring and debugging purposes. From the caller’s perspective, this method does the following: Calls List on the backing data store, attempting to list up to one blob/object/etc. If the above succeeds, and if a blob/object/etc is found, calls Get on that object, attempting to download one byte.
 
 begin
   
   result = api_instance.connectors_test_existing_connection(api_version, subscription_id, resource_group_name, account_name, connector_name, body)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_test_existing_connection: #{e}"
 end
 ```
@@ -368,7 +368,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TestConnectionResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_test_existing_connection_with_http_info: #{e}"
 end
 ```
@@ -410,26 +410,26 @@ Update a Storage Connector.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConnectorsApi.new
+api_instance = AzureRest::ConnectorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 connector_name = 'connector_name_example' # String | The name of the Storage Connector.
-properties = AzureSDK::ConnectorUpdate.new # ConnectorUpdate | The updated properties of the Storage Connector.
+properties = AzureRest::ConnectorUpdate.new # ConnectorUpdate | The updated properties of the Storage Connector.
 
 begin
   
   result = api_instance.connectors_update(api_version, subscription_id, resource_group_name, account_name, connector_name, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_update: #{e}"
 end
 ```
@@ -447,7 +447,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Connector>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConnectorsApi->connectors_update_with_http_info: #{e}"
 end
 ```

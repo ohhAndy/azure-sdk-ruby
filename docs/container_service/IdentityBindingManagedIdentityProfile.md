@@ -1,4 +1,4 @@
-# AzureSDK::IdentityBindingManagedIdentityProfile
+# AzureRest::IdentityBindingManagedIdentityProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IdentityBindingManagedIdentityProfile.new(
+instance = AzureRest::IdentityBindingManagedIdentityProfile.new(
   resource_id: null,
   object_id: null,
   client_id: null,

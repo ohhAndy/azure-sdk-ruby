@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineCaptureResult
+# AzureRest::VirtualMachineCaptureResult
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineCaptureResult.new(
+instance = AzureRest::VirtualMachineCaptureResult.new(
   id: null,
   schema: null,
   content_version: null,

@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetUpdateStorageProfile
+# AzureRest::VirtualMachineScaleSetUpdateStorageProfile
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetUpdateStorageProfile.new(
+instance = AzureRest::VirtualMachineScaleSetUpdateStorageProfile.new(
   image_reference: null,
   os_disk: null,
   data_disks: null,

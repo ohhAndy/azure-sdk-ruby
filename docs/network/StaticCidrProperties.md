@@ -1,4 +1,4 @@
-# AzureSDK::StaticCidrProperties
+# AzureRest::StaticCidrProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StaticCidrProperties.new(
+instance = AzureRest::StaticCidrProperties.new(
   description: null,
   number_of_ip_addresses_to_allocate: null,
   address_prefixes: null,

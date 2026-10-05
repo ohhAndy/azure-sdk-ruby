@@ -1,4 +1,4 @@
-# AzureSDK::StorageTaskAssignmentUpdateReport
+# AzureRest::StorageTaskAssignmentUpdateReport
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageTaskAssignmentUpdateReport.new(
+instance = AzureRest::StorageTaskAssignmentUpdateReport.new(
   prefix: null
 )
 ```

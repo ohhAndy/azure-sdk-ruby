@@ -1,4 +1,4 @@
-# AzureSDK::BlobServiceItems
+# AzureRest::BlobServiceItems
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobServiceItems.new(
+instance = AzureRest::BlobServiceItems.new(
   value: null,
   next_link: null
 )

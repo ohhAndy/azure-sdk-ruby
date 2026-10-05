@@ -1,4 +1,4 @@
-# AzureSDK::CommonTrackedResource
+# AzureRest::CommonTrackedResource
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonTrackedResource.new(
+instance = AzureRest::CommonTrackedResource.new(
   id: null,
   name: null,
   type: null,

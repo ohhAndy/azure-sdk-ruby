@@ -1,4 +1,4 @@
-# AzureSDK::PatchInstallationDetail
+# AzureRest::PatchInstallationDetail
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PatchInstallationDetail.new(
+instance = AzureRest::PatchInstallationDetail.new(
   patch_id: null,
   name: null,
   version: null,

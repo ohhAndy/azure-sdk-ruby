@@ -1,4 +1,4 @@
-# AzureSDK::MHSMPrivateLinkServiceConnectionState
+# AzureRest::MHSMPrivateLinkServiceConnectionState
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMPrivateLinkServiceConnectionState.new(
+instance = AzureRest::MHSMPrivateLinkServiceConnectionState.new(
   status: null,
   description: null,
   actions_required: null

@@ -1,4 +1,4 @@
-# AzureSDK::JsonWebKeyType
+# AzureRest::JsonWebKeyType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::JsonWebKeyType.new()
+instance = AzureRest::JsonWebKeyType.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::NfsSetting
+# AzureRest::NfsSetting
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NfsSetting.new(
+instance = AzureRest::NfsSetting.new(
   encryption_in_transit: null
 )
 ```

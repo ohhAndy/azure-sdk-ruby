@@ -1,4 +1,4 @@
-# AzureSDK::ClusterListResult
+# AzureRest::ClusterListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterListResult.new(
+instance = AzureRest::ClusterListResult.new(
   value: null,
   next_link: null
 )

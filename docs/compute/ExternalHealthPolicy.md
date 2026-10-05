@@ -1,4 +1,4 @@
-# AzureSDK::ExternalHealthPolicy
+# AzureRest::ExternalHealthPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExternalHealthPolicy.new(
+instance = AzureRest::ExternalHealthPolicy.new(
   enabled: null,
   expiry_duration: null,
   grace_period: null

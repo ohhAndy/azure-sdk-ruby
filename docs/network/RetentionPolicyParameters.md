@@ -1,4 +1,4 @@
-# AzureSDK::RetentionPolicyParameters
+# AzureRest::RetentionPolicyParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RetentionPolicyParameters.new(
+instance = AzureRest::RetentionPolicyParameters.new(
   days: null,
   enabled: null
 )

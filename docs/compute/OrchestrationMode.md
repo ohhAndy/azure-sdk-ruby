@@ -1,4 +1,4 @@
-# AzureSDK::OrchestrationMode
+# AzureRest::OrchestrationMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OrchestrationMode.new()
+instance = AzureRest::OrchestrationMode.new()
 ```
 

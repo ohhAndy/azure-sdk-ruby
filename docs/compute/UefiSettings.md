@@ -1,4 +1,4 @@
-# AzureSDK::UefiSettings
+# AzureRest::UefiSettings
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UefiSettings.new(
+instance = AzureRest::UefiSettings.new(
   secure_boot_enabled: null,
   v_tpm_enabled: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::RestorePoint
+# AzureRest::RestorePoint
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePoint.new(
+instance = AzureRest::RestorePoint.new(
   id: null,
   name: null,
   type: null,

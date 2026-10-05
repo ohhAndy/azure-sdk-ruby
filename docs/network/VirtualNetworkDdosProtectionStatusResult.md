@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkDdosProtectionStatusResult
+# AzureRest::VirtualNetworkDdosProtectionStatusResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkDdosProtectionStatusResult.new(
+instance = AzureRest::VirtualNetworkDdosProtectionStatusResult.new(
   value: null,
   next_link: null
 )

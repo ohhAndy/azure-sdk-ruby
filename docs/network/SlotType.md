@@ -1,4 +1,4 @@
-# AzureSDK::SlotType
+# AzureRest::SlotType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SlotType.new()
+instance = AzureRest::SlotType.new()
 ```
 

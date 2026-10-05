@@ -1,4 +1,4 @@
-# AzureSDK::LoadBalancingRulePropertiesFormat
+# AzureRest::LoadBalancingRulePropertiesFormat
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LoadBalancingRulePropertiesFormat.new(
+instance = AzureRest::LoadBalancingRulePropertiesFormat.new(
   frontend_ip_configuration: null,
   backend_address_pool: null,
   backend_address_pools: null,

@@ -1,4 +1,4 @@
-# AzureSDK::VMGalleryApplication
+# AzureRest::VMGalleryApplication
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMGalleryApplication.new(
+instance = AzureRest::VMGalleryApplication.new(
   tags: null,
   order: null,
   package_reference_id: null,

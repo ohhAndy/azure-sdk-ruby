@@ -1,4 +1,4 @@
-# AzureSDK::RootSquashType
+# AzureRest::RootSquashType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RootSquashType.new()
+instance = AzureRest::RootSquashType.new()
 ```
 

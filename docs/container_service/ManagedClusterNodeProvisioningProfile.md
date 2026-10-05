@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterNodeProvisioningProfile
+# AzureRest::ManagedClusterNodeProvisioningProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterNodeProvisioningProfile.new(
+instance = AzureRest::ManagedClusterNodeProvisioningProfile.new(
   mode: null,
   default_node_pools: null
 )

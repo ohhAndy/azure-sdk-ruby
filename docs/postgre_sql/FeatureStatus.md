@@ -1,4 +1,4 @@
-# AzureSDK::FeatureStatus
+# AzureRest::FeatureStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FeatureStatus.new()
+instance = AzureRest::FeatureStatus.new()
 ```
 

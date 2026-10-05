@@ -1,4 +1,4 @@
-# AzureSDK::ListServiceSasResponse
+# AzureRest::ListServiceSasResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListServiceSasResponse.new(
+instance = AzureRest::ListServiceSasResponse.new(
   service_sas_token: null
 )
 ```

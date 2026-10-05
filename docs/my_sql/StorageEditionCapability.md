@@ -1,4 +1,4 @@
-# AzureSDK::StorageEditionCapability
+# AzureRest::StorageEditionCapability
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageEditionCapability.new(
+instance = AzureRest::StorageEditionCapability.new(
   name: null,
   min_storage_size: null,
   max_storage_size: null,

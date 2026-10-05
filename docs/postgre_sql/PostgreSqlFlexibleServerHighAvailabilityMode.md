@@ -1,4 +1,4 @@
-# AzureSDK::PostgreSqlFlexibleServerHighAvailabilityMode
+# AzureRest::PostgreSqlFlexibleServerHighAvailabilityMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PostgreSqlFlexibleServerHighAvailabilityMode.new()
+instance = AzureRest::PostgreSqlFlexibleServerHighAvailabilityMode.new()
 ```
 

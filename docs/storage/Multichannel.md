@@ -1,4 +1,4 @@
-# AzureSDK::Multichannel
+# AzureRest::Multichannel
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Multichannel.new(
+instance = AzureRest::Multichannel.new(
   enabled: null
 )
 ```

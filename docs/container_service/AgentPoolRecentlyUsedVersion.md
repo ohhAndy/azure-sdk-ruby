@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolRecentlyUsedVersion
+# AzureRest::AgentPoolRecentlyUsedVersion
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolRecentlyUsedVersion.new(
+instance = AzureRest::AgentPoolRecentlyUsedVersion.new(
   orchestrator_version: null,
   node_image_version: null,
   timestamp: null

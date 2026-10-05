@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostSizeListResult
+# AzureRest::DedicatedHostSizeListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostSizeListResult.new(
+instance = AzureRest::DedicatedHostSizeListResult.new(
   value: null,
   next_link: null
 )

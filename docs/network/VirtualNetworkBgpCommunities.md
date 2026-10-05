@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkBgpCommunities
+# AzureRest::VirtualNetworkBgpCommunities
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkBgpCommunities.new(
+instance = AzureRest::VirtualNetworkBgpCommunities.new(
   virtual_network_community: null,
   regional_community: null
 )

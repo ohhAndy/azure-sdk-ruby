@@ -1,4 +1,4 @@
-# AzureSDK::ManagedIdentityAuthProperties
+# AzureRest::ManagedIdentityAuthProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedIdentityAuthProperties.new(
+instance = AzureRest::ManagedIdentityAuthProperties.new(
   identity_resource_id: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationProfile
+# AzureRest::CapacityReservationProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationProfile.new(
+instance = AzureRest::CapacityReservationProfile.new(
   capacity_reservation_group: null,
   disable_capacity_reservation_assignment: null
 )

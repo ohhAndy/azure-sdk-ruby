@@ -1,4 +1,4 @@
-# AzureSDK::BackupsLongTermRetentionRequest
+# AzureRest::BackupsLongTermRetentionRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupsLongTermRetentionRequest.new(
+instance = AzureRest::BackupsLongTermRetentionRequest.new(
   backup_settings: null,
   target_details: null
 )

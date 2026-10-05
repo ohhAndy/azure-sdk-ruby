@@ -1,4 +1,4 @@
-# AzureSDK::Kind
+# AzureRest::Kind
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Kind.new()
+instance = AzureRest::Kind.new()
 ```
 

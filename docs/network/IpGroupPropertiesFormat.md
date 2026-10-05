@@ -1,4 +1,4 @@
-# AzureSDK::IpGroupPropertiesFormat
+# AzureRest::IpGroupPropertiesFormat
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpGroupPropertiesFormat.new(
+instance = AzureRest::IpGroupPropertiesFormat.new(
   provisioning_state: null,
   ip_addresses: null,
   firewalls: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ServerStopApi
+# AzureRest::ServerStopApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,9 +19,9 @@ Stops a running server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 
-api_instance = AzureSDK::ServerStopApi.new
+api_instance = AzureRest::ServerStopApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -30,7 +30,7 @@ server_name = 'server_name_example' # String | The name of the server.
 begin
   
   api_instance.servers_stop(api_version, subscription_id, resource_group_name, server_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServerStopApi->servers_stop: #{e}"
 end
 ```
@@ -48,7 +48,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServerStopApi->servers_stop_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::DdosProtectionPlanPropertiesFormat
+# AzureRest::DdosProtectionPlanPropertiesFormat
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosProtectionPlanPropertiesFormat.new(
+instance = AzureRest::DdosProtectionPlanPropertiesFormat.new(
   resource_guid: null,
   provisioning_state: null,
   public_ip_addresses: null,

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualAppliancesApi
+# AzureRest::NetworkVirtualAppliancesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -31,14 +31,14 @@ Aborts an in-progress migration of the specified Network Virtual Appliance and r
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -47,7 +47,7 @@ network_virtual_appliance_name = 'network_virtual_appliance_name_example' # Stri
 begin
   
   api_instance.network_virtual_appliances_abort_migration(api_version, subscription_id, resource_group_name, network_virtual_appliance_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_abort_migration: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_abort_migration_with_http_info: #{e}"
 end
 ```
@@ -105,24 +105,24 @@ Commits the migration of the specified Network Virtual Appliance. This finalizes
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-body = AzureSDK::NetworkVirtualApplianceCommitMigrationRequest.new # NetworkVirtualApplianceCommitMigrationRequest | Parameters supplied to commit the migration of the Network Virtual Appliance.
+body = AzureRest::NetworkVirtualApplianceCommitMigrationRequest.new # NetworkVirtualApplianceCommitMigrationRequest | Parameters supplied to commit the migration of the Network Virtual Appliance.
 
 begin
   
   api_instance.network_virtual_appliances_commit_migration(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, body)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_commit_migration: #{e}"
 end
 ```
@@ -140,7 +140,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_commit_migration_with_http_info: #{e}"
 end
 ```
@@ -181,25 +181,25 @@ Creates or updates the specified Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-parameters = AzureSDK::NetworkVirtualAppliance.new # NetworkVirtualAppliance | Parameters supplied to the create or update Network Virtual Appliance.
+parameters = AzureRest::NetworkVirtualAppliance.new # NetworkVirtualAppliance | Parameters supplied to the create or update Network Virtual Appliance.
 
 begin
   
   result = api_instance.network_virtual_appliances_create_or_update(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_create_or_update: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualAppliance>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -258,14 +258,14 @@ Deletes the specified Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -274,7 +274,7 @@ network_virtual_appliance_name = 'network_virtual_appliance_name_example' # Stri
 begin
   
   api_instance.network_virtual_appliances_delete(api_version, subscription_id, resource_group_name, network_virtual_appliance_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_delete: #{e}"
 end
 ```
@@ -292,7 +292,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_delete_with_http_info: #{e}"
 end
 ```
@@ -332,24 +332,24 @@ Executes the migration of the specified Network Virtual Appliance. This step per
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-body = AzureSDK::NetworkVirtualApplianceExecuteMigrationRequest.new # NetworkVirtualApplianceExecuteMigrationRequest | Parameters supplied to execute the migration of the Network Virtual Appliance.
+body = AzureRest::NetworkVirtualApplianceExecuteMigrationRequest.new # NetworkVirtualApplianceExecuteMigrationRequest | Parameters supplied to execute the migration of the Network Virtual Appliance.
 
 begin
   
   api_instance.network_virtual_appliances_execute_migration(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, body)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_execute_migration: #{e}"
 end
 ```
@@ -367,7 +367,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_execute_migration_with_http_info: #{e}"
 end
 ```
@@ -408,14 +408,14 @@ Gets the specified Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -428,7 +428,7 @@ begin
   
   result = api_instance.network_virtual_appliances_get(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_get: #{e}"
 end
 ```
@@ -446,7 +446,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualAppliance>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_get_with_http_info: #{e}"
 end
 ```
@@ -487,25 +487,25 @@ Retrieves the boot diagnostic logs for a VM instance belonging to the specified 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-request = AzureSDK::NetworkVirtualApplianceBootDiagnosticParameters.new # NetworkVirtualApplianceBootDiagnosticParameters | Parameters supplied to retrieve boot diagnostic logs for a NVA VM instance
+request = AzureRest::NetworkVirtualApplianceBootDiagnosticParameters.new # NetworkVirtualApplianceBootDiagnosticParameters | Parameters supplied to retrieve boot diagnostic logs for a NVA VM instance
 
 begin
   
   result = api_instance.network_virtual_appliances_get_boot_diagnostic_logs(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, request)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_get_boot_diagnostic_logs: #{e}"
 end
 ```
@@ -523,7 +523,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceInstanceId>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_get_boot_diagnostic_logs_with_http_info: #{e}"
 end
 ```
@@ -564,14 +564,14 @@ Gets all Network Virtual Appliances in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -579,7 +579,7 @@ begin
   
   result = api_instance.network_virtual_appliances_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_list: #{e}"
 end
 ```
@@ -597,7 +597,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_list_with_http_info: #{e}"
 end
 ```
@@ -635,14 +635,14 @@ Lists all Network Virtual Appliances in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -651,7 +651,7 @@ begin
   
   result = api_instance.network_virtual_appliances_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_list_by_resource_group: #{e}"
 end
 ```
@@ -669,7 +669,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -708,24 +708,24 @@ Prepares the migration of the specified Network Virtual Appliance. This is the f
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-body = AzureSDK::NetworkVirtualAppliancePrepareMigrationRequest.new # NetworkVirtualAppliancePrepareMigrationRequest | Parameters supplied to prepare the migration of the Network Virtual Appliance.
+body = AzureRest::NetworkVirtualAppliancePrepareMigrationRequest.new # NetworkVirtualAppliancePrepareMigrationRequest | Parameters supplied to prepare the migration of the Network Virtual Appliance.
 
 begin
   
   api_instance.network_virtual_appliances_prepare_migration(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, body)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_prepare_migration: #{e}"
 end
 ```
@@ -743,7 +743,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_prepare_migration_with_http_info: #{e}"
 end
 ```
@@ -784,27 +784,27 @@ Reimages one VM belonging to the specified Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
 opts = {
-  network_virtual_appliance_instance_ids: AzureSDK::NetworkVirtualApplianceInstanceIds.new # NetworkVirtualApplianceInstanceIds | Specifies a list of virtual machine instance IDs from the Network Virtual Appliance VM instances.
+  network_virtual_appliance_instance_ids: AzureRest::NetworkVirtualApplianceInstanceIds.new # NetworkVirtualApplianceInstanceIds | Specifies a list of virtual machine instance IDs from the Network Virtual Appliance VM instances.
 }
 
 begin
   
   result = api_instance.network_virtual_appliances_reimage(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_reimage: #{e}"
 end
 ```
@@ -822,7 +822,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceInstanceIds>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_reimage_with_http_info: #{e}"
 end
 ```
@@ -863,27 +863,27 @@ Restarts one or more VMs belonging to the specified Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
 opts = {
-  network_virtual_appliance_instance_ids: AzureSDK::NetworkVirtualApplianceInstanceIds.new # NetworkVirtualApplianceInstanceIds | Specifies a list of virtual machine instance IDs from the Network Virtual Appliance VM instances.
+  network_virtual_appliance_instance_ids: AzureRest::NetworkVirtualApplianceInstanceIds.new # NetworkVirtualApplianceInstanceIds | Specifies a list of virtual machine instance IDs from the Network Virtual Appliance VM instances.
 }
 
 begin
   
   result = api_instance.network_virtual_appliances_restart(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_restart: #{e}"
 end
 ```
@@ -901,7 +901,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceInstanceIds>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_restart_with_http_info: #{e}"
 end
 ```
@@ -942,25 +942,25 @@ Updates a Network Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkVirtualAppliancesApi.new
+api_instance = AzureRest::NetworkVirtualAppliancesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to Update Network Virtual Appliance Tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to Update Network Virtual Appliance Tags.
 
 begin
   
   result = api_instance.network_virtual_appliances_update_tags(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_update_tags: #{e}"
 end
 ```
@@ -978,7 +978,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualAppliance>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkVirtualAppliancesApi->network_virtual_appliances_update_tags_with_http_info: #{e}"
 end
 ```

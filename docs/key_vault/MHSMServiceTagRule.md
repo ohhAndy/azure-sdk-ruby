@@ -1,4 +1,4 @@
-# AzureSDK::MHSMServiceTagRule
+# AzureRest::MHSMServiceTagRule
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMServiceTagRule.new(
+instance = AzureRest::MHSMServiceTagRule.new(
   tag: null
 )
 ```

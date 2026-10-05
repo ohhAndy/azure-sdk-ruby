@@ -1,4 +1,4 @@
-# AzureSDK::SettingNames
+# AzureRest::SettingNames
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SettingNames.new()
+instance = AzureRest::SettingNames.new()
 ```
 

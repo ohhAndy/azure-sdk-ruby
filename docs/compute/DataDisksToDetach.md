@@ -1,4 +1,4 @@
-# AzureSDK::DataDisksToDetach
+# AzureRest::DataDisksToDetach
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataDisksToDetach.new(
+instance = AzureRest::DataDisksToDetach.new(
   disk_id: null,
   detach_option: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServiceProperties
+# AzureRest::PrivateLinkServiceProperties
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkServiceProperties.new(
+instance = AzureRest::PrivateLinkServiceProperties.new(
   load_balancer_frontend_ip_configurations: null,
   ip_configurations: null,
   destination_ip_address: null,

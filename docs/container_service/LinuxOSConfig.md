@@ -1,4 +1,4 @@
-# AzureSDK::LinuxOSConfig
+# AzureRest::LinuxOSConfig
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxOSConfig.new(
+instance = AzureRest::LinuxOSConfig.new(
   sysctls: null,
   transparent_huge_page_enabled: null,
   transparent_huge_page_defrag: null,

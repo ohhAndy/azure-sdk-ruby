@@ -1,4 +1,4 @@
-# AzureSDK::EndpointDependency
+# AzureRest::EndpointDependency
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EndpointDependency.new(
+instance = AzureRest::EndpointDependency.new(
   domain_name: null,
   endpoint_details: null
 )

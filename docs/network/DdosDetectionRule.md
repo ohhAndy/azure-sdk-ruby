@@ -1,4 +1,4 @@
-# AzureSDK::DdosDetectionRule
+# AzureRest::DdosDetectionRule
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosDetectionRule.new(
+instance = AzureRest::DdosDetectionRule.new(
   id: null,
   name: null,
   etag: null,

@@ -1,4 +1,4 @@
-# AzureSDK::BlobServicePropertiesProperties
+# AzureRest::BlobServicePropertiesProperties
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobServicePropertiesProperties.new(
+instance = AzureRest::BlobServicePropertiesProperties.new(
   cors: null,
   default_service_version: null,
   delete_retention_policy: null,

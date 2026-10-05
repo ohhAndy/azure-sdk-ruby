@@ -1,4 +1,4 @@
-# AzureSDK::PatchAssessmentState
+# AzureRest::PatchAssessmentState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PatchAssessmentState.new()
+instance = AzureRest::PatchAssessmentState.new()
 ```
 

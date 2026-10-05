@@ -1,4 +1,4 @@
-# AzureSDK::OutboundRulePropertiesFormat
+# AzureRest::OutboundRulePropertiesFormat
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OutboundRulePropertiesFormat.new(
+instance = AzureRest::OutboundRulePropertiesFormat.new(
   allocated_outbound_ports: null,
   frontend_ip_configurations: null,
   backend_address_pool: null,

@@ -1,4 +1,4 @@
-# AzureSDK::AccessTier
+# AzureRest::AccessTier
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccessTier.new()
+instance = AzureRest::AccessTier.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::CheckNameAvailabilityResult
+# AzureRest::CheckNameAvailabilityResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CheckNameAvailabilityResult.new(
+instance = AzureRest::CheckNameAvailabilityResult.new(
   name_available: null,
   reason: null,
   message: null

@@ -1,4 +1,4 @@
-# AzureSDK::ServiceTagInformationPropertiesFormat
+# AzureRest::ServiceTagInformationPropertiesFormat
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceTagInformationPropertiesFormat.new(
+instance = AzureRest::ServiceTagInformationPropertiesFormat.new(
   change_number: null,
   region: null,
   system_service: null,

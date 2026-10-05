@@ -1,4 +1,4 @@
-# AzureSDK::VirtualEndpoint
+# AzureRest::VirtualEndpoint
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualEndpoint.new(
+instance = AzureRest::VirtualEndpoint.new(
   id: null,
   name: null,
   type: null,

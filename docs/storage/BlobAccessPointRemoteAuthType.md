@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointRemoteAuthType
+# AzureRest::BlobAccessPointRemoteAuthType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointRemoteAuthType.new()
+instance = AzureRest::BlobAccessPointRemoteAuthType.new()
 ```
 

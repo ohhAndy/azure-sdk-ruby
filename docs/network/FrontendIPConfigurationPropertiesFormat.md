@@ -1,4 +1,4 @@
-# AzureSDK::FrontendIPConfigurationPropertiesFormat
+# AzureRest::FrontendIPConfigurationPropertiesFormat
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FrontendIPConfigurationPropertiesFormat.new(
+instance = AzureRest::FrontendIPConfigurationPropertiesFormat.new(
   inbound_nat_rules: null,
   inbound_nat_pools: null,
   outbound_rules: null,

@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionInTransitProperties
+# AzureRest::EncryptionInTransitProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionInTransitProperties.new(
+instance = AzureRest::EncryptionInTransitProperties.new(
   is_encryption_in_transit_enabled: null
 )
 ```

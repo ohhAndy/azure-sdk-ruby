@@ -1,4 +1,4 @@
-# AzureSDK::NvaInterfaceConfigurationsProperties
+# AzureRest::NvaInterfaceConfigurationsProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NvaInterfaceConfigurationsProperties.new(
+instance = AzureRest::NvaInterfaceConfigurationsProperties.new(
   subnet: null,
   type: null,
   name: null

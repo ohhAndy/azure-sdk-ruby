@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetListResult
+# AzureRest::VirtualMachineScaleSetListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetListResult.new(
+instance = AzureRest::VirtualMachineScaleSetListResult.new(
   value: null,
   next_link: null
 )

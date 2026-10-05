@@ -1,4 +1,4 @@
-# AzureSDK::BlobRestoreRange
+# AzureRest::BlobRestoreRange
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobRestoreRange.new(
+instance = AzureRest::BlobRestoreRange.new(
   start_range: null,
   end_range: null
 )

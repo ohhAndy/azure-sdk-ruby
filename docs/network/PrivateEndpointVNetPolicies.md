@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointVNetPolicies
+# AzureRest::PrivateEndpointVNetPolicies
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateEndpointVNetPolicies.new()
+instance = AzureRest::PrivateEndpointVNetPolicies.new()
 ```
 

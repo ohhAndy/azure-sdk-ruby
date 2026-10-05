@@ -1,4 +1,4 @@
-# AzureSDK::NetworkPlugin
+# AzureRest::NetworkPlugin
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkPlugin.new()
+instance = AzureRest::NetworkPlugin.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::Plan
+# AzureRest::Plan
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Plan.new(
+instance = AzureRest::Plan.new(
   name: null,
   publisher: null,
   product: null,

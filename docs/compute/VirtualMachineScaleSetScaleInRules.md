@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetScaleInRules
+# AzureRest::VirtualMachineScaleSetScaleInRules
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetScaleInRules.new()
+instance = AzureRest::VirtualMachineScaleSetScaleInRules.new()
 ```
 

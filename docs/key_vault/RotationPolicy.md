@@ -1,4 +1,4 @@
-# AzureSDK::RotationPolicy
+# AzureRest::RotationPolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RotationPolicy.new(
+instance = AzureRest::RotationPolicy.new(
   attributes: null,
   lifetime_actions: null
 )

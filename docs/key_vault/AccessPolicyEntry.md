@@ -1,4 +1,4 @@
-# AzureSDK::AccessPolicyEntry
+# AzureRest::AccessPolicyEntry
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccessPolicyEntry.new(
+instance = AzureRest::AccessPolicyEntry.new(
   tenant_id: null,
   object_id: null,
   application_id: null,

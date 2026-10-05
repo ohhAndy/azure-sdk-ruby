@@ -1,4 +1,4 @@
-# AzureSDK::ReimageRecoveryPolicy
+# AzureRest::ReimageRecoveryPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReimageRecoveryPolicy.new(
+instance = AzureRest::ReimageRecoveryPolicy.new(
   enabled: null
 )
 ```

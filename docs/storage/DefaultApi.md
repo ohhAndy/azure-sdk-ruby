@@ -1,4 +1,4 @@
-# AzureSDK::DefaultApi
+# AzureRest::DefaultApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,14 +21,14 @@ Lists deleted accounts under the subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -36,7 +36,7 @@ begin
   
   result = api_instance.deleted_accounts_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->deleted_accounts_list: #{e}"
 end
 ```
@@ -54,7 +54,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeletedAccountListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->deleted_accounts_list_with_http_info: #{e}"
 end
 ```
@@ -92,14 +92,14 @@ Lists the available SKUs supported by Microsoft.Storage for given subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -107,7 +107,7 @@ begin
   
   result = api_instance.skus_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->skus_list: #{e}"
 end
 ```
@@ -125,7 +125,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageSkuListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->skus_list_with_http_info: #{e}"
 end
 ```
@@ -163,14 +163,14 @@ Gets the current usage count and the limit for the resources of the location und
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -179,7 +179,7 @@ begin
   
   result = api_instance.usages_list_by_location(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->usages_list_by_location: #{e}"
 end
 ```
@@ -197,7 +197,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UsageListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->usages_list_by_location_with_http_info: #{e}"
 end
 ```

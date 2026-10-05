@@ -1,4 +1,4 @@
-# AzureSDK::AttachDetachDataDisksRequest
+# AzureRest::AttachDetachDataDisksRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AttachDetachDataDisksRequest.new(
+instance = AzureRest::AttachDetachDataDisksRequest.new(
   data_disks_to_attach: null,
   data_disks_to_detach: null
 )

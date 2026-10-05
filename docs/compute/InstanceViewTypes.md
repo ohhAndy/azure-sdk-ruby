@@ -1,4 +1,4 @@
-# AzureSDK::InstanceViewTypes
+# AzureRest::InstanceViewTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InstanceViewTypes.new()
+instance = AzureRest::InstanceViewTypes.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::MoveIpConfigurationResourceReference
+# AzureRest::MoveIpConfigurationResourceReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MoveIpConfigurationResourceReference.new(
+instance = AzureRest::MoveIpConfigurationResourceReference.new(
   id: null
 )
 ```

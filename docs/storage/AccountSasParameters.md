@@ -1,4 +1,4 @@
-# AzureSDK::AccountSasParameters
+# AzureRest::AccountSasParameters
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccountSasParameters.new(
+instance = AzureRest::AccountSasParameters.new(
   signed_services: null,
   signed_resource_types: null,
   signed_permission: null,

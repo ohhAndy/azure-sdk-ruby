@@ -1,4 +1,4 @@
-# AzureSDK::BackupStoreDetails
+# AzureRest::BackupStoreDetails
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupStoreDetails.new(
+instance = AzureRest::BackupStoreDetails.new(
   object_type: null
 )
 ```

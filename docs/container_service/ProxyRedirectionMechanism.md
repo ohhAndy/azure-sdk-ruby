@@ -1,4 +1,4 @@
-# AzureSDK::ProxyRedirectionMechanism
+# AzureRest::ProxyRedirectionMechanism
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProxyRedirectionMechanism.new()
+instance = AzureRest::ProxyRedirectionMechanism.new()
 ```
 

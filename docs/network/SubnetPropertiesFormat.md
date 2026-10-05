@@ -1,4 +1,4 @@
-# AzureSDK::SubnetPropertiesFormat
+# AzureRest::SubnetPropertiesFormat
 
 ## Properties
 
@@ -31,9 +31,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SubnetPropertiesFormat.new(
+instance = AzureRest::SubnetPropertiesFormat.new(
   address_prefix: null,
   address_prefixes: null,
   network_security_group: null,

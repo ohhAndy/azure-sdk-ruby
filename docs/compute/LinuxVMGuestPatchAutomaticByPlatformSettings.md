@@ -1,4 +1,4 @@
-# AzureSDK::LinuxVMGuestPatchAutomaticByPlatformSettings
+# AzureRest::LinuxVMGuestPatchAutomaticByPlatformSettings
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxVMGuestPatchAutomaticByPlatformSettings.new(
+instance = AzureRest::LinuxVMGuestPatchAutomaticByPlatformSettings.new(
   reboot_setting: null,
   bypass_platform_safety_checks_on_user_schedule: null
 )

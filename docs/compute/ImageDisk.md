@@ -1,4 +1,4 @@
-# AzureSDK::ImageDisk
+# AzureRest::ImageDisk
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImageDisk.new(
+instance = AzureRest::ImageDisk.new(
   snapshot: null,
   managed_disk: null,
   blob_uri: null,

@@ -1,4 +1,4 @@
-# AzureSDK::MigrationSubstateDetails
+# AzureRest::MigrationSubstateDetails
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationSubstateDetails.new(
+instance = AzureRest::MigrationSubstateDetails.new(
   current_sub_state: null,
   db_details: null,
   validation_details: null

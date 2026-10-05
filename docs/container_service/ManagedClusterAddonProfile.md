@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAddonProfile
+# AzureRest::ManagedClusterAddonProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAddonProfile.new(
+instance = AzureRest::ManagedClusterAddonProfile.new(
   enabled: null,
   config: null,
   identity: null

@@ -1,4 +1,4 @@
-# AzureSDK::WeeklySchedule
+# AzureRest::WeeklySchedule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WeeklySchedule.new(
+instance = AzureRest::WeeklySchedule.new(
   interval_weeks: null,
   day_of_week: null
 )

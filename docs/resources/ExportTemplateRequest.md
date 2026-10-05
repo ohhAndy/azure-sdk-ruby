@@ -1,4 +1,4 @@
-# AzureSDK::ExportTemplateRequest
+# AzureRest::ExportTemplateRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExportTemplateRequest.new(
+instance = AzureRest::ExportTemplateRequest.new(
   resources: null,
   options: null,
   output_format: null

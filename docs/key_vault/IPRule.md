@@ -1,4 +1,4 @@
-# AzureSDK::IPRule
+# AzureRest::IPRule
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPRule.new(
+instance = AzureRest::IPRule.new(
   value: null
 )
 ```

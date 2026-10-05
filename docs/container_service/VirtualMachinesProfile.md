@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachinesProfile
+# AzureRest::VirtualMachinesProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachinesProfile.new(
+instance = AzureRest::VirtualMachinesProfile.new(
   scale: null
 )
 ```

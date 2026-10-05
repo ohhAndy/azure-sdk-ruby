@@ -1,4 +1,4 @@
-# AzureSDK::SubResourceModel
+# AzureRest::SubResourceModel
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SubResourceModel.new(
+instance = AzureRest::SubResourceModel.new(
   id: null,
   name: null,
   type: null

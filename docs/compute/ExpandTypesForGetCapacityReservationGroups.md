@@ -1,4 +1,4 @@
-# AzureSDK::ExpandTypesForGetCapacityReservationGroups
+# AzureRest::ExpandTypesForGetCapacityReservationGroups
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExpandTypesForGetCapacityReservationGroups.new()
+instance = AzureRest::ExpandTypesForGetCapacityReservationGroups.new()
 ```
 

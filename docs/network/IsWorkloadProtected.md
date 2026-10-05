@@ -1,4 +1,4 @@
-# AzureSDK::IsWorkloadProtected
+# AzureRest::IsWorkloadProtected
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IsWorkloadProtected.new()
+instance = AzureRest::IsWorkloadProtected.new()
 ```
 

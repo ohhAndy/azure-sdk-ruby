@@ -1,4 +1,4 @@
-# AzureSDK::NetworkProfile
+# AzureRest::NetworkProfile
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkProfile.new(
+instance = AzureRest::NetworkProfile.new(
   id: null,
   name: null,
   type: null,

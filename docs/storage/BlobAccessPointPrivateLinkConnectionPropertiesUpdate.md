@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointPrivateLinkConnectionPropertiesUpdate
+# AzureRest::BlobAccessPointPrivateLinkConnectionPropertiesUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointPrivateLinkConnectionPropertiesUpdate.new(
+instance = AzureRest::BlobAccessPointPrivateLinkConnectionPropertiesUpdate.new(
   tls_verification: null
 )
 ```

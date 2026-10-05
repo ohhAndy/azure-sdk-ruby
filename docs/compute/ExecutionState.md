@@ -1,4 +1,4 @@
-# AzureSDK::ExecutionState
+# AzureRest::ExecutionState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExecutionState.new()
+instance = AzureRest::ExecutionState.new()
 ```
 

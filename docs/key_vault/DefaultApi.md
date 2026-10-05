@@ -1,4 +1,4 @@
-# AzureSDK::DefaultApi
+# AzureRest::DefaultApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,23 +23,23 @@ Checks that the managed hsm name is valid and is not already in use.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
-mhsm_name = AzureSDK::CheckMhsmNameAvailabilityParameters.new({name: 'name_example'}) # CheckMhsmNameAvailabilityParameters | The request body
+mhsm_name = AzureRest::CheckMhsmNameAvailabilityParameters.new({name: 'name_example'}) # CheckMhsmNameAvailabilityParameters | The request body
 
 begin
   
   result = api_instance.managed_hsms_check_mhsm_name_availability(api_version, subscription_id, mhsm_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->managed_hsms_check_mhsm_name_availability: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CheckMhsmNameAvailabilityResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->managed_hsms_check_mhsm_name_availability_with_http_info: #{e}"
 end
 ```
@@ -96,14 +96,14 @@ The List operation gets information about the deleted managed HSMs associated wi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -111,7 +111,7 @@ begin
   
   result = api_instance.managed_hsms_list_deleted(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->managed_hsms_list_deleted: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeletedManagedHsmListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->managed_hsms_list_deleted_with_http_info: #{e}"
 end
 ```
@@ -167,23 +167,23 @@ Checks that the vault name is valid and is not already in use.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
-vault_name = AzureSDK::VaultCheckNameAvailabilityParameters.new({name: 'name_example', type: 'Microsoft.KeyVault/vaults'}) # VaultCheckNameAvailabilityParameters | The name of the vault.
+vault_name = AzureRest::VaultCheckNameAvailabilityParameters.new({name: 'name_example', type: 'Microsoft.KeyVault/vaults'}) # VaultCheckNameAvailabilityParameters | The name of the vault.
 
 begin
   
   result = api_instance.vaults_check_name_availability(api_version, subscription_id, vault_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_check_name_availability: #{e}"
 end
 ```
@@ -201,7 +201,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CheckNameAvailabilityResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_check_name_availability_with_http_info: #{e}"
 end
 ```
@@ -240,14 +240,14 @@ The List operation gets information about the vaults associated with the subscri
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 filter = 'resourceType eq 'Microsoft.KeyVault/vaults'' # String | The filter to apply on the operation.
 api_version = '2015-11-01' # String | Azure Resource Manager Api Version.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
@@ -259,7 +259,7 @@ begin
   
   result = api_instance.vaults_list(filter, api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_list: #{e}"
 end
 ```
@@ -277,7 +277,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_list_with_http_info: #{e}"
 end
 ```
@@ -317,14 +317,14 @@ Gets information about the deleted vaults in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -332,7 +332,7 @@ begin
   
   result = api_instance.vaults_list_deleted(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_list_deleted: #{e}"
 end
 ```
@@ -350,7 +350,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeletedVaultListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->vaults_list_deleted_with_http_info: #{e}"
 end
 ```

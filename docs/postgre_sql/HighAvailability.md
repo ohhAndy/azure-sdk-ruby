@@ -1,4 +1,4 @@
-# AzureSDK::HighAvailability
+# AzureRest::HighAvailability
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HighAvailability.new(
+instance = AzureRest::HighAvailability.new(
   mode: null,
   state: null,
   standby_availability_zone: null

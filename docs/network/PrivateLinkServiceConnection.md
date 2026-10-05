@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServiceConnection
+# AzureRest::PrivateLinkServiceConnection
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkServiceConnection.new(
+instance = AzureRest::PrivateLinkServiceConnection.new(
   id: null,
   properties: null,
   name: null,

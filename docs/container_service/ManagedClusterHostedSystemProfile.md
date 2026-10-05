@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterHostedSystemProfile
+# AzureRest::ManagedClusterHostedSystemProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterHostedSystemProfile.new(
+instance = AzureRest::ManagedClusterHostedSystemProfile.new(
   enabled: null,
   system_node_subnet_id: null,
   node_subnet_id: null

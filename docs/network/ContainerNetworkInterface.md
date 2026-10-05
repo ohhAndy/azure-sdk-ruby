@@ -1,4 +1,4 @@
-# AzureSDK::ContainerNetworkInterface
+# AzureRest::ContainerNetworkInterface
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerNetworkInterface.new(
+instance = AzureRest::ContainerNetworkInterface.new(
   id: null,
   properties: null,
   name: null,

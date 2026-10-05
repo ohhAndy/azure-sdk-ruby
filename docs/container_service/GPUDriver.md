@@ -1,4 +1,4 @@
-# AzureSDK::GPUDriver
+# AzureRest::GPUDriver
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GPUDriver.new()
+instance = AzureRest::GPUDriver.new()
 ```
 

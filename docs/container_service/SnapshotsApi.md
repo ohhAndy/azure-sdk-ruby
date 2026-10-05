@@ -1,4 +1,4 @@
-# AzureSDK::SnapshotsApi
+# AzureRest::SnapshotsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates a snapshot.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::Snapshot.new({location: 'location_example'}) # Snapshot | The snapshot to create or update.
+parameters = AzureRest::Snapshot.new({location: 'location_example'}) # Snapshot | The snapshot to create or update.
 
 begin
   
   result = api_instance.snapshots_create_or_update(api_version, subscription_id, resource_group_name, resource_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Snapshot>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes a snapshot.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ resource_name = 'resource_name_example' # String | The name of the managed clust
 begin
   
   api_instance.snapshots_delete(api_version, subscription_id, resource_group_name, resource_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets a snapshot.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -192,7 +192,7 @@ begin
   
   result = api_instance.snapshots_get(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_get: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Snapshot>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_get_with_http_info: #{e}"
 end
 ```
@@ -250,14 +250,14 @@ Gets a list of snapshots in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -265,7 +265,7 @@ begin
   
   result = api_instance.snapshots_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_list: #{e}"
 end
 ```
@@ -283,7 +283,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SnapshotListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_list_with_http_info: #{e}"
 end
 ```
@@ -321,14 +321,14 @@ Lists snapshots in the specified subscription and resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -337,7 +337,7 @@ begin
   
   result = api_instance.snapshots_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_list_by_resource_group: #{e}"
 end
 ```
@@ -355,7 +355,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SnapshotListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -394,25 +394,25 @@ Updates tags on a snapshot.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SnapshotsApi.new
+api_instance = AzureRest::SnapshotsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to the Update snapshot Tags operation.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to the Update snapshot Tags operation.
 
 begin
   
   result = api_instance.snapshots_update_tags(api_version, subscription_id, resource_group_name, resource_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_update_tags: #{e}"
 end
 ```
@@ -430,7 +430,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Snapshot>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SnapshotsApi->snapshots_update_tags_with_http_info: #{e}"
 end
 ```

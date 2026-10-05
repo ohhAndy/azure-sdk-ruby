@@ -1,4 +1,4 @@
-# AzureSDK::SecurityRuleDirection
+# AzureRest::SecurityRuleDirection
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityRuleDirection.new()
+instance = AzureRest::SecurityRuleDirection.new()
 ```
 

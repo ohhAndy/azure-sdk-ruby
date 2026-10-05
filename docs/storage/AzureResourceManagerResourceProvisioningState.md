@@ -1,4 +1,4 @@
-# AzureSDK::AzureResourceManagerResourceProvisioningState
+# AzureRest::AzureResourceManagerResourceProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureResourceManagerResourceProvisioningState.new()
+instance = AzureRest::AzureResourceManagerResourceProvisioningState.new()
 ```
 

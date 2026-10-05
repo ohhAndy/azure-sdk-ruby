@@ -1,4 +1,4 @@
-# AzureSDK::KeyCreationTime
+# AzureRest::KeyCreationTime
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyCreationTime.new(
+instance = AzureRest::KeyCreationTime.new(
   key1: null,
   key2: null
 )

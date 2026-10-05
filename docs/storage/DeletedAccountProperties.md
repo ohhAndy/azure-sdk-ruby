@@ -1,4 +1,4 @@
-# AzureSDK::DeletedAccountProperties
+# AzureRest::DeletedAccountProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletedAccountProperties.new(
+instance = AzureRest::DeletedAccountProperties.new(
   storage_account_resource_id: null,
   location: null,
   restore_reference: null,

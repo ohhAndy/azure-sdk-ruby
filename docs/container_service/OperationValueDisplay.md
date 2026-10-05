@@ -1,4 +1,4 @@
-# AzureSDK::OperationValueDisplay
+# AzureRest::OperationValueDisplay
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OperationValueDisplay.new(
+instance = AzureRest::OperationValueDisplay.new(
   operation: null,
   resource: null,
   description: null,

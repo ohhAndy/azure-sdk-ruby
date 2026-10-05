@@ -1,4 +1,4 @@
-# AzureSDK::IpAllocationPropertiesFormat
+# AzureRest::IpAllocationPropertiesFormat
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpAllocationPropertiesFormat.new(
+instance = AzureRest::IpAllocationPropertiesFormat.new(
   subnet: null,
   virtual_network: null,
   type: null,

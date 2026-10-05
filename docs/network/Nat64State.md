@@ -1,4 +1,4 @@
-# AzureSDK::Nat64State
+# AzureRest::Nat64State
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Nat64State.new()
+instance = AzureRest::Nat64State.new()
 ```
 

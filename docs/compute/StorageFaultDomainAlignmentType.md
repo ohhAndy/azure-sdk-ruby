@@ -1,4 +1,4 @@
-# AzureSDK::StorageFaultDomainAlignmentType
+# AzureRest::StorageFaultDomainAlignmentType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageFaultDomainAlignmentType.new()
+instance = AzureRest::StorageFaultDomainAlignmentType.new()
 ```
 

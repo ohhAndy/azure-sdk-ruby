@@ -1,4 +1,4 @@
-# AzureSDK::IpamPoolProperties
+# AzureRest::IpamPoolProperties
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpamPoolProperties.new(
+instance = AzureRest::IpamPoolProperties.new(
   description: null,
   display_name: null,
   ip_address_type: null,

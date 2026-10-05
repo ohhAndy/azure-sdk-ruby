@@ -1,4 +1,4 @@
-# AzureSDK::ResiliencyProfile
+# AzureRest::ResiliencyProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResiliencyProfile.new(
+instance = AzureRest::ResiliencyProfile.new(
   zone_movement: null
 )
 ```

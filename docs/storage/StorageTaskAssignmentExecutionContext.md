@@ -1,4 +1,4 @@
-# AzureSDK::StorageTaskAssignmentExecutionContext
+# AzureRest::StorageTaskAssignmentExecutionContext
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageTaskAssignmentExecutionContext.new(
+instance = AzureRest::StorageTaskAssignmentExecutionContext.new(
   target: null,
   trigger: null
 )

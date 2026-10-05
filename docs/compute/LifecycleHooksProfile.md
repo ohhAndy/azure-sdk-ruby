@@ -1,4 +1,4 @@
-# AzureSDK::LifecycleHooksProfile
+# AzureRest::LifecycleHooksProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LifecycleHooksProfile.new(
+instance = AzureRest::LifecycleHooksProfile.new(
   lifecycle_hooks: null
 )
 ```

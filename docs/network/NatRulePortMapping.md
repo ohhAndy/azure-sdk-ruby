@@ -1,4 +1,4 @@
-# AzureSDK::NatRulePortMapping
+# AzureRest::NatRulePortMapping
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NatRulePortMapping.new(
+instance = AzureRest::NatRulePortMapping.new(
   inbound_nat_rule_name: null,
   frontend_port: null,
   backend_port: null

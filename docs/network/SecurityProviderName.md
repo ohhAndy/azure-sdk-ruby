@@ -1,4 +1,4 @@
-# AzureSDK::SecurityProviderName
+# AzureRest::SecurityProviderName
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityProviderName.new()
+instance = AzureRest::SecurityProviderName.new()
 ```
 

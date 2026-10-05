@@ -1,4 +1,4 @@
-# AzureSDK::FeatureProperty
+# AzureRest::FeatureProperty
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FeatureProperty.new(
+instance = AzureRest::FeatureProperty.new(
   feature_name: null,
   feature_value: null
 )

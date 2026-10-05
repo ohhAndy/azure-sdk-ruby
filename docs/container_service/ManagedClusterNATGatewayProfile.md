@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterNATGatewayProfile
+# AzureRest::ManagedClusterNATGatewayProfile
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterNATGatewayProfile.new(
+instance = AzureRest::ManagedClusterNATGatewayProfile.new(
   sku: null,
   managed_outbound_ip_profile: null,
   effective_outbound_ips: null,

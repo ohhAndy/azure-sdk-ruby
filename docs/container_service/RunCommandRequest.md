@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandRequest
+# AzureRest::RunCommandRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandRequest.new(
+instance = AzureRest::RunCommandRequest.new(
   command: null,
   context: null,
   cluster_token: null

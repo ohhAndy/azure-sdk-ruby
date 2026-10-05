@@ -1,4 +1,4 @@
-# AzureSDK::ProviderRegistrationRequest
+# AzureRest::ProviderRegistrationRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderRegistrationRequest.new(
+instance = AzureRest::ProviderRegistrationRequest.new(
   third_party_provider_consent: null
 )
 ```

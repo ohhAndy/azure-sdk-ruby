@@ -1,4 +1,4 @@
-# AzureSDK::SchedulerConfigMode
+# AzureRest::SchedulerConfigMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SchedulerConfigMode.new()
+instance = AzureRest::SchedulerConfigMode.new()
 ```
 

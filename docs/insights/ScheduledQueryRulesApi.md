@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledQueryRulesApi
+# AzureRest::ScheduledQueryRulesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates a scheduled query rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 rule_name = 'rule_name_example' # String | The name of the rule.
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::ScheduledQueryRuleResource.new({location: 'location_example', properties: AzureSDK::ScheduledQueryRuleProperties.new}) # ScheduledQueryRuleResource | The parameters of the rule to create or update.
+parameters = AzureRest::ScheduledQueryRuleResource.new({location: 'location_example', properties: AzureRest::ScheduledQueryRuleProperties.new}) # ScheduledQueryRuleResource | The parameters of the rule to create or update.
 
 begin
   
   result = api_instance.scheduled_query_rules_create_or_update(subscription_id, resource_group_name, rule_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ScheduledQueryRuleResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes a scheduled query rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 rule_name = 'rule_name_example' # String | The name of the rule.
@@ -117,7 +117,7 @@ api_version = 'api_version_example' # String | The API version to use for this o
 begin
   
   api_instance.scheduled_query_rules_delete(subscription_id, resource_group_name, rule_name, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Retrieve an scheduled query rule definition.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 rule_name = 'rule_name_example' # String | The name of the rule.
@@ -192,7 +192,7 @@ begin
   
   result = api_instance.scheduled_query_rules_get(subscription_id, resource_group_name, rule_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_get: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ScheduledQueryRuleResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_get_with_http_info: #{e}"
 end
 ```
@@ -250,14 +250,14 @@ Retrieve scheduled query rule definitions in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 api_version = 'api_version_example' # String | The API version to use for this operation.
@@ -266,7 +266,7 @@ begin
   
   result = api_instance.scheduled_query_rules_list_by_resource_group(subscription_id, resource_group_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_list_by_resource_group: #{e}"
 end
 ```
@@ -284,7 +284,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ScheduledQueryRuleResourceCollection>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -323,14 +323,14 @@ Retrieve a scheduled query rule definitions in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
@@ -338,7 +338,7 @@ begin
   
   result = api_instance.scheduled_query_rules_list_by_subscription(subscription_id, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_list_by_subscription: #{e}"
 end
 ```
@@ -356,7 +356,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ScheduledQueryRuleResourceCollection>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -394,25 +394,25 @@ Update a scheduled query rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ScheduledQueryRulesApi.new
+api_instance = AzureRest::ScheduledQueryRulesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 rule_name = 'rule_name_example' # String | The name of the rule.
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::ScheduledQueryRuleResourcePatch.new # ScheduledQueryRuleResourcePatch | The parameters of the rule to update.
+parameters = AzureRest::ScheduledQueryRuleResourcePatch.new # ScheduledQueryRuleResourcePatch | The parameters of the rule to update.
 
 begin
   
   result = api_instance.scheduled_query_rules_update(subscription_id, resource_group_name, rule_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_update: #{e}"
 end
 ```
@@ -430,7 +430,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ScheduledQueryRuleResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ScheduledQueryRulesApi->scheduled_query_rules_update_with_http_info: #{e}"
 end
 ```

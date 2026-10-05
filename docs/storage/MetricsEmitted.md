@@ -1,4 +1,4 @@
-# AzureSDK::MetricsEmitted
+# AzureRest::MetricsEmitted
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MetricsEmitted.new()
+instance = AzureRest::MetricsEmitted.new()
 ```
 

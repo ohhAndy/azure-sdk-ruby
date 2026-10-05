@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationGatewayBackendAddressPool
+# AzureRest::ApplicationGatewayBackendAddressPool
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationGatewayBackendAddressPool.new(
+instance = AzureRest::ApplicationGatewayBackendAddressPool.new(
   id: null,
   properties: null,
   name: null,

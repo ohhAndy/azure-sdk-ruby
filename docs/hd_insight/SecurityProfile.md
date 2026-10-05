@@ -1,4 +1,4 @@
-# AzureSDK::SecurityProfile
+# AzureRest::SecurityProfile
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityProfile.new(
+instance = AzureRest::SecurityProfile.new(
   directory_type: null,
   domain: null,
   organizational_unit_dn: null,

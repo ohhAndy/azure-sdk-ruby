@@ -1,4 +1,4 @@
-# AzureSDK::DdosFrontendIpConfigurationSettings
+# AzureRest::DdosFrontendIpConfigurationSettings
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosFrontendIpConfigurationSettings.new(
+instance = AzureRest::DdosFrontendIpConfigurationSettings.new(
   ddos_custom_policy: null
 )
 ```

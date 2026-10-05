@@ -1,4 +1,4 @@
-# AzureSDK::RateCardApi
+# AzureRest::RateCardApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,14 +19,14 @@ Enables you to query for the resource/meter metadata and related prices used in 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RateCardApi.new
+api_instance = AzureRest::RateCardApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 filter = 'filter_example' # String | The filter to apply on the operation. It ONLY supports the 'eq' and 'and' logical operators at this time. All the 4 query parameters 'OfferDurableId',  'Currency', 'Locale', 'Region' are required to be a part of the $filter.
@@ -35,7 +35,7 @@ begin
   
   result = api_instance.rate_card_get(api_version, subscription_id, filter)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RateCardApi->rate_card_get: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceRateCardInfo>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RateCardApi->rate_card_get_with_http_info: #{e}"
 end
 ```

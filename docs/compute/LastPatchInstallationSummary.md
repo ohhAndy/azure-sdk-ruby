@@ -1,4 +1,4 @@
-# AzureSDK::LastPatchInstallationSummary
+# AzureRest::LastPatchInstallationSummary
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LastPatchInstallationSummary.new(
+instance = AzureRest::LastPatchInstallationSummary.new(
   status: null,
   installation_activity_id: null,
   maintenance_window_exceeded: null,

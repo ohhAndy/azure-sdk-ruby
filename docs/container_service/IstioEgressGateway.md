@@ -1,4 +1,4 @@
-# AzureSDK::IstioEgressGateway
+# AzureRest::IstioEgressGateway
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IstioEgressGateway.new(
+instance = AzureRest::IstioEgressGateway.new(
   enabled: null,
   name: null,
   namespace: null,

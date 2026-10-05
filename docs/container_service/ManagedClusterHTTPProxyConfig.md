@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterHTTPProxyConfig
+# AzureRest::ManagedClusterHTTPProxyConfig
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterHTTPProxyConfig.new(
+instance = AzureRest::ManagedClusterHTTPProxyConfig.new(
   http_proxy: null,
   https_proxy: null,
   no_proxy: null,

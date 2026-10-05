@@ -1,4 +1,4 @@
-# AzureSDK::GatewayAPIIstioEnabled
+# AzureRest::GatewayAPIIstioEnabled
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GatewayAPIIstioEnabled.new()
+instance = AzureRest::GatewayAPIIstioEnabled.new()
 ```
 

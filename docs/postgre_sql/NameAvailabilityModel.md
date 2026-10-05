@@ -1,4 +1,4 @@
-# AzureSDK::NameAvailabilityModel
+# AzureRest::NameAvailabilityModel
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NameAvailabilityModel.new(
+instance = AzureRest::NameAvailabilityModel.new(
   name_available: null,
   reason: null,
   message: null,

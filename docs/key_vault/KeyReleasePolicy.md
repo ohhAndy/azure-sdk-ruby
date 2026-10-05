@@ -1,4 +1,4 @@
-# AzureSDK::KeyReleasePolicy
+# AzureRest::KeyReleasePolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyReleasePolicy.new(
+instance = AzureRest::KeyReleasePolicy.new(
   content_type: null,
   data: null
 )

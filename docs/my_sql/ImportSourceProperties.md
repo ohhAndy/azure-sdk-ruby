@@ -1,4 +1,4 @@
-# AzureSDK::ImportSourceProperties
+# AzureRest::ImportSourceProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImportSourceProperties.new(
+instance = AzureRest::ImportSourceProperties.new(
   storage_type: null,
   storage_url: null,
   sas_token: null,

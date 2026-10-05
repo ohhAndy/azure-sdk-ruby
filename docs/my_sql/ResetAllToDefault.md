@@ -1,4 +1,4 @@
-# AzureSDK::ResetAllToDefault
+# AzureRest::ResetAllToDefault
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResetAllToDefault.new()
+instance = AzureRest::ResetAllToDefault.new()
 ```
 

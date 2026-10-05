@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterLoadBalancerProfile
+# AzureRest::ManagedClusterLoadBalancerProfile
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterLoadBalancerProfile.new(
+instance = AzureRest::ManagedClusterLoadBalancerProfile.new(
   managed_outbound_ips: null,
   outbound_ip_prefixes: null,
   outbound_ips: null,

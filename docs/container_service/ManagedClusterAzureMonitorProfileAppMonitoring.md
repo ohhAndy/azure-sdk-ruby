@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAzureMonitorProfileAppMonitoring
+# AzureRest::ManagedClusterAzureMonitorProfileAppMonitoring
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAzureMonitorProfileAppMonitoring.new(
+instance = AzureRest::ManagedClusterAzureMonitorProfileAppMonitoring.new(
   auto_instrumentation: null,
   open_telemetry_metrics: null,
   open_telemetry_logs_and_traces: null

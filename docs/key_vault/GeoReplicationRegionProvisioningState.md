@@ -1,4 +1,4 @@
-# AzureSDK::GeoReplicationRegionProvisioningState
+# AzureRest::GeoReplicationRegionProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GeoReplicationRegionProvisioningState.new()
+instance = AzureRest::GeoReplicationRegionProvisioningState.new()
 ```
 

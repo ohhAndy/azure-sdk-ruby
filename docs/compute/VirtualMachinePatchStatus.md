@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachinePatchStatus
+# AzureRest::VirtualMachinePatchStatus
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachinePatchStatus.new(
+instance = AzureRest::VirtualMachinePatchStatus.new(
   available_patch_summary: null,
   last_patch_installation_summary: null,
   configuration_statuses: null

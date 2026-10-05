@@ -1,4 +1,4 @@
-# AzureSDK::ImagesApi
+# AzureRest::ImagesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Create or update an image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 image_name = 'image_name_example' # String | The name of the image.
-parameters = AzureSDK::Image.new({location: 'location_example'}) # Image | Parameters supplied to the Create Image operation.
+parameters = AzureRest::Image.new({location: 'location_example'}) # Image | Parameters supplied to the Create Image operation.
 
 begin
   
   result = api_instance.images_create_or_update(api_version, subscription_id, resource_group_name, image_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Image>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes an Image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ image_name = 'image_name_example' # String | The name of the image.
 begin
   
   api_instance.images_delete(api_version, subscription_id, resource_group_name, image_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets an image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.images_get(api_version, subscription_id, resource_group_name, image_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Image>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets the list of Images in the subscription. Use nextLink property in the respon
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -269,7 +269,7 @@ begin
   
   result = api_instance.images_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_list: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ImageListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_list_with_http_info: #{e}"
 end
 ```
@@ -325,14 +325,14 @@ Gets the list of images under a resource group. Use nextLink property in the res
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -341,7 +341,7 @@ begin
   
   result = api_instance.images_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_list_by_resource_group: #{e}"
 end
 ```
@@ -359,7 +359,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ImageListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Update an image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ImagesApi.new
+api_instance = AzureRest::ImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 image_name = 'image_name_example' # String | The name of the image.
-parameters = AzureSDK::ImageUpdate.new # ImageUpdate | Parameters supplied to the Update Image operation.
+parameters = AzureRest::ImageUpdate.new # ImageUpdate | Parameters supplied to the Update Image operation.
 
 begin
   
   result = api_instance.images_update(api_version, subscription_id, resource_group_name, image_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_update: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Image>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ImagesApi->images_update_with_http_info: #{e}"
 end
 ```

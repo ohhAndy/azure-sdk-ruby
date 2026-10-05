@@ -1,4 +1,4 @@
-# AzureSDK::RoleAssignmentListResult
+# AzureRest::RoleAssignmentListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoleAssignmentListResult.new(
+instance = AzureRest::RoleAssignmentListResult.new(
   value: null,
   next_link: null
 )

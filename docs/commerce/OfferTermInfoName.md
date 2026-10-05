@@ -1,4 +1,4 @@
-# AzureSDK::OfferTermInfoName
+# AzureRest::OfferTermInfoName
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OfferTermInfoName.new()
+instance = AzureRest::OfferTermInfoName.new()
 ```
 

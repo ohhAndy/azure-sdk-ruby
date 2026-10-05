@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineDiagnosticRunCommandsApi
+# AzureRest::VirtualMachineDiagnosticRunCommandsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,26 +23,26 @@ The operation to create or update the diagnostic run command.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineDiagnosticRunCommandsApi.new
+api_instance = AzureRest::VirtualMachineDiagnosticRunCommandsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the VirtualMachine
 run_command_name = 'run_command_name_example' # String | The name of the VirtualMachineDiagnosticRunCommand
-run_command = AzureSDK::VirtualMachineDiagnosticRunCommand.new({location: 'location_example'}) # VirtualMachineDiagnosticRunCommand | Parameters supplied to the Create Virtual Machine Diagnostic RunCommand operation.
+run_command = AzureRest::VirtualMachineDiagnosticRunCommand.new({location: 'location_example'}) # VirtualMachineDiagnosticRunCommand | Parameters supplied to the Create Virtual Machine Diagnostic RunCommand operation.
 
 begin
   
   result = api_instance.virtual_machine_diagnostic_run_commands_create_or_update(api_version, subscription_id, resource_group_name, vm_name, run_command_name, run_command)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineDiagnosticRunCommand>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ The operation to delete the diagnostic run command.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineDiagnosticRunCommandsApi.new
+api_instance = AzureRest::VirtualMachineDiagnosticRunCommandsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -119,7 +119,7 @@ run_command_name = 'run_command_name_example' # String | The name of the Virtual
 begin
   
   api_instance.virtual_machine_diagnostic_run_commands_delete(api_version, subscription_id, resource_group_name, vm_name, run_command_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_delete: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_delete_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ The operation to get all diagnostic run commands of a Virtual Machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineDiagnosticRunCommandsApi.new
+api_instance = AzureRest::VirtualMachineDiagnosticRunCommandsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ begin
   
   result = api_instance.virtual_machine_diagnostic_run_commands_diagnostic_list_by_virtual_machine(api_version, subscription_id, resource_group_name, vm_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_diagnostic_list_by_virtual_machine: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineDiagnosticRunCommandsListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_diagnostic_list_by_virtual_machine_with_http_info: #{e}"
 end
 ```
@@ -257,14 +257,14 @@ The operation to get the diagnostic run command.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineDiagnosticRunCommandsApi.new
+api_instance = AzureRest::VirtualMachineDiagnosticRunCommandsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -278,7 +278,7 @@ begin
   
   result = api_instance.virtual_machine_diagnostic_run_commands_get_by_virtual_machine(api_version, subscription_id, resource_group_name, vm_name, run_command_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_get_by_virtual_machine: #{e}"
 end
 ```
@@ -296,7 +296,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineDiagnosticRunCommand>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_get_by_virtual_machine_with_http_info: #{e}"
 end
 ```
@@ -338,26 +338,26 @@ The operation to update the diagnostic run command.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineDiagnosticRunCommandsApi.new
+api_instance = AzureRest::VirtualMachineDiagnosticRunCommandsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the VirtualMachine
 run_command_name = 'run_command_name_example' # String | The name of the VirtualMachineDiagnosticRunCommand
-run_command = AzureSDK::VirtualMachineRunCommandUpdate.new # VirtualMachineRunCommandUpdate | Parameters supplied to the Update Virtual Machine Diagnostic RunCommand operation.
+run_command = AzureRest::VirtualMachineRunCommandUpdate.new # VirtualMachineRunCommandUpdate | Parameters supplied to the Update Virtual Machine Diagnostic RunCommand operation.
 
 begin
   
   result = api_instance.virtual_machine_diagnostic_run_commands_update(api_version, subscription_id, resource_group_name, vm_name, run_command_name, run_command)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_update: #{e}"
 end
 ```
@@ -375,7 +375,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineDiagnosticRunCommand>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineDiagnosticRunCommandsApi->virtual_machine_diagnostic_run_commands_update_with_http_info: #{e}"
 end
 ```

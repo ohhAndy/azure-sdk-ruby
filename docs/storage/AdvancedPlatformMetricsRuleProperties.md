@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedPlatformMetricsRuleProperties
+# AzureRest::AdvancedPlatformMetricsRuleProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedPlatformMetricsRuleProperties.new(
+instance = AzureRest::AdvancedPlatformMetricsRuleProperties.new(
   rule_type: null,
   enabled: null,
   last_modified_time: null,

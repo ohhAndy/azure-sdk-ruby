@@ -1,4 +1,4 @@
-# AzureSDK::PoolAssociation
+# AzureRest::PoolAssociation
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PoolAssociation.new(
+instance = AzureRest::PoolAssociation.new(
   resource_id: null,
   pool_id: null,
   description: null,

@@ -1,4 +1,4 @@
-# AzureSDK::Key
+# AzureRest::Key
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Key.new(
+instance = AzureRest::Key.new(
   id: null,
   name: null,
   type: null,

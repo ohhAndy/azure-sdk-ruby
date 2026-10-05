@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterCostAnalysis
+# AzureRest::ManagedClusterCostAnalysis
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterCostAnalysis.new(
+instance = AzureRest::ManagedClusterCostAnalysis.new(
   enabled: null
 )
 ```

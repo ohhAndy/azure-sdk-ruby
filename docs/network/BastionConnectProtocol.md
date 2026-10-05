@@ -1,4 +1,4 @@
-# AzureSDK::BastionConnectProtocol
+# AzureRest::BastionConnectProtocol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionConnectProtocol.new()
+instance = AzureRest::BastionConnectProtocol.new()
 ```
 

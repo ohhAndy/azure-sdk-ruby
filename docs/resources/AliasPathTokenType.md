@@ -1,4 +1,4 @@
-# AzureSDK::AliasPathTokenType
+# AzureRest::AliasPathTokenType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AliasPathTokenType.new()
+instance = AzureRest::AliasPathTokenType.new()
 ```
 

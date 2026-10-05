@@ -1,4 +1,4 @@
-# AzureSDK::RouteTable2
+# AzureRest::RouteTable2
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RouteTable2.new(
+instance = AzureRest::RouteTable2.new(
   id: null,
   name: null,
   type: null,

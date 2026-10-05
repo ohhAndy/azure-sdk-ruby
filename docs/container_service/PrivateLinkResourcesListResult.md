@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkResourcesListResult
+# AzureRest::PrivateLinkResourcesListResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkResourcesListResult.new(
+instance = AzureRest::PrivateLinkResourcesListResult.new(
   value: null
 )
 ```

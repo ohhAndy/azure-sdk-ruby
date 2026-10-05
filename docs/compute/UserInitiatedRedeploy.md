@@ -1,4 +1,4 @@
-# AzureSDK::UserInitiatedRedeploy
+# AzureRest::UserInitiatedRedeploy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UserInitiatedRedeploy.new(
+instance = AzureRest::UserInitiatedRedeploy.new(
   automatically_approve: null
 )
 ```

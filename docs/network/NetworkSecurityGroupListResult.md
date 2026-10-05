@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityGroupListResult
+# AzureRest::NetworkSecurityGroupListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkSecurityGroupListResult.new(
+instance = AzureRest::NetworkSecurityGroupListResult.new(
   value: null,
   next_link: null
 )

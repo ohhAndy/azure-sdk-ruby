@@ -1,4 +1,4 @@
-# AzureSDK::MigrationProperties
+# AzureRest::MigrationProperties
 
 ## Properties
 
@@ -33,9 +33,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationProperties.new(
+instance = AzureRest::MigrationProperties.new(
   migration_id: null,
   current_status: null,
   migration_instance_resource_id: null,

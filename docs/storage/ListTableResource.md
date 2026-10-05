@@ -1,4 +1,4 @@
-# AzureSDK::ListTableResource
+# AzureRest::ListTableResource
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListTableResource.new(
+instance = AzureRest::ListTableResource.new(
   value: null,
   next_link: null
 )

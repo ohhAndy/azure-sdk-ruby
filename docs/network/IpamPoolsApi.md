@@ -1,4 +1,4 @@
-# AzureSDK::IpamPoolsApi
+# AzureRest::IpamPoolsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -25,20 +25,20 @@ Creates/Updates the Pool resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_manager_name = 'network_manager_name_example' # String | The name of the network manager.
 pool_name = 'pool_name_example' # String | Pool resource name.
-body = AzureSDK::IpamPool.new({location: 'location_example', properties: AzureSDK::IpamPoolProperties.new({address_prefixes: ['address_prefixes_example']})}) # IpamPool | Pool resource object to create/update.
+body = AzureRest::IpamPool.new({location: 'location_example', properties: AzureRest::IpamPoolProperties.new({address_prefixes: ['address_prefixes_example']})}) # IpamPool | Pool resource object to create/update.
 opts = {
   if_match: 'if_match_example' # String | The entity state (ETag) version of the pool to update. This value can be omitted or set to \"*\" to apply the operation unconditionally.
 }
@@ -47,7 +47,7 @@ begin
   # Creates/Updates the Pool resource.
   result = api_instance.ipam_pools_create(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, body, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_create: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpamPool>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_create_with_http_info: #{e}"
 end
 ```
@@ -108,14 +108,14 @@ Delete the Pool resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -128,7 +128,7 @@ opts = {
 begin
   # Delete the Pool resource.
   api_instance.ipam_pools_delete(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_delete: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_delete_with_http_info: #{e}"
 end
 ```
@@ -188,14 +188,14 @@ Gets the specific Pool resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -206,7 +206,7 @@ begin
   # Gets the specific Pool resource.
   result = api_instance.ipam_pools_get(api_version, subscription_id, resource_group_name, network_manager_name, pool_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_get: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpamPool>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_get_with_http_info: #{e}"
 end
 ```
@@ -265,14 +265,14 @@ Get the Pool Usage.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -283,7 +283,7 @@ begin
   # Get the Pool Usage.
   result = api_instance.ipam_pools_get_pool_usage(api_version, subscription_id, resource_group_name, network_manager_name, pool_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_get_pool_usage: #{e}"
 end
 ```
@@ -301,7 +301,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PoolUsage>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_get_pool_usage_with_http_info: #{e}"
 end
 ```
@@ -342,14 +342,14 @@ Gets list of Pool resources at Network Manager level.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -366,7 +366,7 @@ begin
   # Gets list of Pool resources at Network Manager level.
   result = api_instance.ipam_pools_list(api_version, subscription_id, resource_group_name, network_manager_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_list: #{e}"
 end
 ```
@@ -384,7 +384,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpamPoolList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_list_with_http_info: #{e}"
 end
 ```
@@ -429,14 +429,14 @@ List Associated Resource in the Pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -447,7 +447,7 @@ begin
   # List Associated Resource in the Pool.
   result = api_instance.ipam_pools_list_associated_resources(api_version, subscription_id, resource_group_name, network_manager_name, pool_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_list_associated_resources: #{e}"
 end
 ```
@@ -465,7 +465,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PoolAssociationList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_list_associated_resources_with_http_info: #{e}"
 end
 ```
@@ -506,14 +506,14 @@ Updates the specific Pool resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpamPoolsApi.new
+api_instance = AzureRest::IpamPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -521,14 +521,14 @@ network_manager_name = 'network_manager_name_example' # String | The name of the
 pool_name = 'pool_name_example' # String | Pool resource name.
 opts = {
   if_match: 'if_match_example', # String | The entity state (ETag) version of the pool to update. This value can be omitted or set to \"*\" to apply the operation unconditionally.
-  body: AzureSDK::IpamPoolUpdate.new # IpamPoolUpdate | Pool resource object to update partially.
+  body: AzureRest::IpamPoolUpdate.new # IpamPoolUpdate | Pool resource object to update partially.
 }
 
 begin
   # Updates the specific Pool resource.
   result = api_instance.ipam_pools_update(api_version, subscription_id, resource_group_name, network_manager_name, pool_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_update: #{e}"
 end
 ```
@@ -546,7 +546,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpamPool>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpamPoolsApi->ipam_pools_update_with_http_info: #{e}"
 end
 ```

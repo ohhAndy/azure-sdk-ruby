@@ -1,4 +1,4 @@
-# AzureSDK::DiagnosticsProfile
+# AzureRest::DiagnosticsProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiagnosticsProfile.new(
+instance = AzureRest::DiagnosticsProfile.new(
   boot_diagnostics: null
 )
 ```

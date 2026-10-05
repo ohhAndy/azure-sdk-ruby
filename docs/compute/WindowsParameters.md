@@ -1,4 +1,4 @@
-# AzureSDK::WindowsParameters
+# AzureRest::WindowsParameters
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WindowsParameters.new(
+instance = AzureRest::WindowsParameters.new(
   classifications_to_include: null,
   kb_numbers_to_include: null,
   kb_numbers_to_exclude: null,

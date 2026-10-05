@@ -1,4 +1,4 @@
-# AzureSDK::ContainerServiceLinuxProfile
+# AzureRest::ContainerServiceLinuxProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerServiceLinuxProfile.new(
+instance = AzureRest::ContainerServiceLinuxProfile.new(
   admin_username: null,
   ssh: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::CheckNameAvailabilityResourceType
+# AzureRest::CheckNameAvailabilityResourceType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CheckNameAvailabilityResourceType.new()
+instance = AzureRest::CheckNameAvailabilityResourceType.new()
 ```
 

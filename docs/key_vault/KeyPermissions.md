@@ -1,4 +1,4 @@
-# AzureSDK::KeyPermissions
+# AzureRest::KeyPermissions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyPermissions.new()
+instance = AzureRest::KeyPermissions.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkProperties
+# AzureRest::NetworkProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkProperties.new(
+instance = AzureRest::NetworkProperties.new(
   resource_provider_connection: null,
   private_link: null
 )

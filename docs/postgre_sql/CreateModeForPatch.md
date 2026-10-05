@@ -1,4 +1,4 @@
-# AzureSDK::CreateModeForPatch
+# AzureRest::CreateModeForPatch
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CreateModeForPatch.new()
+instance = AzureRest::CreateModeForPatch.new()
 ```
 

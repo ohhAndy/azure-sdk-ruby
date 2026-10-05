@@ -1,4 +1,4 @@
-# AzureSDK::ResourceNavigationLinkFormat2
+# AzureRest::ResourceNavigationLinkFormat2
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceNavigationLinkFormat2.new(
+instance = AzureRest::ResourceNavigationLinkFormat2.new(
   linked_resource_type: null,
   link: null,
   provisioning_state: null

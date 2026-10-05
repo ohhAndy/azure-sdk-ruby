@@ -1,4 +1,4 @@
-# AzureSDK::QosIpRange
+# AzureRest::QosIpRange
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::QosIpRange.new(
+instance = AzureRest::QosIpRange.new(
   start_ip: null,
   end_ip: null
 )

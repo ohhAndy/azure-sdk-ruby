@@ -1,4 +1,4 @@
-# AzureSDK::AzureResourceManagerCommonTypesEncryption
+# AzureRest::AzureResourceManagerCommonTypesEncryption
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureResourceManagerCommonTypesEncryption.new(
+instance = AzureRest::AzureResourceManagerCommonTypesEncryption.new(
   infrastructure_encryption: null,
   customer_managed_key_encryption: null
 )

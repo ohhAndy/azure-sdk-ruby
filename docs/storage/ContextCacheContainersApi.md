@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheContainersApi
+# AzureRest::ContextCacheContainersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,26 +23,26 @@ Create or update a container in a Context Cache.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ContextCacheContainersApi.new
+api_instance = AzureRest::ContextCacheContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 context_cache_name = 'context_cache_name_example' # String | The name of the context cache
 context_cache_container_name = 'context_cache_container_name_example' # String | The name of the context cache container
-resource = AzureSDK::ContextCacheContainer.new({properties: AzureSDK::ContextCacheContainerProperties.new({model_name: 'model_name_example', provider: AzureSDK::AiProvider::OPEN_AI})}) # ContextCacheContainer | Resource create parameters.
+resource = AzureRest::ContextCacheContainer.new({properties: AzureRest::ContextCacheContainerProperties.new({model_name: 'model_name_example', provider: AzureRest::AiProvider::OPEN_AI})}) # ContextCacheContainer | Resource create parameters.
 
 begin
   
   result = api_instance.context_cache_containers_create_or_update(api_version, subscription_id, resource_group_name, context_cache_name, context_cache_container_name, resource)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ContextCacheContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ Delete a container from a Context Cache.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ContextCacheContainersApi.new
+api_instance = AzureRest::ContextCacheContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -119,7 +119,7 @@ context_cache_container_name = 'context_cache_container_name_example' # String |
 begin
   
   api_instance.context_cache_containers_delete(api_version, subscription_id, resource_group_name, context_cache_name, context_cache_container_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_delete: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_delete_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ Get a container in a Context Cache.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ContextCacheContainersApi.new
+api_instance = AzureRest::ContextCacheContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -196,7 +196,7 @@ begin
   
   result = api_instance.context_cache_containers_get(api_version, subscription_id, resource_group_name, context_cache_name, context_cache_container_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_get: #{e}"
 end
 ```
@@ -214,7 +214,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ContextCacheContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_get_with_http_info: #{e}"
 end
 ```
@@ -255,14 +255,14 @@ List all containers in a Context Cache.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ContextCacheContainersApi.new
+api_instance = AzureRest::ContextCacheContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -272,7 +272,7 @@ begin
   
   result = api_instance.context_cache_containers_list_by_context_cache(api_version, subscription_id, resource_group_name, context_cache_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_list_by_context_cache: #{e}"
 end
 ```
@@ -290,7 +290,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ContextCacheContainerListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_list_by_context_cache_with_http_info: #{e}"
 end
 ```
@@ -330,26 +330,26 @@ Update a container in a Context Cache.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ContextCacheContainersApi.new
+api_instance = AzureRest::ContextCacheContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 context_cache_name = 'context_cache_name_example' # String | The name of the context cache
 context_cache_container_name = 'context_cache_container_name_example' # String | The name of the context cache container
-properties = AzureSDK::ContextCacheContainerUpdate.new # ContextCacheContainerUpdate | The resource properties to be updated.
+properties = AzureRest::ContextCacheContainerUpdate.new # ContextCacheContainerUpdate | The resource properties to be updated.
 
 begin
   
   result = api_instance.context_cache_containers_update(api_version, subscription_id, resource_group_name, context_cache_name, context_cache_container_name, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_update: #{e}"
 end
 ```
@@ -367,7 +367,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ContextCacheContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ContextCacheContainersApi->context_cache_containers_update_with_http_info: #{e}"
 end
 ```

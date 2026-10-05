@@ -1,4 +1,4 @@
-# AzureSDK::ServerEditionCapability
+# AzureRest::ServerEditionCapability
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerEditionCapability.new(
+instance = AzureRest::ServerEditionCapability.new(
   status: null,
   reason: null,
   name: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ClusterPatchParameters
+# AzureRest::ClusterPatchParameters
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterPatchParameters.new(
+instance = AzureRest::ClusterPatchParameters.new(
   tags: null
 )
 ```

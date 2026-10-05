@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointSourceVMOSDisk
+# AzureRest::RestorePointSourceVMOSDisk
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointSourceVMOSDisk.new(
+instance = AzureRest::RestorePointSourceVMOSDisk.new(
   os_type: null,
   encryption_settings: null,
   name: null,

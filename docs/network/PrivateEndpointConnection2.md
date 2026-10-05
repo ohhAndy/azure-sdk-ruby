@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointConnection2
+# AzureRest::PrivateEndpointConnection2
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateEndpointConnection2.new(
+instance = AzureRest::PrivateEndpointConnection2.new(
   id: null,
   name: null,
   type: null,

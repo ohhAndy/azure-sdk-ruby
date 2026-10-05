@@ -1,4 +1,4 @@
-# AzureSDK::ConfigurationForBatchUpdateProperties
+# AzureRest::ConfigurationForBatchUpdateProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConfigurationForBatchUpdateProperties.new(
+instance = AzureRest::ConfigurationForBatchUpdateProperties.new(
   value: null,
   source: null
 )

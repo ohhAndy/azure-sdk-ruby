@@ -1,4 +1,4 @@
-# AzureSDK::ObjectReplicationPolicy
+# AzureRest::ObjectReplicationPolicy
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectReplicationPolicy.new(
+instance = AzureRest::ObjectReplicationPolicy.new(
   id: null,
   name: null,
   type: null,

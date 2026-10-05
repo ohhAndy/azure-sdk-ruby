@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmTrigger
+# AzureRest::ManagedHsmTrigger
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmTrigger.new(
+instance = AzureRest::ManagedHsmTrigger.new(
   time_after_create: null,
   time_before_expiry: null
 )

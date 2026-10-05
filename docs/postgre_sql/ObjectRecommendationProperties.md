@@ -1,4 +1,4 @@
-# AzureSDK::ObjectRecommendationProperties
+# AzureRest::ObjectRecommendationProperties
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectRecommendationProperties.new(
+instance = AzureRest::ObjectRecommendationProperties.new(
   initial_recommended_time: null,
   last_recommended_time: null,
   times_recommended: null,

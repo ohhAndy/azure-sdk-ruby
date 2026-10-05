@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionImagesApi
+# AzureRest::VirtualMachineExtensionImagesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,14 +21,14 @@ Gets a virtual machine extension image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionImagesApi.new
+api_instance = AzureRest::VirtualMachineExtensionImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -40,7 +40,7 @@ begin
   
   result = api_instance.virtual_machine_extension_images_get(api_version, subscription_id, location, publisher_name, type, version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_get: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineExtensionImage>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_get_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Gets a list of virtual machine extension image types.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionImagesApi.new
+api_instance = AzureRest::VirtualMachineExtensionImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -117,7 +117,7 @@ begin
   
   result = api_instance.virtual_machine_extension_images_list_types(api_version, subscription_id, location, publisher_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_list_types: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineExtensionImage>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_list_types_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets a list of virtual machine extension image versions.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionImagesApi.new
+api_instance = AzureRest::VirtualMachineExtensionImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -199,7 +199,7 @@ begin
   
   result = api_instance.virtual_machine_extension_images_list_versions(api_version, subscription_id, location, publisher_name, type, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_list_versions: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineExtensionImage>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionImagesApi->virtual_machine_extension_images_list_versions_with_http_info: #{e}"
 end
 ```

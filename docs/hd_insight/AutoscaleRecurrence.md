@@ -1,4 +1,4 @@
-# AzureSDK::AutoscaleRecurrence
+# AzureRest::AutoscaleRecurrence
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutoscaleRecurrence.new(
+instance = AzureRest::AutoscaleRecurrence.new(
   time_zone: null,
   schedule: null
 )

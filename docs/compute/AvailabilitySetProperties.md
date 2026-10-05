@@ -1,4 +1,4 @@
-# AzureSDK::AvailabilitySetProperties
+# AzureRest::AvailabilitySetProperties
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailabilitySetProperties.new(
+instance = AzureRest::AvailabilitySetProperties.new(
   platform_update_domain_count: null,
   platform_fault_domain_count: null,
   virtual_machines: null,

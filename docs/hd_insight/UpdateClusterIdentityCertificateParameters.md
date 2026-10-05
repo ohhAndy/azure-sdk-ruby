@@ -1,4 +1,4 @@
-# AzureSDK::UpdateClusterIdentityCertificateParameters
+# AzureRest::UpdateClusterIdentityCertificateParameters
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpdateClusterIdentityCertificateParameters.new(
+instance = AzureRest::UpdateClusterIdentityCertificateParameters.new(
   application_id: null,
   certificate: null,
   certificate_password: null

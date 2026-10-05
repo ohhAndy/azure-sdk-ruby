@@ -1,4 +1,4 @@
-# AzureSDK::LocalDNSProfile
+# AzureRest::LocalDNSProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalDNSProfile.new(
+instance = AzureRest::LocalDNSProfile.new(
   mode: null,
   state: null,
   vnet_dns_overrides: null,

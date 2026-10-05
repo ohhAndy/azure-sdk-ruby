@@ -1,4 +1,4 @@
-# AzureSDK::IPFamily
+# AzureRest::IPFamily
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPFamily.new()
+instance = AzureRest::IPFamily.new()
 ```
 

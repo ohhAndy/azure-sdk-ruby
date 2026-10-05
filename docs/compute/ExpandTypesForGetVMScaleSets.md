@@ -1,4 +1,4 @@
-# AzureSDK::ExpandTypesForGetVMScaleSets
+# AzureRest::ExpandTypesForGetVMScaleSets
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExpandTypesForGetVMScaleSets.new()
+instance = AzureRest::ExpandTypesForGetVMScaleSets.new()
 ```
 

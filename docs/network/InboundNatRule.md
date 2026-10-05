@@ -1,4 +1,4 @@
-# AzureSDK::InboundNatRule
+# AzureRest::InboundNatRule
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundNatRule.new(
+instance = AzureRest::InboundNatRule.new(
   id: null,
   name: null,
   type: null,

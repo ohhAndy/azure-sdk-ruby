@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetUpdateOSDisk
+# AzureRest::VirtualMachineScaleSetUpdateOSDisk
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetUpdateOSDisk.new(
+instance = AzureRest::VirtualMachineScaleSetUpdateOSDisk.new(
   caching: null,
   write_accelerator_enabled: null,
   diff_disk_settings: null,

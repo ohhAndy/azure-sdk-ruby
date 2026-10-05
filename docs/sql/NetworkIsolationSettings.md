@@ -1,4 +1,4 @@
-# AzureSDK::NetworkIsolationSettings
+# AzureRest::NetworkIsolationSettings
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkIsolationSettings.new(
+instance = AzureRest::NetworkIsolationSettings.new(
   storage_account_resource_id: null,
   sql_server_resource_id: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::MaintenanceUpdate
+# AzureRest::MaintenanceUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MaintenanceUpdate.new(
+instance = AzureRest::MaintenanceUpdate.new(
   properties: null
 )
 ```

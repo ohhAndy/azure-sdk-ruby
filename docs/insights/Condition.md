@@ -1,4 +1,4 @@
-# AzureSDK::Condition
+# AzureRest::Condition
 
 ## Properties
 
@@ -21,9 +21,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Condition.new(
+instance = AzureRest::Condition.new(
   criterion_type: null,
   query: null,
   time_aggregation: null,

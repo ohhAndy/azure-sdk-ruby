@@ -1,4 +1,4 @@
-# AzureSDK::FlowLog
+# AzureRest::FlowLog
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FlowLog.new(
+instance = AzureRest::FlowLog.new(
   id: null,
   name: null,
   type: null,

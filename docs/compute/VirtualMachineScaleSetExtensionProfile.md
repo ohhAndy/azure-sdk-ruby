@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetExtensionProfile
+# AzureRest::VirtualMachineScaleSetExtensionProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetExtensionProfile.new(
+instance = AzureRest::VirtualMachineScaleSetExtensionProfile.new(
   extensions: null,
   extensions_time_budget: null
 )

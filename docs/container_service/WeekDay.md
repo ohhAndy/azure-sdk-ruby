@@ -1,4 +1,4 @@
-# AzureSDK::WeekDay
+# AzureRest::WeekDay
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WeekDay.new()
+instance = AzureRest::WeekDay.new()
 ```
 

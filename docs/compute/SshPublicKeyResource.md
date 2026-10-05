@@ -1,4 +1,4 @@
-# AzureSDK::SshPublicKeyResource
+# AzureRest::SshPublicKeyResource
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SshPublicKeyResource.new(
+instance = AzureRest::SshPublicKeyResource.new(
   id: null,
   name: null,
   type: null,

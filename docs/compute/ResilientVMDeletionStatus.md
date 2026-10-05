@@ -1,4 +1,4 @@
-# AzureSDK::ResilientVMDeletionStatus
+# AzureRest::ResilientVMDeletionStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResilientVMDeletionStatus.new()
+instance = AzureRest::ResilientVMDeletionStatus.new()
 ```
 

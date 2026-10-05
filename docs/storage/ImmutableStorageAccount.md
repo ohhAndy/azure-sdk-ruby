@@ -1,4 +1,4 @@
-# AzureSDK::ImmutableStorageAccount
+# AzureRest::ImmutableStorageAccount
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImmutableStorageAccount.new(
+instance = AzureRest::ImmutableStorageAccount.new(
   enabled: null,
   immutability_policy: null
 )

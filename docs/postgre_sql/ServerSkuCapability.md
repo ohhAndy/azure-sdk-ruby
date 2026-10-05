@@ -1,4 +1,4 @@
-# AzureSDK::ServerSkuCapability
+# AzureRest::ServerSkuCapability
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerSkuCapability.new(
+instance = AzureRest::ServerSkuCapability.new(
   status: null,
   reason: null,
   name: null,

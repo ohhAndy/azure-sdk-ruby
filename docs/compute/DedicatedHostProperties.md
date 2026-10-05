@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostProperties
+# AzureRest::DedicatedHostProperties
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostProperties.new(
+instance = AzureRest::DedicatedHostProperties.new(
   platform_fault_domain: null,
   auto_replace_on_failure: null,
   host_id: null,

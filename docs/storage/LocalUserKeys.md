@@ -1,4 +1,4 @@
-# AzureSDK::LocalUserKeys
+# AzureRest::LocalUserKeys
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalUserKeys.new(
+instance = AzureRest::LocalUserKeys.new(
   ssh_authorized_keys: null,
   shared_key: null
 )

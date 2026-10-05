@@ -1,4 +1,4 @@
-# AzureSDK::StorageDataCollaborationPolicyProperties
+# AzureRest::StorageDataCollaborationPolicyProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageDataCollaborationPolicyProperties.new(
+instance = AzureRest::StorageDataCollaborationPolicyProperties.new(
   allow_storage_connectors: null,
   allow_blob_access_points: null,
   allow_storage_data_shares: null,

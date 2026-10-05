@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterPodIdentity
+# AzureRest::ManagedClusterPodIdentity
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterPodIdentity.new(
+instance = AzureRest::ManagedClusterPodIdentity.new(
   name: null,
   namespace: null,
   binding_selector: null,

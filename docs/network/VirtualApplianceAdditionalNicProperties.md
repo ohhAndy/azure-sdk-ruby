@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceAdditionalNicProperties
+# AzureRest::VirtualApplianceAdditionalNicProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualApplianceAdditionalNicProperties.new(
+instance = AzureRest::VirtualApplianceAdditionalNicProperties.new(
   name: null,
   has_public_ip: null
 )

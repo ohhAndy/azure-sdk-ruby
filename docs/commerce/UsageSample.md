@@ -1,4 +1,4 @@
-# AzureSDK::UsageSample
+# AzureRest::UsageSample
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UsageSample.new(
+instance = AzureRest::UsageSample.new(
   subscription_id: null,
   meter_id: null,
   usage_start_time: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAPIServerAccessProfile
+# AzureRest::ManagedClusterAPIServerAccessProfile
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAPIServerAccessProfile.new(
+instance = AzureRest::ManagedClusterAPIServerAccessProfile.new(
   authorized_ip_ranges: null,
   enable_private_cluster: null,
   private_dns_zone: null,

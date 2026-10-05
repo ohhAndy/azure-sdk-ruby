@@ -1,4 +1,4 @@
-# AzureSDK::IntervalUnit
+# AzureRest::IntervalUnit
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IntervalUnit.new()
+instance = AzureRest::IntervalUnit.new()
 ```
 

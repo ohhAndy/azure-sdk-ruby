@@ -1,4 +1,4 @@
-# AzureSDK::BackupAutomaticAndOnDemand
+# AzureRest::BackupAutomaticAndOnDemand
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupAutomaticAndOnDemand.new(
+instance = AzureRest::BackupAutomaticAndOnDemand.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ProvidersApi
+# AzureRest::ProvidersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -27,14 +27,14 @@ List the resource types for a specified resource provider.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider.
@@ -46,7 +46,7 @@ begin
   
   result = api_instance.provider_resource_types_list(api_version, subscription_id, resource_provider_namespace, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->provider_resource_types_list: #{e}"
 end
 ```
@@ -64,7 +64,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProviderResourceTypeListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->provider_resource_types_list_with_http_info: #{e}"
 end
 ```
@@ -104,14 +104,14 @@ Gets the specified resource provider.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
@@ -123,7 +123,7 @@ begin
   
   result = api_instance.providers_get(api_version, resource_provider_namespace, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_get: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Provider>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_get_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Gets the specified resource provider at the tenant level.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider.
 opts = {
@@ -199,7 +199,7 @@ begin
   
   result = api_instance.providers_get_at_tenant_scope(api_version, resource_provider_namespace, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_get_at_tenant_scope: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Provider>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_get_at_tenant_scope_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ Gets all resource providers for a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -274,7 +274,7 @@ begin
   
   result = api_instance.providers_list(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_list: #{e}"
 end
 ```
@@ -292,7 +292,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProviderListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_list_with_http_info: #{e}"
 end
 ```
@@ -331,14 +331,14 @@ Gets all resource providers for the tenant.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 opts = {
   expand: 'expand_example' # String | The properties to include in the results.
@@ -348,7 +348,7 @@ begin
   
   result = api_instance.providers_list_at_tenant_scope(api_version, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_list_at_tenant_scope: #{e}"
 end
 ```
@@ -366,7 +366,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProviderListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_list_at_tenant_scope_with_http_info: #{e}"
 end
 ```
@@ -404,14 +404,14 @@ Get the provider permissions.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider.
@@ -420,7 +420,7 @@ begin
   
   result = api_instance.providers_provider_permissions(api_version, subscription_id, resource_provider_namespace)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_provider_permissions: #{e}"
 end
 ```
@@ -438,7 +438,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProviderPermissionListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_provider_permissions_with_http_info: #{e}"
 end
 ```
@@ -477,26 +477,26 @@ Registers a subscription with a resource provider.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider to register.
 opts = {
-  properties: AzureSDK::ProviderRegistrationRequest.new # ProviderRegistrationRequest | The third party consent for S2S.
+  properties: AzureRest::ProviderRegistrationRequest.new # ProviderRegistrationRequest | The third party consent for S2S.
 }
 
 begin
   
   result = api_instance.providers_register(api_version, subscription_id, resource_provider_namespace, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_register: #{e}"
 end
 ```
@@ -514,7 +514,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Provider>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_register_with_http_info: #{e}"
 end
 ```
@@ -554,14 +554,14 @@ Registers a management group with a resource provider. Use this operation to reg
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The management group ID.The namespace of the resource provider to register.
 group_id = 'group_id_example' # String | 
@@ -569,7 +569,7 @@ group_id = 'group_id_example' # String |
 begin
   
   api_instance.providers_register_at_management_group_scope(api_version, resource_provider_namespace, group_id)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_register_at_management_group_scope: #{e}"
 end
 ```
@@ -587,7 +587,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_register_at_management_group_scope_with_http_info: #{e}"
 end
 ```
@@ -626,14 +626,14 @@ Unregisters a subscription from a resource provider.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProvidersApi.new
+api_instance = AzureRest::ProvidersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The namespace of the resource provider to unregister.
@@ -642,7 +642,7 @@ begin
   
   result = api_instance.providers_unregister(api_version, subscription_id, resource_provider_namespace)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_unregister: #{e}"
 end
 ```
@@ -660,7 +660,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Provider>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProvidersApi->providers_unregister_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandParameterDefinition
+# AzureRest::RunCommandParameterDefinition
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandParameterDefinition.new(
+instance = AzureRest::RunCommandParameterDefinition.new(
   name: null,
   type: null,
   default_value: null,

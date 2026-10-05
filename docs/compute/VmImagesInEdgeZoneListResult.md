@@ -1,4 +1,4 @@
-# AzureSDK::VmImagesInEdgeZoneListResult
+# AzureRest::VmImagesInEdgeZoneListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VmImagesInEdgeZoneListResult.new(
+instance = AzureRest::VmImagesInEdgeZoneListResult.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicyVersion
+# AzureRest::ManagementPolicyVersion
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicyVersion.new(
+instance = AzureRest::ManagementPolicyVersion.new(
   tier_to_cool: null,
   tier_to_archive: null,
   tier_to_cold: null,

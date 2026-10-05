@@ -1,4 +1,4 @@
-# AzureSDK::ServiceAssociationLinksListResult
+# AzureRest::ServiceAssociationLinksListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceAssociationLinksListResult.new(
+instance = AzureRest::ServiceAssociationLinksListResult.new(
   value: null,
   next_link: null
 )

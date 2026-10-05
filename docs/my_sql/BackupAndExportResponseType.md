@@ -1,4 +1,4 @@
-# AzureSDK::BackupAndExportResponseType
+# AzureRest::BackupAndExportResponseType
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupAndExportResponseType.new(
+instance = AzureRest::BackupAndExportResponseType.new(
   datasource_size_in_bytes: null,
   data_transferred_in_bytes: null,
   backup_metadata: null

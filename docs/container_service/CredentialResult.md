@@ -1,4 +1,4 @@
-# AzureSDK::CredentialResult
+# AzureRest::CredentialResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CredentialResult.new(
+instance = AzureRest::CredentialResult.new(
   name: null,
   value: null
 )

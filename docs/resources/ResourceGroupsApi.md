@@ -1,4 +1,4 @@
-# AzureSDK::ResourceGroupsApi
+# AzureRest::ResourceGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -26,14 +26,14 @@ Checks whether a resource group exists.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
@@ -41,7 +41,7 @@ resource_group_name = 'resource_group_name_example' # String | The name of the r
 begin
   
   api_instance.resource_groups_check_existence(api_version, subscription_id, resource_group_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_check_existence: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_check_existence_with_http_info: #{e}"
 end
 ```
@@ -98,24 +98,24 @@ Creates or updates a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
-parameters = AzureSDK::ResourceGroup.new({location: 'location_example'}) # ResourceGroup | Parameters supplied to the create or update a resource group.
+parameters = AzureRest::ResourceGroup.new({location: 'location_example'}) # ResourceGroup | Parameters supplied to the create or update a resource group.
 
 begin
   
   result = api_instance.resource_groups_create_or_update(api_version, subscription_id, resource_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_create_or_update: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -173,14 +173,14 @@ When you delete a resource group, all of its resources are also deleted. Deletin
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
@@ -191,7 +191,7 @@ opts = {
 begin
   # Deletes a resource group.
   api_instance.resource_groups_delete(api_version, subscription_id, resource_group_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_delete: #{e}"
 end
 ```
@@ -209,7 +209,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -249,24 +249,24 @@ Captures the specified resource group as a template.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
-parameters = AzureSDK::ExportTemplateRequest.new # ExportTemplateRequest | Parameters for exporting the template.
+parameters = AzureRest::ExportTemplateRequest.new # ExportTemplateRequest | Parameters for exporting the template.
 
 begin
   
   result = api_instance.resource_groups_export_template(api_version, subscription_id, resource_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_export_template: #{e}"
 end
 ```
@@ -284,7 +284,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceGroupExportResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_export_template_with_http_info: #{e}"
 end
 ```
@@ -324,14 +324,14 @@ Gets a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
@@ -340,7 +340,7 @@ begin
   
   result = api_instance.resource_groups_get(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_get: #{e}"
 end
 ```
@@ -358,7 +358,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_get_with_http_info: #{e}"
 end
 ```
@@ -397,14 +397,14 @@ Gets all the resource groups for a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -416,7 +416,7 @@ begin
   
   result = api_instance.resource_groups_list(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_list: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_list_with_http_info: #{e}"
 end
 ```
@@ -474,24 +474,24 @@ Resource groups can be updated through a simple PATCH operation to a group addre
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
-parameters = AzureSDK::ResourceGroupPatchable.new # ResourceGroupPatchable | Parameters supplied to update a resource group.
+parameters = AzureRest::ResourceGroupPatchable.new # ResourceGroupPatchable | Parameters supplied to update a resource group.
 
 begin
   # Updates a resource group.
   result = api_instance.resource_groups_update(api_version, subscription_id, resource_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_update: #{e}"
 end
 ```
@@ -509,7 +509,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resource_groups_update_with_http_info: #{e}"
 end
 ```
@@ -549,14 +549,14 @@ Get all the resources for a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourceGroupsApi.new
+api_instance = AzureRest::ResourceGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
@@ -570,7 +570,7 @@ begin
   
   result = api_instance.resources_list_by_resource_group(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resources_list_by_resource_group: #{e}"
 end
 ```
@@ -588,7 +588,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourceGroupsApi->resources_list_by_resource_group_with_http_info: #{e}"
 end
 ```

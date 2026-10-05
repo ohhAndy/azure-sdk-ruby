@@ -1,4 +1,4 @@
-# AzureSDK::ZoneAllocationPolicy
+# AzureRest::ZoneAllocationPolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ZoneAllocationPolicy.new(
+instance = AzureRest::ZoneAllocationPolicy.new(
   max_zone_count: null,
   max_instance_percent_per_zone_policy: null
 )

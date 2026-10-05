@@ -1,4 +1,4 @@
-# AzureSDK::KeyPolicy
+# AzureRest::KeyPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyPolicy.new(
+instance = AzureRest::KeyPolicy.new(
   key_expiration_period_in_days: null
 )
 ```

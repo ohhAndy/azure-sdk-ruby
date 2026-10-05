@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionIdentity
+# AzureRest::EncryptionIdentity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionIdentity.new(
+instance = AzureRest::EncryptionIdentity.new(
   user_assigned_identity: null,
   federated_identity_client_id: null
 )

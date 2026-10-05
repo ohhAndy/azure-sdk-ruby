@@ -1,4 +1,4 @@
-# AzureSDK::IpamPoolPrefixAllocationPool2
+# AzureRest::IpamPoolPrefixAllocationPool2
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpamPoolPrefixAllocationPool2.new(
+instance = AzureRest::IpamPoolPrefixAllocationPool2.new(
   id: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmKeyListResult
+# AzureRest::ManagedHsmKeyListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmKeyListResult.new(
+instance = AzureRest::ManagedHsmKeyListResult.new(
   value: null,
   next_link: null
 )

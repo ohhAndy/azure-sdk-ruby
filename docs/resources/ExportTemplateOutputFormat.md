@@ -1,4 +1,4 @@
-# AzureSDK::ExportTemplateOutputFormat
+# AzureRest::ExportTemplateOutputFormat
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExportTemplateOutputFormat.new()
+instance = AzureRest::ExportTemplateOutputFormat.new()
 ```
 

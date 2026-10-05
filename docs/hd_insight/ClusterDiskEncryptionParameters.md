@@ -1,4 +1,4 @@
-# AzureSDK::ClusterDiskEncryptionParameters
+# AzureRest::ClusterDiskEncryptionParameters
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterDiskEncryptionParameters.new(
+instance = AzureRest::ClusterDiskEncryptionParameters.new(
   vault_uri: null,
   key_name: null,
   key_version: null

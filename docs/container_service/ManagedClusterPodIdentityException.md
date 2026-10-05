@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterPodIdentityException
+# AzureRest::ManagedClusterPodIdentityException
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterPodIdentityException.new(
+instance = AzureRest::ManagedClusterPodIdentityException.new(
   name: null,
   namespace: null,
   pod_labels: null

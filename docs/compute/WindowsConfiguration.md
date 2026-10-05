@@ -1,4 +1,4 @@
-# AzureSDK::WindowsConfiguration
+# AzureRest::WindowsConfiguration
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WindowsConfiguration.new(
+instance = AzureRest::WindowsConfiguration.new(
   provision_vm_agent: null,
   enable_automatic_updates: null,
   time_zone: null,

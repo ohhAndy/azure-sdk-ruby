@@ -1,4 +1,4 @@
-# AzureSDK::RoutePropertiesFormat
+# AzureRest::RoutePropertiesFormat
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoutePropertiesFormat.new(
+instance = AzureRest::RoutePropertiesFormat.new(
   address_prefix: null,
   next_hop_type: null,
   next_hop_ip_address: null,

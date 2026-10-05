@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceSitesApi
+# AzureRest::VirtualApplianceSitesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates the specified Network Virtual Appliance Site.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualApplianceSitesApi.new
+api_instance = AzureRest::VirtualApplianceSitesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
 site_name = 'site_name_example' # String | The name of the resource that is unique within a resource group. This name can be used to access the resource.
-parameters = AzureSDK::VirtualApplianceSite.new # VirtualApplianceSite | Parameters supplied to the create or update Network Virtual Appliance Site operation.
+parameters = AzureRest::VirtualApplianceSite.new # VirtualApplianceSite | Parameters supplied to the create or update Network Virtual Appliance Site operation.
 
 begin
   
   result = api_instance.virtual_appliance_sites_create_or_update(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, site_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualApplianceSite>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified site from a Virtual Appliance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualApplianceSitesApi.new
+api_instance = AzureRest::VirtualApplianceSitesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ site_name = 'site_name_example' # String | The name of the resource that is uniq
 begin
   
   api_instance.virtual_appliance_sites_delete(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, site_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the specified Virtual Appliance Site.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualApplianceSitesApi.new
+api_instance = AzureRest::VirtualApplianceSitesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.virtual_appliance_sites_get(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, site_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualApplianceSite>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Lists all Network Virtual Appliance Sites in a Network Virtual Appliance resourc
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualApplianceSitesApi.new
+api_instance = AzureRest::VirtualApplianceSitesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.virtual_appliance_sites_list(api_version, subscription_id, resource_group_name, network_virtual_appliance_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkVirtualApplianceSiteListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualApplianceSitesApi->virtual_appliance_sites_list_with_http_info: #{e}"
 end
 ```

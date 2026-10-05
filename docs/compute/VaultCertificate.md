@@ -1,4 +1,4 @@
-# AzureSDK::VaultCertificate
+# AzureRest::VaultCertificate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultCertificate.new(
+instance = AzureRest::VaultCertificate.new(
   certificate_url: null,
   certificate_store: null
 )

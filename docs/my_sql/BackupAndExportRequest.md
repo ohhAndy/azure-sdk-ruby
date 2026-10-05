@@ -1,4 +1,4 @@
-# AzureSDK::BackupAndExportRequest
+# AzureRest::BackupAndExportRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupAndExportRequest.new(
+instance = AzureRest::BackupAndExportRequest.new(
   backup_settings: null,
   target_details: null
 )

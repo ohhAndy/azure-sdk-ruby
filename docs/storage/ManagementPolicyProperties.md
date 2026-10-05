@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicyProperties
+# AzureRest::ManagementPolicyProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicyProperties.new(
+instance = AzureRest::ManagementPolicyProperties.new(
   last_modified_time: null,
   policy: null
 )

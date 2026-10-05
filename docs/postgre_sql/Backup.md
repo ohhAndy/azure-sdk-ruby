@@ -1,4 +1,4 @@
-# AzureSDK::Backup
+# AzureRest::Backup
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Backup.new(
+instance = AzureRest::Backup.new(
   backup_retention_days: null,
   geo_redundant_backup: null,
   earliest_restore_date: null

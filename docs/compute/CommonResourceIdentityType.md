@@ -1,4 +1,4 @@
-# AzureSDK::CommonResourceIdentityType
+# AzureRest::CommonResourceIdentityType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonResourceIdentityType.new()
+instance = AzureRest::CommonResourceIdentityType.new()
 ```
 

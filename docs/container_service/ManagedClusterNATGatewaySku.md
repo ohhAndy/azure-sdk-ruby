@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterNATGatewaySku
+# AzureRest::ManagedClusterNATGatewaySku
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterNATGatewaySku.new()
+instance = AzureRest::ManagedClusterNATGatewaySku.new()
 ```
 

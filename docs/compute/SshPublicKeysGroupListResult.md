@@ -1,4 +1,4 @@
-# AzureSDK::SshPublicKeysGroupListResult
+# AzureRest::SshPublicKeysGroupListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SshPublicKeysGroupListResult.new(
+instance = AzureRest::SshPublicKeysGroupListResult.new(
   value: null,
   next_link: null
 )

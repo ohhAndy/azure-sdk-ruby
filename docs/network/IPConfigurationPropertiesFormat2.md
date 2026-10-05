@@ -1,4 +1,4 @@
-# AzureSDK::IPConfigurationPropertiesFormat2
+# AzureRest::IPConfigurationPropertiesFormat2
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPConfigurationPropertiesFormat2.new(
+instance = AzureRest::IPConfigurationPropertiesFormat2.new(
   private_ip_address: null,
   private_ip_allocation_method: null,
   subnet: null,

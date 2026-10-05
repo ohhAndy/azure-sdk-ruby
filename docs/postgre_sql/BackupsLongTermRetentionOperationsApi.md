@@ -1,4 +1,4 @@
-# AzureSDK::BackupsLongTermRetentionOperationsApi
+# AzureRest::BackupsLongTermRetentionOperationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,14 +20,14 @@ Gets the results of a long retention backup operation for a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BackupsLongTermRetentionOperationsApi.new
+api_instance = AzureRest::BackupsLongTermRetentionOperationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -38,7 +38,7 @@ begin
   
   result = api_instance.backups_long_term_retention_get(api_version, subscription_id, resource_group_name, server_name, backup_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupsLongTermRetentionOperationsApi->backups_long_term_retention_get: #{e}"
 end
 ```
@@ -56,7 +56,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BackupsLongTermRetentionOperation>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupsLongTermRetentionOperationsApi->backups_long_term_retention_get_with_http_info: #{e}"
 end
 ```
@@ -97,14 +97,14 @@ Lists the results of the long term retention backup operations for a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BackupsLongTermRetentionOperationsApi.new
+api_instance = AzureRest::BackupsLongTermRetentionOperationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -114,7 +114,7 @@ begin
   
   result = api_instance.backups_long_term_retention_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupsLongTermRetentionOperationsApi->backups_long_term_retention_list_by_server: #{e}"
 end
 ```
@@ -132,7 +132,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LtrServerBackupOperationList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupsLongTermRetentionOperationsApi->backups_long_term_retention_list_by_server_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionServices
+# AzureRest::EncryptionServices
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionServices.new(
+instance = AzureRest::EncryptionServices.new(
   blob: null,
   file: null,
   table: null,

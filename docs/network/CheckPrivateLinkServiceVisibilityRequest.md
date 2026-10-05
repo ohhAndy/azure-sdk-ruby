@@ -1,4 +1,4 @@
-# AzureSDK::CheckPrivateLinkServiceVisibilityRequest
+# AzureRest::CheckPrivateLinkServiceVisibilityRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CheckPrivateLinkServiceVisibilityRequest.new(
+instance = AzureRest::CheckPrivateLinkServiceVisibilityRequest.new(
   private_link_service_alias: null
 )
 ```

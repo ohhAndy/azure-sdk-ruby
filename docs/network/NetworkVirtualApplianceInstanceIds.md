@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualApplianceInstanceIds
+# AzureRest::NetworkVirtualApplianceInstanceIds
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualApplianceInstanceIds.new(
+instance = AzureRest::NetworkVirtualApplianceInstanceIds.new(
   instance_ids: null
 )
 ```

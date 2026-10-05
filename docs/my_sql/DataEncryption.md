@@ -1,4 +1,4 @@
-# AzureSDK::DataEncryption
+# AzureRest::DataEncryption
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataEncryption.new(
+instance = AzureRest::DataEncryption.new(
   primary_user_assigned_identity_id: null,
   primary_key_uri: null,
   geo_backup_user_assigned_identity_id: null,

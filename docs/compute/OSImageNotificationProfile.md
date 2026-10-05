@@ -1,4 +1,4 @@
-# AzureSDK::OSImageNotificationProfile
+# AzureRest::OSImageNotificationProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OSImageNotificationProfile.new(
+instance = AzureRest::OSImageNotificationProfile.new(
   not_before_timeout: null,
   enable: null
 )

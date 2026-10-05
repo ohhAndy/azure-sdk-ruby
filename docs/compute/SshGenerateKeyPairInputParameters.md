@@ -1,4 +1,4 @@
-# AzureSDK::SshGenerateKeyPairInputParameters
+# AzureRest::SshGenerateKeyPairInputParameters
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SshGenerateKeyPairInputParameters.new(
+instance = AzureRest::SshGenerateKeyPairInputParameters.new(
   encryption_type: null
 )
 ```

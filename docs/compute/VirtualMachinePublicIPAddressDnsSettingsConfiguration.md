@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachinePublicIPAddressDnsSettingsConfiguration
+# AzureRest::VirtualMachinePublicIPAddressDnsSettingsConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachinePublicIPAddressDnsSettingsConfiguration.new(
+instance = AzureRest::VirtualMachinePublicIPAddressDnsSettingsConfiguration.new(
   domain_name_label: null,
   domain_name_label_scope: null
 )

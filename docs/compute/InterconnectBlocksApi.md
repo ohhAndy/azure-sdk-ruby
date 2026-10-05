@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectBlocksApi
+# AzureRest::InterconnectBlocksApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates an Interconnect Block. When updating an Interconnect Block, o
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 interconnect_block_name = 'interconnect_block_name_example' # String | The name of the Interconnect Block.
-resource = AzureSDK::InterconnectBlock.new({location: 'location_example', sku: AzureSDK::Sku.new}) # InterconnectBlock | Parameters supplied to the Create Interconnect Block.
+resource = AzureRest::InterconnectBlock.new({location: 'location_example', sku: AzureRest::Sku.new}) # InterconnectBlock | Parameters supplied to the Create Interconnect Block.
 
 begin
   
   result = api_instance.interconnect_blocks_create_or_update(api_version, subscription_id, resource_group_name, interconnect_block_name, resource)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InterconnectBlock>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes an Interconnect Block. The operation is only allowed when there are no v
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ interconnect_block_name = 'interconnect_block_name_example' # String | The name 
 begin
   
   api_instance.interconnect_blocks_delete(api_version, subscription_id, resource_group_name, interconnect_block_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Retrieves information about an Interconnect Block.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.interconnect_blocks_get(api_version, subscription_id, resource_group_name, interconnect_block_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InterconnectBlock>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Lists all of the Interconnect Blocks in the specified resource group. Use the ne
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.interconnect_blocks_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_list_by_resource_group: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InterconnectBlockListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Lists all of the Interconnect Blocks in the subscription. Use the nextLink prope
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -342,7 +342,7 @@ begin
   
   result = api_instance.interconnect_blocks_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_list_by_subscription: #{e}"
 end
 ```
@@ -360,7 +360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InterconnectBlockListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Updates an Interconnect Block. When updating an Interconnect Block, only tags an
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::InterconnectBlocksApi.new
+api_instance = AzureRest::InterconnectBlocksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 interconnect_block_name = 'interconnect_block_name_example' # String | The name of the Interconnect Block.
-properties = AzureSDK::InterconnectBlockUpdate.new # InterconnectBlockUpdate | Parameters supplied to the Update Interconnect Block operation.
+properties = AzureRest::InterconnectBlockUpdate.new # InterconnectBlockUpdate | Parameters supplied to the Update Interconnect Block operation.
 
 begin
   
   result = api_instance.interconnect_blocks_update(api_version, subscription_id, resource_group_name, interconnect_block_name, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_update: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InterconnectBlock>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling InterconnectBlocksApi->interconnect_blocks_update_with_http_info: #{e}"
 end
 ```

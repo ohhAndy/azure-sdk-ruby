@@ -1,4 +1,4 @@
-# AzureSDK::RepairAction
+# AzureRest::RepairAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RepairAction.new()
+instance = AzureRest::RepairAction.new()
 ```
 

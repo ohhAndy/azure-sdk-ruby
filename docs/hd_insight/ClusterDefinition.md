@@ -1,4 +1,4 @@
-# AzureSDK::ClusterDefinition
+# AzureRest::ClusterDefinition
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterDefinition.new(
+instance = AzureRest::ClusterDefinition.new(
   blueprint: null,
   kind: null,
   component_version: null,

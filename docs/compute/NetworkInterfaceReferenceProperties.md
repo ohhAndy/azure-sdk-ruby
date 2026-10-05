@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceReferenceProperties
+# AzureRest::NetworkInterfaceReferenceProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceReferenceProperties.new(
+instance = AzureRest::NetworkInterfaceReferenceProperties.new(
   primary: null,
   delete_option: null
 )

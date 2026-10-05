@@ -1,4 +1,4 @@
-# AzureSDK::MicrosoftEntraAuth
+# AzureRest::MicrosoftEntraAuth
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MicrosoftEntraAuth.new()
+instance = AzureRest::MicrosoftEntraAuth.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointGenericS3SourcePropertiesUpdate
+# AzureRest::BlobAccessPointGenericS3SourcePropertiesUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointGenericS3SourcePropertiesUpdate.new(
+instance = AzureRest::BlobAccessPointGenericS3SourcePropertiesUpdate.new(
   connection: null,
   auth: null
 )

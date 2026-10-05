@@ -1,4 +1,4 @@
-# AzureSDK::FlowLogFormatType
+# AzureRest::FlowLogFormatType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FlowLogFormatType.new()
+instance = AzureRest::FlowLogFormatType.new()
 ```
 

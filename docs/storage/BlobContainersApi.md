@@ -1,4 +1,4 @@
-# AzureSDK::BlobContainersApi
+# AzureRest::BlobContainersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -26,26 +26,26 @@ Clears legal hold tags. Clearing the same or non-existent tag results in an idem
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 container_name = 'container_name_example' # String | The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-legal_hold = AzureSDK::LegalHold.new({tags: ['tags_example']}) # LegalHold | The LegalHold property that will be clear from a blob container.
+legal_hold = AzureRest::LegalHold.new({tags: ['tags_example']}) # LegalHold | The LegalHold property that will be clear from a blob container.
 
 begin
   
   result = api_instance.blob_containers_clear_legal_hold(api_version, subscription_id, resource_group_name, account_name, container_name, legal_hold)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_clear_legal_hold: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LegalHold>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_clear_legal_hold_with_http_info: #{e}"
 end
 ```
@@ -105,26 +105,26 @@ Creates a new container under the specified account as described by request body
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 container_name = 'container_name_example' # String | The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-blob_container = AzureSDK::BlobContainer.new # BlobContainer | Properties of the blob container to create.
+blob_container = AzureRest::BlobContainer.new # BlobContainer | Properties of the blob container to create.
 
 begin
   
   result = api_instance.blob_containers_create(api_version, subscription_id, resource_group_name, account_name, container_name, blob_container)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_create: #{e}"
 end
 ```
@@ -142,7 +142,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_create_with_http_info: #{e}"
 end
 ```
@@ -184,14 +184,14 @@ Deletes specified container under its account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -201,7 +201,7 @@ container_name = 'container_name_example' # String | The name of the blob contai
 begin
   
   api_instance.blob_containers_delete(api_version, subscription_id, resource_group_name, account_name, container_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_delete: #{e}"
 end
 ```
@@ -219,7 +219,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_delete_with_http_info: #{e}"
 end
 ```
@@ -260,14 +260,14 @@ Gets properties of a specified container.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -278,7 +278,7 @@ begin
   
   result = api_instance.blob_containers_get(api_version, subscription_id, resource_group_name, account_name, container_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_get: #{e}"
 end
 ```
@@ -296,7 +296,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_get_with_http_info: #{e}"
 end
 ```
@@ -337,28 +337,28 @@ The Lease Container operation establishes and manages a lock on a container for 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 container_name = 'container_name_example' # String | The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
 opts = {
-  parameters: AzureSDK::LeaseContainerRequest.new({action: AzureSDK::LeaseContainerRequestAction::ACQUIRE}) # LeaseContainerRequest | The content of the action request
+  parameters: AzureRest::LeaseContainerRequest.new({action: AzureRest::LeaseContainerRequestAction::ACQUIRE}) # LeaseContainerRequest | The content of the action request
 }
 
 begin
   
   result = api_instance.blob_containers_lease(api_version, subscription_id, resource_group_name, account_name, container_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_lease: #{e}"
 end
 ```
@@ -376,7 +376,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LeaseContainerResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_lease_with_http_info: #{e}"
 end
 ```
@@ -418,14 +418,14 @@ This operation migrates a blob container from container level WORM to object lev
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -435,7 +435,7 @@ container_name = 'container_name_example' # String | The name of the blob contai
 begin
   
   api_instance.blob_containers_object_level_worm(api_version, subscription_id, resource_group_name, account_name, container_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_object_level_worm: #{e}"
 end
 ```
@@ -453,7 +453,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_object_level_worm_with_http_info: #{e}"
 end
 ```
@@ -494,26 +494,26 @@ Sets legal hold tags. Setting the same tag results in an idempotent operation. S
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 container_name = 'container_name_example' # String | The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-legal_hold = AzureSDK::LegalHold.new({tags: ['tags_example']}) # LegalHold | The LegalHold property that will be set to a blob container.
+legal_hold = AzureRest::LegalHold.new({tags: ['tags_example']}) # LegalHold | The LegalHold property that will be set to a blob container.
 
 begin
   
   result = api_instance.blob_containers_set_legal_hold(api_version, subscription_id, resource_group_name, account_name, container_name, legal_hold)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_set_legal_hold: #{e}"
 end
 ```
@@ -531,7 +531,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LegalHold>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_set_legal_hold_with_http_info: #{e}"
 end
 ```
@@ -573,26 +573,26 @@ Updates container properties as specified in request body. Properties not mentio
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobContainersApi.new
+api_instance = AzureRest::BlobContainersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 container_name = 'container_name_example' # String | The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-blob_container = AzureSDK::BlobContainer.new # BlobContainer | Properties to update for the blob container.
+blob_container = AzureRest::BlobContainer.new # BlobContainer | Properties to update for the blob container.
 
 begin
   
   result = api_instance.blob_containers_update(api_version, subscription_id, resource_group_name, account_name, container_name, blob_container)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_update: #{e}"
 end
 ```
@@ -610,7 +610,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobContainer>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobContainersApi->blob_containers_update_with_http_info: #{e}"
 end
 ```

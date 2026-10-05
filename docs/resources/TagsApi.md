@@ -1,4 +1,4 @@
-# AzureSDK::TagsApi
+# AzureRest::TagsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -27,14 +27,14 @@ This operation allows adding a name to the list of predefined tag names for the 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 tag_name = 'tag_name_example' # String | The name of the tag to create.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
@@ -43,7 +43,7 @@ begin
   # Creates a predefined tag name.
   result = api_instance.tags_create_or_update(api_version, tag_name, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagDetails>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -100,23 +100,23 @@ This operation allows adding or replacing the entire set of tags on the specifie
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
-parameters = AzureSDK::TagsResource.new({properties: AzureSDK::Tags.new}) # TagsResource | 
+parameters = AzureRest::TagsResource.new({properties: AzureRest::Tags.new}) # TagsResource | 
 
 begin
   # Creates or updates the entire set of tags on a resource or subscription.
   result = api_instance.tags_create_or_update_at_scope(api_version, scope, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update_at_scope: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagsResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update_at_scope_with_http_info: #{e}"
 end
 ```
@@ -173,14 +173,14 @@ This operation allows adding a value to the list of predefined values for an exi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 tag_name = 'tag_name_example' # String | The name of the tag.
 tag_value = 'tag_value_example' # String | The value of the tag to create.
@@ -190,7 +190,7 @@ begin
   # Creates a predefined value for a predefined tag name.
   result = api_instance.tags_create_or_update_value(api_version, tag_name, tag_value, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update_value: #{e}"
 end
 ```
@@ -208,7 +208,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagValue>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_create_or_update_value_with_http_info: #{e}"
 end
 ```
@@ -248,14 +248,14 @@ This operation allows deleting a name from the list of predefined tag names for 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 tag_name = 'tag_name_example' # String | The name of the tag.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
@@ -263,7 +263,7 @@ subscription_id = 'subscription_id_example' # String | The ID of the target subs
 begin
   # Deletes a predefined tag name.
   api_instance.tags_delete(api_version, tag_name, subscription_id)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete: #{e}"
 end
 ```
@@ -281,7 +281,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete_with_http_info: #{e}"
 end
 ```
@@ -320,21 +320,21 @@ Deletes the entire set of tags on a resource or subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 
 begin
   # Deletes the entire set of tags on a resource or subscription.
   api_instance.tags_delete_at_scope(api_version, scope)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete_at_scope: #{e}"
 end
 ```
@@ -352,7 +352,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete_at_scope_with_http_info: #{e}"
 end
 ```
@@ -390,14 +390,14 @@ This operation allows deleting a value from the list of predefined values for an
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 tag_name = 'tag_name_example' # String | The name of the tag.
 tag_value = 'tag_value_example' # String | The value of the tag to delete.
@@ -406,7 +406,7 @@ subscription_id = 'subscription_id_example' # String | The ID of the target subs
 begin
   # Deletes a predefined tag value for a predefined tag name.
   api_instance.tags_delete_value(api_version, tag_name, tag_value, subscription_id)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete_value: #{e}"
 end
 ```
@@ -424,7 +424,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_delete_value_with_http_info: #{e}"
 end
 ```
@@ -464,14 +464,14 @@ Gets the entire set of tags on a resource or subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 
@@ -479,7 +479,7 @@ begin
   # Gets the entire set of tags on a resource or subscription.
   result = api_instance.tags_get_at_scope(api_version, scope)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_get_at_scope: #{e}"
 end
 ```
@@ -497,7 +497,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagsResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_get_at_scope_with_http_info: #{e}"
 end
 ```
@@ -535,14 +535,14 @@ This operation performs a union of predefined tags, resource tags, resource grou
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -550,7 +550,7 @@ begin
   # Gets a summary of tag usage under the subscription.
   result = api_instance.tags_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_list: #{e}"
 end
 ```
@@ -568,7 +568,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagsListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_list_with_http_info: #{e}"
 end
 ```
@@ -606,23 +606,23 @@ This operation allows replacing, merging or selectively deleting tags on the spe
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TagsApi.new
+api_instance = AzureRest::TagsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
-parameters = AzureSDK::TagsPatchResource.new # TagsPatchResource | 
+parameters = AzureRest::TagsPatchResource.new # TagsPatchResource | 
 
 begin
   # Selectively updates the set of tags on a resource or subscription.
   result = api_instance.tags_update_at_scope(api_version, scope, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_update_at_scope: #{e}"
 end
 ```
@@ -640,7 +640,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TagsResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TagsApi->tags_update_at_scope_with_http_info: #{e}"
 end
 ```

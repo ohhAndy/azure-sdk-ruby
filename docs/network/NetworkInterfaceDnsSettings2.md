@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceDnsSettings2
+# AzureRest::NetworkInterfaceDnsSettings2
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceDnsSettings2.new(
+instance = AzureRest::NetworkInterfaceDnsSettings2.new(
   dns_servers: null,
   applied_dns_servers: null,
   internal_dns_name_label: null,

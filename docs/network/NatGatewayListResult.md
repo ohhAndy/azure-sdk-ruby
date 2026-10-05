@@ -1,4 +1,4 @@
-# AzureSDK::NatGatewayListResult
+# AzureRest::NatGatewayListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NatGatewayListResult.new(
+instance = AzureRest::NatGatewayListResult.new(
   value: null,
   next_link: null
 )

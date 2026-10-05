@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationSecurityGroupPropertiesFormat2
+# AzureRest::ApplicationSecurityGroupPropertiesFormat2
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationSecurityGroupPropertiesFormat2.new(
+instance = AzureRest::ApplicationSecurityGroupPropertiesFormat2.new(
   resource_guid: null,
   provisioning_state: null
 )

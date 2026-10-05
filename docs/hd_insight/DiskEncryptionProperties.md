@@ -1,4 +1,4 @@
-# AzureSDK::DiskEncryptionProperties
+# AzureRest::DiskEncryptionProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskEncryptionProperties.new(
+instance = AzureRest::DiskEncryptionProperties.new(
   vault_uri: null,
   key_name: null,
   key_version: null,

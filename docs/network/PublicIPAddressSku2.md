@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPAddressSku2
+# AzureRest::PublicIPAddressSku2
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPAddressSku2.new(
+instance = AzureRest::PublicIPAddressSku2.new(
   name: null,
   tier: null
 )

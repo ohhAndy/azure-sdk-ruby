@@ -1,4 +1,4 @@
-# AzureSDK::ServerBackupProperties
+# AzureRest::ServerBackupProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerBackupProperties.new(
+instance = AzureRest::ServerBackupProperties.new(
   backup_type: null,
   completed_time: null,
   source: null

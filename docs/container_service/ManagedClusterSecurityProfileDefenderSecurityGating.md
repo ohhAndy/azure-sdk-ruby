@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileDefenderSecurityGating
+# AzureRest::ManagedClusterSecurityProfileDefenderSecurityGating
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileDefenderSecurityGating.new(
+instance = AzureRest::ManagedClusterSecurityProfileDefenderSecurityGating.new(
   enabled: null,
   identities: null,
   allow_secret_access: null

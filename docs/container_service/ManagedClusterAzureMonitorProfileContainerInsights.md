@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAzureMonitorProfileContainerInsights
+# AzureRest::ManagedClusterAzureMonitorProfileContainerInsights
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAzureMonitorProfileContainerInsights.new(
+instance = AzureRest::ManagedClusterAzureMonitorProfileContainerInsights.new(
   enabled: null,
   log_analytics_workspace_resource_id: null,
   syslog_port: null,

@@ -1,4 +1,4 @@
-# AzureSDK::RunStatusEnum
+# AzureRest::RunStatusEnum
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunStatusEnum.new()
+instance = AzureRest::RunStatusEnum.new()
 ```
 

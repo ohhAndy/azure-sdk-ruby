@@ -1,4 +1,4 @@
-# AzureSDK::RestorePolicyProperties
+# AzureRest::RestorePolicyProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePolicyProperties.new(
+instance = AzureRest::RestorePolicyProperties.new(
   enabled: null,
   days: null,
   last_enabled_time: null,

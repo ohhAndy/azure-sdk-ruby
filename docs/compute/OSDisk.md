@@ -1,4 +1,4 @@
-# AzureSDK::OSDisk
+# AzureRest::OSDisk
 
 ## Properties
 
@@ -21,9 +21,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OSDisk.new(
+instance = AzureRest::OSDisk.new(
   os_type: null,
   encryption_settings: null,
   name: null,

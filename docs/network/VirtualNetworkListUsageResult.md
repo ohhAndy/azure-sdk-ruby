@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkListUsageResult
+# AzureRest::VirtualNetworkListUsageResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkListUsageResult.new(
+instance = AzureRest::VirtualNetworkListUsageResult.new(
   value: null,
   next_link: null
 )

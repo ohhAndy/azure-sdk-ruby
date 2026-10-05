@@ -1,4 +1,4 @@
-# AzureSDK::InboundSecurityRulesProtocol
+# AzureRest::InboundSecurityRulesProtocol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundSecurityRulesProtocol.new()
+instance = AzureRest::InboundSecurityRulesProtocol.new()
 ```
 

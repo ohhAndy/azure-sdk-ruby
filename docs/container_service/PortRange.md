@@ -1,4 +1,4 @@
-# AzureSDK::PortRange
+# AzureRest::PortRange
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PortRange.new(
+instance = AzureRest::PortRange.new(
   port_start: null,
   port_end: null,
   protocol: null

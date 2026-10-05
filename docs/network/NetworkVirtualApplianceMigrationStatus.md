@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualApplianceMigrationStatus
+# AzureRest::NetworkVirtualApplianceMigrationStatus
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualApplianceMigrationStatus.new(
+instance = AzureRest::NetworkVirtualApplianceMigrationStatus.new(
   migration_type: null,
   migration_phase: null,
   migration_phase_status: null

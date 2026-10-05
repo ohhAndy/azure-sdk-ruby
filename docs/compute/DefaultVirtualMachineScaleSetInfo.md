@@ -1,4 +1,4 @@
-# AzureSDK::DefaultVirtualMachineScaleSetInfo
+# AzureRest::DefaultVirtualMachineScaleSetInfo
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DefaultVirtualMachineScaleSetInfo.new(
+instance = AzureRest::DefaultVirtualMachineScaleSetInfo.new(
   constrained_maximum_capacity: null,
   default_virtual_machine_scale_set: null
 )

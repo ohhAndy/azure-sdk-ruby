@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointAzureNetAppFilesSourcePropertiesUpdate
+# AzureRest::BlobAccessPointAzureNetAppFilesSourcePropertiesUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointAzureNetAppFilesSourcePropertiesUpdate.new(
+instance = AzureRest::BlobAccessPointAzureNetAppFilesSourcePropertiesUpdate.new(
   connection: null,
   auth: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::StorageConnectorSourceUpdate
+# AzureRest::StorageConnectorSourceUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageConnectorSourceUpdate.new(
+instance = AzureRest::StorageConnectorSourceUpdate.new(
   type: null
 )
 ```

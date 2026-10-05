@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAzureMonitorProfile
+# AzureRest::ManagedClusterAzureMonitorProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAzureMonitorProfile.new(
+instance = AzureRest::ManagedClusterAzureMonitorProfile.new(
   metrics: null,
   container_insights: null,
   app_monitoring: null

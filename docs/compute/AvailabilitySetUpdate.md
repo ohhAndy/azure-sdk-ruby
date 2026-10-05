@@ -1,4 +1,4 @@
-# AzureSDK::AvailabilitySetUpdate
+# AzureRest::AvailabilitySetUpdate
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailabilitySetUpdate.new(
+instance = AzureRest::AvailabilitySetUpdate.new(
   tags: null,
   properties: null,
   sku: null

@@ -1,4 +1,4 @@
-# AzureSDK::FileServicePropertiesProperties
+# AzureRest::FileServicePropertiesProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileServicePropertiesProperties.new(
+instance = AzureRest::FileServicePropertiesProperties.new(
   cors: null,
   share_delete_retention_policy: null,
   protocol_settings: null

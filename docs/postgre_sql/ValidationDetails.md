@@ -1,4 +1,4 @@
-# AzureSDK::ValidationDetails
+# AzureRest::ValidationDetails
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ValidationDetails.new(
+instance = AzureRest::ValidationDetails.new(
   status: null,
   validation_start_time_in_utc: null,
   validation_end_time_in_utc: null,

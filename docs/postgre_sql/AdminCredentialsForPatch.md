@@ -1,4 +1,4 @@
-# AzureSDK::AdminCredentialsForPatch
+# AzureRest::AdminCredentialsForPatch
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdminCredentialsForPatch.new(
+instance = AzureRest::AdminCredentialsForPatch.new(
   source_server_password: null,
   target_server_password: null
 )

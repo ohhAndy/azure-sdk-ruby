@@ -1,4 +1,4 @@
-# AzureSDK::AddressSpace
+# AzureRest::AddressSpace
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AddressSpace.new(
+instance = AzureRest::AddressSpace.new(
   address_prefixes: null,
   ipam_pool_prefix_allocations: null
 )

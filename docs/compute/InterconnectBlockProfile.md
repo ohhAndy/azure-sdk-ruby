@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectBlockProfile
+# AzureRest::InterconnectBlockProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectBlockProfile.new(
+instance = AzureRest::InterconnectBlockProfile.new(
   interconnect_block: null
 )
 ```

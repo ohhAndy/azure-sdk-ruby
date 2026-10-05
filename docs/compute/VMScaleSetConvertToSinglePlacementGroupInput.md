@@ -1,4 +1,4 @@
-# AzureSDK::VMScaleSetConvertToSinglePlacementGroupInput
+# AzureRest::VMScaleSetConvertToSinglePlacementGroupInput
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMScaleSetConvertToSinglePlacementGroupInput.new(
+instance = AzureRest::VMScaleSetConvertToSinglePlacementGroupInput.new(
   active_placement_group_id: null
 )
 ```

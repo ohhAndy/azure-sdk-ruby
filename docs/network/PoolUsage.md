@@ -1,4 +1,4 @@
-# AzureSDK::PoolUsage
+# AzureRest::PoolUsage
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PoolUsage.new(
+instance = AzureRest::PoolUsage.new(
   address_prefixes: null,
   child_pools: null,
   allocated_address_prefixes: null,

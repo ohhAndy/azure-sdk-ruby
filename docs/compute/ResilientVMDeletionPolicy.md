@@ -1,4 +1,4 @@
-# AzureSDK::ResilientVMDeletionPolicy
+# AzureRest::ResilientVMDeletionPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResilientVMDeletionPolicy.new(
+instance = AzureRest::ResilientVMDeletionPolicy.new(
   enabled: null
 )
 ```

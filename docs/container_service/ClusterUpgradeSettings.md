@@ -1,4 +1,4 @@
-# AzureSDK::ClusterUpgradeSettings
+# AzureRest::ClusterUpgradeSettings
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterUpgradeSettings.new(
+instance = AzureRest::ClusterUpgradeSettings.new(
   override_settings: null
 )
 ```

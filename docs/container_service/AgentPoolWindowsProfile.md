@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolWindowsProfile
+# AzureRest::AgentPoolWindowsProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolWindowsProfile.new(
+instance = AzureRest::AgentPoolWindowsProfile.new(
   disable_outbound_nat: null
 )
 ```

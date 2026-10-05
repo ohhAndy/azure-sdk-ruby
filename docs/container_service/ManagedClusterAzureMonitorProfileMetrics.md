@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAzureMonitorProfileMetrics
+# AzureRest::ManagedClusterAzureMonitorProfileMetrics
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAzureMonitorProfileMetrics.new(
+instance = AzureRest::ManagedClusterAzureMonitorProfileMetrics.new(
   enabled: null,
   kube_state_metrics: null,
   control_plane: null

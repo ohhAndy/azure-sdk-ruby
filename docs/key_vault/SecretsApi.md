@@ -1,4 +1,4 @@
-# AzureSDK::SecretsApi
+# AzureRest::SecretsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Create or update a secret in a key vault in the specified subscription.  NOTE: T
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecretsApi.new
+api_instance = AzureRest::SecretsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | The name of the vault.
 secret_name = 'secret_name_example' # String | The name of the secret.
-parameters = AzureSDK::SecretCreateOrUpdateParameters.new({properties: AzureSDK::SecretProperties.new}) # SecretCreateOrUpdateParameters | Parameters to create or update the secret
+parameters = AzureRest::SecretCreateOrUpdateParameters.new({properties: AzureRest::SecretProperties.new}) # SecretCreateOrUpdateParameters | Parameters to create or update the secret
 
 begin
   
   result = api_instance.secrets_create_or_update(api_version, subscription_id, resource_group_name, vault_name, secret_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Secret>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Gets the specified secret.  NOTE: This API is intended for internal use in ARM d
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecretsApi.new
+api_instance = AzureRest::SecretsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -119,7 +119,7 @@ begin
   
   result = api_instance.secrets_get(api_version, subscription_id, resource_group_name, vault_name, secret_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_get: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Secret>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_get_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ The List operation gets information about the secrets in a vault.  NOTE: This AP
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecretsApi.new
+api_instance = AzureRest::SecretsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ begin
   
   result = api_instance.secrets_list(api_version, subscription_id, resource_group_name, vault_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_list: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecretListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_list_with_http_info: #{e}"
 end
 ```
@@ -257,26 +257,26 @@ Update a secret in the specified subscription.  NOTE: This API is intended for i
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecretsApi.new
+api_instance = AzureRest::SecretsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | The name of the vault.
 secret_name = 'secret_name_example' # String | The name of the secret.
-parameters = AzureSDK::SecretPatchParameters.new # SecretPatchParameters | Parameters to patch the secret
+parameters = AzureRest::SecretPatchParameters.new # SecretPatchParameters | Parameters to patch the secret
 
 begin
   
   result = api_instance.secrets_update(api_version, subscription_id, resource_group_name, vault_name, secret_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_update: #{e}"
 end
 ```
@@ -294,7 +294,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Secret>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecretsApi->secrets_update_with_http_info: #{e}"
 end
 ```

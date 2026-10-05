@@ -1,4 +1,4 @@
-# AzureSDK::RateCardQueryParameters
+# AzureRest::RateCardQueryParameters
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RateCardQueryParameters.new(
+instance = AzureRest::RateCardQueryParameters.new(
   offer_durable_id: null,
   currency: null,
   locale: null,

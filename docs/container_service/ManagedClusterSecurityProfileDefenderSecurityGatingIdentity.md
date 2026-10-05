@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileDefenderSecurityGatingIdentity
+# AzureRest::ManagedClusterSecurityProfileDefenderSecurityGatingIdentity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileDefenderSecurityGatingIdentity.new(
+instance = AzureRest::ManagedClusterSecurityProfileDefenderSecurityGatingIdentity.new(
   azure_container_registry: null,
   identity: null
 )

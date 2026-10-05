@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualAppliance
+# AzureRest::NetworkVirtualAppliance
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualAppliance.new(
+instance = AzureRest::NetworkVirtualAppliance.new(
   id: null,
   name: null,
   type: null,

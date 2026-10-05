@@ -1,4 +1,4 @@
-# AzureSDK::ValidationSummaryItem
+# AzureRest::ValidationSummaryItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ValidationSummaryItem.new(
+instance = AzureRest::ValidationSummaryItem.new(
   type: null,
   state: null,
   messages: null

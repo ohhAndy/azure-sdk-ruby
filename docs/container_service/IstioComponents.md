@@ -1,4 +1,4 @@
-# AzureSDK::IstioComponents
+# AzureRest::IstioComponents
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IstioComponents.new(
+instance = AzureRest::IstioComponents.new(
   ingress_gateways: null,
   egress_gateways: null,
   proxy_redirection_mechanism: null

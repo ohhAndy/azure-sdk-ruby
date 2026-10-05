@@ -1,4 +1,4 @@
-# AzureSDK::NatGatewaySku2
+# AzureRest::NatGatewaySku2
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NatGatewaySku2.new(
+instance = AzureRest::NatGatewaySku2.new(
   name: null
 )
 ```

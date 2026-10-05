@@ -1,4 +1,4 @@
-# AzureSDK::LtrBackupOperationResponseProperties
+# AzureRest::LtrBackupOperationResponseProperties
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LtrBackupOperationResponseProperties.new(
+instance = AzureRest::LtrBackupOperationResponseProperties.new(
   datasource_size_in_bytes: null,
   data_transferred_in_bytes: null,
   backup_name: null,

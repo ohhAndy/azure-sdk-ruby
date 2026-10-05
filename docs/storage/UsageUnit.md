@@ -1,4 +1,4 @@
-# AzureSDK::UsageUnit
+# AzureRest::UsageUnit
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UsageUnit.new()
+instance = AzureRest::UsageUnit.new()
 ```
 

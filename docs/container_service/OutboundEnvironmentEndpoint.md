@@ -1,4 +1,4 @@
-# AzureSDK::OutboundEnvironmentEndpoint
+# AzureRest::OutboundEnvironmentEndpoint
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OutboundEnvironmentEndpoint.new(
+instance = AzureRest::OutboundEnvironmentEndpoint.new(
   category: null,
   endpoints: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::TrackedResourceWithOptionalLocation
+# AzureRest::TrackedResourceWithOptionalLocation
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrackedResourceWithOptionalLocation.new(
+instance = AzureRest::TrackedResourceWithOptionalLocation.new(
   id: null,
   name: null,
   type: null,

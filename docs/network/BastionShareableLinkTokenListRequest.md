@@ -1,4 +1,4 @@
-# AzureSDK::BastionShareableLinkTokenListRequest
+# AzureRest::BastionShareableLinkTokenListRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionShareableLinkTokenListRequest.new(
+instance = AzureRest::BastionShareableLinkTokenListRequest.new(
   tokens: null
 )
 ```

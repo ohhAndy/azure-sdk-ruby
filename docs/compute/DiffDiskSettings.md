@@ -1,4 +1,4 @@
-# AzureSDK::DiffDiskSettings
+# AzureRest::DiffDiskSettings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiffDiskSettings.new(
+instance = AzureRest::DiffDiskSettings.new(
   option: null,
   placement: null,
   enable_full_caching: null

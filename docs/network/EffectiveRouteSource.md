@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveRouteSource
+# AzureRest::EffectiveRouteSource
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveRouteSource.new()
+instance = AzureRest::EffectiveRouteSource.new()
 ```
 

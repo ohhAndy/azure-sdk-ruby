@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetInstanceViewStatusesSummary
+# AzureRest::VirtualMachineScaleSetInstanceViewStatusesSummary
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetInstanceViewStatusesSummary.new(
+instance = AzureRest::VirtualMachineScaleSetInstanceViewStatusesSummary.new(
   statuses_summary: null
 )
 ```

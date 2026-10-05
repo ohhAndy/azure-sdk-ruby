@@ -1,4 +1,4 @@
-# AzureSDK::IpAllocation
+# AzureRest::IpAllocation
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpAllocation.new(
+instance = AzureRest::IpAllocation.new(
   id: null,
   name: null,
   type: null,

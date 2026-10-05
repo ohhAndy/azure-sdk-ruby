@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmRotationPolicy
+# AzureRest::ManagedHsmRotationPolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmRotationPolicy.new(
+instance = AzureRest::ManagedHsmRotationPolicy.new(
   attributes: null,
   lifetime_actions: null
 )

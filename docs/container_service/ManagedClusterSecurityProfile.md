@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfile
+# AzureRest::ManagedClusterSecurityProfile
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfile.new(
+instance = AzureRest::ManagedClusterSecurityProfile.new(
   defender: null,
   azure_key_vault_kms: null,
   kubernetes_resource_object_encryption_profile: null,

@@ -1,4 +1,4 @@
-# AzureSDK::AutomaticZoneRebalancingPolicy
+# AzureRest::AutomaticZoneRebalancingPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutomaticZoneRebalancingPolicy.new(
+instance = AzureRest::AutomaticZoneRebalancingPolicy.new(
   enabled: null,
   rebalance_strategy: null,
   rebalance_behavior: null

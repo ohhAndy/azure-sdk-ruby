@@ -1,4 +1,4 @@
-# AzureSDK::AddressPrefixSet
+# AzureRest::AddressPrefixSet
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AddressPrefixSet.new(
+instance = AzureRest::AddressPrefixSet.new(
   id: null,
   name: null,
   type: null,

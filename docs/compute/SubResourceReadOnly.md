@@ -1,4 +1,4 @@
-# AzureSDK::SubResourceReadOnly
+# AzureRest::SubResourceReadOnly
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SubResourceReadOnly.new(
+instance = AzureRest::SubResourceReadOnly.new(
   id: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::SkuCapabilityV2
+# AzureRest::SkuCapabilityV2
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuCapabilityV2.new(
+instance = AzureRest::SkuCapabilityV2.new(
   name: null,
   v_cores: null,
   supported_iops: null,

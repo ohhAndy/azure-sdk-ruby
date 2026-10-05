@@ -1,4 +1,4 @@
-# AzureSDK::InventoryRuleType
+# AzureRest::InventoryRuleType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InventoryRuleType.new()
+instance = AzureRest::InventoryRuleType.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ContainerNetworkInterfaceIpConfiguration
+# AzureRest::ContainerNetworkInterfaceIpConfiguration
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerNetworkInterfaceIpConfiguration.new(
+instance = AzureRest::ContainerNetworkInterfaceIpConfiguration.new(
   properties: null,
   name: null,
   type: null,

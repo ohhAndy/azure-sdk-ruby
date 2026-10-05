@@ -1,4 +1,4 @@
-# AzureSDK::LocalDNSOverride
+# AzureRest::LocalDNSOverride
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalDNSOverride.new(
+instance = AzureRest::LocalDNSOverride.new(
   query_logging: null,
   protocol: null,
   forward_destination: null,

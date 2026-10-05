@@ -1,4 +1,4 @@
-# AzureSDK::ValidateBackupResponseProperties
+# AzureRest::ValidateBackupResponseProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ValidateBackupResponseProperties.new(
+instance = AzureRest::ValidateBackupResponseProperties.new(
   number_of_containers: null
 )
 ```

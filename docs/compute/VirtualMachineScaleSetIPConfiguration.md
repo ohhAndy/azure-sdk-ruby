@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetIPConfiguration
+# AzureRest::VirtualMachineScaleSetIPConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetIPConfiguration.new(
+instance = AzureRest::VirtualMachineScaleSetIPConfiguration.new(
   name: null,
   properties: null
 )

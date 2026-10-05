@@ -1,4 +1,4 @@
-# AzureSDK::PurchasePlan
+# AzureRest::PurchasePlan
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PurchasePlan.new(
+instance = AzureRest::PurchasePlan.new(
   publisher: null,
   name: null,
   product: null

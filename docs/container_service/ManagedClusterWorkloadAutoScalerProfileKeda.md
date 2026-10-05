@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterWorkloadAutoScalerProfileKeda
+# AzureRest::ManagedClusterWorkloadAutoScalerProfileKeda
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterWorkloadAutoScalerProfileKeda.new(
+instance = AzureRest::ManagedClusterWorkloadAutoScalerProfileKeda.new(
   enabled: null
 )
 ```

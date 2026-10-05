@@ -1,4 +1,4 @@
-# AzureSDK::SkuConversionStatus
+# AzureRest::SkuConversionStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuConversionStatus.new()
+instance = AzureRest::SkuConversionStatus.new()
 ```
 

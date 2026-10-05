@@ -1,4 +1,4 @@
-# AzureSDK::FileShareItem
+# AzureRest::FileShareItem
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileShareItem.new(
+instance = AzureRest::FileShareItem.new(
   id: null,
   name: null,
   type: null,

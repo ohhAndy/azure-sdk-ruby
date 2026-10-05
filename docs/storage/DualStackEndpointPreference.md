@@ -1,4 +1,4 @@
-# AzureSDK::DualStackEndpointPreference
+# AzureRest::DualStackEndpointPreference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DualStackEndpointPreference.new(
+instance = AzureRest::DualStackEndpointPreference.new(
   publish_ipv6_endpoint: null
 )
 ```

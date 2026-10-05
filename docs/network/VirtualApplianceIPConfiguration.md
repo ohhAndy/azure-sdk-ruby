@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceIPConfiguration
+# AzureRest::VirtualApplianceIPConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualApplianceIPConfiguration.new(
+instance = AzureRest::VirtualApplianceIPConfiguration.new(
   name: null,
   properties: null
 )

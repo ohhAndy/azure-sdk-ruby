@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineHealthStatus
+# AzureRest::VirtualMachineHealthStatus
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineHealthStatus.new(
+instance = AzureRest::VirtualMachineHealthStatus.new(
   status: null
 )
 ```

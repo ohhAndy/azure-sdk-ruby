@@ -1,4 +1,4 @@
-# AzureSDK::Operation
+# AzureRest::Operation
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Operation.new(
+instance = AzureRest::Operation.new(
   name: null,
   display: null,
   origin: null,

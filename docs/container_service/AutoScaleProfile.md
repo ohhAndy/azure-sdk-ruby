@@ -1,4 +1,4 @@
-# AzureSDK::AutoScaleProfile
+# AzureRest::AutoScaleProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutoScaleProfile.new(
+instance = AzureRest::AutoScaleProfile.new(
   size: null,
   min_count: null,
   max_count: null

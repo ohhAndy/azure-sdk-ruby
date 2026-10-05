@@ -1,4 +1,4 @@
-# AzureSDK::SupportedFeature
+# AzureRest::SupportedFeature
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SupportedFeature.new(
+instance = AzureRest::SupportedFeature.new(
   name: null,
   status: null
 )

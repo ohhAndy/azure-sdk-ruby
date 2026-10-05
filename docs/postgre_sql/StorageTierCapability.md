@@ -1,4 +1,4 @@
-# AzureSDK::StorageTierCapability
+# AzureRest::StorageTierCapability
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageTierCapability.new(
+instance = AzureRest::StorageTierCapability.new(
   status: null,
   reason: null,
   name: null,

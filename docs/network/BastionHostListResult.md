@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostListResult
+# AzureRest::BastionHostListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionHostListResult.new(
+instance = AzureRest::BastionHostListResult.new(
   value: null,
   next_link: null
 )

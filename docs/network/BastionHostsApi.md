@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostsApi
+# AzureRest::BastionHostsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -30,25 +30,25 @@ Creates or updates the specified Bastion Host.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-parameters = AzureSDK::BastionHost.new # BastionHost | Parameters supplied to the create or update Bastion Host operation.
+parameters = AzureRest::BastionHost.new # BastionHost | Parameters supplied to the create or update Bastion Host operation.
 
 begin
   
   result = api_instance.bastion_hosts_create_or_update(api_version, subscription_id, resource_group_name, bastion_host_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_create_or_update: #{e}"
 end
 ```
@@ -66,7 +66,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -107,14 +107,14 @@ Deletes the specified Bastion Host.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -123,7 +123,7 @@ bastion_host_name = 'bastion_host_name_example' # String | The name of the Basti
 begin
   
   api_instance.bastion_hosts_delete(api_version, subscription_id, resource_group_name, bastion_host_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_delete: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_delete_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Gets the specified Bastion Host.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ begin
   
   result = api_instance.bastion_hosts_get(api_version, subscription_id, resource_group_name, bastion_host_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_get: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ Lists all Bastion Hosts in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.bastion_hosts_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionHostListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_list_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Lists all Bastion Hosts in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -343,7 +343,7 @@ begin
   
   result = api_instance.bastion_hosts_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_list_by_resource_group: #{e}"
 end
 ```
@@ -361,7 +361,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionHostListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -400,25 +400,25 @@ Updates Tags or identity for BastionHost resource
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-parameters = AzureSDK::BastionHostUpdate.new # BastionHostUpdate | Parameters supplied to update BastionHost tags or identity.
+parameters = AzureRest::BastionHostUpdate.new # BastionHostUpdate | Parameters supplied to update BastionHost tags or identity.
 
 begin
   
   result = api_instance.bastion_hosts_update(api_version, subscription_id, resource_group_name, bastion_host_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_update: #{e}"
 end
 ```
@@ -436,7 +436,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionHost>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->bastion_hosts_update_with_http_info: #{e}"
 end
 ```
@@ -477,24 +477,24 @@ Deletes the Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   api_instance.delete_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->delete_bastion_shareable_link: #{e}"
 end
 ```
@@ -512,7 +512,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->delete_bastion_shareable_link_with_http_info: #{e}"
 end
 ```
@@ -553,24 +553,24 @@ Deletes the Bastion Shareable Links for all the tokens specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_token_request = AzureSDK::BastionShareableLinkTokenListRequest.new # BastionShareableLinkTokenListRequest | Post request for Delete Bastion Shareable Link By Token endpoint.
+bsl_token_request = AzureRest::BastionShareableLinkTokenListRequest.new # BastionShareableLinkTokenListRequest | Post request for Delete Bastion Shareable Link By Token endpoint.
 
 begin
   
   api_instance.delete_bastion_shareable_link_by_token(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_token_request)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->delete_bastion_shareable_link_by_token: #{e}"
 end
 ```
@@ -588,7 +588,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->delete_bastion_shareable_link_by_token_with_http_info: #{e}"
 end
 ```
@@ -629,25 +629,25 @@ Returns the list of currently active sessions on the Bastion.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-session_ids = AzureSDK::SessionIds.new # SessionIds | The list of sessionids to disconnect.
+session_ids = AzureRest::SessionIds.new # SessionIds | The list of sessionids to disconnect.
 
 begin
   
   result = api_instance.disconnect_active_sessions(api_version, subscription_id, resource_group_name, bastion_host_name, session_ids)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->disconnect_active_sessions: #{e}"
 end
 ```
@@ -665,7 +665,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionSessionDeleteResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->disconnect_active_sessions_with_http_info: #{e}"
 end
 ```
@@ -706,14 +706,14 @@ Returns the list of currently active sessions on the Bastion.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -723,7 +723,7 @@ begin
   
   result = api_instance.get_active_sessions(api_version, subscription_id, resource_group_name, bastion_host_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->get_active_sessions: #{e}"
 end
 ```
@@ -741,7 +741,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionActiveSessionListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->get_active_sessions_with_http_info: #{e}"
 end
 ```
@@ -781,25 +781,25 @@ Return the Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   result = api_instance.get_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->get_bastion_shareable_link: #{e}"
 end
 ```
@@ -817,7 +817,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionShareableLinkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->get_bastion_shareable_link_with_http_info: #{e}"
 end
 ```
@@ -858,25 +858,25 @@ Creates a Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionHostsApi.new
+api_instance = AzureRest::BastionHostsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   result = api_instance.put_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->put_bastion_shareable_link: #{e}"
 end
 ```
@@ -894,7 +894,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionShareableLinkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionHostsApi->put_bastion_shareable_link_with_http_info: #{e}"
 end
 ```

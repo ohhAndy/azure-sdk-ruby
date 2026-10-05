@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineSizeTypes
+# AzureRest::VirtualMachineSizeTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineSizeTypes.new()
+instance = AzureRest::VirtualMachineSizeTypes.new()
 ```
 

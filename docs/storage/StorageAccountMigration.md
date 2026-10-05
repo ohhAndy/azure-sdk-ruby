@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountMigration
+# AzureRest::StorageAccountMigration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountMigration.new(
+instance = AzureRest::StorageAccountMigration.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ClientGroupInfo
+# AzureRest::ClientGroupInfo
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClientGroupInfo.new(
+instance = AzureRest::ClientGroupInfo.new(
   group_name: null,
   group_id: null
 )

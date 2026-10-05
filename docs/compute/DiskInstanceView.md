@@ -1,4 +1,4 @@
-# AzureSDK::DiskInstanceView
+# AzureRest::DiskInstanceView
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskInstanceView.new(
+instance = AzureRest::DiskInstanceView.new(
   name: null,
   encryption_settings: null,
   statuses: null,

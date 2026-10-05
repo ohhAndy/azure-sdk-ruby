@@ -1,4 +1,4 @@
-# AzureSDK::FirewallRulesApi
+# AzureRest::FirewallRulesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,25 +22,25 @@ Creates a new firewall rule or updates an existing firewall rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FirewallRulesApi.new
+api_instance = AzureRest::FirewallRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 firewall_rule_name = 'firewall_rule_name_example' # String | Name of the firewall rule.
-parameters = AzureSDK::FirewallRule.new({properties: AzureSDK::FirewallRuleProperties.new({start_ip_address: 'start_ip_address_example', end_ip_address: 'end_ip_address_example'})}) # FirewallRule | Parameters required for creating or updating a firewall rule.
+parameters = AzureRest::FirewallRule.new({properties: AzureRest::FirewallRuleProperties.new({start_ip_address: 'start_ip_address_example', end_ip_address: 'end_ip_address_example'})}) # FirewallRule | Parameters required for creating or updating a firewall rule.
 
 begin
   
   api_instance.firewall_rules_create_or_update(api_version, subscription_id, resource_group_name, server_name, firewall_rule_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_create_or_update: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Deletes an existing firewall rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FirewallRulesApi.new
+api_instance = AzureRest::FirewallRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ firewall_rule_name = 'firewall_rule_name_example' # String | Name of the firewal
 begin
   
   api_instance.firewall_rules_delete(api_version, subscription_id, resource_group_name, server_name, firewall_rule_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_delete_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ Gets information about a firewall rule in a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FirewallRulesApi.new
+api_instance = AzureRest::FirewallRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ begin
   
   result = api_instance.firewall_rules_get(api_version, subscription_id, resource_group_name, server_name, firewall_rule_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_get: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FirewallRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_get_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ Lists information about all firewall rules in a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FirewallRulesApi.new
+api_instance = AzureRest::FirewallRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.firewall_rules_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_list_by_server: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FirewallRuleList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FirewallRulesApi->firewall_rules_list_by_server_with_http_info: #{e}"
 end
 ```

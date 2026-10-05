@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointInstanceView
+# AzureRest::RestorePointInstanceView
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointInstanceView.new(
+instance = AzureRest::RestorePointInstanceView.new(
   disk_restore_points: null,
   statuses: null
 )

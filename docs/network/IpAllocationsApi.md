@@ -1,4 +1,4 @@
-# AzureSDK::IpAllocationsApi
+# AzureRest::IpAllocationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates an IpAllocation in the specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ip_allocation_name = 'ip_allocation_name_example' # String | The name of the IpAllocation.
-parameters = AzureSDK::IpAllocation.new # IpAllocation | Parameters supplied to the create or update virtual network operation.
+parameters = AzureRest::IpAllocation.new # IpAllocation | Parameters supplied to the create or update virtual network operation.
 
 begin
   
   result = api_instance.ip_allocations_create_or_update(api_version, subscription_id, resource_group_name, ip_allocation_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpAllocation>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified IpAllocation.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ ip_allocation_name = 'ip_allocation_name_example' # String | The name of the IpA
 begin
   
   api_instance.ip_allocations_delete(api_version, subscription_id, resource_group_name, ip_allocation_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets the specified IpAllocation by resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.ip_allocations_get(api_version, subscription_id, resource_group_name, ip_allocation_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpAllocation>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all IpAllocations in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -269,7 +269,7 @@ begin
   
   result = api_instance.ip_allocations_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_list: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpAllocationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_list_with_http_info: #{e}"
 end
 ```
@@ -325,14 +325,14 @@ Gets all IpAllocations in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -341,7 +341,7 @@ begin
   
   result = api_instance.ip_allocations_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_list_by_resource_group: #{e}"
 end
 ```
@@ -359,7 +359,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpAllocationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Updates a IpAllocation tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpAllocationsApi.new
+api_instance = AzureRest::IpAllocationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ip_allocation_name = 'ip_allocation_name_example' # String | The name of the IpAllocation.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update IpAllocation tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update IpAllocation tags.
 
 begin
   
   result = api_instance.ip_allocations_update_tags(api_version, subscription_id, resource_group_name, ip_allocation_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_update_tags: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpAllocation>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpAllocationsApi->ip_allocations_update_tags_with_http_info: #{e}"
 end
 ```

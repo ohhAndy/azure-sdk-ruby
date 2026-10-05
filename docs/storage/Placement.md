@@ -1,4 +1,4 @@
-# AzureSDK::Placement
+# AzureRest::Placement
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Placement.new(
+instance = AzureRest::Placement.new(
   zone_placement_policy: null
 )
 ```

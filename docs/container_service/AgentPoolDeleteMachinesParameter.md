@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolDeleteMachinesParameter
+# AzureRest::AgentPoolDeleteMachinesParameter
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolDeleteMachinesParameter.new(
+instance = AzureRest::AgentPoolDeleteMachinesParameter.new(
   machine_names: null
 )
 ```

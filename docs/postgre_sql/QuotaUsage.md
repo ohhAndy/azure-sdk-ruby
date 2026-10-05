@@ -1,4 +1,4 @@
-# AzureSDK::QuotaUsage
+# AzureRest::QuotaUsage
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::QuotaUsage.new(
+instance = AzureRest::QuotaUsage.new(
   name: null,
   limit: null,
   unit: null,

@@ -1,4 +1,4 @@
-# AzureSDK::LifecycleHook
+# AzureRest::LifecycleHook
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LifecycleHook.new(
+instance = AzureRest::LifecycleHook.new(
   type: null,
   wait_duration: null,
   default_action: null

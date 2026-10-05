@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointProvisioningState
+# AzureRest::PrivateEndpointProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateEndpointProvisioningState.new()
+instance = AzureRest::PrivateEndpointProvisioningState.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceNicType
+# AzureRest::NetworkInterfaceNicType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceNicType.new()
+instance = AzureRest::NetworkInterfaceNicType.new()
 ```
 

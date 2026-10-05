@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterStaticEgressGatewayProfile
+# AzureRest::ManagedClusterStaticEgressGatewayProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterStaticEgressGatewayProfile.new(
+instance = AzureRest::ManagedClusterStaticEgressGatewayProfile.new(
   enabled: null
 )
 ```

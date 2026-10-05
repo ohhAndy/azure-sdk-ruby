@@ -1,4 +1,4 @@
-# AzureSDK::ServiceSpecification
+# AzureRest::ServiceSpecification
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceSpecification.new(
+instance = AzureRest::ServiceSpecification.new(
   metric_specifications: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::MigrationResourceForPatch
+# AzureRest::MigrationResourceForPatch
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationResourceForPatch.new(
+instance = AzureRest::MigrationResourceForPatch.new(
   properties: null,
   tags: null
 )

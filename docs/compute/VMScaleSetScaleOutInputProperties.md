@@ -1,4 +1,4 @@
-# AzureSDK::VMScaleSetScaleOutInputProperties
+# AzureRest::VMScaleSetScaleOutInputProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMScaleSetScaleOutInputProperties.new(
+instance = AzureRest::VMScaleSetScaleOutInputProperties.new(
   zone: null
 )
 ```

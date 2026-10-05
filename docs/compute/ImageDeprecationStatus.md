@@ -1,4 +1,4 @@
-# AzureSDK::ImageDeprecationStatus
+# AzureRest::ImageDeprecationStatus
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImageDeprecationStatus.new(
+instance = AzureRest::ImageDeprecationStatus.new(
   image_state: null,
   scheduled_deprecation_time: null,
   alternative_option: null

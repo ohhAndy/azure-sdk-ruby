@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolAvailableVersionsProperties
+# AzureRest::AgentPoolAvailableVersionsProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolAvailableVersionsProperties.new(
+instance = AzureRest::AgentPoolAvailableVersionsProperties.new(
   agent_pool_versions: null
 )
 ```

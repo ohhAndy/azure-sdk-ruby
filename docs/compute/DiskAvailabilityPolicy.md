@@ -1,4 +1,4 @@
-# AzureSDK::DiskAvailabilityPolicy
+# AzureRest::DiskAvailabilityPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskAvailabilityPolicy.new(
+instance = AzureRest::DiskAvailabilityPolicy.new(
   action_on_disk_delay: null
 )
 ```

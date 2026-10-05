@@ -1,4 +1,4 @@
-# AzureSDK::RouteNextHopEcmp
+# AzureRest::RouteNextHopEcmp
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RouteNextHopEcmp.new(
+instance = AzureRest::RouteNextHopEcmp.new(
   next_hop_ip_addresses: null
 )
 ```

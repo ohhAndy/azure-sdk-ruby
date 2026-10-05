@@ -1,4 +1,4 @@
-# AzureSDK::ProvisioningState
+# AzureRest::ProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProvisioningState.new()
+instance = AzureRest::ProvisioningState.new()
 ```
 

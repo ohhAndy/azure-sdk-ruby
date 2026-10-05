@@ -1,4 +1,4 @@
-# AzureSDK::IstioServiceMesh
+# AzureRest::IstioServiceMesh
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IstioServiceMesh.new(
+instance = AzureRest::IstioServiceMesh.new(
   components: null,
   certificate_authority: null,
   revisions: null

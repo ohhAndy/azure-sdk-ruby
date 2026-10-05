@@ -1,4 +1,4 @@
-# AzureSDK::AdministratorMicrosoftEntraProperties
+# AzureRest::AdministratorMicrosoftEntraProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdministratorMicrosoftEntraProperties.new(
+instance = AzureRest::AdministratorMicrosoftEntraProperties.new(
   principal_type: null,
   principal_name: null,
   object_id: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DiskCreateOptionTypes
+# AzureRest::DiskCreateOptionTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskCreateOptionTypes.new()
+instance = AzureRest::DiskCreateOptionTypes.new()
 ```
 

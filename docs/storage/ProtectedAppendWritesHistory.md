@@ -1,4 +1,4 @@
-# AzureSDK::ProtectedAppendWritesHistory
+# AzureRest::ProtectedAppendWritesHistory
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProtectedAppendWritesHistory.new(
+instance = AzureRest::ProtectedAppendWritesHistory.new(
   allow_protected_append_writes_all: null,
   timestamp: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::SasPolicy
+# AzureRest::SasPolicy
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SasPolicy.new(
+instance = AzureRest::SasPolicy.new(
   sas_expiration_period: null,
   expiration_action: null,
   require_user_bound_user_delegation_sas: null,

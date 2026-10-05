@@ -1,4 +1,4 @@
-# AzureSDK::SmbOAuthSettings
+# AzureRest::SmbOAuthSettings
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SmbOAuthSettings.new(
+instance = AzureRest::SmbOAuthSettings.new(
   is_smb_o_auth_enabled: null
 )
 ```

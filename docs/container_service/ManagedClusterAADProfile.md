@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAADProfile
+# AzureRest::ManagedClusterAADProfile
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAADProfile.new(
+instance = AzureRest::ManagedClusterAADProfile.new(
   managed: null,
   enable_azure_rbac: null,
   admin_group_object_ids: null,

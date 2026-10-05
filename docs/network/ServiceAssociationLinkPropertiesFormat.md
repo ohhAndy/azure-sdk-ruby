@@ -1,4 +1,4 @@
-# AzureSDK::ServiceAssociationLinkPropertiesFormat
+# AzureRest::ServiceAssociationLinkPropertiesFormat
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceAssociationLinkPropertiesFormat.new(
+instance = AzureRest::ServiceAssociationLinkPropertiesFormat.new(
   linked_resource_type: null,
   link: null,
   provisioning_state: null,

@@ -1,4 +1,4 @@
-# AzureSDK::InternetIngressPublicIpsProperties
+# AzureRest::InternetIngressPublicIpsProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InternetIngressPublicIpsProperties.new(
+instance = AzureRest::InternetIngressPublicIpsProperties.new(
   id: null
 )
 ```

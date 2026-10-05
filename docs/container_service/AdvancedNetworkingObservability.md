@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedNetworkingObservability
+# AzureRest::AdvancedNetworkingObservability
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedNetworkingObservability.new(
+instance = AzureRest::AdvancedNetworkingObservability.new(
   enabled: null
 )
 ```

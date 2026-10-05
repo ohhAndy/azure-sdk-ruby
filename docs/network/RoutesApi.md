@@ -1,4 +1,4 @@
-# AzureSDK::RoutesApi
+# AzureRest::RoutesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates a route in the specified route table.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoutesApi.new
+api_instance = AzureRest::RoutesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 route_table_name = 'route_table_name_example' # String | The name of the route table.
 route_name = 'route_name_example' # String | The name of the route.
-route_parameters = AzureSDK::Route.new # Route | Parameters supplied to the create or update route operation.
+route_parameters = AzureRest::Route.new # Route | Parameters supplied to the create or update route operation.
 
 begin
   
   result = api_instance.routes_create_or_update(api_version, subscription_id, resource_group_name, route_table_name, route_name, route_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Route>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified route from a route table.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoutesApi.new
+api_instance = AzureRest::RoutesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ route_name = 'route_name_example' # String | The name of the route.
 begin
   
   api_instance.routes_delete(api_version, subscription_id, resource_group_name, route_table_name, route_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the specified route from a route table.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoutesApi.new
+api_instance = AzureRest::RoutesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.routes_get(api_version, subscription_id, resource_group_name, route_table_name, route_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Route>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all routes in a route table.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoutesApi.new
+api_instance = AzureRest::RoutesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.routes_list(api_version, subscription_id, resource_group_name, route_table_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RouteListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoutesApi->routes_list_with_http_info: #{e}"
 end
 ```

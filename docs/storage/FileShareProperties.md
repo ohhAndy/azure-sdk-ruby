@@ -1,4 +1,4 @@
-# AzureSDK::FileShareProperties
+# AzureRest::FileShareProperties
 
 ## Properties
 
@@ -34,9 +34,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileShareProperties.new(
+instance = AzureRest::FileShareProperties.new(
   last_modified_time: null,
   metadata: null,
   share_quota: null,

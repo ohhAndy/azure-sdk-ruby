@@ -1,4 +1,4 @@
-# AzureSDK::SecurityRule2
+# AzureRest::SecurityRule2
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityRule2.new(
+instance = AzureRest::SecurityRule2.new(
   id: null,
   name: null,
   type: null,

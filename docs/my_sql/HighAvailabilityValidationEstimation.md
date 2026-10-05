@@ -1,4 +1,4 @@
-# AzureSDK::HighAvailabilityValidationEstimation
+# AzureRest::HighAvailabilityValidationEstimation
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HighAvailabilityValidationEstimation.new(
+instance = AzureRest::HighAvailabilityValidationEstimation.new(
   estimated_downtime: null,
   scheduled_standby_availability_zone: null,
   expected_standby_availability_zone: null

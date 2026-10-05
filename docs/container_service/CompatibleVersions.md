@@ -1,4 +1,4 @@
-# AzureSDK::CompatibleVersions
+# AzureRest::CompatibleVersions
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CompatibleVersions.new(
+instance = AzureRest::CompatibleVersions.new(
   name: null,
   versions: null
 )

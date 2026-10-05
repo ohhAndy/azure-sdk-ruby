@@ -1,4 +1,4 @@
-# AzureSDK::UserInitiatedReboot
+# AzureRest::UserInitiatedReboot
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UserInitiatedReboot.new(
+instance = AzureRest::UserInitiatedReboot.new(
   automatically_approve: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::DdosCustomPolicy
+# AzureRest::DdosCustomPolicy
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosCustomPolicy.new(
+instance = AzureRest::DdosCustomPolicy.new(
   id: null,
   name: null,
   type: null,

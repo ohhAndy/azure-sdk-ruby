@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicyAction
+# AzureRest::ManagementPolicyAction
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicyAction.new(
+instance = AzureRest::ManagementPolicyAction.new(
   base_blob: null,
   snapshot: null,
   version: null

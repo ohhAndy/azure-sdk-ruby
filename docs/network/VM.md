@@ -1,4 +1,4 @@
-# AzureSDK::VM
+# AzureRest::VM
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VM.new(
+instance = AzureRest::VM.new(
   id: null,
   name: null,
   type: null,

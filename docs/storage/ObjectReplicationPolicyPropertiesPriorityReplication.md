@@ -1,4 +1,4 @@
-# AzureSDK::ObjectReplicationPolicyPropertiesPriorityReplication
+# AzureRest::ObjectReplicationPolicyPropertiesPriorityReplication
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectReplicationPolicyPropertiesPriorityReplication.new(
+instance = AzureRest::ObjectReplicationPolicyPropertiesPriorityReplication.new(
   enabled: null
 )
 ```

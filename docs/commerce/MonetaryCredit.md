@@ -1,4 +1,4 @@
-# AzureSDK::MonetaryCredit
+# AzureRest::MonetaryCredit
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MonetaryCredit.new(
+instance = AzureRest::MonetaryCredit.new(
   credit: null,
   excluded_meter_ids: null
 )

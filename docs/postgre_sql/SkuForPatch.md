@@ -1,4 +1,4 @@
-# AzureSDK::SkuForPatch
+# AzureRest::SkuForPatch
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuForPatch.new(
+instance = AzureRest::SkuForPatch.new(
   name: null,
   tier: null
 )

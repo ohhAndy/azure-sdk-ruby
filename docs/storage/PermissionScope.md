@@ -1,4 +1,4 @@
-# AzureSDK::PermissionScope
+# AzureRest::PermissionScope
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PermissionScope.new(
+instance = AzureRest::PermissionScope.new(
   permissions: null,
   service: null,
   resource_name: null

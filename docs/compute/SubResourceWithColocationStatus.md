@@ -1,4 +1,4 @@
-# AzureSDK::SubResourceWithColocationStatus
+# AzureRest::SubResourceWithColocationStatus
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SubResourceWithColocationStatus.new(
+instance = AzureRest::SubResourceWithColocationStatus.new(
   id: null,
   colocation_status: null
 )

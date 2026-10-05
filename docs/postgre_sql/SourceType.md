@@ -1,4 +1,4 @@
-# AzureSDK::SourceType
+# AzureRest::SourceType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SourceType.new()
+instance = AzureRest::SourceType.new()
 ```
 

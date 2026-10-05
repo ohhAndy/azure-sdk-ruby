@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationGroupListResult
+# AzureRest::CapacityReservationGroupListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationGroupListResult.new(
+instance = AzureRest::CapacityReservationGroupListResult.new(
   value: null,
   next_link: null
 )

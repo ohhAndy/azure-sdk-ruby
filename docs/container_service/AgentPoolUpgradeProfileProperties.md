@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolUpgradeProfileProperties
+# AzureRest::AgentPoolUpgradeProfileProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolUpgradeProfileProperties.new(
+instance = AzureRest::AgentPoolUpgradeProfileProperties.new(
   kubernetes_version: null,
   os_type: null,
   upgrades: null,

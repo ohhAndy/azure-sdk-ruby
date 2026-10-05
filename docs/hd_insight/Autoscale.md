@@ -1,4 +1,4 @@
-# AzureSDK::Autoscale
+# AzureRest::Autoscale
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Autoscale.new(
+instance = AzureRest::Autoscale.new(
   capacity: null,
   recurrence: null
 )

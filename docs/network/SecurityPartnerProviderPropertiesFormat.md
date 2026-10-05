@@ -1,4 +1,4 @@
-# AzureSDK::SecurityPartnerProviderPropertiesFormat
+# AzureRest::SecurityPartnerProviderPropertiesFormat
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityPartnerProviderPropertiesFormat.new(
+instance = AzureRest::SecurityPartnerProviderPropertiesFormat.new(
   provisioning_state: null,
   security_provider_name: null,
   connection_status: null,

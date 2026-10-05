@@ -1,4 +1,4 @@
-# AzureSDK::AbsoluteMonthlySchedule
+# AzureRest::AbsoluteMonthlySchedule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AbsoluteMonthlySchedule.new(
+instance = AzureRest::AbsoluteMonthlySchedule.new(
   interval_months: null,
   day_of_month: null
 )

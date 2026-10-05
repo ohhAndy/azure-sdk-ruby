@@ -1,4 +1,4 @@
-# AzureSDK::ProximityPlacementGroupPropertiesIntent
+# AzureRest::ProximityPlacementGroupPropertiesIntent
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProximityPlacementGroupPropertiesIntent.new(
+instance = AzureRest::ProximityPlacementGroupPropertiesIntent.new(
   vm_sizes: null
 )
 ```

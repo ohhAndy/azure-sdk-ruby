@@ -1,4 +1,4 @@
-# AzureSDK::TriggerType
+# AzureRest::TriggerType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TriggerType.new()
+instance = AzureRest::TriggerType.new()
 ```
 

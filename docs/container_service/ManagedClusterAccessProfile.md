@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAccessProfile
+# AzureRest::ManagedClusterAccessProfile
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAccessProfile.new(
+instance = AzureRest::ManagedClusterAccessProfile.new(
   id: null,
   name: null,
   type: null,

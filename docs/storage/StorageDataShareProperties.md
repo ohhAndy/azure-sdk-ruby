@@ -1,4 +1,4 @@
-# AzureSDK::StorageDataShareProperties
+# AzureRest::StorageDataShareProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageDataShareProperties.new(
+instance = AzureRest::StorageDataShareProperties.new(
   data_share_identifier: null,
   description: null,
   data_share_uri: null,

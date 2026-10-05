@@ -1,4 +1,4 @@
-# AzureSDK::FullBackupStoreDetails
+# AzureRest::FullBackupStoreDetails
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FullBackupStoreDetails.new(
+instance = AzureRest::FullBackupStoreDetails.new(
   sas_uri_list: null
 )
 ```

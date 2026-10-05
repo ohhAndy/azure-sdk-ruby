@@ -1,4 +1,4 @@
-# AzureSDK::StorageConnectorDataSourceType
+# AzureRest::StorageConnectorDataSourceType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageConnectorDataSourceType.new()
+instance = AzureRest::StorageConnectorDataSourceType.new()
 ```
 

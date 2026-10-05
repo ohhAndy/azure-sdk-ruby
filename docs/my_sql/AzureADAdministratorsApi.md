@@ -1,4 +1,4 @@
-# AzureSDK::AzureADAdministratorsApi
+# AzureRest::AzureADAdministratorsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates an existing Azure Active Directory administrator.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AzureADAdministratorsApi.new
+api_instance = AzureRest::AzureADAdministratorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 administrator_name = 'ActiveDirectory' # String | The name of the Azure AD Administrator.
-parameters = AzureSDK::AzureADAdministrator.new # AzureADAdministrator | The required parameters for creating or updating an aad administrator.
+parameters = AzureRest::AzureADAdministrator.new # AzureADAdministrator | The required parameters for creating or updating an aad administrator.
 
 begin
   
   result = api_instance.azure_ad_administrators_create_or_update(api_version, subscription_id, resource_group_name, server_name, administrator_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AzureADAdministrator>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes an Azure AD Administrator.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AzureADAdministratorsApi.new
+api_instance = AzureRest::AzureADAdministratorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ administrator_name = 'ActiveDirectory' # String | The name of the Azure AD Admin
 begin
   
   api_instance.azure_ad_administrators_delete(api_version, subscription_id, resource_group_name, server_name, administrator_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets information about an azure ad administrator.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AzureADAdministratorsApi.new
+api_instance = AzureRest::AzureADAdministratorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.azure_ad_administrators_get(api_version, subscription_id, resource_group_name, server_name, administrator_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AzureADAdministrator>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ List all the AAD administrators in a given server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AzureADAdministratorsApi.new
+api_instance = AzureRest::AzureADAdministratorsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.azure_ad_administrators_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_list_by_server: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AdministratorListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AzureADAdministratorsApi->azure_ad_administrators_list_by_server_with_http_info: #{e}"
 end
 ```

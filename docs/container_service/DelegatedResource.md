@@ -1,4 +1,4 @@
-# AzureSDK::DelegatedResource
+# AzureRest::DelegatedResource
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DelegatedResource.new(
+instance = AzureRest::DelegatedResource.new(
   resource_id: null,
   tenant_id: null,
   referral_resource: null,

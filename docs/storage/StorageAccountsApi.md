@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountsApi
+# AzureRest::StorageAccountsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -37,14 +37,14 @@ Gets the private link resources that need to be created for a storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -54,7 +54,7 @@ begin
   
   result = api_instance.private_link_resources_list_by_storage_account(api_version, subscription_id, resource_group_name, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->private_link_resources_list_by_storage_account: #{e}"
 end
 ```
@@ -72,7 +72,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->private_link_resources_list_by_storage_account_with_http_info: #{e}"
 end
 ```
@@ -112,14 +112,14 @@ Abort live Migration of storage account to enable Hns
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -128,7 +128,7 @@ account_name = 'account_name_example' # String | The name of the storage account
 begin
   
   api_instance.storage_accounts_abort_hierarchical_namespace_migration(api_version, subscription_id, resource_group_name, account_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_abort_hierarchical_namespace_migration: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_abort_hierarchical_namespace_migration_with_http_info: #{e}"
 end
 ```
@@ -186,23 +186,23 @@ Checks that the storage account name is valid and is not already in use.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
-account_name = AzureSDK::StorageAccountCheckNameAvailabilityParameters.new({name: 'name_example', type: 'Microsoft.Storage/storageAccounts'}) # StorageAccountCheckNameAvailabilityParameters | The request body
+account_name = AzureRest::StorageAccountCheckNameAvailabilityParameters.new({name: 'name_example', type: 'Microsoft.Storage/storageAccounts'}) # StorageAccountCheckNameAvailabilityParameters | The request body
 
 begin
   
   result = api_instance.storage_accounts_check_name_availability(api_version, subscription_id, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_check_name_availability: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CheckNameAvailabilityResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_check_name_availability_with_http_info: #{e}"
 end
 ```
@@ -259,25 +259,25 @@ Asynchronously creates a new storage account with the specified parameters. If a
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::StorageAccountCreateParameters.new({sku: AzureSDK::Sku.new({name: AzureSDK::SkuName::STANDARD_LRS}), kind: AzureSDK::Kind::STORAGE, location: 'location_example'}) # StorageAccountCreateParameters | The parameters to provide for the created account.
+parameters = AzureRest::StorageAccountCreateParameters.new({sku: AzureRest::Sku.new({name: AzureRest::SkuName::STANDARD_LRS}), kind: AzureRest::Kind::STORAGE, location: 'location_example'}) # StorageAccountCreateParameters | The parameters to provide for the created account.
 
 begin
   
   result = api_instance.storage_accounts_create(api_version, subscription_id, resource_group_name, account_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_create: #{e}"
 end
 ```
@@ -295,7 +295,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccount>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_create_with_http_info: #{e}"
 end
 ```
@@ -336,24 +336,24 @@ Account Migration request can be triggered for a storage account to change its r
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::StorageAccountMigration.new({properties: AzureSDK::StorageAccountMigrationProperties.new({target_sku_name: AzureSDK::SkuName::STANDARD_LRS})}) # StorageAccountMigration | The request parameters required to perform storage account migration.
+parameters = AzureRest::StorageAccountMigration.new({properties: AzureRest::StorageAccountMigrationProperties.new({target_sku_name: AzureRest::SkuName::STANDARD_LRS})}) # StorageAccountMigration | The request parameters required to perform storage account migration.
 
 begin
   
   api_instance.storage_accounts_customer_initiated_migration(api_version, subscription_id, resource_group_name, account_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_customer_initiated_migration: #{e}"
 end
 ```
@@ -371,7 +371,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_customer_initiated_migration_with_http_info: #{e}"
 end
 ```
@@ -412,14 +412,14 @@ Deletes a storage account in Microsoft Azure.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -428,7 +428,7 @@ account_name = 'account_name_example' # String | The name of the storage account
 begin
   
   api_instance.storage_accounts_delete(api_version, subscription_id, resource_group_name, account_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_delete: #{e}"
 end
 ```
@@ -446,7 +446,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_delete_with_http_info: #{e}"
 end
 ```
@@ -486,14 +486,14 @@ A failover request can be triggered for a storage account in the event a primary
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -505,7 +505,7 @@ opts = {
 begin
   
   api_instance.storage_accounts_failover(api_version, subscription_id, resource_group_name, account_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_failover: #{e}"
 end
 ```
@@ -523,7 +523,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_failover_with_http_info: #{e}"
 end
 ```
@@ -564,14 +564,14 @@ Returns the properties for the specified storage account including but not limit
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -584,7 +584,7 @@ begin
   
   result = api_instance.storage_accounts_get_properties(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_get_properties: #{e}"
 end
 ```
@@ -602,7 +602,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccount>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_get_properties_with_http_info: #{e}"
 end
 ```
@@ -643,14 +643,14 @@ Live Migration of storage account to enable Hns
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -660,7 +660,7 @@ request_type = 'request_type_example' # String | Required. Hierarchical namespac
 begin
   
   api_instance.storage_accounts_hierarchical_namespace_migration(api_version, subscription_id, resource_group_name, account_name, request_type)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_hierarchical_namespace_migration: #{e}"
 end
 ```
@@ -678,7 +678,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_hierarchical_namespace_migration_with_http_info: #{e}"
 end
 ```
@@ -719,14 +719,14 @@ Lists all the storage accounts available under the subscription. Note that stora
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -734,7 +734,7 @@ begin
   
   result = api_instance.storage_accounts_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list: #{e}"
 end
 ```
@@ -752,7 +752,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccountListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_with_http_info: #{e}"
 end
 ```
@@ -790,25 +790,25 @@ List SAS credentials of a storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::AccountSasParameters.new({signed_services: AzureSDK::Services::B, signed_resource_types: AzureSDK::SignedResourceTypes::S, signed_permission: AzureSDK::Permissions::R, signed_expiry: Time.now}) # AccountSasParameters | The parameters to provide to list SAS credentials for the storage account.
+parameters = AzureRest::AccountSasParameters.new({signed_services: AzureRest::Services::B, signed_resource_types: AzureRest::SignedResourceTypes::S, signed_permission: AzureRest::Permissions::R, signed_expiry: Time.now}) # AccountSasParameters | The parameters to provide to list SAS credentials for the storage account.
 
 begin
   
   result = api_instance.storage_accounts_list_account_sas(api_version, subscription_id, resource_group_name, account_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_account_sas: #{e}"
 end
 ```
@@ -826,7 +826,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAccountSasResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_account_sas_with_http_info: #{e}"
 end
 ```
@@ -867,14 +867,14 @@ Lists all the storage accounts available under the given resource group. Note th
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -883,7 +883,7 @@ begin
   
   result = api_instance.storage_accounts_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_by_resource_group: #{e}"
 end
 ```
@@ -901,7 +901,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccountListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -940,14 +940,14 @@ Lists the access keys or Kerberos keys (if active directory enabled) for the spe
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -960,7 +960,7 @@ begin
   
   result = api_instance.storage_accounts_list_keys(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_keys: #{e}"
 end
 ```
@@ -978,7 +978,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccountListKeysResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_keys_with_http_info: #{e}"
 end
 ```
@@ -1019,25 +1019,25 @@ List service SAS credentials of a specific resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::ServiceSasParameters.new({canonicalized_resource: 'canonicalized_resource_example'}) # ServiceSasParameters | The parameters to provide to list service SAS credentials.
+parameters = AzureRest::ServiceSasParameters.new({canonicalized_resource: 'canonicalized_resource_example'}) # ServiceSasParameters | The parameters to provide to list service SAS credentials.
 
 begin
   
   result = api_instance.storage_accounts_list_service_sas(api_version, subscription_id, resource_group_name, account_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_service_sas: #{e}"
 end
 ```
@@ -1055,7 +1055,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListServiceSasResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_list_service_sas_with_http_info: #{e}"
 end
 ```
@@ -1096,25 +1096,25 @@ Regenerates one of the access keys or Kerberos keys for the specified storage ac
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-regenerate_key = AzureSDK::StorageAccountRegenerateKeyParameters.new({key_name: 'key_name_example'}) # StorageAccountRegenerateKeyParameters | Specifies name of the key which should be regenerated -- key1, key2, kerb1, kerb2.
+regenerate_key = AzureRest::StorageAccountRegenerateKeyParameters.new({key_name: 'key_name_example'}) # StorageAccountRegenerateKeyParameters | Specifies name of the key which should be regenerated -- key1, key2, kerb1, kerb2.
 
 begin
   
   result = api_instance.storage_accounts_regenerate_key(api_version, subscription_id, resource_group_name, account_name, regenerate_key)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_regenerate_key: #{e}"
 end
 ```
@@ -1132,7 +1132,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccountListKeysResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_regenerate_key_with_http_info: #{e}"
 end
 ```
@@ -1173,25 +1173,25 @@ Restore blobs in the specified blob ranges
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::BlobRestoreParameters.new({time_to_restore: Time.now, blob_ranges: [AzureSDK::BlobRestoreRange.new({start_range: 'start_range_example', end_range: 'end_range_example'})]}) # BlobRestoreParameters | The parameters to provide for restore blob ranges.
+parameters = AzureRest::BlobRestoreParameters.new({time_to_restore: Time.now, blob_ranges: [AzureRest::BlobRestoreRange.new({start_range: 'start_range_example', end_range: 'end_range_example'})]}) # BlobRestoreParameters | The parameters to provide for restore blob ranges.
 
 begin
   
   result = api_instance.storage_accounts_restore_blob_ranges(api_version, subscription_id, resource_group_name, account_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_restore_blob_ranges: #{e}"
 end
 ```
@@ -1209,7 +1209,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobRestoreStatus>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_restore_blob_ranges_with_http_info: #{e}"
 end
 ```
@@ -1250,14 +1250,14 @@ Revoke user delegation keys.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1266,7 +1266,7 @@ account_name = 'account_name_example' # String | The name of the storage account
 begin
   
   api_instance.storage_accounts_revoke_user_delegation_keys(api_version, subscription_id, resource_group_name, account_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_revoke_user_delegation_keys: #{e}"
 end
 ```
@@ -1284,7 +1284,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_revoke_user_delegation_keys_with_http_info: #{e}"
 end
 ```
@@ -1324,25 +1324,25 @@ The update operation can be used to update the SKU, encryption, access tier, or 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::StorageAccountUpdateParameters.new # StorageAccountUpdateParameters | The parameters to provide for the updated account.
+parameters = AzureRest::StorageAccountUpdateParameters.new # StorageAccountUpdateParameters | The parameters to provide for the updated account.
 
 begin
   
   result = api_instance.storage_accounts_update(api_version, subscription_id, resource_group_name, account_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_update: #{e}"
 end
 ```
@@ -1360,7 +1360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageAccount>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_accounts_update_with_http_info: #{e}"
 end
 ```
@@ -1401,14 +1401,14 @@ Fetch the report summary of all the storage task assignments and instances in an
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageAccountsApi.new
+api_instance = AzureRest::StorageAccountsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1422,7 +1422,7 @@ begin
   
   result = api_instance.storage_task_assignments_instances_report_list(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_task_assignments_instances_report_list: #{e}"
 end
 ```
@@ -1440,7 +1440,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskReportSummary>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageAccountsApi->storage_task_assignments_instances_report_list_with_http_info: #{e}"
 end
 ```

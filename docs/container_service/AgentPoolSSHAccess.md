@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolSSHAccess
+# AzureRest::AgentPoolSSHAccess
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolSSHAccess.new()
+instance = AzureRest::AgentPoolSSHAccess.new()
 ```
 

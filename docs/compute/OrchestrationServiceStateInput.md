@@ -1,4 +1,4 @@
-# AzureSDK::OrchestrationServiceStateInput
+# AzureRest::OrchestrationServiceStateInput
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OrchestrationServiceStateInput.new(
+instance = AzureRest::OrchestrationServiceStateInput.new(
   service_name: null,
   action: null
 )

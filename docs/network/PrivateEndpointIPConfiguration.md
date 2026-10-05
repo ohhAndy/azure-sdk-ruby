@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointIPConfiguration
+# AzureRest::PrivateEndpointIPConfiguration
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateEndpointIPConfiguration.new(
+instance = AzureRest::PrivateEndpointIPConfiguration.new(
   properties: null,
   name: null,
   type: null,

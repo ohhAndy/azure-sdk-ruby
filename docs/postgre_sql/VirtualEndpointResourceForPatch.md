@@ -1,4 +1,4 @@
-# AzureSDK::VirtualEndpointResourceForPatch
+# AzureRest::VirtualEndpointResourceForPatch
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualEndpointResourceForPatch.new(
+instance = AzureRest::VirtualEndpointResourceForPatch.new(
   properties: null
 )
 ```

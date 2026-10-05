@@ -1,4 +1,4 @@
-# AzureSDK::MaintenancePolicy
+# AzureRest::MaintenancePolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MaintenancePolicy.new(
+instance = AzureRest::MaintenancePolicy.new(
   patch_strategy: null
 )
 ```

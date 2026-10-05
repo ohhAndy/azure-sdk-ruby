@@ -1,4 +1,4 @@
-# AzureSDK::AdditionalCapabilities
+# AzureRest::AdditionalCapabilities
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdditionalCapabilities.new(
+instance = AzureRest::AdditionalCapabilities.new(
   ultra_ssd_enabled: null,
   hibernation_enabled: null,
   enable_fips1403_encryption: null

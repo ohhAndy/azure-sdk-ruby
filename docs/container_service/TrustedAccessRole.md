@@ -1,4 +1,4 @@
-# AzureSDK::TrustedAccessRole
+# AzureRest::TrustedAccessRole
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrustedAccessRole.new(
+instance = AzureRest::TrustedAccessRole.new(
   source_resource_type: null,
   name: null,
   rules: null

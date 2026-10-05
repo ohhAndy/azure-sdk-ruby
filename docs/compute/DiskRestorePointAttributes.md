@@ -1,4 +1,4 @@
-# AzureSDK::DiskRestorePointAttributes
+# AzureRest::DiskRestorePointAttributes
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskRestorePointAttributes.new(
+instance = AzureRest::DiskRestorePointAttributes.new(
   id: null,
   encryption: null,
   source_disk_restore_point: null

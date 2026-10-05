@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceMigrationPhase
+# AzureRest::NetworkInterfaceMigrationPhase
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceMigrationPhase.new()
+instance = AzureRest::NetworkInterfaceMigrationPhase.new()
 ```
 

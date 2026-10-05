@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkUsageName
+# AzureRest::VirtualNetworkUsageName
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkUsageName.new(
+instance = AzureRest::VirtualNetworkUsageName.new(
   localized_value: null,
   value: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ObjectRecommendation
+# AzureRest::ObjectRecommendation
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectRecommendation.new(
+instance = AzureRest::ObjectRecommendation.new(
   id: null,
   name: null,
   type: null,

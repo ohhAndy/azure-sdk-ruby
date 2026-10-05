@@ -1,4 +1,4 @@
-# AzureSDK::SKUCapability
+# AzureRest::SKUCapability
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SKUCapability.new(
+instance = AzureRest::SKUCapability.new(
   name: null,
   value: null
 )

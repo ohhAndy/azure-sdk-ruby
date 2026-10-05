@@ -1,4 +1,4 @@
-# AzureSDK::DbServerMetadata
+# AzureRest::DbServerMetadata
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DbServerMetadata.new(
+instance = AzureRest::DbServerMetadata.new(
   location: null,
   version: null,
   storage_mb: null,

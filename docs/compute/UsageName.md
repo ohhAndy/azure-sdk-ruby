@@ -1,4 +1,4 @@
-# AzureSDK::UsageName
+# AzureRest::UsageName
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UsageName.new(
+instance = AzureRest::UsageName.new(
   value: null,
   localized_value: null
 )

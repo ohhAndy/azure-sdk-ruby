@@ -1,4 +1,4 @@
-# AzureSDK::SignedIdentifier
+# AzureRest::SignedIdentifier
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SignedIdentifier.new(
+instance = AzureRest::SignedIdentifier.new(
   id: null,
   access_policy: null
 )

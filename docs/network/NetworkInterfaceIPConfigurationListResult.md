@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceIPConfigurationListResult
+# AzureRest::NetworkInterfaceIPConfigurationListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceIPConfigurationListResult.new(
+instance = AzureRest::NetworkInterfaceIPConfigurationListResult.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::RouteTableListResult
+# AzureRest::RouteTableListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RouteTableListResult.new(
+instance = AzureRest::RouteTableListResult.new(
   value: null,
   next_link: null
 )

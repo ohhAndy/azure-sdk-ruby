@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineProperties
+# AzureRest::VirtualMachineProperties
 
 ## Properties
 
@@ -37,9 +37,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineProperties.new(
+instance = AzureRest::VirtualMachineProperties.new(
   hardware_profile: null,
   scheduled_events_policy: null,
   storage_profile: null,

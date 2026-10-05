@@ -1,4 +1,4 @@
-# AzureSDK::MoveIpConfigurationItem
+# AzureRest::MoveIpConfigurationItem
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MoveIpConfigurationItem.new(
+instance = AzureRest::MoveIpConfigurationItem.new(
   source_ip_configuration: null,
   target_ip_configuration: null
 )

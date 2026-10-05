@@ -1,4 +1,4 @@
-# AzureSDK::IsReadOnly
+# AzureRest::IsReadOnly
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IsReadOnly.new()
+instance = AzureRest::IsReadOnly.new()
 ```
 

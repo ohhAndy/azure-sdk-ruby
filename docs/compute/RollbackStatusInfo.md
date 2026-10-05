@@ -1,4 +1,4 @@
-# AzureSDK::RollbackStatusInfo
+# AzureRest::RollbackStatusInfo
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RollbackStatusInfo.new(
+instance = AzureRest::RollbackStatusInfo.new(
   successfully_rolledback_instance_count: null,
   failed_rolledback_instance_count: null,
   rollback_error: null

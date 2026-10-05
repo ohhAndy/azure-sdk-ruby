@@ -1,4 +1,4 @@
-# AzureSDK::VirtualRouterPropertiesFormat
+# AzureRest::VirtualRouterPropertiesFormat
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualRouterPropertiesFormat.new(
+instance = AzureRest::VirtualRouterPropertiesFormat.new(
   virtual_router_asn: null,
   virtual_router_ips: null,
   hosted_subnet: null,

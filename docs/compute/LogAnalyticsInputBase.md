@@ -1,4 +1,4 @@
-# AzureSDK::LogAnalyticsInputBase
+# AzureRest::LogAnalyticsInputBase
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LogAnalyticsInputBase.new(
+instance = AzureRest::LogAnalyticsInputBase.new(
   blob_container_sas_uri: null,
   from_time: null,
   to_time: null,

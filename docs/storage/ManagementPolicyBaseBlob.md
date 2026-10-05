@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicyBaseBlob
+# AzureRest::ManagementPolicyBaseBlob
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicyBaseBlob.new(
+instance = AzureRest::ManagementPolicyBaseBlob.new(
   tier_to_cool: null,
   tier_to_archive: null,
   tier_to_cold: null,

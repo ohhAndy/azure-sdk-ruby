@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileImageCleaner
+# AzureRest::ManagedClusterSecurityProfileImageCleaner
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileImageCleaner.new(
+instance = AzureRest::ManagedClusterSecurityProfileImageCleaner.new(
   enabled: null,
   interval_hours: null
 )

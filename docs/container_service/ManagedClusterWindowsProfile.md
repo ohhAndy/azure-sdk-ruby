@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterWindowsProfile
+# AzureRest::ManagedClusterWindowsProfile
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterWindowsProfile.new(
+instance = AzureRest::ManagedClusterWindowsProfile.new(
   admin_username: null,
   admin_password: null,
   license_type: null,

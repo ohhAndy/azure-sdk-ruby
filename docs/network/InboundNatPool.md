@@ -1,4 +1,4 @@
-# AzureSDK::InboundNatPool
+# AzureRest::InboundNatPool
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundNatPool.new(
+instance = AzureRest::InboundNatPool.new(
   id: null,
   properties: null,
   name: null,

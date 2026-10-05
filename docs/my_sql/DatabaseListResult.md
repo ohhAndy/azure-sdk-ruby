@@ -1,4 +1,4 @@
-# AzureSDK::DatabaseListResult
+# AzureRest::DatabaseListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DatabaseListResult.new(
+instance = AzureRest::DatabaseListResult.new(
   value: null,
   next_link: null
 )

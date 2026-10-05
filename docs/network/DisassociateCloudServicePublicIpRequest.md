@@ -1,4 +1,4 @@
-# AzureSDK::DisassociateCloudServicePublicIpRequest
+# AzureRest::DisassociateCloudServicePublicIpRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DisassociateCloudServicePublicIpRequest.new(
+instance = AzureRest::DisassociateCloudServicePublicIpRequest.new(
   public_ip_arm_id: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ClusterCreateParametersExtended
+# AzureRest::ClusterCreateParametersExtended
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterCreateParametersExtended.new(
+instance = AzureRest::ClusterCreateParametersExtended.new(
   location: null,
   tags: null,
   zones: null,

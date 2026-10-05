@@ -1,4 +1,4 @@
-# AzureSDK::ResourceGroupExportResult
+# AzureRest::ResourceGroupExportResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceGroupExportResult.new(
+instance = AzureRest::ResourceGroupExportResult.new(
   template: null,
   output: null,
   error: null

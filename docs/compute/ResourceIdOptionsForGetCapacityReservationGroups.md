@@ -1,4 +1,4 @@
-# AzureSDK::ResourceIdOptionsForGetCapacityReservationGroups
+# AzureRest::ResourceIdOptionsForGetCapacityReservationGroups
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceIdOptionsForGetCapacityReservationGroups.new()
+instance = AzureRest::ResourceIdOptionsForGetCapacityReservationGroups.new()
 ```
 

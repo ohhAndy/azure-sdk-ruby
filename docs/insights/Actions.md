@@ -1,4 +1,4 @@
-# AzureSDK::Actions
+# AzureRest::Actions
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Actions.new(
+instance = AzureRest::Actions.new(
   action_groups: null,
   custom_properties: null,
   action_properties: null

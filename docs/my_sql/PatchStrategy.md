@@ -1,4 +1,4 @@
-# AzureSDK::PatchStrategy
+# AzureRest::PatchStrategy
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PatchStrategy.new()
+instance = AzureRest::PatchStrategy.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ContainerServiceNetworkProfile
+# AzureRest::ContainerServiceNetworkProfile
 
 ## Properties
 
@@ -25,9 +25,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerServiceNetworkProfile.new(
+instance = AzureRest::ContainerServiceNetworkProfile.new(
   network_plugin: null,
   network_plugin_mode: null,
   network_policy: null,

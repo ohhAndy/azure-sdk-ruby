@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterProperties
+# AzureRest::ManagedClusterProperties
 
 ## Properties
 
@@ -56,9 +56,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterProperties.new(
+instance = AzureRest::ManagedClusterProperties.new(
   provisioning_state: null,
   power_state: null,
   max_agent_pools: null,

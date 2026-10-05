@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointAccessKeyAuthProperties
+# AzureRest::BlobAccessPointAccessKeyAuthProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointAccessKeyAuthProperties.new(
+instance = AzureRest::BlobAccessPointAccessKeyAuthProperties.new(
   access_key_id: null,
   secret_access_key: null,
   signing_region: null,

@@ -1,4 +1,4 @@
-# AzureSDK::RoleAssignmentCreateParameters
+# AzureRest::RoleAssignmentCreateParameters
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoleAssignmentCreateParameters.new(
+instance = AzureRest::RoleAssignmentCreateParameters.new(
   properties: null
 )
 ```

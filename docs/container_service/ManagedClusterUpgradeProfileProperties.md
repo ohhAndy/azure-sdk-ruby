@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterUpgradeProfileProperties
+# AzureRest::ManagedClusterUpgradeProfileProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterUpgradeProfileProperties.new(
+instance = AzureRest::ManagedClusterUpgradeProfileProperties.new(
   control_plane_profile: null,
   agent_pool_profiles: null
 )

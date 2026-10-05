@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetNetworkConfigurationDnsSettings
+# AzureRest::VirtualMachineScaleSetNetworkConfigurationDnsSettings
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetNetworkConfigurationDnsSettings.new(
+instance = AzureRest::VirtualMachineScaleSetNetworkConfigurationDnsSettings.new(
   dns_servers: null
 )
 ```

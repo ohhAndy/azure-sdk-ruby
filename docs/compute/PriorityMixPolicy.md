@@ -1,4 +1,4 @@
-# AzureSDK::PriorityMixPolicy
+# AzureRest::PriorityMixPolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PriorityMixPolicy.new(
+instance = AzureRest::PriorityMixPolicy.new(
   base_regular_priority_count: null,
   regular_priority_percentage_above_base: null
 )

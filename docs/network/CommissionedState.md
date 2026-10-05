@@ -1,4 +1,4 @@
-# AzureSDK::CommissionedState
+# AzureRest::CommissionedState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommissionedState.new()
+instance = AzureRest::CommissionedState.new()
 ```
 

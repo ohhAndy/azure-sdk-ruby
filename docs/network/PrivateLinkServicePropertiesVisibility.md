@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServicePropertiesVisibility
+# AzureRest::PrivateLinkServicePropertiesVisibility
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkServicePropertiesVisibility.new(
+instance = AzureRest::PrivateLinkServicePropertiesVisibility.new(
   subscriptions: null
 )
 ```

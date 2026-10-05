@@ -1,4 +1,4 @@
-# AzureSDK::MigrationNameAvailabilityReason
+# AzureRest::MigrationNameAvailabilityReason
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationNameAvailabilityReason.new()
+instance = AzureRest::MigrationNameAvailabilityReason.new()
 ```
 

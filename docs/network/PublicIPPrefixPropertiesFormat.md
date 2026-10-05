@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPPrefixPropertiesFormat
+# AzureRest::PublicIPPrefixPropertiesFormat
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPPrefixPropertiesFormat.new(
+instance = AzureRest::PublicIPPrefixPropertiesFormat.new(
   public_ip_address_version: null,
   ip_tags: null,
   prefix_length: null,

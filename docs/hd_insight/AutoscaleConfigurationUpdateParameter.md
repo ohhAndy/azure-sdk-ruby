@@ -1,4 +1,4 @@
-# AzureSDK::AutoscaleConfigurationUpdateParameter
+# AzureRest::AutoscaleConfigurationUpdateParameter
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutoscaleConfigurationUpdateParameter.new(
+instance = AzureRest::AutoscaleConfigurationUpdateParameter.new(
   autoscale: null
 )
 ```

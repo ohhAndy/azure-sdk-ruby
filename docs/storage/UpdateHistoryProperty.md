@@ -1,4 +1,4 @@
-# AzureSDK::UpdateHistoryProperty
+# AzureRest::UpdateHistoryProperty
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpdateHistoryProperty.new(
+instance = AzureRest::UpdateHistoryProperty.new(
   update: null,
   immutability_period_since_creation_in_days: null,
   timestamp: null,

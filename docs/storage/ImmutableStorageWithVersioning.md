@@ -1,4 +1,4 @@
-# AzureSDK::ImmutableStorageWithVersioning
+# AzureRest::ImmutableStorageWithVersioning
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImmutableStorageWithVersioning.new(
+instance = AzureRest::ImmutableStorageWithVersioning.new(
   enabled: null,
   time_stamp: null,
   migration_state: null

@@ -1,4 +1,4 @@
-# AzureSDK::Configuration
+# AzureRest::Configuration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Configuration.new(
+instance = AzureRest::Configuration.new(
   id: null,
   name: null,
   type: null,

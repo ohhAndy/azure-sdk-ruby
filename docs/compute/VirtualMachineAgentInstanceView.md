@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineAgentInstanceView
+# AzureRest::VirtualMachineAgentInstanceView
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineAgentInstanceView.new(
+instance = AzureRest::VirtualMachineAgentInstanceView.new(
   vm_agent_version: null,
   extension_handlers: null,
   statuses: null

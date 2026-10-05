@@ -1,4 +1,4 @@
-# AzureSDK::ImportFromStorageResponseType
+# AzureRest::ImportFromStorageResponseType
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImportFromStorageResponseType.new(
+instance = AzureRest::ImportFromStorageResponseType.new(
   estimated_completion_time: null
 )
 ```

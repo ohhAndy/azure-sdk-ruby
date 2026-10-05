@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionsApi
+# AzureRest::VirtualMachineExtensionsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,26 +23,26 @@ The operation to create or update the extension.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionsApi.new
+api_instance = AzureRest::VirtualMachineExtensionsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
 vm_extension_name = 'vm_extension_name_example' # String | The name of the virtual machine extension.
-extension_parameters = AzureSDK::VirtualMachineExtension.new({location: 'location_example'}) # VirtualMachineExtension | Parameters supplied to the Create Virtual Machine Extension operation.
+extension_parameters = AzureRest::VirtualMachineExtension.new({location: 'location_example'}) # VirtualMachineExtension | Parameters supplied to the Create Virtual Machine Extension operation.
 
 begin
   
   result = api_instance.virtual_machine_extensions_create_or_update(api_version, subscription_id, resource_group_name, vm_name, vm_extension_name, extension_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineExtension>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ The operation to delete the extension.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionsApi.new
+api_instance = AzureRest::VirtualMachineExtensionsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -119,7 +119,7 @@ vm_extension_name = 'vm_extension_name_example' # String | The name of the virtu
 begin
   
   api_instance.virtual_machine_extensions_delete(api_version, subscription_id, resource_group_name, vm_name, vm_extension_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_delete: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_delete_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ The operation to get the extension.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionsApi.new
+api_instance = AzureRest::VirtualMachineExtensionsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -199,7 +199,7 @@ begin
   
   result = api_instance.virtual_machine_extensions_get(api_version, subscription_id, resource_group_name, vm_name, vm_extension_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_get: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineExtension>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_get_with_http_info: #{e}"
 end
 ```
@@ -259,14 +259,14 @@ The operation to get all extensions of a Virtual Machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionsApi.new
+api_instance = AzureRest::VirtualMachineExtensionsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -279,7 +279,7 @@ begin
   
   result = api_instance.virtual_machine_extensions_list(api_version, subscription_id, resource_group_name, vm_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_list: #{e}"
 end
 ```
@@ -297,7 +297,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineExtensionsListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_list_with_http_info: #{e}"
 end
 ```
@@ -338,26 +338,26 @@ The operation to update the extension.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineExtensionsApi.new
+api_instance = AzureRest::VirtualMachineExtensionsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
 vm_extension_name = 'vm_extension_name_example' # String | The name of the virtual machine extension.
-extension_parameters = AzureSDK::VirtualMachineExtensionUpdate.new # VirtualMachineExtensionUpdate | Parameters supplied to the Update Virtual Machine Extension operation.
+extension_parameters = AzureRest::VirtualMachineExtensionUpdate.new # VirtualMachineExtensionUpdate | Parameters supplied to the Update Virtual Machine Extension operation.
 
 begin
   
   result = api_instance.virtual_machine_extensions_update(api_version, subscription_id, resource_group_name, vm_name, vm_extension_name, extension_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_update: #{e}"
 end
 ```
@@ -375,7 +375,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineExtension>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineExtensionsApi->virtual_machine_extensions_update_with_http_info: #{e}"
 end
 ```

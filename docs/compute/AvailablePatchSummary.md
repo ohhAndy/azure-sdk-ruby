@@ -1,4 +1,4 @@
-# AzureSDK::AvailablePatchSummary
+# AzureRest::AvailablePatchSummary
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailablePatchSummary.new(
+instance = AzureRest::AvailablePatchSummary.new(
   status: null,
   assessment_activity_id: null,
   reboot_pending: null,

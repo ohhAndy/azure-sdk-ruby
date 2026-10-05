@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPAddressDnsSettings
+# AzureRest::PublicIPAddressDnsSettings
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPAddressDnsSettings.new(
+instance = AzureRest::PublicIPAddressDnsSettings.new(
   domain_name_label: null,
   domain_name_label_scope: null,
   fqdn: null,

@@ -1,4 +1,4 @@
-# AzureSDK::OverwriteDatabasesOnTargetServer
+# AzureRest::OverwriteDatabasesOnTargetServer
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OverwriteDatabasesOnTargetServer.new()
+instance = AzureRest::OverwriteDatabasesOnTargetServer.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::MHSMVirtualNetworkRule
+# AzureRest::MHSMVirtualNetworkRule
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMVirtualNetworkRule.new(
+instance = AzureRest::MHSMVirtualNetworkRule.new(
   id: null
 )
 ```

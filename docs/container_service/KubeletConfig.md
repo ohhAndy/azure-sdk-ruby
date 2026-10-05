@@ -1,4 +1,4 @@
-# AzureSDK::KubeletConfig
+# AzureRest::KubeletConfig
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KubeletConfig.new(
+instance = AzureRest::KubeletConfig.new(
   cpu_manager_policy: null,
   cpu_cfs_quota: null,
   cpu_cfs_quota_period: null,

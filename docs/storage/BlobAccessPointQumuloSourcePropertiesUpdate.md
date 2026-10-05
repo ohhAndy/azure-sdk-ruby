@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointQumuloSourcePropertiesUpdate
+# AzureRest::BlobAccessPointQumuloSourcePropertiesUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointQumuloSourcePropertiesUpdate.new(
+instance = AzureRest::BlobAccessPointQumuloSourcePropertiesUpdate.new(
   connection: null,
   auth: null
 )

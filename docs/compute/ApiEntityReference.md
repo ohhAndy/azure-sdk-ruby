@@ -1,4 +1,4 @@
-# AzureSDK::ApiEntityReference
+# AzureRest::ApiEntityReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApiEntityReference.new(
+instance = AzureRest::ApiEntityReference.new(
   id: null
 )
 ```

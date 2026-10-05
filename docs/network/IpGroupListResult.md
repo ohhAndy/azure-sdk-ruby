@@ -1,4 +1,4 @@
-# AzureSDK::IpGroupListResult
+# AzureRest::IpGroupListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpGroupListResult.new(
+instance = AzureRest::IpGroupListResult.new(
   value: null,
   next_link: null
 )

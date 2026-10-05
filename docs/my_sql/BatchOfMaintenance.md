@@ -1,4 +1,4 @@
-# AzureSDK::BatchOfMaintenance
+# AzureRest::BatchOfMaintenance
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BatchOfMaintenance.new()
+instance = AzureRest::BatchOfMaintenance.new()
 ```
 

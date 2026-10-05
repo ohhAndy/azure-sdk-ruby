@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileWorkloadIdentity
+# AzureRest::ManagedClusterSecurityProfileWorkloadIdentity
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileWorkloadIdentity.new(
+instance = AzureRest::ManagedClusterSecurityProfileWorkloadIdentity.new(
   enabled: null
 )
 ```

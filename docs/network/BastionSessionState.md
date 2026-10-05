@@ -1,4 +1,4 @@
-# AzureSDK::BastionSessionState
+# AzureRest::BastionSessionState
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionSessionState.new(
+instance = AzureRest::BastionSessionState.new(
   session_id: null,
   message: null,
   state: null

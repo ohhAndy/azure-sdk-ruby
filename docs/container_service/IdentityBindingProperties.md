@@ -1,4 +1,4 @@
-# AzureSDK::IdentityBindingProperties
+# AzureRest::IdentityBindingProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IdentityBindingProperties.new(
+instance = AzureRest::IdentityBindingProperties.new(
   managed_identity: null,
   oidc_issuer: null,
   provisioning_state: null

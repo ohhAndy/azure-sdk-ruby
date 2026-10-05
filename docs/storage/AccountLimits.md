@@ -1,4 +1,4 @@
-# AzureSDK::AccountLimits
+# AzureRest::AccountLimits
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccountLimits.new(
+instance = AzureRest::AccountLimits.new(
   max_file_shares: null,
   max_provisioned_storage_gi_b: null,
   max_provisioned_iops: null,

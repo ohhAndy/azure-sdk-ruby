@@ -1,4 +1,4 @@
-# AzureSDK::MHSMPrivateEndpointConnectionItem
+# AzureRest::MHSMPrivateEndpointConnectionItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMPrivateEndpointConnectionItem.new(
+instance = AzureRest::MHSMPrivateEndpointConnectionItem.new(
   id: null,
   etag: null,
   properties: null

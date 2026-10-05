@@ -1,4 +1,4 @@
-# AzureSDK::UpgradeOperationInvoker
+# AzureRest::UpgradeOperationInvoker
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpgradeOperationInvoker.new()
+instance = AzureRest::UpgradeOperationInvoker.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ServerUpdate
+# AzureRest::ServerUpdate
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerUpdate.new(
+instance = AzureRest::ServerUpdate.new(
   identity: null,
   properties: null,
   tags: null

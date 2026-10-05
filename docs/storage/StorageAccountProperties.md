@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountProperties
+# AzureRest::StorageAccountProperties
 
 ## Properties
 
@@ -55,9 +55,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountProperties.new(
+instance = AzureRest::StorageAccountProperties.new(
   provisioning_state: null,
   primary_endpoints: null,
   primary_location: null,

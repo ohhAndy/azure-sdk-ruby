@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineSizesApi
+# AzureRest::VirtualMachineSizesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,14 +19,14 @@ This API is deprecated. Use [Resources Skus](https://docs.microsoft.com/rest/api
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineSizesApi.new
+api_instance = AzureRest::VirtualMachineSizesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -35,7 +35,7 @@ begin
   
   result = api_instance.virtual_machine_sizes_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineSizesApi->virtual_machine_sizes_list: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineSizeListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineSizesApi->virtual_machine_sizes_list_with_http_info: #{e}"
 end
 ```

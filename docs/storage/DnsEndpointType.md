@@ -1,4 +1,4 @@
-# AzureSDK::DnsEndpointType
+# AzureRest::DnsEndpointType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DnsEndpointType.new()
+instance = AzureRest::DnsEndpointType.new()
 ```
 

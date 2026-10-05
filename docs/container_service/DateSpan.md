@@ -1,4 +1,4 @@
-# AzureSDK::DateSpan
+# AzureRest::DateSpan
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DateSpan.new(
+instance = AzureRest::DateSpan.new(
   start: null,
   _end: null
 )

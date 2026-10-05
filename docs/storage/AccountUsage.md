@@ -1,4 +1,4 @@
-# AzureSDK::AccountUsage
+# AzureRest::AccountUsage
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccountUsage.new(
+instance = AzureRest::AccountUsage.new(
   live_shares: null,
   soft_deleted_shares: null
 )

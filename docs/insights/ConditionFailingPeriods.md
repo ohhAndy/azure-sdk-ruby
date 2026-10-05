@@ -1,4 +1,4 @@
-# AzureSDK::ConditionFailingPeriods
+# AzureRest::ConditionFailingPeriods
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConditionFailingPeriods.new(
+instance = AzureRest::ConditionFailingPeriods.new(
   number_of_evaluation_periods: null,
   min_failing_periods_to_alert: null
 )

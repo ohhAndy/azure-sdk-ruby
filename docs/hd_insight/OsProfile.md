@@ -1,4 +1,4 @@
-# AzureSDK::OsProfile
+# AzureRest::OsProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OsProfile.new(
+instance = AzureRest::OsProfile.new(
   linux_operating_system_profile: null
 )
 ```

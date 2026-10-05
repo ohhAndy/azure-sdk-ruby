@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetMigrationInfo
+# AzureRest::VirtualMachineScaleSetMigrationInfo
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetMigrationInfo.new(
+instance = AzureRest::VirtualMachineScaleSetMigrationInfo.new(
   default_virtual_machine_scale_set_info: null,
   migrate_to_virtual_machine_scale_set: null
 )

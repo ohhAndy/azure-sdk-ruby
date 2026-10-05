@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkRule
+# AzureRest::VirtualNetworkRule
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkRule.new(
+instance = AzureRest::VirtualNetworkRule.new(
   id: null,
   action: null,
   state: null

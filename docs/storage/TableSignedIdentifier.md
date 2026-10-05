@@ -1,4 +1,4 @@
-# AzureSDK::TableSignedIdentifier
+# AzureRest::TableSignedIdentifier
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TableSignedIdentifier.new(
+instance = AzureRest::TableSignedIdentifier.new(
   id: null,
   access_policy: null
 )

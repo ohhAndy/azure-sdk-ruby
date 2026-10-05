@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolGatewayProfile
+# AzureRest::AgentPoolGatewayProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolGatewayProfile.new(
+instance = AzureRest::AgentPoolGatewayProfile.new(
   public_ip_prefix_size: null
 )
 ```

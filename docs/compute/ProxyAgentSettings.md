@@ -1,4 +1,4 @@
-# AzureSDK::ProxyAgentSettings
+# AzureRest::ProxyAgentSettings
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProxyAgentSettings.new(
+instance = AzureRest::ProxyAgentSettings.new(
   enabled: null,
   mode: null,
   key_incarnation_id: null,

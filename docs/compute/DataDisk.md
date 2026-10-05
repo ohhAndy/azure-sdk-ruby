@@ -1,4 +1,4 @@
-# AzureSDK::DataDisk
+# AzureRest::DataDisk
 
 ## Properties
 
@@ -24,9 +24,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataDisk.new(
+instance = AzureRest::DataDisk.new(
   lun: null,
   name: null,
   vhd: null,

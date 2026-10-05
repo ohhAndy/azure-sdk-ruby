@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointEndpointConnectionProperties
+# AzureRest::BlobAccessPointEndpointConnectionProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointEndpointConnectionProperties.new(
+instance = AzureRest::BlobAccessPointEndpointConnectionProperties.new(
   endpoint: null,
   tls_verification: null
 )

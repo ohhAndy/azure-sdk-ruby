@@ -1,4 +1,4 @@
-# AzureSDK::GeographicallyRedundantBackup
+# AzureRest::GeographicallyRedundantBackup
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GeographicallyRedundantBackup.new()
+instance = AzureRest::GeographicallyRedundantBackup.new()
 ```
 

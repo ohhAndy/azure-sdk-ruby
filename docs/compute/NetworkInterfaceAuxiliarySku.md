@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceAuxiliarySku
+# AzureRest::NetworkInterfaceAuxiliarySku
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceAuxiliarySku.new()
+instance = AzureRest::NetworkInterfaceAuxiliarySku.new()
 ```
 

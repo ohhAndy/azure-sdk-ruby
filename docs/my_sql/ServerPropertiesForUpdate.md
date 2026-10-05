@@ -1,4 +1,4 @@
-# AzureSDK::ServerPropertiesForUpdate
+# AzureRest::ServerPropertiesForUpdate
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerPropertiesForUpdate.new(
+instance = AzureRest::ServerPropertiesForUpdate.new(
   administrator_login_password: null,
   version: null,
   storage: null,

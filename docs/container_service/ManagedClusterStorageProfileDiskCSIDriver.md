@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterStorageProfileDiskCSIDriver
+# AzureRest::ManagedClusterStorageProfileDiskCSIDriver
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterStorageProfileDiskCSIDriver.new(
+instance = AzureRest::ManagedClusterStorageProfileDiskCSIDriver.new(
   enabled: null
 )
 ```

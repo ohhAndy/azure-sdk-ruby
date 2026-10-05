@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkSubnetUsageResult
+# AzureRest::VirtualNetworkSubnetUsageResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkSubnetUsageResult.new(
+instance = AzureRest::VirtualNetworkSubnetUsageResult.new(
   location: null,
   subscription_id: null,
   delegated_subnets_usage: null

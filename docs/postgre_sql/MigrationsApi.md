@@ -1,4 +1,4 @@
-# AzureSDK::MigrationsApi
+# AzureRest::MigrationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,14 +23,14 @@ Cancels an active migration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::MigrationsApi.new
+api_instance = AzureRest::MigrationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -41,7 +41,7 @@ begin
   
   result = api_instance.migrations_cancel(api_version, subscription_id, resource_group_name, server_name, migration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_cancel: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Migration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_cancel_with_http_info: #{e}"
 end
 ```
@@ -100,26 +100,26 @@ Creates a new migration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::MigrationsApi.new
+api_instance = AzureRest::MigrationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 migration_name = 'migration_name_example' # String | Name of migration.
-parameters = AzureSDK::Migration.new({location: 'location_example'}) # Migration | Parameters required for creating a migration.
+parameters = AzureRest::Migration.new({location: 'location_example'}) # Migration | Parameters required for creating a migration.
 
 begin
   
   result = api_instance.migrations_create(api_version, subscription_id, resource_group_name, server_name, migration_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_create: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Migration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_create_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Gets information about a migration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::MigrationsApi.new
+api_instance = AzureRest::MigrationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.migrations_get(api_version, subscription_id, resource_group_name, server_name, migration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Migration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ Lists all migrations of a target flexible server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::MigrationsApi.new
+api_instance = AzureRest::MigrationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -276,7 +276,7 @@ begin
   
   result = api_instance.migrations_list_by_target_server(api_version, subscription_id, resource_group_name, server_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_list_by_target_server: #{e}"
 end
 ```
@@ -294,7 +294,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MigrationList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_list_by_target_server_with_http_info: #{e}"
 end
 ```
@@ -335,26 +335,26 @@ Updates an existing migration. The request body can contain one to many of the m
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::MigrationsApi.new
+api_instance = AzureRest::MigrationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 migration_name = 'migration_name_example' # String | Name of migration.
-parameters = AzureSDK::MigrationResourceForPatch.new # MigrationResourceForPatch | Parameters required to update an existing migration.
+parameters = AzureRest::MigrationResourceForPatch.new # MigrationResourceForPatch | Parameters required to update an existing migration.
 
 begin
   
   result = api_instance.migrations_update(api_version, subscription_id, resource_group_name, server_name, migration_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_update: #{e}"
 end
 ```
@@ -372,7 +372,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Migration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling MigrationsApi->migrations_update_with_http_info: #{e}"
 end
 ```

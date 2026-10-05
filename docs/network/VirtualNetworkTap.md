@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkTap
+# AzureRest::VirtualNetworkTap
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkTap.new(
+instance = AzureRest::VirtualNetworkTap.new(
   id: null,
   name: null,
   type: null,

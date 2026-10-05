@@ -1,4 +1,4 @@
-# AzureSDK::ScheduleProfile
+# AzureRest::ScheduleProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduleProfile.new(
+instance = AzureRest::ScheduleProfile.new(
   start: null,
   _end: null,
   minimum_commitment_days: null,

@@ -1,4 +1,4 @@
-# AzureSDK::SecurityPostureReference
+# AzureRest::SecurityPostureReference
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityPostureReference.new(
+instance = AzureRest::SecurityPostureReference.new(
   id: null,
   exclude_extensions: null,
   is_overridable: null

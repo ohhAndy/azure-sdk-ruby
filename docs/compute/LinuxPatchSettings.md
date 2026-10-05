@@ -1,4 +1,4 @@
-# AzureSDK::LinuxPatchSettings
+# AzureRest::LinuxPatchSettings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxPatchSettings.new(
+instance = AzureRest::LinuxPatchSettings.new(
   patch_mode: null,
   assessment_mode: null,
   automatic_by_platform_settings: null

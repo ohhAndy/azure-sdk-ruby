@@ -1,4 +1,4 @@
-# AzureSDK::DscpConfigurationApi
+# AzureRest::DscpConfigurationApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,25 +21,25 @@ Creates or updates a DSCP Configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DscpConfigurationApi.new
+api_instance = AzureRest::DscpConfigurationApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 dscp_configuration_name = 'dscp_configuration_name_example' # String | The name of the resource.
-parameters = AzureSDK::DscpConfiguration.new # DscpConfiguration | Parameters supplied to the create or update DscpConfiguration operation.
+parameters = AzureRest::DscpConfiguration.new # DscpConfiguration | Parameters supplied to the create or update DscpConfiguration operation.
 
 begin
   
   result = api_instance.dscp_configuration_create_or_update(api_version, subscription_id, resource_group_name, dscp_configuration_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_create_or_update: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DscpConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -98,14 +98,14 @@ Deletes a DSCP Configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DscpConfigurationApi.new
+api_instance = AzureRest::DscpConfigurationApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -114,7 +114,7 @@ dscp_configuration_name = 'dscp_configuration_name_example' # String | The name 
 begin
   
   api_instance.dscp_configuration_delete(api_version, subscription_id, resource_group_name, dscp_configuration_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_delete: #{e}"
 end
 ```
@@ -132,7 +132,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_delete_with_http_info: #{e}"
 end
 ```
@@ -172,14 +172,14 @@ Gets a DSCP Configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DscpConfigurationApi.new
+api_instance = AzureRest::DscpConfigurationApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -189,7 +189,7 @@ begin
   
   result = api_instance.dscp_configuration_get(api_version, subscription_id, resource_group_name, dscp_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_get: #{e}"
 end
 ```
@@ -207,7 +207,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DscpConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DscpConfigurationApi->dscp_configuration_get_with_http_info: #{e}"
 end
 ```

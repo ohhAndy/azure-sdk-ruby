@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetIdentity
+# AzureRest::VirtualMachineScaleSetIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetIdentity.new(
+instance = AzureRest::VirtualMachineScaleSetIdentity.new(
   principal_id: null,
   tenant_id: null,
   type: null,

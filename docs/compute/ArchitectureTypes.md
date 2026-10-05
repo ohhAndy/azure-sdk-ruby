@@ -1,4 +1,4 @@
-# AzureSDK::ArchitectureTypes
+# AzureRest::ArchitectureTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ArchitectureTypes.new()
+instance = AzureRest::ArchitectureTypes.new()
 ```
 

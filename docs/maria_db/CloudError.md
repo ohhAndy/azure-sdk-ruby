@@ -1,4 +1,4 @@
-# AzureSDK::CloudError
+# AzureRest::CloudError
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CloudError.new(
+instance = AzureRest::CloudError.new(
   error: null
 )
 ```

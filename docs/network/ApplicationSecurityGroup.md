@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationSecurityGroup
+# AzureRest::ApplicationSecurityGroup
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationSecurityGroup.new(
+instance = AzureRest::ApplicationSecurityGroup.new(
   id: null,
   name: null,
   type: null,

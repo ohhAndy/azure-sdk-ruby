@@ -1,4 +1,4 @@
-# AzureSDK::Cancel
+# AzureRest::Cancel
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Cancel.new()
+instance = AzureRest::Cancel.new()
 ```
 

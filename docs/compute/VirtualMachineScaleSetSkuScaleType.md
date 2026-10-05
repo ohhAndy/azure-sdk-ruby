@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetSkuScaleType
+# AzureRest::VirtualMachineScaleSetSkuScaleType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetSkuScaleType.new()
+instance = AzureRest::VirtualMachineScaleSetSkuScaleType.new()
 ```
 

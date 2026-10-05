@@ -1,4 +1,4 @@
-# AzureSDK::SecretCreateOrUpdateParameters
+# AzureRest::SecretCreateOrUpdateParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecretCreateOrUpdateParameters.new(
+instance = AzureRest::SecretCreateOrUpdateParameters.new(
   tags: null,
   properties: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::CapabilityList
+# AzureRest::CapabilityList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapabilityList.new(
+instance = AzureRest::CapabilityList.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfacesApi
+# AzureRest::NetworkInterfacesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -36,14 +36,14 @@ Gets the specified network interface ip configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -54,7 +54,7 @@ begin
   
   result = api_instance.network_interface_ip_configurations_get(api_version, subscription_id, resource_group_name, network_interface_name, ip_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_ip_configurations_get: #{e}"
 end
 ```
@@ -72,7 +72,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceIPConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_ip_configurations_get_with_http_info: #{e}"
 end
 ```
@@ -113,14 +113,14 @@ Get all ip configurations in a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -130,7 +130,7 @@ begin
   
   result = api_instance.network_interface_ip_configurations_list(api_version, subscription_id, resource_group_name, network_interface_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_ip_configurations_list: #{e}"
 end
 ```
@@ -148,7 +148,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceIPConfigurationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_ip_configurations_list_with_http_info: #{e}"
 end
 ```
@@ -188,14 +188,14 @@ List all load balancers in a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -205,7 +205,7 @@ begin
   
   result = api_instance.network_interface_load_balancers_list(api_version, subscription_id, resource_group_name, network_interface_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_load_balancers_list: #{e}"
 end
 ```
@@ -223,7 +223,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceLoadBalancerListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_load_balancers_list_with_http_info: #{e}"
 end
 ```
@@ -263,26 +263,26 @@ Creates or updates a Tap configuration in the specified NetworkInterface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_interface_name = 'network_interface_name_example' # String | The name of the network interface.
 tap_configuration_name = 'tap_configuration_name_example' # String | The name of the resource that is unique within a resource group. This name can be used to access the resource.
-tap_configuration_parameters = AzureSDK::NetworkInterfaceTapConfiguration.new # NetworkInterfaceTapConfiguration | Parameters supplied to the create or update tap configuration operation.
+tap_configuration_parameters = AzureRest::NetworkInterfaceTapConfiguration.new # NetworkInterfaceTapConfiguration | Parameters supplied to the create or update tap configuration operation.
 
 begin
   
   result = api_instance.network_interface_tap_configurations_create_or_update(api_version, subscription_id, resource_group_name, network_interface_name, tap_configuration_name, tap_configuration_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_create_or_update: #{e}"
 end
 ```
@@ -300,7 +300,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceTapConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -342,14 +342,14 @@ Deletes the specified tap configuration from the NetworkInterface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -359,7 +359,7 @@ tap_configuration_name = 'tap_configuration_name_example' # String | The name of
 begin
   
   api_instance.network_interface_tap_configurations_delete(api_version, subscription_id, resource_group_name, network_interface_name, tap_configuration_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_delete: #{e}"
 end
 ```
@@ -377,7 +377,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_delete_with_http_info: #{e}"
 end
 ```
@@ -418,14 +418,14 @@ Get the specified tap configuration on a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -436,7 +436,7 @@ begin
   
   result = api_instance.network_interface_tap_configurations_get(api_version, subscription_id, resource_group_name, network_interface_name, tap_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_get: #{e}"
 end
 ```
@@ -454,7 +454,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceTapConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_get_with_http_info: #{e}"
 end
 ```
@@ -495,14 +495,14 @@ Get all Tap configurations in a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -512,7 +512,7 @@ begin
   
   result = api_instance.network_interface_tap_configurations_list(api_version, subscription_id, resource_group_name, network_interface_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_list: #{e}"
 end
 ```
@@ -530,7 +530,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceTapConfigurationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interface_tap_configurations_list_with_http_info: #{e}"
 end
 ```
@@ -570,25 +570,25 @@ Creates or updates a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_interface_name = 'network_interface_name_example' # String | The name of the network interface.
-parameters = AzureSDK::NetworkInterface.new # NetworkInterface | Parameters supplied to the create or update network interface operation.
+parameters = AzureRest::NetworkInterface.new # NetworkInterface | Parameters supplied to the create or update network interface operation.
 
 begin
   
   result = api_instance.network_interfaces_create_or_update(api_version, subscription_id, resource_group_name, network_interface_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_create_or_update: #{e}"
 end
 ```
@@ -606,7 +606,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterface>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -647,14 +647,14 @@ Deletes the specified network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -663,7 +663,7 @@ network_interface_name = 'network_interface_name_example' # String | The name of
 begin
   
   api_instance.network_interfaces_delete(api_version, subscription_id, resource_group_name, network_interface_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_delete: #{e}"
 end
 ```
@@ -681,7 +681,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_delete_with_http_info: #{e}"
 end
 ```
@@ -721,14 +721,14 @@ Gets information about the specified network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -741,7 +741,7 @@ begin
   
   result = api_instance.network_interfaces_get(api_version, subscription_id, resource_group_name, network_interface_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get: #{e}"
 end
 ```
@@ -759,7 +759,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterface>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get_with_http_info: #{e}"
 end
 ```
@@ -800,14 +800,14 @@ Get the specified network interface in a cloud service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -822,7 +822,7 @@ begin
   
   result = api_instance.network_interfaces_get_cloud_service_network_interface(api_version, subscription_id, resource_group_name, cloud_service_name, role_instance_name, network_interface_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get_cloud_service_network_interface: #{e}"
 end
 ```
@@ -840,7 +840,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterface>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get_cloud_service_network_interface_with_http_info: #{e}"
 end
 ```
@@ -883,14 +883,14 @@ Gets all route tables applied to a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -900,7 +900,7 @@ begin
   
   result = api_instance.network_interfaces_get_effective_route_table(api_version, subscription_id, resource_group_name, network_interface_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get_effective_route_table: #{e}"
 end
 ```
@@ -918,7 +918,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EffectiveRouteListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_get_effective_route_table_with_http_info: #{e}"
 end
 ```
@@ -958,14 +958,14 @@ Gets all network interfaces in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -974,7 +974,7 @@ begin
   
   result = api_instance.network_interfaces_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list: #{e}"
 end
 ```
@@ -992,7 +992,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_with_http_info: #{e}"
 end
 ```
@@ -1031,14 +1031,14 @@ Gets all network interfaces in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -1046,7 +1046,7 @@ begin
   
   result = api_instance.network_interfaces_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_all: #{e}"
 end
 ```
@@ -1064,7 +1064,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_all_with_http_info: #{e}"
 end
 ```
@@ -1102,14 +1102,14 @@ Gets all network interfaces in a cloud service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1119,7 +1119,7 @@ begin
   
   result = api_instance.network_interfaces_list_cloud_service_network_interfaces(api_version, subscription_id, resource_group_name, cloud_service_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_cloud_service_network_interfaces: #{e}"
 end
 ```
@@ -1137,7 +1137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_cloud_service_network_interfaces_with_http_info: #{e}"
 end
 ```
@@ -1177,14 +1177,14 @@ Gets information about all network interfaces in a role instance in a cloud serv
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1195,7 +1195,7 @@ begin
   
   result = api_instance.network_interfaces_list_cloud_service_role_instance_network_interfaces(api_version, subscription_id, resource_group_name, cloud_service_name, role_instance_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_cloud_service_role_instance_network_interfaces: #{e}"
 end
 ```
@@ -1213,7 +1213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterfaceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_cloud_service_role_instance_network_interfaces_with_http_info: #{e}"
 end
 ```
@@ -1254,14 +1254,14 @@ Gets all network security groups applied to a network interface.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1271,7 +1271,7 @@ begin
   
   result = api_instance.network_interfaces_list_effective_network_security_groups(api_version, subscription_id, resource_group_name, network_interface_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_effective_network_security_groups: #{e}"
 end
 ```
@@ -1289,7 +1289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EffectiveNetworkSecurityGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_list_effective_network_security_groups_with_http_info: #{e}"
 end
 ```
@@ -1329,25 +1329,25 @@ Updates a network interface tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::NetworkInterfacesApi.new
+api_instance = AzureRest::NetworkInterfacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_interface_name = 'network_interface_name_example' # String | The name of the network interface.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update network interface tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update network interface tags.
 
 begin
   
   result = api_instance.network_interfaces_update_tags(api_version, subscription_id, resource_group_name, network_interface_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_update_tags: #{e}"
 end
 ```
@@ -1365,7 +1365,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NetworkInterface>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling NetworkInterfacesApi->network_interfaces_update_tags_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineCaptureParameters
+# AzureRest::VirtualMachineCaptureParameters
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineCaptureParameters.new(
+instance = AzureRest::VirtualMachineCaptureParameters.new(
   vhd_prefix: null,
   destination_container_name: null,
   overwrite_vhds: null

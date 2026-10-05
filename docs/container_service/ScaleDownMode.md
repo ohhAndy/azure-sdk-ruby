@@ -1,4 +1,4 @@
-# AzureSDK::ScaleDownMode
+# AzureRest::ScaleDownMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScaleDownMode.new()
+instance = AzureRest::ScaleDownMode.new()
 ```
 

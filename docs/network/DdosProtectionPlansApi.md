@@ -1,4 +1,4 @@
-# AzureSDK::DdosProtectionPlansApi
+# AzureRest::DdosProtectionPlansApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates a DDoS protection plan.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ddos_protection_plan_name = 'ddos_protection_plan_name_example' # String | The name of the DDoS protection plan.
-parameters = AzureSDK::DdosProtectionPlan.new # DdosProtectionPlan | Parameters supplied to the create or update operation.
+parameters = AzureRest::DdosProtectionPlan.new # DdosProtectionPlan | Parameters supplied to the create or update operation.
 
 begin
   
   result = api_instance.ddos_protection_plans_create_or_update(api_version, subscription_id, resource_group_name, ddos_protection_plan_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DdosProtectionPlan>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified DDoS protection plan.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ ddos_protection_plan_name = 'ddos_protection_plan_name_example' # String | The n
 begin
   
   api_instance.ddos_protection_plans_delete(api_version, subscription_id, resource_group_name, ddos_protection_plan_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets information about the specified DDoS protection plan.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -192,7 +192,7 @@ begin
   
   result = api_instance.ddos_protection_plans_get(api_version, subscription_id, resource_group_name, ddos_protection_plan_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_get: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DdosProtectionPlan>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_get_with_http_info: #{e}"
 end
 ```
@@ -250,14 +250,14 @@ Gets all DDoS protection plans in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -265,7 +265,7 @@ begin
   
   result = api_instance.ddos_protection_plans_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_list: #{e}"
 end
 ```
@@ -283,7 +283,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DdosProtectionPlanListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_list_with_http_info: #{e}"
 end
 ```
@@ -321,14 +321,14 @@ Gets all the DDoS protection plans in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -337,7 +337,7 @@ begin
   
   result = api_instance.ddos_protection_plans_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_list_by_resource_group: #{e}"
 end
 ```
@@ -355,7 +355,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DdosProtectionPlanListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -394,25 +394,25 @@ Update a DDoS protection plan tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DdosProtectionPlansApi.new
+api_instance = AzureRest::DdosProtectionPlansApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ddos_protection_plan_name = 'ddos_protection_plan_name_example' # String | The name of the DDoS protection plan.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to the update DDoS protection plan resource tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to the update DDoS protection plan resource tags.
 
 begin
   
   result = api_instance.ddos_protection_plans_update_tags(api_version, subscription_id, resource_group_name, ddos_protection_plan_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_update_tags: #{e}"
 end
 ```
@@ -430,7 +430,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DdosProtectionPlan>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DdosProtectionPlansApi->ddos_protection_plans_update_tags_with_http_info: #{e}"
 end
 ```

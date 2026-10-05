@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheProperties
+# AzureRest::ContextCacheProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContextCacheProperties.new(
+instance = AzureRest::ContextCacheProperties.new(
   account_kind: null,
   description: null,
   provisioning_state: null,

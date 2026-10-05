@@ -1,4 +1,4 @@
-# AzureSDK::VaultCheckNameAvailabilityParameters
+# AzureRest::VaultCheckNameAvailabilityParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultCheckNameAvailabilityParameters.new(
+instance = AzureRest::VaultCheckNameAvailabilityParameters.new(
   name: null,
   type: null
 )

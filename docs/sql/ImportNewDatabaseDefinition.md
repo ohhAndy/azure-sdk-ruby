@@ -1,4 +1,4 @@
-# AzureSDK::ImportNewDatabaseDefinition
+# AzureRest::ImportNewDatabaseDefinition
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImportNewDatabaseDefinition.new(
+instance = AzureRest::ImportNewDatabaseDefinition.new(
   database_name: null,
   edition: null,
   service_objective_name: null,

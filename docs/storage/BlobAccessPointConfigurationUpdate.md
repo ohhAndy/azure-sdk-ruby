@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointConfigurationUpdate
+# AzureRest::BlobAccessPointConfigurationUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointConfigurationUpdate.new(
+instance = AzureRest::BlobAccessPointConfigurationUpdate.new(
   tags: null,
   properties: null
 )

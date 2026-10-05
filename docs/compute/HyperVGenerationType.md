@@ -1,4 +1,4 @@
-# AzureSDK::HyperVGenerationType
+# AzureRest::HyperVGenerationType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HyperVGenerationType.new()
+instance = AzureRest::HyperVGenerationType.new()
 ```
 

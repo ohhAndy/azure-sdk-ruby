@@ -1,4 +1,4 @@
-# AzureSDK::ServiceArtifactReference
+# AzureRest::ServiceArtifactReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceArtifactReference.new(
+instance = AzureRest::ServiceArtifactReference.new(
   id: null
 )
 ```

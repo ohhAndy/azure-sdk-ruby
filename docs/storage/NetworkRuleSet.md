@@ -1,4 +1,4 @@
-# AzureSDK::NetworkRuleSet
+# AzureRest::NetworkRuleSet
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkRuleSet.new(
+instance = AzureRest::NetworkRuleSet.new(
   bypass: null,
   resource_access_rules: null,
   virtual_network_rules: null,

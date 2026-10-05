@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationGatewayIPConfiguration
+# AzureRest::ApplicationGatewayIPConfiguration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationGatewayIPConfiguration.new(
+instance = AzureRest::ApplicationGatewayIPConfiguration.new(
   id: null,
   properties: null,
   name: null,

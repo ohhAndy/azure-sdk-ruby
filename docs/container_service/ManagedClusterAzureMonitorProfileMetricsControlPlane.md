@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAzureMonitorProfileMetricsControlPlane
+# AzureRest::ManagedClusterAzureMonitorProfileMetricsControlPlane
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAzureMonitorProfileMetricsControlPlane.new(
+instance = AzureRest::ManagedClusterAzureMonitorProfileMetricsControlPlane.new(
   enabled: null
 )
 ```

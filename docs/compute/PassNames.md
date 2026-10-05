@@ -1,4 +1,4 @@
-# AzureSDK::PassNames
+# AzureRest::PassNames
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PassNames.new()
+instance = AzureRest::PassNames.new()
 ```
 

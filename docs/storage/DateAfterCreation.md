@@ -1,4 +1,4 @@
-# AzureSDK::DateAfterCreation
+# AzureRest::DateAfterCreation
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DateAfterCreation.new(
+instance = AzureRest::DateAfterCreation.new(
   days_after_creation_greater_than: null,
   days_after_last_tier_change_greater_than: null
 )

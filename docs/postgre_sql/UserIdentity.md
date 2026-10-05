@@ -1,4 +1,4 @@
-# AzureSDK::UserIdentity
+# AzureRest::UserIdentity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UserIdentity.new(
+instance = AzureRest::UserIdentity.new(
   principal_id: null,
   client_id: null
 )

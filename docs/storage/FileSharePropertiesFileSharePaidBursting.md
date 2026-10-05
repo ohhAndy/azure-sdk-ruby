@@ -1,4 +1,4 @@
-# AzureSDK::FileSharePropertiesFileSharePaidBursting
+# AzureRest::FileSharePropertiesFileSharePaidBursting
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileSharePropertiesFileSharePaidBursting.new(
+instance = AzureRest::FileSharePropertiesFileSharePaidBursting.new(
   paid_bursting_enabled: null,
   paid_bursting_max_iops: null,
   paid_bursting_max_bandwidth_mibps: null

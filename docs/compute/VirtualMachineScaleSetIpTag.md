@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetIpTag
+# AzureRest::VirtualMachineScaleSetIpTag
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetIpTag.new(
+instance = AzureRest::VirtualMachineScaleSetIpTag.new(
   ip_tag_type: null,
   tag: null,
   first_party_service_tag_id: null

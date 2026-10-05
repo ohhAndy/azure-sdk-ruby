@@ -1,4 +1,4 @@
-# AzureSDK::RecommendationTypeEnum
+# AzureRest::RecommendationTypeEnum
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RecommendationTypeEnum.new()
+instance = AzureRest::RecommendationTypeEnum.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostPropertiesFormat
+# AzureRest::BastionHostPropertiesFormat
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionHostPropertiesFormat.new(
+instance = AzureRest::BastionHostPropertiesFormat.new(
   ip_configurations: null,
   dns_name: null,
   virtual_network: null,

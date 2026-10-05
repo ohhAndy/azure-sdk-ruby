@@ -1,4 +1,4 @@
-# AzureSDK::TuningOptionsList
+# AzureRest::TuningOptionsList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TuningOptionsList.new(
+instance = AzureRest::TuningOptionsList.new(
   value: null,
   next_link: null
 )

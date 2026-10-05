@@ -1,4 +1,4 @@
-# AzureSDK::OrchestrationServiceStateAction
+# AzureRest::OrchestrationServiceStateAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OrchestrationServiceStateAction.new()
+instance = AzureRest::OrchestrationServiceStateAction.new()
 ```
 

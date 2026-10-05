@@ -1,4 +1,4 @@
-# AzureSDK::MHSMNetworkRuleSet
+# AzureRest::MHSMNetworkRuleSet
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMNetworkRuleSet.new(
+instance = AzureRest::MHSMNetworkRuleSet.new(
   bypass: null,
   default_action: null,
   ip_rules: null,

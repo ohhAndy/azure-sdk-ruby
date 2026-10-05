@@ -1,4 +1,4 @@
-# AzureSDK::DefaultApi
+# AzureRest::DefaultApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -40,14 +40,14 @@ Gets all of the available subnet delegations for this subscription in this regio
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -56,7 +56,7 @@ begin
   
   result = api_instance.available_delegations_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_delegations_list: #{e}"
 end
 ```
@@ -74,7 +74,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailableDelegationsResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_delegations_list_with_http_info: #{e}"
 end
 ```
@@ -113,14 +113,14 @@ List what values of endpoint services are available for use.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -129,7 +129,7 @@ begin
   
   result = api_instance.available_endpoint_services_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_endpoint_services_list: #{e}"
 end
 ```
@@ -147,7 +147,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EndpointServicesListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_endpoint_services_list_with_http_info: #{e}"
 end
 ```
@@ -186,14 +186,14 @@ Returns all of the resource types that can be linked to a Private Endpoint in th
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -202,7 +202,7 @@ begin
   
   result = api_instance.available_private_endpoint_types_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_private_endpoint_types_list: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailablePrivateEndpointTypesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_private_endpoint_types_list_with_http_info: #{e}"
 end
 ```
@@ -259,14 +259,14 @@ Returns all of the resource types that can be linked to a Private Endpoint in th
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -276,7 +276,7 @@ begin
   
   result = api_instance.available_private_endpoint_types_list_by_resource_group(api_version, subscription_id, resource_group_name, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_private_endpoint_types_list_by_resource_group: #{e}"
 end
 ```
@@ -294,7 +294,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailablePrivateEndpointTypesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_private_endpoint_types_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -334,14 +334,14 @@ Gets all of the available subnet delegations for this resource group in this reg
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -351,7 +351,7 @@ begin
   
   result = api_instance.available_resource_group_delegations_list(api_version, subscription_id, resource_group_name, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_resource_group_delegations_list: #{e}"
 end
 ```
@@ -369,7 +369,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailableDelegationsResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_resource_group_delegations_list_with_http_info: #{e}"
 end
 ```
@@ -409,14 +409,14 @@ Gets all available service aliases for this subscription in this region.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -425,7 +425,7 @@ begin
   
   result = api_instance.available_service_aliases_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_service_aliases_list: #{e}"
 end
 ```
@@ -443,7 +443,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailableServiceAliasesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_service_aliases_list_with_http_info: #{e}"
 end
 ```
@@ -482,14 +482,14 @@ Gets all available service aliases for this resource group in this region.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -499,7 +499,7 @@ begin
   
   result = api_instance.available_service_aliases_list_by_resource_group(api_version, subscription_id, resource_group_name, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_service_aliases_list_by_resource_group: #{e}"
 end
 ```
@@ -517,7 +517,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailableServiceAliasesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->available_service_aliases_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -557,14 +557,14 @@ Checks whether a domain name in the cloudapp.azure.com zone is available for use
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -574,7 +574,7 @@ begin
   
   result = api_instance.check_dns_name_availability(api_version, subscription_id, location, domain_name_label)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->check_dns_name_availability: #{e}"
 end
 ```
@@ -592,7 +592,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DnsNameAvailabilityResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->check_dns_name_availability_with_http_info: #{e}"
 end
 ```
@@ -632,26 +632,26 @@ Creates or updates the specified Network Virtual Appliance Inbound Security Rule
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_virtual_appliance_name = 'network_virtual_appliance_name_example' # String | The name of Network Virtual Appliance.
 rule_collection_name = 'rule_collection_name_example' # String | The name of the resource that is unique within a resource group. This name can be used to access the resource.
-parameters = AzureSDK::InboundSecurityRule.new # InboundSecurityRule | Parameters supplied to the create or update Network Virtual Appliance Inbound Security Rules operation.
+parameters = AzureRest::InboundSecurityRule.new # InboundSecurityRule | Parameters supplied to the create or update Network Virtual Appliance Inbound Security Rules operation.
 
 begin
   
   result = api_instance.inbound_security_rule_create_or_update(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, rule_collection_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->inbound_security_rule_create_or_update: #{e}"
 end
 ```
@@ -669,7 +669,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InboundSecurityRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->inbound_security_rule_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -711,14 +711,14 @@ Retrieves the available specified Network Virtual Appliance Inbound Security Rul
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -729,7 +729,7 @@ begin
   
   result = api_instance.inbound_security_rule_get(api_version, subscription_id, resource_group_name, network_virtual_appliance_name, rule_collection_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->inbound_security_rule_get: #{e}"
 end
 ```
@@ -747,7 +747,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <InboundSecurityRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->inbound_security_rule_get_with_http_info: #{e}"
 end
 ```
@@ -788,14 +788,14 @@ Get the specified public IP address in a cloud service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -812,7 +812,7 @@ begin
   
   result = api_instance.public_ip_addresses_get_cloud_service_public_ip_address(api_version, subscription_id, resource_group_name, cloud_service_name, role_instance_name, network_interface_name, ip_configuration_name, public_ip_address_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_get_cloud_service_public_ip_address: #{e}"
 end
 ```
@@ -830,7 +830,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_get_cloud_service_public_ip_address_with_http_info: #{e}"
 end
 ```
@@ -875,14 +875,14 @@ Gets information about all public IP addresses on a cloud service level.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -892,7 +892,7 @@ begin
   
   result = api_instance.public_ip_addresses_list_cloud_service_public_ip_addresses(api_version, subscription_id, resource_group_name, cloud_service_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_list_cloud_service_public_ip_addresses: #{e}"
 end
 ```
@@ -910,7 +910,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddressListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_list_cloud_service_public_ip_addresses_with_http_info: #{e}"
 end
 ```
@@ -950,14 +950,14 @@ Gets information about all public IP addresses in a role instance IP configurati
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -970,7 +970,7 @@ begin
   
   result = api_instance.public_ip_addresses_list_cloud_service_role_instance_public_ip_addresses(api_version, subscription_id, resource_group_name, cloud_service_name, role_instance_name, network_interface_name, ip_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_list_cloud_service_role_instance_public_ip_addresses: #{e}"
 end
 ```
@@ -988,7 +988,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddressListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->public_ip_addresses_list_cloud_service_role_instance_public_ip_addresses_with_http_info: #{e}"
 end
 ```
@@ -1031,14 +1031,14 @@ Gets a list of resource navigation links for a subnet.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1049,7 +1049,7 @@ begin
   
   result = api_instance.resource_navigation_links_list(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->resource_navigation_links_list: #{e}"
 end
 ```
@@ -1067,7 +1067,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceNavigationLinksListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->resource_navigation_links_list_with_http_info: #{e}"
 end
 ```
@@ -1108,14 +1108,14 @@ Gets a list of service association links for a subnet.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1126,7 +1126,7 @@ begin
   
   result = api_instance.service_association_links_list(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_association_links_list: #{e}"
 end
 ```
@@ -1144,7 +1144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServiceAssociationLinksListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_association_links_list_with_http_info: #{e}"
 end
 ```
@@ -1185,14 +1185,14 @@ Gets a list of service tag information resources with pagination.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -1205,7 +1205,7 @@ begin
   
   result = api_instance.service_tag_information_list(api_version, subscription_id, location, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_tag_information_list: #{e}"
 end
 ```
@@ -1223,7 +1223,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServiceTagInformationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_tag_information_list_with_http_info: #{e}"
 end
 ```
@@ -1264,14 +1264,14 @@ Gets a list of service tag information resources.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -1280,7 +1280,7 @@ begin
   
   result = api_instance.service_tags_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_tags_list: #{e}"
 end
 ```
@@ -1298,7 +1298,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServiceTagsListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->service_tags_list_with_http_info: #{e}"
 end
 ```
@@ -1337,25 +1337,25 @@ Prepares a subnet by applying network intent policies.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
 subnet_name = 'subnet_name_example' # String | The name of the subnet.
-prepare_network_policies_request_parameters = AzureSDK::PrepareNetworkPoliciesRequest.new # PrepareNetworkPoliciesRequest | Parameters supplied to prepare subnet by applying network intent policies.
+prepare_network_policies_request_parameters = AzureRest::PrepareNetworkPoliciesRequest.new # PrepareNetworkPoliciesRequest | Parameters supplied to prepare subnet by applying network intent policies.
 
 begin
   
   api_instance.subnets_prepare_network_policies(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name, prepare_network_policies_request_parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->subnets_prepare_network_policies: #{e}"
 end
 ```
@@ -1373,7 +1373,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->subnets_prepare_network_policies_with_http_info: #{e}"
 end
 ```
@@ -1415,25 +1415,25 @@ Unprepares a subnet by removing network intent policies.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
 subnet_name = 'subnet_name_example' # String | The name of the subnet.
-unprepare_network_policies_request_parameters = AzureSDK::UnprepareNetworkPoliciesRequest.new # UnprepareNetworkPoliciesRequest | Parameters supplied to unprepare subnet to remove network intent policies.
+unprepare_network_policies_request_parameters = AzureRest::UnprepareNetworkPoliciesRequest.new # UnprepareNetworkPoliciesRequest | Parameters supplied to unprepare subnet to remove network intent policies.
 
 begin
   
   api_instance.subnets_unprepare_network_policies(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name, unprepare_network_policies_request_parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->subnets_unprepare_network_policies: #{e}"
 end
 ```
@@ -1451,7 +1451,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->subnets_unprepare_network_policies_with_http_info: #{e}"
 end
 ```
@@ -1493,14 +1493,14 @@ Checks whether a private IP address is available for use.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1511,7 +1511,7 @@ begin
   
   result = api_instance.virtual_networks_check_ip_address_availability(api_version, subscription_id, resource_group_name, virtual_network_name, ip_address)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_check_ip_address_availability: #{e}"
 end
 ```
@@ -1529,7 +1529,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IPAddressAvailabilityResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_check_ip_address_availability_with_http_info: #{e}"
 end
 ```
@@ -1570,14 +1570,14 @@ Gets the Ddos Protection Status of all IP Addresses under the Virtual Network
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1591,7 +1591,7 @@ begin
   
   result = api_instance.virtual_networks_list_ddos_protection_status(api_version, subscription_id, resource_group_name, virtual_network_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_list_ddos_protection_status: #{e}"
 end
 ```
@@ -1609,7 +1609,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkDdosProtectionStatusResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_list_ddos_protection_status_with_http_info: #{e}"
 end
 ```
@@ -1651,14 +1651,14 @@ Lists usage stats.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1668,7 +1668,7 @@ begin
   
   result = api_instance.virtual_networks_list_usage(api_version, subscription_id, resource_group_name, virtual_network_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_list_usage: #{e}"
 end
 ```
@@ -1686,7 +1686,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkListUsageResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_networks_list_usage_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::AccessPolicy
+# AzureRest::AccessPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccessPolicy.new(
+instance = AzureRest::AccessPolicy.new(
   start_time: null,
   expiry_time: null,
   permission: null

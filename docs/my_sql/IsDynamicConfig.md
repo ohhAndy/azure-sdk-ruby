@@ -1,4 +1,4 @@
-# AzureSDK::IsDynamicConfig
+# AzureRest::IsDynamicConfig
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IsDynamicConfig.new()
+instance = AzureRest::IsDynamicConfig.new()
 ```
 

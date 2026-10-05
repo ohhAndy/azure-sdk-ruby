@@ -1,4 +1,4 @@
-# AzureSDK::DiskDeleteOptionTypes
+# AzureRest::DiskDeleteOptionTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskDeleteOptionTypes.new()
+instance = AzureRest::DiskDeleteOptionTypes.new()
 ```
 

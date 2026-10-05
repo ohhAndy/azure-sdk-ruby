@@ -1,4 +1,4 @@
-# AzureSDK::ProtocolSettings
+# AzureRest::ProtocolSettings
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProtocolSettings.new(
+instance = AzureRest::ProtocolSettings.new(
   smb: null,
   nfs: null
 )

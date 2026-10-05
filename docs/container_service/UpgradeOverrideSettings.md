@@ -1,4 +1,4 @@
-# AzureSDK::UpgradeOverrideSettings
+# AzureRest::UpgradeOverrideSettings
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpgradeOverrideSettings.new(
+instance = AzureRest::UpgradeOverrideSettings.new(
   force_upgrade: null,
   _until: null
 )

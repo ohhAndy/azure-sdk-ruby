@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationStateInfo
+# AzureRest::CapacityReservationStateInfo
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationStateInfo.new(
+instance = AzureRest::CapacityReservationStateInfo.new(
   reservation_state: null
 )
 ```

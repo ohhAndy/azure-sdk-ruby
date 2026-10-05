@@ -1,4 +1,4 @@
-# AzureSDK::DefaultApi
+# AzureRest::DefaultApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,26 +21,26 @@ The operation to create the restore point. Updating properties of an existing re
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 restore_point_collection_name = 'restore_point_collection_name_example' # String | The name of the restore point collection.
 restore_point_name = 'restore_point_name_example' # String | The name of the restore point.
-parameters = AzureSDK::RestorePoint.new # RestorePoint | Parameters supplied to the Create restore point operation.
+parameters = AzureRest::RestorePoint.new # RestorePoint | Parameters supplied to the Create restore point operation.
 
 begin
   
   result = api_instance.restore_points_create(api_version, subscription_id, resource_group_name, restore_point_collection_name, restore_point_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_create: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RestorePoint>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_create_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ The operation to delete the restore point.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ restore_point_name = 'restore_point_name_example' # String | The name of the res
 begin
   
   api_instance.restore_points_delete(api_version, subscription_id, resource_group_name, restore_point_collection_name, restore_point_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_delete_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ The operation to get the restore point.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.restore_points_get(api_version, subscription_id, resource_group_name, restore_point_collection_name, restore_point_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RestorePoint>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->restore_points_get_with_http_info: #{e}"
 end
 ```

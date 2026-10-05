@@ -1,4 +1,4 @@
-# AzureSDK::WinRMListener
+# AzureRest::WinRMListener
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WinRMListener.new(
+instance = AzureRest::WinRMListener.new(
   protocol: null,
   certificate_url: null
 )

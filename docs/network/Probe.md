@@ -1,4 +1,4 @@
-# AzureSDK::Probe
+# AzureRest::Probe
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Probe.new(
+instance = AzureRest::Probe.new(
   id: null,
   name: null,
   type: null,

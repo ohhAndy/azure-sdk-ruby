@@ -1,4 +1,4 @@
-# AzureSDK::MinimumTlsVersion
+# AzureRest::MinimumTlsVersion
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MinimumTlsVersion.new()
+instance = AzureRest::MinimumTlsVersion.new()
 ```
 

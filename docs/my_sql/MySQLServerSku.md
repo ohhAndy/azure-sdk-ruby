@@ -1,4 +1,4 @@
-# AzureSDK::MySQLServerSku
+# AzureRest::MySQLServerSku
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MySQLServerSku.new(
+instance = AzureRest::MySQLServerSku.new(
   name: null,
   tier: null
 )

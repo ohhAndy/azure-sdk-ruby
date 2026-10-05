@@ -1,4 +1,4 @@
-# AzureSDK::DeletionRecoveryLevel
+# AzureRest::DeletionRecoveryLevel
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletionRecoveryLevel.new()
+instance = AzureRest::DeletionRecoveryLevel.new()
 ```
 

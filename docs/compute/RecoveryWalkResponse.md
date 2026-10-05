@@ -1,4 +1,4 @@
-# AzureSDK::RecoveryWalkResponse
+# AzureRest::RecoveryWalkResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RecoveryWalkResponse.new(
+instance = AzureRest::RecoveryWalkResponse.new(
   walk_performed: null,
   next_platform_update_domain: null
 )

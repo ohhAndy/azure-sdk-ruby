@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectGroupProfile
+# AzureRest::InterconnectGroupProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectGroupProfile.new(
+instance = AzureRest::InterconnectGroupProfile.new(
   interconnect_group: null,
   subgroups: null
 )

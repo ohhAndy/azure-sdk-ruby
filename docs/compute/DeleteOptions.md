@@ -1,4 +1,4 @@
-# AzureSDK::DeleteOptions
+# AzureRest::DeleteOptions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeleteOptions.new()
+instance = AzureRest::DeleteOptions.new()
 ```
 

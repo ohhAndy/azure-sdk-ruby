@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetVMReimageParameters
+# AzureRest::VirtualMachineScaleSetVMReimageParameters
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetVMReimageParameters.new(
+instance = AzureRest::VirtualMachineScaleSetVMReimageParameters.new(
   temp_disk: null,
   exact_version: null,
   os_profile: null,

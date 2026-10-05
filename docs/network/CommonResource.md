@@ -1,4 +1,4 @@
-# AzureSDK::CommonResource
+# AzureRest::CommonResource
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonResource.new(
+instance = AzureRest::CommonResource.new(
   id: null,
   name: null,
   type: null,

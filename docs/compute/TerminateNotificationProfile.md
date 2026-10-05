@@ -1,4 +1,4 @@
-# AzureSDK::TerminateNotificationProfile
+# AzureRest::TerminateNotificationProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TerminateNotificationProfile.new(
+instance = AzureRest::TerminateNotificationProfile.new(
   not_before_timeout: null,
   enable: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostPropertiesFormatNetworkAcls
+# AzureRest::BastionHostPropertiesFormatNetworkAcls
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionHostPropertiesFormatNetworkAcls.new(
+instance = AzureRest::BastionHostPropertiesFormatNetworkAcls.new(
   ip_rules: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::IsConfigPendingRestart
+# AzureRest::IsConfigPendingRestart
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IsConfigPendingRestart.new()
+instance = AzureRest::IsConfigPendingRestart.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::CachingTypes
+# AzureRest::CachingTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CachingTypes.new()
+instance = AzureRest::CachingTypes.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterNATGatewayProfileOutboundIPPrefixes
+# AzureRest::ManagedClusterNATGatewayProfileOutboundIPPrefixes
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterNATGatewayProfileOutboundIPPrefixes.new(
+instance = AzureRest::ManagedClusterNATGatewayProfileOutboundIPPrefixes.new(
   public_ip_prefixes: null
 )
 ```

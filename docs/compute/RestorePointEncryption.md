@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointEncryption
+# AzureRest::RestorePointEncryption
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointEncryption.new(
+instance = AzureRest::RestorePointEncryption.new(
   disk_encryption_set: null,
   type: null
 )

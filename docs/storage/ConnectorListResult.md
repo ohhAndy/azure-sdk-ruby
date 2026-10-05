@@ -1,4 +1,4 @@
-# AzureSDK::ConnectorListResult
+# AzureRest::ConnectorListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConnectorListResult.new(
+instance = AzureRest::ConnectorListResult.new(
   value: null,
   next_link: null
 )

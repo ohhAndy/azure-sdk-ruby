@@ -1,4 +1,4 @@
-# AzureSDK::CommonOperatingSystemTypes
+# AzureRest::CommonOperatingSystemTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonOperatingSystemTypes.new()
+instance = AzureRest::CommonOperatingSystemTypes.new()
 ```
 

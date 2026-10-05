@@ -1,4 +1,4 @@
-# AzureSDK::PartnerManagedResourceProperties
+# AzureRest::PartnerManagedResourceProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PartnerManagedResourceProperties.new(
+instance = AzureRest::PartnerManagedResourceProperties.new(
   id: null,
   internal_load_balancer_id: null,
   standard_load_balancer_id: null

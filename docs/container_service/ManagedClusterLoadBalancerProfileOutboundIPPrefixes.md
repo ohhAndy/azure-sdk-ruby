@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterLoadBalancerProfileOutboundIPPrefixes
+# AzureRest::ManagedClusterLoadBalancerProfileOutboundIPPrefixes
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterLoadBalancerProfileOutboundIPPrefixes.new(
+instance = AzureRest::ManagedClusterLoadBalancerProfileOutboundIPPrefixes.new(
   public_ip_prefixes: null
 )
 ```

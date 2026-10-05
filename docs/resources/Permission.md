@@ -1,4 +1,4 @@
-# AzureSDK::Permission
+# AzureRest::Permission
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Permission.new(
+instance = AzureRest::Permission.new(
   actions: null,
   not_actions: null,
   data_actions: null,

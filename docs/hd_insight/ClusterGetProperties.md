@@ -1,4 +1,4 @@
-# AzureSDK::ClusterGetProperties
+# AzureRest::ClusterGetProperties
 
 ## Properties
 
@@ -32,9 +32,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterGetProperties.new(
+instance = AzureRest::ClusterGetProperties.new(
   cluster_version: null,
   cluster_hdp_version: null,
   os_type: null,

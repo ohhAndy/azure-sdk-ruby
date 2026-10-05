@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointNetAppOntapSourceProperties
+# AzureRest::BlobAccessPointNetAppOntapSourceProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointNetAppOntapSourceProperties.new(
+instance = AzureRest::BlobAccessPointNetAppOntapSourceProperties.new(
   connection: null,
   auth: null
 )

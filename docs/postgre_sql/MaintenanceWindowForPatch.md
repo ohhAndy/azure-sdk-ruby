@@ -1,4 +1,4 @@
-# AzureSDK::MaintenanceWindowForPatch
+# AzureRest::MaintenanceWindowForPatch
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MaintenanceWindowForPatch.new(
+instance = AzureRest::MaintenanceWindowForPatch.new(
   custom_window: null,
   start_hour: null,
   start_minute: null,

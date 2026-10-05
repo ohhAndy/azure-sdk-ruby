@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceAuxiliaryMode
+# AzureRest::NetworkInterfaceAuxiliaryMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceAuxiliaryMode.new()
+instance = AzureRest::NetworkInterfaceAuxiliaryMode.new()
 ```
 

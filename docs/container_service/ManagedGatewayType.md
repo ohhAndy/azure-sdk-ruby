@@ -1,4 +1,4 @@
-# AzureSDK::ManagedGatewayType
+# AzureRest::ManagedGatewayType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedGatewayType.new()
+instance = AzureRest::ManagedGatewayType.new()
 ```
 

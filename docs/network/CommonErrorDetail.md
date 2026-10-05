@@ -1,4 +1,4 @@
-# AzureSDK::CommonErrorDetail
+# AzureRest::CommonErrorDetail
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CommonErrorDetail.new(
+instance = AzureRest::CommonErrorDetail.new(
   code: null,
   message: null,
   target: null,

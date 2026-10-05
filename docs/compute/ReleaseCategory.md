@@ -1,4 +1,4 @@
-# AzureSDK::ReleaseCategory
+# AzureRest::ReleaseCategory
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReleaseCategory.new()
+instance = AzureRest::ReleaseCategory.new()
 ```
 

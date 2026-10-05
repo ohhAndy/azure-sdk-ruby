@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandManagedIdentity
+# AzureRest::RunCommandManagedIdentity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandManagedIdentity.new(
+instance = AzureRest::RunCommandManagedIdentity.new(
   client_id: null,
   object_id: null
 )

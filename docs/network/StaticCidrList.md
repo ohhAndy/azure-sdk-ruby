@@ -1,4 +1,4 @@
-# AzureSDK::StaticCidrList
+# AzureRest::StaticCidrList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StaticCidrList.new(
+instance = AzureRest::StaticCidrList.new(
   value: null,
   next_link: null
 )

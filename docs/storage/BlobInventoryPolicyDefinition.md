@@ -1,4 +1,4 @@
-# AzureSDK::BlobInventoryPolicyDefinition
+# AzureRest::BlobInventoryPolicyDefinition
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobInventoryPolicyDefinition.new(
+instance = AzureRest::BlobInventoryPolicyDefinition.new(
   filters: null,
   format: null,
   schedule: null,

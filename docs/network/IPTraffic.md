@@ -1,4 +1,4 @@
-# AzureSDK::IPTraffic
+# AzureRest::IPTraffic
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPTraffic.new(
+instance = AzureRest::IPTraffic.new(
   source_ips: null,
   destination_ips: null,
   source_ports: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ConnectorUpdate
+# AzureRest::ConnectorUpdate
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConnectorUpdate.new(
+instance = AzureRest::ConnectorUpdate.new(
   id: null,
   name: null,
   type: null,

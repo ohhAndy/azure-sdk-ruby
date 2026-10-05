@@ -1,4 +1,4 @@
-# AzureSDK::Route
+# AzureRest::Route
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Route.new(
+instance = AzureRest::Route.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveRouteListResult
+# AzureRest::EffectiveRouteListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveRouteListResult.new(
+instance = AzureRest::EffectiveRouteListResult.new(
   value: null,
   next_link: null
 )

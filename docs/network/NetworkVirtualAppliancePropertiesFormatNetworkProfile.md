@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualAppliancePropertiesFormatNetworkProfile
+# AzureRest::NetworkVirtualAppliancePropertiesFormatNetworkProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualAppliancePropertiesFormatNetworkProfile.new(
+instance = AzureRest::NetworkVirtualAppliancePropertiesFormatNetworkProfile.new(
   network_interface_configurations: null
 )
 ```

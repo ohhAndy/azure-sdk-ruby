@@ -1,4 +1,4 @@
-# AzureSDK::ManagedServiceIdentityUserAssignedIdentities
+# AzureRest::ManagedServiceIdentityUserAssignedIdentities
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedServiceIdentityUserAssignedIdentities.new(
+instance = AzureRest::ManagedServiceIdentityUserAssignedIdentities.new(
   principal_id: null,
   client_id: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::StorageProfile
+# AzureRest::StorageProfile
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageProfile.new(
+instance = AzureRest::StorageProfile.new(
   image_reference: null,
   os_disk: null,
   data_disks: null,

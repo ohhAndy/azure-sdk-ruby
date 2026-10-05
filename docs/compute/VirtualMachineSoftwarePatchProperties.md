@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineSoftwarePatchProperties
+# AzureRest::VirtualMachineSoftwarePatchProperties
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineSoftwarePatchProperties.new(
+instance = AzureRest::VirtualMachineSoftwarePatchProperties.new(
   patch_id: null,
   name: null,
   version: null,

@@ -1,4 +1,4 @@
-# AzureSDK::AggregationGranularity
+# AzureRest::AggregationGranularity
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AggregationGranularity.new()
+instance = AzureRest::AggregationGranularity.new()
 ```
 

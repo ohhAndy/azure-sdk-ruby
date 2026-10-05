@@ -1,13 +1,13 @@
 {
-  "gemName": "azure_sdk",
-  "moduleName": "AzureSDK",
+  "gemName": "azure_rest",
+  "moduleName": "AzureRest",
   "library": "faraday",
   "gemVersion": "0.1.0",
   "gemAuthor": "ManageIQ Authors",
   "gemAuthorEmail": "",
   "gemDescription": "Ruby client for the Azure Resource Manager REST API, generated from the official OpenAPI specs.",
   "gemSummary": "Azure Resource Manager Ruby client",
-  "gemHomepage": "https://github.com/ManageIQ/azure_sdk",
+  "gemHomepage": "https://github.com/ManageIQ/azure_rest",
   "gemLicense": "Apache-2.0",
   "gemRequiredRubyVersion": ">= 2.7",
   "hideGenerationTimestamp": true

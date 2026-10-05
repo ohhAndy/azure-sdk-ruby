@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolNetworkProfile
+# AzureRest::AgentPoolNetworkProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolNetworkProfile.new(
+instance = AzureRest::AgentPoolNetworkProfile.new(
   node_public_ip_tags: null,
   allowed_host_ports: null,
   application_security_groups: null,

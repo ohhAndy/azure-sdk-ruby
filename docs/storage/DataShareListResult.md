@@ -1,4 +1,4 @@
-# AzureSDK::DataShareListResult
+# AzureRest::DataShareListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataShareListResult.new(
+instance = AzureRest::DataShareListResult.new(
   value: null,
   next_link: null
 )

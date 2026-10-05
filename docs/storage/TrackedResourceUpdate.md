@@ -1,4 +1,4 @@
-# AzureSDK::TrackedResourceUpdate
+# AzureRest::TrackedResourceUpdate
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrackedResourceUpdate.new(
+instance = AzureRest::TrackedResourceUpdate.new(
   id: null,
   name: null,
   type: null,

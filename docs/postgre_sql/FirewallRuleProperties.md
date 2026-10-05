@@ -1,4 +1,4 @@
-# AzureSDK::FirewallRuleProperties
+# AzureRest::FirewallRuleProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FirewallRuleProperties.new(
+instance = AzureRest::FirewallRuleProperties.new(
   start_ip_address: null,
   end_ip_address: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterPoolUpgradeProfileUpgradesItem
+# AzureRest::ManagedClusterPoolUpgradeProfileUpgradesItem
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterPoolUpgradeProfileUpgradesItem.new(
+instance = AzureRest::ManagedClusterPoolUpgradeProfileUpgradesItem.new(
   kubernetes_version: null,
   is_preview: null
 )

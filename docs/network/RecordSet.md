@@ -1,4 +1,4 @@
-# AzureSDK::RecordSet
+# AzureRest::RecordSet
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RecordSet.new(
+instance = AzureRest::RecordSet.new(
   record_type: null,
   record_set_name: null,
   fqdn: null,

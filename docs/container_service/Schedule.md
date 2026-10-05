@@ -1,4 +1,4 @@
-# AzureSDK::Schedule
+# AzureRest::Schedule
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Schedule.new(
+instance = AzureRest::Schedule.new(
   daily: null,
   weekly: null,
   absolute_monthly: null,

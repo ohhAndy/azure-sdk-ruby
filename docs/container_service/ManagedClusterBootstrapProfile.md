@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterBootstrapProfile
+# AzureRest::ManagedClusterBootstrapProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterBootstrapProfile.new(
+instance = AzureRest::ManagedClusterBootstrapProfile.new(
   artifact_source: null,
   container_registry_id: null
 )

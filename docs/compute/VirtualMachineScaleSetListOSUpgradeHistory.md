@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetListOSUpgradeHistory
+# AzureRest::VirtualMachineScaleSetListOSUpgradeHistory
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetListOSUpgradeHistory.new(
+instance = AzureRest::VirtualMachineScaleSetListOSUpgradeHistory.new(
   value: null,
   next_link: null
 )

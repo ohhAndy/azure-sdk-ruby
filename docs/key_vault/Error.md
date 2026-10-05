@@ -1,4 +1,4 @@
-# AzureSDK::Error
+# AzureRest::Error
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Error.new(
+instance = AzureRest::Error.new(
   code: null,
   message: null,
   innererror: null

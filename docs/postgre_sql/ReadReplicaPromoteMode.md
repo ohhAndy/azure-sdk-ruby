@@ -1,4 +1,4 @@
-# AzureSDK::ReadReplicaPromoteMode
+# AzureRest::ReadReplicaPromoteMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReadReplicaPromoteMode.new()
+instance = AzureRest::ReadReplicaPromoteMode.new()
 ```
 

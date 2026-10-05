@@ -1,4 +1,4 @@
-# AzureSDK::PublicNetworkAccess
+# AzureRest::PublicNetworkAccess
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicNetworkAccess.new()
+instance = AzureRest::PublicNetworkAccess.new()
 ```
 

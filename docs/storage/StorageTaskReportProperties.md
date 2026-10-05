@@ -1,4 +1,4 @@
-# AzureSDK::StorageTaskReportProperties
+# AzureRest::StorageTaskReportProperties
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageTaskReportProperties.new(
+instance = AzureRest::StorageTaskReportProperties.new(
   task_assignment_id: null,
   storage_account_id: null,
   start_time: null,

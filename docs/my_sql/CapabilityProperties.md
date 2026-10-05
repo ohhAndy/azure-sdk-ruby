@@ -1,4 +1,4 @@
-# AzureSDK::CapabilityProperties
+# AzureRest::CapabilityProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapabilityProperties.new(
+instance = AzureRest::CapabilityProperties.new(
   zone: null,
   supported_ha_mode: null,
   supported_geo_backup_regions: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ResourcesApi
+# AzureRest::ResourcesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -31,14 +31,14 @@ Checks whether a resource exists.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group containing the resource to get. The name is case insensitive.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The resource provider of the resource to check.
@@ -50,7 +50,7 @@ api_version = 'api_version_example' # String | The API version to use for this o
 begin
   
   api_instance.resources_check_existence(subscription_id, resource_group_name, resource_provider_namespace, parent_resource_path, resource_type, resource_name, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_check_existence: #{e}"
 end
 ```
@@ -68,7 +68,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_check_existence_with_http_info: #{e}"
 end
 ```
@@ -111,21 +111,21 @@ Checks by ID whether a resource exists. This API currently works only for a limi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 resource_id = 'resource_id_example' # String | 
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
 begin
   
   api_instance.resources_check_existence_by_id(resource_id, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_check_existence_by_id: #{e}"
 end
 ```
@@ -143,7 +143,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_check_existence_by_id_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Creates a resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group containing the resource to get. The name is case insensitive.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The resource provider of the resource to check.
@@ -196,13 +196,13 @@ parent_resource_path = 'parent_resource_path_example' # String | The parent reso
 resource_type = 'resource_type_example' # String | The resource type.
 resource_name = 'resource_name_example' # String | The name of the resource to check whether it exists.
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::GenericResource.new # GenericResource | Resource create parameters.
+parameters = AzureRest::GenericResource.new # GenericResource | Resource create parameters.
 
 begin
   
   result = api_instance.resources_create_or_update(subscription_id, resource_group_name, resource_provider_namespace, parent_resource_path, resource_type, resource_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_create_or_update: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -264,23 +264,23 @@ Create a resource by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 resource_id = 'resource_id_example' # String | 
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::GenericResource.new # GenericResource | Resource create parameters.
+parameters = AzureRest::GenericResource.new # GenericResource | Resource create parameters.
 
 begin
   
   result = api_instance.resources_create_or_update_by_id(resource_id, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_create_or_update_by_id: #{e}"
 end
 ```
@@ -298,7 +298,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_create_or_update_by_id_with_http_info: #{e}"
 end
 ```
@@ -337,14 +337,14 @@ Deletes a resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group containing the resource to get. The name is case insensitive.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The resource provider of the resource to check.
@@ -356,7 +356,7 @@ api_version = 'api_version_example' # String | The API version to use for this o
 begin
   
   api_instance.resources_delete(subscription_id, resource_group_name, resource_provider_namespace, parent_resource_path, resource_type, resource_name, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_delete: #{e}"
 end
 ```
@@ -374,7 +374,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_delete_with_http_info: #{e}"
 end
 ```
@@ -417,21 +417,21 @@ Deletes a resource by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 resource_id = 'resource_id_example' # String | 
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
 begin
   
   api_instance.resources_delete_by_id(resource_id, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_delete_by_id: #{e}"
 end
 ```
@@ -449,7 +449,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_delete_by_id_with_http_info: #{e}"
 end
 ```
@@ -487,14 +487,14 @@ Gets a resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group containing the resource to get. The name is case insensitive.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The resource provider of the resource to check.
@@ -507,7 +507,7 @@ begin
   
   result = api_instance.resources_get(subscription_id, resource_group_name, resource_provider_namespace, parent_resource_path, resource_type, resource_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_get: #{e}"
 end
 ```
@@ -525,7 +525,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_get_with_http_info: #{e}"
 end
 ```
@@ -568,14 +568,14 @@ Gets a resource by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 resource_id = 'resource_id_example' # String | 
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
@@ -583,7 +583,7 @@ begin
   
   result = api_instance.resources_get_by_id(resource_id, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_get_by_id: #{e}"
 end
 ```
@@ -601,7 +601,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_get_by_id_with_http_info: #{e}"
 end
 ```
@@ -639,14 +639,14 @@ Get all the resources in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -659,7 +659,7 @@ begin
   
   result = api_instance.resources_list(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_list: #{e}"
 end
 ```
@@ -677,7 +677,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_list_with_http_info: #{e}"
 end
 ```
@@ -718,23 +718,23 @@ The resources to be moved must be in the same source resource group in the sourc
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 source_resource_group_name = 'source_resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
-parameters = AzureSDK::ResourcesMoveInfo.new # ResourcesMoveInfo | Parameters for moving resources.
+parameters = AzureRest::ResourcesMoveInfo.new # ResourcesMoveInfo | Parameters for moving resources.
 
 begin
   # Moves resources from one resource group to another resource group.
   api_instance.resources_move_resources(api_version, subscription_id, source_resource_group_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_move_resources: #{e}"
 end
 ```
@@ -752,7 +752,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_move_resources_with_http_info: #{e}"
 end
 ```
@@ -792,14 +792,14 @@ Updates a resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group containing the resource to get. The name is case insensitive.
 resource_provider_namespace = 'resource_provider_namespace_example' # String | The resource provider of the resource to check.
@@ -807,13 +807,13 @@ parent_resource_path = 'parent_resource_path_example' # String | The parent reso
 resource_type = 'resource_type_example' # String | The resource type.
 resource_name = 'resource_name_example' # String | The name of the resource to check whether it exists.
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::GenericResource.new # GenericResource | Resource create parameters.
+parameters = AzureRest::GenericResource.new # GenericResource | Resource create parameters.
 
 begin
   
   result = api_instance.resources_update(subscription_id, resource_group_name, resource_provider_namespace, parent_resource_path, resource_type, resource_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_update: #{e}"
 end
 ```
@@ -831,7 +831,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_update_with_http_info: #{e}"
 end
 ```
@@ -875,23 +875,23 @@ Update a resource by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 resource_id = 'resource_id_example' # String | 
 api_version = 'api_version_example' # String | The API version to use for this operation.
-parameters = AzureSDK::GenericResource.new # GenericResource | Resource create parameters.
+parameters = AzureRest::GenericResource.new # GenericResource | Resource create parameters.
 
 begin
   
   result = api_instance.resources_update_by_id(resource_id, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_update_by_id: #{e}"
 end
 ```
@@ -909,7 +909,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GenericResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_update_by_id_with_http_info: #{e}"
 end
 ```
@@ -948,23 +948,23 @@ This operation checks whether the specified resources can be moved to the target
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ResourcesApi.new
+api_instance = AzureRest::ResourcesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 source_resource_group_name = 'source_resource_group_name_example' # String | The name of the resource group to get. The name is case insensitive.
-parameters = AzureSDK::ResourcesMoveInfo.new # ResourcesMoveInfo | Parameters for moving resources.
+parameters = AzureRest::ResourcesMoveInfo.new # ResourcesMoveInfo | Parameters for moving resources.
 
 begin
   # Validates whether resources can be moved from one resource group to another resource group.
   api_instance.resources_validate_move_resources(api_version, subscription_id, source_resource_group_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_validate_move_resources: #{e}"
 end
 ```
@@ -982,7 +982,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ResourcesApi->resources_validate_move_resources_with_http_info: #{e}"
 end
 ```

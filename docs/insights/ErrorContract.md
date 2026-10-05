@@ -1,4 +1,4 @@
-# AzureSDK::ErrorContract
+# AzureRest::ErrorContract
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ErrorContract.new(
+instance = AzureRest::ErrorContract.new(
   error: null
 )
 ```

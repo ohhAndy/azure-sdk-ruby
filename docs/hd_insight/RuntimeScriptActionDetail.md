@@ -1,4 +1,4 @@
-# AzureSDK::RuntimeScriptActionDetail
+# AzureRest::RuntimeScriptActionDetail
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RuntimeScriptActionDetail.new(
+instance = AzureRest::RuntimeScriptActionDetail.new(
   name: null,
   uri: null,
   parameters: null,

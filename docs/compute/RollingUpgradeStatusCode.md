@@ -1,4 +1,4 @@
-# AzureSDK::RollingUpgradeStatusCode
+# AzureRest::RollingUpgradeStatusCode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RollingUpgradeStatusCode.new()
+instance = AzureRest::RollingUpgradeStatusCode.new()
 ```
 

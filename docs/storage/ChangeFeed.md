@@ -1,4 +1,4 @@
-# AzureSDK::ChangeFeed
+# AzureRest::ChangeFeed
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ChangeFeed.new(
+instance = AzureRest::ChangeFeed.new(
   enabled: null,
   retention_in_days: null
 )

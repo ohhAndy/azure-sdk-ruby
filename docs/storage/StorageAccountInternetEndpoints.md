@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountInternetEndpoints
+# AzureRest::StorageAccountInternetEndpoints
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountInternetEndpoints.new(
+instance = AzureRest::StorageAccountInternetEndpoints.new(
   blob: null,
   file: null,
   web: null,

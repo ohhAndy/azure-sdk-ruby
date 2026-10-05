@@ -1,4 +1,4 @@
-# AzureSDK::UpgradeOperationHistoricalStatusInfo
+# AzureRest::UpgradeOperationHistoricalStatusInfo
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpgradeOperationHistoricalStatusInfo.new(
+instance = AzureRest::UpgradeOperationHistoricalStatusInfo.new(
   properties: null,
   type: null,
   location: null

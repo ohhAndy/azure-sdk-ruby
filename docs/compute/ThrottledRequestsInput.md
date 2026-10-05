@@ -1,4 +1,4 @@
-# AzureSDK::ThrottledRequestsInput
+# AzureRest::ThrottledRequestsInput
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ThrottledRequestsInput.new(
+instance = AzureRest::ThrottledRequestsInput.new(
   blob_container_sas_uri: null,
   from_time: null,
   to_time: null,

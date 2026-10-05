@@ -1,4 +1,4 @@
-# AzureSDK::Database
+# AzureRest::Database
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Database.new(
+instance = AzureRest::Database.new(
   id: null,
   name: null,
   type: null,

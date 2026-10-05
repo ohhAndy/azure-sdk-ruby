@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkPeering
+# AzureRest::VirtualNetworkPeering
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkPeering.new(
+instance = AzureRest::VirtualNetworkPeering.new(
   id: null,
   name: null,
   type: null,

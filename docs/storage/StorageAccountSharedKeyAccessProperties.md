@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountSharedKeyAccessProperties
+# AzureRest::StorageAccountSharedKeyAccessProperties
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountSharedKeyAccessProperties.new(
+instance = AzureRest::StorageAccountSharedKeyAccessProperties.new(
   blob: null,
   file: null,
   table: null,

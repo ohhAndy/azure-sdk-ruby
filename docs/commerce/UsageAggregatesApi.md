@@ -1,4 +1,4 @@
-# AzureSDK::UsageAggregatesApi
+# AzureRest::UsageAggregatesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,14 +19,14 @@ Query aggregated Azure subscription consumption data for a date range.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::UsageAggregatesApi.new
+api_instance = AzureRest::UsageAggregatesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 reported_start_time = Time.parse('2013-10-20T19:20:30+01:00') # Time | The start of the time range to retrieve data for.
@@ -41,7 +41,7 @@ begin
   
   result = api_instance.usage_aggregates_list(api_version, subscription_id, reported_start_time, reported_end_time, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling UsageAggregatesApi->usage_aggregates_list: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <UsageAggregationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling UsageAggregatesApi->usage_aggregates_list_with_http_info: #{e}"
 end
 ```

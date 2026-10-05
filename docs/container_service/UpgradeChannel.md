@@ -1,4 +1,4 @@
-# AzureSDK::UpgradeChannel
+# AzureRest::UpgradeChannel
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UpgradeChannel.new()
+instance = AzureRest::UpgradeChannel.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::TrustedAccessRoleBindingListResult
+# AzureRest::TrustedAccessRoleBindingListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrustedAccessRoleBindingListResult.new(
+instance = AzureRest::TrustedAccessRoleBindingListResult.new(
   value: null,
   next_link: null
 )

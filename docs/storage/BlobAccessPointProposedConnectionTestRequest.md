@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointProposedConnectionTestRequest
+# AzureRest::BlobAccessPointProposedConnectionTestRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointProposedConnectionTestRequest.new(
+instance = AzureRest::BlobAccessPointProposedConnectionTestRequest.new(
   source: null
 )
 ```

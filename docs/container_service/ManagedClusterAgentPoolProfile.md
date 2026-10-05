@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAgentPoolProfile
+# AzureRest::ManagedClusterAgentPoolProfile
 
 ## Properties
 
@@ -64,9 +64,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAgentPoolProfile.new(
+instance = AzureRest::ManagedClusterAgentPoolProfile.new(
   e_tag: null,
   count: null,
   vm_size: null,

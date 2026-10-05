@@ -1,4 +1,4 @@
-# AzureSDK::ClusterResizeParameters
+# AzureRest::ClusterResizeParameters
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterResizeParameters.new(
+instance = AzureRest::ClusterResizeParameters.new(
   target_instance_count: null
 )
 ```

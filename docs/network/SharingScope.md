@@ -1,4 +1,4 @@
-# AzureSDK::SharingScope
+# AzureRest::SharingScope
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SharingScope.new()
+instance = AzureRest::SharingScope.new()
 ```
 

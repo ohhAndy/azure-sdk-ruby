@@ -1,4 +1,4 @@
-# AzureSDK::Replica
+# AzureRest::Replica
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Replica.new(
+instance = AzureRest::Replica.new(
   role: null,
   capacity: null,
   replication_state: null,

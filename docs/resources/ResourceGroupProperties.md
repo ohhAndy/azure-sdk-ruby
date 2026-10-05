@@ -1,4 +1,4 @@
-# AzureSDK::ResourceGroupProperties
+# AzureRest::ResourceGroupProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceGroupProperties.new(
+instance = AzureRest::ResourceGroupProperties.new(
   provisioning_state: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::DatabasesApi
+# AzureRest::DatabasesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,25 +22,25 @@ Creates a new database.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DatabasesApi.new
+api_instance = AzureRest::DatabasesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 database_name = 'database_name_example' # String | Name of the database (case-sensitive). Exact database names can be retrieved by getting the list of all existing databases in a server.
-parameters = AzureSDK::Database.new # Database | Parameters required to create a new database.
+parameters = AzureRest::Database.new # Database | Parameters required to create a new database.
 
 begin
   
   api_instance.databases_create(api_version, subscription_id, resource_group_name, server_name, database_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_create: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_create_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Deletes an existing database.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DatabasesApi.new
+api_instance = AzureRest::DatabasesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ database_name = 'database_name_example' # String | Name of the database (case-se
 begin
   
   api_instance.databases_delete(api_version, subscription_id, resource_group_name, server_name, database_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_delete_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ Gets information about an existing database.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DatabasesApi.new
+api_instance = AzureRest::DatabasesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ begin
   
   result = api_instance.databases_get(api_version, subscription_id, resource_group_name, server_name, database_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_get: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Database>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_get_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ Lists all databases in a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DatabasesApi.new
+api_instance = AzureRest::DatabasesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.databases_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_list_by_server: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DatabaseList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DatabasesApi->databases_list_by_server_with_http_info: #{e}"
 end
 ```

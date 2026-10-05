@@ -1,4 +1,4 @@
-# AzureSDK::AvailablePrivateEndpointTypesResult
+# AzureRest::AvailablePrivateEndpointTypesResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailablePrivateEndpointTypesResult.new(
+instance = AzureRest::AvailablePrivateEndpointTypesResult.new(
   value: null,
   next_link: null
 )

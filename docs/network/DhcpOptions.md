@@ -1,4 +1,4 @@
-# AzureSDK::DhcpOptions
+# AzureRest::DhcpOptions
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DhcpOptions.new(
+instance = AzureRest::DhcpOptions.new(
   dns_servers: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostInstanceView
+# AzureRest::DedicatedHostInstanceView
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostInstanceView.new(
+instance = AzureRest::DedicatedHostInstanceView.new(
   asset_id: null,
   available_capacity: null,
   statuses: null

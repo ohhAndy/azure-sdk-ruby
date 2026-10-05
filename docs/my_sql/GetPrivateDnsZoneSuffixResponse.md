@@ -1,4 +1,4 @@
-# AzureSDK::GetPrivateDnsZoneSuffixResponse
+# AzureRest::GetPrivateDnsZoneSuffixResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GetPrivateDnsZoneSuffixResponse.new(
+instance = AzureRest::GetPrivateDnsZoneSuffixResponse.new(
   private_dns_zone_suffix: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicyFilter
+# AzureRest::ManagementPolicyFilter
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicyFilter.new(
+instance = AzureRest::ManagementPolicyFilter.new(
   prefix_match: null,
   blob_types: null,
   blob_index_match: null

@@ -1,4 +1,4 @@
-# AzureSDK::AdministratorMicrosoftEntrasApi
+# AzureRest::AdministratorMicrosoftEntrasApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,25 +22,25 @@ Creates a new server administrator associated to a Microsoft Entra principal.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdministratorMicrosoftEntrasApi.new
+api_instance = AzureRest::AdministratorMicrosoftEntrasApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 object_id = 'object_id_example' # String | Object identifier of the Microsoft Entra principal.
-parameters = AzureSDK::AdministratorMicrosoftEntraAdd.new # AdministratorMicrosoftEntraAdd | Required parameters for adding a server administrator associated to a Microsoft Entra principal.
+parameters = AzureRest::AdministratorMicrosoftEntraAdd.new # AdministratorMicrosoftEntraAdd | Required parameters for adding a server administrator associated to a Microsoft Entra principal.
 
 begin
   
   api_instance.administrators_microsoft_entra_create_or_update(api_version, subscription_id, resource_group_name, server_name, object_id, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_create_or_update: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Deletes an existing server administrator associated to a Microsoft Entra princip
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdministratorMicrosoftEntrasApi.new
+api_instance = AzureRest::AdministratorMicrosoftEntrasApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ object_id = 'object_id_example' # String | Object identifier of the Microsoft En
 begin
   
   api_instance.administrators_microsoft_entra_delete(api_version, subscription_id, resource_group_name, server_name, object_id)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_delete_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ Gets information about a server administrator associated to a Microsoft Entra pr
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdministratorMicrosoftEntrasApi.new
+api_instance = AzureRest::AdministratorMicrosoftEntrasApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ begin
   
   result = api_instance.administrators_microsoft_entra_get(api_version, subscription_id, resource_group_name, server_name, object_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_get: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AdministratorMicrosoftEntra>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_get_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ List all server administrators associated to a Microsoft Entra principal.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdministratorMicrosoftEntrasApi.new
+api_instance = AzureRest::AdministratorMicrosoftEntrasApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.administrators_microsoft_entra_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_list_by_server: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AdministratorMicrosoftEntraList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdministratorMicrosoftEntrasApi->administrators_microsoft_entra_list_by_server_with_http_info: #{e}"
 end
 ```

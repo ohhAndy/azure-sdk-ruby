@@ -1,4 +1,4 @@
-# AzureSDK::TableServicePropertiesProperties
+# AzureRest::TableServicePropertiesProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TableServicePropertiesProperties.new(
+instance = AzureRest::TableServicePropertiesProperties.new(
   cors: null
 )
 ```

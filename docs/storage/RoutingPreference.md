@@ -1,4 +1,4 @@
-# AzureSDK::RoutingPreference
+# AzureRest::RoutingPreference
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoutingPreference.new(
+instance = AzureRest::RoutingPreference.new(
   routing_choice: null,
   publish_microsoft_endpoints: null,
   publish_internet_endpoints: null

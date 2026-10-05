@@ -1,4 +1,4 @@
-# AzureSDK::Reason
+# AzureRest::Reason
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Reason.new()
+instance = AzureRest::Reason.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::VaultSecretGroup
+# AzureRest::VaultSecretGroup
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultSecretGroup.new(
+instance = AzureRest::VaultSecretGroup.new(
   source_vault: null,
   vault_certificates: null
 )

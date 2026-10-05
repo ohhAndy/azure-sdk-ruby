@@ -1,4 +1,4 @@
-# AzureSDK::DataDisksToAttach
+# AzureRest::DataDisksToAttach
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataDisksToAttach.new(
+instance = AzureRest::DataDisksToAttach.new(
   disk_id: null,
   lun: null,
   caching: null,

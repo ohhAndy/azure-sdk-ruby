@@ -1,4 +1,4 @@
-# AzureSDK::ClusterCreateProperties
+# AzureRest::ClusterCreateProperties
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterCreateProperties.new(
+instance = AzureRest::ClusterCreateProperties.new(
   cluster_version: null,
   os_type: null,
   tier: null,

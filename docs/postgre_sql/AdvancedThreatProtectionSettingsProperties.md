@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedThreatProtectionSettingsProperties
+# AzureRest::AdvancedThreatProtectionSettingsProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedThreatProtectionSettingsProperties.new(
+instance = AzureRest::AdvancedThreatProtectionSettingsProperties.new(
   state: null,
   creation_time: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkRuleBypassOptions
+# AzureRest::NetworkRuleBypassOptions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkRuleBypassOptions.new()
+instance = AzureRest::NetworkRuleBypassOptions.new()
 ```
 

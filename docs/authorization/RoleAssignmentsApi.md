@@ -1,4 +1,4 @@
-# AzureSDK::RoleAssignmentsApi
+# AzureRest::RoleAssignmentsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -28,24 +28,24 @@ Create or update a role assignment by scope and name.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 role_assignment_name = 'role_assignment_name_example' # String | The name of the role assignment. It can be any valid GUID.
-parameters = AzureSDK::RoleAssignmentCreateParameters.new({properties: AzureSDK::RoleAssignmentProperties.new({role_definition_id: 'role_definition_id_example', principal_id: 'principal_id_example'})}) # RoleAssignmentCreateParameters | Parameters for the role assignment.
+parameters = AzureRest::RoleAssignmentCreateParameters.new({properties: AzureRest::RoleAssignmentProperties.new({role_definition_id: 'role_definition_id_example', principal_id: 'principal_id_example'})}) # RoleAssignmentCreateParameters | Parameters for the role assignment.
 
 begin
   
   result = api_instance.role_assignments_create(api_version, scope, role_assignment_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_create: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_create_with_http_info: #{e}"
 end
 ```
@@ -103,23 +103,23 @@ Create or update a role assignment by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 role_assignment_id = 'role_assignment_id_example' # String | The fully qualified ID of the role assignment including scope, resource name, and resource type. Format: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}. Example: /subscriptions/<SUB_ID>/resourcegroups/<RESOURCE_GROUP>/providers/Microsoft.Authorization/roleAssignments/<ROLE_ASSIGNMENT_NAME>
-parameters = AzureSDK::RoleAssignmentCreateParameters.new({properties: AzureSDK::RoleAssignmentProperties.new({role_definition_id: 'role_definition_id_example', principal_id: 'principal_id_example'})}) # RoleAssignmentCreateParameters | Resource create parameters.
+parameters = AzureRest::RoleAssignmentCreateParameters.new({properties: AzureRest::RoleAssignmentProperties.new({role_definition_id: 'role_definition_id_example', principal_id: 'principal_id_example'})}) # RoleAssignmentCreateParameters | Resource create parameters.
 
 begin
   
   result = api_instance.role_assignments_create_by_id(api_version, role_assignment_id, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_create_by_id: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_create_by_id_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ Delete a role assignment by scope and name.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 role_assignment_name = 'role_assignment_name_example' # String | The name of the role assignment. It can be any valid GUID.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.role_assignments_delete(api_version, scope, role_assignment_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_delete: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_delete_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ Delete a role assignment by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 role_assignment_id = 'role_assignment_id_example' # String | The fully qualified ID of the role assignment including scope, resource name, and resource type. Format: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}. Example: /subscriptions/<SUB_ID>/resourcegroups/<RESOURCE_GROUP>/providers/Microsoft.Authorization/roleAssignments/<ROLE_ASSIGNMENT_NAME>
 opts = {
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.role_assignments_delete_by_id(api_version, role_assignment_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_delete_by_id: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_delete_by_id_with_http_info: #{e}"
 end
 ```
@@ -328,14 +328,14 @@ Get a role assignment by scope and name.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 role_assignment_name = 'role_assignment_name_example' # String | The name of the role assignment. It can be any valid GUID.
@@ -347,7 +347,7 @@ begin
   
   result = api_instance.role_assignments_get(api_version, scope, role_assignment_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_get: #{e}"
 end
 ```
@@ -365,7 +365,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_get_with_http_info: #{e}"
 end
 ```
@@ -405,14 +405,14 @@ Get a role assignment by ID.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 role_assignment_id = 'role_assignment_id_example' # String | The fully qualified ID of the role assignment including scope, resource name, and resource type. Format: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}. Example: /subscriptions/<SUB_ID>/resourcegroups/<RESOURCE_GROUP>/providers/Microsoft.Authorization/roleAssignments/<ROLE_ASSIGNMENT_NAME>
 opts = {
@@ -423,7 +423,7 @@ begin
   
   result = api_instance.role_assignments_get_by_id(api_version, role_assignment_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_get_by_id: #{e}"
 end
 ```
@@ -441,7 +441,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_get_by_id_with_http_info: #{e}"
 end
 ```
@@ -480,14 +480,14 @@ List all role assignments that apply to a resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -503,7 +503,7 @@ begin
   
   result = api_instance.role_assignments_list_for_resource(api_version, subscription_id, resource_group_name, resource_provider_namespace, resource_type, resource_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_resource: #{e}"
 end
 ```
@@ -521,7 +521,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignmentListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_resource_with_http_info: #{e}"
 end
 ```
@@ -565,14 +565,14 @@ List all role assignments that apply to a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -585,7 +585,7 @@ begin
   
   result = api_instance.role_assignments_list_for_resource_group(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_resource_group: #{e}"
 end
 ```
@@ -603,7 +603,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignmentListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_resource_group_with_http_info: #{e}"
 end
 ```
@@ -644,14 +644,14 @@ List all role assignments that apply to a scope.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 scope = 'scope_example' # String | The fully qualified Azure Resource manager identifier of the resource.
 opts = {
@@ -664,7 +664,7 @@ begin
   
   result = api_instance.role_assignments_list_for_scope(api_version, scope, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_scope: #{e}"
 end
 ```
@@ -682,7 +682,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignmentListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_scope_with_http_info: #{e}"
 end
 ```
@@ -723,14 +723,14 @@ List all role assignments that apply to a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::RoleAssignmentsApi.new
+api_instance = AzureRest::RoleAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 opts = {
@@ -742,7 +742,7 @@ begin
   
   result = api_instance.role_assignments_list_for_subscription(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_subscription: #{e}"
 end
 ```
@@ -760,7 +760,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RoleAssignmentListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling RoleAssignmentsApi->role_assignments_list_for_subscription_with_http_info: #{e}"
 end
 ```

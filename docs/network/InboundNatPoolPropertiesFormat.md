@@ -1,4 +1,4 @@
-# AzureSDK::InboundNatPoolPropertiesFormat
+# AzureRest::InboundNatPoolPropertiesFormat
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundNatPoolPropertiesFormat.new(
+instance = AzureRest::InboundNatPoolPropertiesFormat.new(
   frontend_ip_configuration: null,
   protocol: null,
   frontend_port_range_start: null,

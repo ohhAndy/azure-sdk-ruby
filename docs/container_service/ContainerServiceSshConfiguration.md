@@ -1,4 +1,4 @@
-# AzureSDK::ContainerServiceSshConfiguration
+# AzureRest::ContainerServiceSshConfiguration
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerServiceSshConfiguration.new(
+instance = AzureRest::ContainerServiceSshConfiguration.new(
   public_keys: null
 )
 ```

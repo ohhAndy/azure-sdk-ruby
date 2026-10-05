@@ -1,4 +1,4 @@
-# AzureSDK::ImportSourceStorageType
+# AzureRest::ImportSourceStorageType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImportSourceStorageType.new()
+instance = AzureRest::ImportSourceStorageType.new()
 ```
 

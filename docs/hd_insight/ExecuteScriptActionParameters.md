@@ -1,4 +1,4 @@
-# AzureSDK::ExecuteScriptActionParameters
+# AzureRest::ExecuteScriptActionParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExecuteScriptActionParameters.new(
+instance = AzureRest::ExecuteScriptActionParameters.new(
   script_actions: null,
   persist_on_success: null
 )

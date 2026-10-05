@@ -1,4 +1,4 @@
-# AzureSDK::Container
+# AzureRest::Container
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Container.new(
+instance = AzureRest::Container.new(
   id: null
 )
 ```

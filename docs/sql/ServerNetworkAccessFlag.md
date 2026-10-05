@@ -1,4 +1,4 @@
-# AzureSDK::ServerNetworkAccessFlag
+# AzureRest::ServerNetworkAccessFlag
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerNetworkAccessFlag.new()
+instance = AzureRest::ServerNetworkAccessFlag.new()
 ```
 

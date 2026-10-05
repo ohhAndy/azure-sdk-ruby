@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServicesApi
+# AzureRest::PrivateLinkServicesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -30,24 +30,24 @@ Checks whether the subscription is visible to private link service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
-parameters = AzureSDK::CheckPrivateLinkServiceVisibilityRequest.new # CheckPrivateLinkServiceVisibilityRequest | The request body
+parameters = AzureRest::CheckPrivateLinkServiceVisibilityRequest.new # CheckPrivateLinkServiceVisibilityRequest | The request body
 
 begin
   
   result = api_instance.private_link_services_check_private_link_service_visibility(api_version, subscription_id, location, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_check_private_link_service_visibility: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkServiceVisibility>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_check_private_link_service_visibility_with_http_info: #{e}"
 end
 ```
@@ -105,25 +105,25 @@ Checks whether the subscription is visible to private link service in the specif
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 location = 'location_example' # String | The name of the Azure region.
-parameters = AzureSDK::CheckPrivateLinkServiceVisibilityRequest.new # CheckPrivateLinkServiceVisibilityRequest | The request body
+parameters = AzureRest::CheckPrivateLinkServiceVisibilityRequest.new # CheckPrivateLinkServiceVisibilityRequest | The request body
 
 begin
   
   result = api_instance.private_link_services_check_private_link_service_visibility_by_resource_group(api_version, subscription_id, resource_group_name, location, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_check_private_link_service_visibility_by_resource_group: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkServiceVisibility>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_check_private_link_service_visibility_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -182,14 +182,14 @@ Deletes the specified private link service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ service_name = 'service_name_example' # String | The name of the private link se
 begin
   
   api_instance.private_link_services_delete(api_version, subscription_id, resource_group_name, service_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_delete: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_delete_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ Delete private end point connection for a private link service in a subscription
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -273,7 +273,7 @@ pe_connection_name = 'pe_connection_name_example' # String | The name of the res
 begin
   
   api_instance.private_link_services_delete_private_endpoint_connection(api_version, subscription_id, resource_group_name, service_name, pe_connection_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_delete_private_endpoint_connection: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_delete_private_endpoint_connection_with_http_info: #{e}"
 end
 ```
@@ -332,14 +332,14 @@ Gets the specified private link service by resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -352,7 +352,7 @@ begin
   
   result = api_instance.private_link_services_get(api_version, subscription_id, resource_group_name, service_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_get: #{e}"
 end
 ```
@@ -370,7 +370,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkService>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_get_with_http_info: #{e}"
 end
 ```
@@ -411,14 +411,14 @@ Get the specific private end point connection by specific private link service i
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -432,7 +432,7 @@ begin
   
   result = api_instance.private_link_services_get_private_endpoint_connection(api_version, subscription_id, resource_group_name, service_name, pe_connection_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_get_private_endpoint_connection: #{e}"
 end
 ```
@@ -450,7 +450,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpointConnection>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_get_private_endpoint_connection_with_http_info: #{e}"
 end
 ```
@@ -492,14 +492,14 @@ Gets all private link services in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -508,7 +508,7 @@ begin
   
   result = api_instance.private_link_services_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list: #{e}"
 end
 ```
@@ -526,7 +526,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkServiceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_with_http_info: #{e}"
 end
 ```
@@ -565,14 +565,14 @@ Returns all of the private link service ids that can be linked to a Private Endp
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -581,7 +581,7 @@ begin
   
   result = api_instance.private_link_services_list_auto_approved_private_link_services(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_auto_approved_private_link_services: #{e}"
 end
 ```
@@ -599,7 +599,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AutoApprovedPrivateLinkServicesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_auto_approved_private_link_services_with_http_info: #{e}"
 end
 ```
@@ -638,14 +638,14 @@ Returns all of the private link service ids that can be linked to a Private Endp
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -655,7 +655,7 @@ begin
   
   result = api_instance.private_link_services_list_auto_approved_private_link_services_by_resource_group(api_version, subscription_id, resource_group_name, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_auto_approved_private_link_services_by_resource_group: #{e}"
 end
 ```
@@ -673,7 +673,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AutoApprovedPrivateLinkServicesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_auto_approved_private_link_services_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -713,14 +713,14 @@ Gets all private link service in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -728,7 +728,7 @@ begin
   
   result = api_instance.private_link_services_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_by_subscription: #{e}"
 end
 ```
@@ -746,7 +746,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkServiceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -784,14 +784,14 @@ Gets all private end point connections for a specific private link service.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -801,7 +801,7 @@ begin
   
   result = api_instance.private_link_services_list_private_endpoint_connections(api_version, subscription_id, resource_group_name, service_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_private_endpoint_connections: #{e}"
 end
 ```
@@ -819,7 +819,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpointConnectionListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_list_private_endpoint_connections_with_http_info: #{e}"
 end
 ```
@@ -859,26 +859,26 @@ Approve or reject private end point connection for a private link service in a s
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateLinkServicesApi.new
+api_instance = AzureRest::PrivateLinkServicesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 service_name = 'service_name_example' # String | The name of the private link service.
 pe_connection_name = 'pe_connection_name_example' # String | The name of the resource that is unique within a resource group. This name can be used to access the resource.
-parameters = AzureSDK::PrivateEndpointConnection.new # PrivateEndpointConnection | Parameters supplied to approve or reject the private end point connection.
+parameters = AzureRest::PrivateEndpointConnection.new # PrivateEndpointConnection | Parameters supplied to approve or reject the private end point connection.
 
 begin
   
   result = api_instance.private_link_services_update_private_endpoint_connection(api_version, subscription_id, resource_group_name, service_name, pe_connection_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_update_private_endpoint_connection: #{e}"
 end
 ```
@@ -896,7 +896,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpointConnection>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateLinkServicesApi->private_link_services_update_private_endpoint_connection_with_http_info: #{e}"
 end
 ```

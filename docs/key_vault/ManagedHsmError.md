@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmError
+# AzureRest::ManagedHsmError
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmError.new(
+instance = AzureRest::ManagedHsmError.new(
   error: null
 )
 ```

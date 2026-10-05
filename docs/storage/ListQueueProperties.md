@@ -1,4 +1,4 @@
-# AzureSDK::ListQueueProperties
+# AzureRest::ListQueueProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListQueueProperties.new(
+instance = AzureRest::ListQueueProperties.new(
   metadata: null
 )
 ```

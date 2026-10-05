@@ -1,4 +1,4 @@
-# AzureSDK::ExecutionTarget
+# AzureRest::ExecutionTarget
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExecutionTarget.new(
+instance = AzureRest::ExecutionTarget.new(
   prefix: null,
   exclude_prefix: null
 )

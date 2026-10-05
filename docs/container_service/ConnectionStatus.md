@@ -1,4 +1,4 @@
-# AzureSDK::ConnectionStatus
+# AzureRest::ConnectionStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConnectionStatus.new()
+instance = AzureRest::ConnectionStatus.new()
 ```
 

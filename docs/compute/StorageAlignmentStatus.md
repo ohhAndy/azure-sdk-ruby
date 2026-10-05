@@ -1,4 +1,4 @@
-# AzureSDK::StorageAlignmentStatus
+# AzureRest::StorageAlignmentStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAlignmentStatus.new()
+instance = AzureRest::StorageAlignmentStatus.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkAccessPolicy
+# AzureRest::NetworkAccessPolicy
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkAccessPolicy.new()
+instance = AzureRest::NetworkAccessPolicy.new()
 ```
 

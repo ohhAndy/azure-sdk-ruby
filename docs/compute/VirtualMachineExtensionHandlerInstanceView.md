@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionHandlerInstanceView
+# AzureRest::VirtualMachineExtensionHandlerInstanceView
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineExtensionHandlerInstanceView.new(
+instance = AzureRest::VirtualMachineExtensionHandlerInstanceView.new(
   type: null,
   type_handler_version: null,
   status: null

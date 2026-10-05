@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachinesApi
+# AzureRest::VirtualMachinesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -45,14 +45,14 @@ Assess patches on the VM.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -62,7 +62,7 @@ begin
   
   result = api_instance.virtual_machines_assess_patches(api_version, subscription_id, resource_group_name, vm_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_assess_patches: #{e}"
 end
 ```
@@ -80,7 +80,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineAssessPatchesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_assess_patches_with_http_info: #{e}"
 end
 ```
@@ -120,25 +120,25 @@ Attach and detach data disks to/from the virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-parameters = AzureSDK::AttachDetachDataDisksRequest.new # AttachDetachDataDisksRequest | Parameters supplied to the attach and detach data disks operation on the virtual machine.
+parameters = AzureRest::AttachDetachDataDisksRequest.new # AttachDetachDataDisksRequest | Parameters supplied to the attach and detach data disks operation on the virtual machine.
 
 begin
   
   result = api_instance.virtual_machines_attach_detach_data_disks(api_version, subscription_id, resource_group_name, vm_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_attach_detach_data_disks: #{e}"
 end
 ```
@@ -156,7 +156,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_attach_detach_data_disks_with_http_info: #{e}"
 end
 ```
@@ -197,25 +197,25 @@ Captures the VM by copying virtual hard disks of the VM and outputs a template t
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-parameters = AzureSDK::VirtualMachineCaptureParameters.new({vhd_prefix: 'vhd_prefix_example', destination_container_name: 'destination_container_name_example', overwrite_vhds: false}) # VirtualMachineCaptureParameters | Parameters supplied to the Capture Virtual Machine operation.
+parameters = AzureRest::VirtualMachineCaptureParameters.new({vhd_prefix: 'vhd_prefix_example', destination_container_name: 'destination_container_name_example', overwrite_vhds: false}) # VirtualMachineCaptureParameters | Parameters supplied to the Capture Virtual Machine operation.
 
 begin
   
   result = api_instance.virtual_machines_capture(api_version, subscription_id, resource_group_name, vm_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_capture: #{e}"
 end
 ```
@@ -233,7 +233,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineCaptureResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_capture_with_http_info: #{e}"
 end
 ```
@@ -274,14 +274,14 @@ Converts virtual machine disks from blob-based to managed disks. Virtual machine
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -290,7 +290,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_convert_to_managed_disks(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_convert_to_managed_disks: #{e}"
 end
 ```
@@ -308,7 +308,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_convert_to_managed_disks_with_http_info: #{e}"
 end
 ```
@@ -348,19 +348,19 @@ The operation to create or update a virtual machine. Please note some properties
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-parameters = AzureSDK::VirtualMachine.new({location: 'location_example'}) # VirtualMachine | Parameters supplied to the Create Virtual Machine operation.
+parameters = AzureRest::VirtualMachine.new({location: 'location_example'}) # VirtualMachine | Parameters supplied to the Create Virtual Machine operation.
 opts = {
   if_match: 'if_match_example', # String | The ETag of the transformation. Omit this value to always overwrite the current resource. Specify the last-seen ETag value to prevent accidentally overwriting concurrent changes.
   if_none_match: 'if_none_match_example' # String | Set to '*' to allow a new record set to be created, but to prevent updating an existing record set. Other values will result in error from server as they are not supported.
@@ -370,7 +370,7 @@ begin
   
   result = api_instance.virtual_machines_create_or_update(api_version, subscription_id, resource_group_name, vm_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_create_or_update: #{e}"
 end
 ```
@@ -388,7 +388,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachine>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -431,14 +431,14 @@ Shuts down the virtual machine and releases the compute resources. You are not b
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -451,7 +451,7 @@ opts = {
 begin
   
   api_instance.virtual_machines_deallocate(api_version, subscription_id, resource_group_name, vm_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_deallocate: #{e}"
 end
 ```
@@ -469,7 +469,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_deallocate_with_http_info: #{e}"
 end
 ```
@@ -511,14 +511,14 @@ The operation to delete a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -530,7 +530,7 @@ opts = {
 begin
   
   api_instance.virtual_machines_delete(api_version, subscription_id, resource_group_name, vm_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_delete: #{e}"
 end
 ```
@@ -548,7 +548,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_delete_with_http_info: #{e}"
 end
 ```
@@ -589,14 +589,14 @@ Sets the OS state of the virtual machine to generalized. It is recommended to sy
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -605,7 +605,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_generalize(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_generalize: #{e}"
 end
 ```
@@ -623,7 +623,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_generalize_with_http_info: #{e}"
 end
 ```
@@ -663,14 +663,14 @@ Retrieves information about the model view or the instance view of a virtual mac
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -683,7 +683,7 @@ begin
   
   result = api_instance.virtual_machines_get(api_version, subscription_id, resource_group_name, vm_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_get: #{e}"
 end
 ```
@@ -701,7 +701,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachine>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_get_with_http_info: #{e}"
 end
 ```
@@ -742,25 +742,25 @@ Installs patches on the VM.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-install_patches_input = AzureSDK::VirtualMachineInstallPatchesParameters.new({reboot_setting: AzureSDK::VMGuestPatchRebootSetting::IF_REQUIRED}) # VirtualMachineInstallPatchesParameters | Input for InstallPatches as directly received by the API
+install_patches_input = AzureRest::VirtualMachineInstallPatchesParameters.new({reboot_setting: AzureRest::VMGuestPatchRebootSetting::IF_REQUIRED}) # VirtualMachineInstallPatchesParameters | Input for InstallPatches as directly received by the API
 
 begin
   
   result = api_instance.virtual_machines_install_patches(api_version, subscription_id, resource_group_name, vm_name, install_patches_input)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_install_patches: #{e}"
 end
 ```
@@ -778,7 +778,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineInstallPatchesResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_install_patches_with_http_info: #{e}"
 end
 ```
@@ -819,14 +819,14 @@ Retrieves information about the run-time state of a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -836,7 +836,7 @@ begin
   
   result = api_instance.virtual_machines_instance_view(api_version, subscription_id, resource_group_name, vm_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_instance_view: #{e}"
 end
 ```
@@ -854,7 +854,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineInstanceView>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_instance_view_with_http_info: #{e}"
 end
 ```
@@ -894,14 +894,14 @@ Lists all of the virtual machines in the specified resource group. Use the nextL
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -914,7 +914,7 @@ begin
   
   result = api_instance.virtual_machines_list(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list: #{e}"
 end
 ```
@@ -932,7 +932,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_with_http_info: #{e}"
 end
 ```
@@ -973,14 +973,14 @@ Lists all of the virtual machines in the specified subscription. Use the nextLin
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -993,7 +993,7 @@ begin
   
   result = api_instance.virtual_machines_list_all(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_all: #{e}"
 end
 ```
@@ -1011,7 +1011,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_all_with_http_info: #{e}"
 end
 ```
@@ -1052,14 +1052,14 @@ Lists all available virtual machine sizes to which the specified virtual machine
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1069,7 +1069,7 @@ begin
   
   result = api_instance.virtual_machines_list_available_sizes(api_version, subscription_id, resource_group_name, vm_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_available_sizes: #{e}"
 end
 ```
@@ -1087,7 +1087,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineSizeListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_available_sizes_with_http_info: #{e}"
 end
 ```
@@ -1127,14 +1127,14 @@ Gets all the virtual machines under the specified subscription for the specified
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -1143,7 +1143,7 @@ begin
   
   result = api_instance.virtual_machines_list_by_location(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_by_location: #{e}"
 end
 ```
@@ -1161,7 +1161,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_list_by_location_with_http_info: #{e}"
 end
 ```
@@ -1200,26 +1200,26 @@ Migrate a virtual machine from availability set to Flexible Virtual Machine Scal
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
 opts = {
-  parameters: AzureSDK::MigrateVMToVirtualMachineScaleSetInput.new # MigrateVMToVirtualMachineScaleSetInput | Parameters supplied to the Migrate Virtual Machine operation.
+  parameters: AzureRest::MigrateVMToVirtualMachineScaleSetInput.new # MigrateVMToVirtualMachineScaleSetInput | Parameters supplied to the Migrate Virtual Machine operation.
 }
 
 begin
   
   api_instance.virtual_machines_migrate_to_vm_scale_set(api_version, subscription_id, resource_group_name, vm_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_migrate_to_vm_scale_set: #{e}"
 end
 ```
@@ -1237,7 +1237,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_migrate_to_vm_scale_set_with_http_info: #{e}"
 end
 ```
@@ -1278,14 +1278,14 @@ The operation to perform maintenance on a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1294,7 +1294,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_perform_maintenance(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_perform_maintenance: #{e}"
 end
 ```
@@ -1312,7 +1312,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_perform_maintenance_with_http_info: #{e}"
 end
 ```
@@ -1352,14 +1352,14 @@ The operation to power off (stop) a virtual machine. The virtual machine can be 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1371,7 +1371,7 @@ opts = {
 begin
   
   api_instance.virtual_machines_power_off(api_version, subscription_id, resource_group_name, vm_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_power_off: #{e}"
 end
 ```
@@ -1389,7 +1389,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_power_off_with_http_info: #{e}"
 end
 ```
@@ -1430,14 +1430,14 @@ The operation to reapply a virtual machine's state.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1446,7 +1446,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_reapply(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_reapply: #{e}"
 end
 ```
@@ -1464,7 +1464,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_reapply_with_http_info: #{e}"
 end
 ```
@@ -1504,14 +1504,14 @@ Shuts down the virtual machine, moves it to a new node, and powers it back on.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1520,7 +1520,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_redeploy(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_redeploy: #{e}"
 end
 ```
@@ -1538,7 +1538,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_redeploy_with_http_info: #{e}"
 end
 ```
@@ -1578,26 +1578,26 @@ Reimages (upgrade the operating system) a virtual machine which don't have a eph
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
 opts = {
-  parameters: AzureSDK::VirtualMachineReimageParameters.new # VirtualMachineReimageParameters | Parameters supplied to the Reimage Virtual Machine operation.
+  parameters: AzureRest::VirtualMachineReimageParameters.new # VirtualMachineReimageParameters | Parameters supplied to the Reimage Virtual Machine operation.
 }
 
 begin
   
   api_instance.virtual_machines_reimage(api_version, subscription_id, resource_group_name, vm_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_reimage: #{e}"
 end
 ```
@@ -1615,7 +1615,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_reimage_with_http_info: #{e}"
 end
 ```
@@ -1656,14 +1656,14 @@ The operation to restart a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1672,7 +1672,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_restart(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_restart: #{e}"
 end
 ```
@@ -1690,7 +1690,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_restart_with_http_info: #{e}"
 end
 ```
@@ -1730,14 +1730,14 @@ The operation to retrieve SAS URIs for a virtual machine's boot diagnostic logs.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1750,7 +1750,7 @@ begin
   
   result = api_instance.virtual_machines_retrieve_boot_diagnostics_data(api_version, subscription_id, resource_group_name, vm_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_retrieve_boot_diagnostics_data: #{e}"
 end
 ```
@@ -1768,7 +1768,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RetrieveBootDiagnosticsDataResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_retrieve_boot_diagnostics_data_with_http_info: #{e}"
 end
 ```
@@ -1809,25 +1809,25 @@ Run command on the VM.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-parameters = AzureSDK::RunCommandInput.new({command_id: 'command_id_example'}) # RunCommandInput | Parameters supplied to the Run command operation.
+parameters = AzureRest::RunCommandInput.new({command_id: 'command_id_example'}) # RunCommandInput | Parameters supplied to the Run command operation.
 
 begin
   
   result = api_instance.virtual_machines_run_command(api_version, subscription_id, resource_group_name, vm_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_run_command: #{e}"
 end
 ```
@@ -1845,7 +1845,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RunCommandResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_run_command_with_http_info: #{e}"
 end
 ```
@@ -1886,14 +1886,14 @@ The operation to simulate the eviction of spot virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1902,7 +1902,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_simulate_eviction(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_simulate_eviction: #{e}"
 end
 ```
@@ -1920,7 +1920,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_simulate_eviction_with_http_info: #{e}"
 end
 ```
@@ -1960,14 +1960,14 @@ The operation to start a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1976,7 +1976,7 @@ vm_name = 'vm_name_example' # String | The name of the virtual machine.
 begin
   
   api_instance.virtual_machines_start(api_version, subscription_id, resource_group_name, vm_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_start: #{e}"
 end
 ```
@@ -1994,7 +1994,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_start_with_http_info: #{e}"
 end
 ```
@@ -2034,19 +2034,19 @@ The operation to update a virtual machine.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachinesApi.new
+api_instance = AzureRest::VirtualMachinesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_name = 'vm_name_example' # String | The name of the virtual machine.
-parameters = AzureSDK::VirtualMachineUpdate.new # VirtualMachineUpdate | Parameters supplied to the Update Virtual Machine operation.
+parameters = AzureRest::VirtualMachineUpdate.new # VirtualMachineUpdate | Parameters supplied to the Update Virtual Machine operation.
 opts = {
   if_match: 'if_match_example', # String | The ETag of the transformation. Omit this value to always overwrite the current resource. Specify the last-seen ETag value to prevent accidentally overwriting concurrent changes.
   if_none_match: 'if_none_match_example' # String | Set to '*' to allow a new record set to be created, but to prevent updating an existing record set. Other values will result in error from server as they are not supported.
@@ -2056,7 +2056,7 @@ begin
   
   result = api_instance.virtual_machines_update(api_version, subscription_id, resource_group_name, vm_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_update: #{e}"
 end
 ```
@@ -2074,7 +2074,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachine>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachinesApi->virtual_machines_update_with_http_info: #{e}"
 end
 ```

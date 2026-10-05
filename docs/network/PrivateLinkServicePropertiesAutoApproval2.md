@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServicePropertiesAutoApproval2
+# AzureRest::PrivateLinkServicePropertiesAutoApproval2
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkServicePropertiesAutoApproval2.new(
+instance = AzureRest::PrivateLinkServicePropertiesAutoApproval2.new(
   subscriptions: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::StorageDataShareAsset
+# AzureRest::StorageDataShareAsset
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageDataShareAsset.new(
+instance = AzureRest::StorageDataShareAsset.new(
   asset_path: null,
   display_name: null
 )

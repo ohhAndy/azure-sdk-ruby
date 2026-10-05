@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedThreatProtectionSettingsModelsApi
+# AzureRest::AdvancedThreatProtectionSettingsModelsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,14 +21,14 @@ Gets state of advanced threat protection settings for a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdvancedThreatProtectionSettingsModelsApi.new
+api_instance = AzureRest::AdvancedThreatProtectionSettingsModelsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -39,7 +39,7 @@ begin
   
   result = api_instance.advanced_threat_protection_settings_get(api_version, subscription_id, resource_group_name, server_name, threat_protection_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->advanced_threat_protection_settings_get: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AdvancedThreatProtectionSettingsModel>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->advanced_threat_protection_settings_get_with_http_info: #{e}"
 end
 ```
@@ -98,14 +98,14 @@ Lists state of advanced threat protection settings for a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdvancedThreatProtectionSettingsModelsApi.new
+api_instance = AzureRest::AdvancedThreatProtectionSettingsModelsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -115,7 +115,7 @@ begin
   
   result = api_instance.advanced_threat_protection_settings_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->advanced_threat_protection_settings_list_by_server: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AdvancedThreatProtectionSettingsList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->advanced_threat_protection_settings_list_by_server_with_http_info: #{e}"
 end
 ```
@@ -173,25 +173,25 @@ Creates or updates a server's Advanced Threat Protection settings.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AdvancedThreatProtectionSettingsModelsApi.new
+api_instance = AzureRest::AdvancedThreatProtectionSettingsModelsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 threat_protection_name = 'Default' # String | Name of the advanced threat protection settings.
-parameters = AzureSDK::AdvancedThreatProtectionSettingsModel.new # AdvancedThreatProtectionSettingsModel | The Advanced Threat Protection state for the server.
+parameters = AzureRest::AdvancedThreatProtectionSettingsModel.new # AdvancedThreatProtectionSettingsModel | The Advanced Threat Protection state for the server.
 
 begin
   
   api_instance.server_threat_protection_settings_create_or_update(api_version, subscription_id, resource_group_name, server_name, threat_protection_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->server_threat_protection_settings_create_or_update: #{e}"
 end
 ```
@@ -209,7 +209,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AdvancedThreatProtectionSettingsModelsApi->server_threat_protection_settings_create_or_update_with_http_info: #{e}"
 end
 ```

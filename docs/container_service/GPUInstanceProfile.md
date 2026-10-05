@@ -1,4 +1,4 @@
-# AzureSDK::GPUInstanceProfile
+# AzureRest::GPUInstanceProfile
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GPUInstanceProfile.new()
+instance = AzureRest::GPUInstanceProfile.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::TagsPatchResource
+# AzureRest::TagsPatchResource
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TagsPatchResource.new(
+instance = AzureRest::TagsPatchResource.new(
   operation: null,
   properties: null
 )

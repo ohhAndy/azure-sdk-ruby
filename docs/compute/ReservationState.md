@@ -1,4 +1,4 @@
-# AzureSDK::ReservationState
+# AzureRest::ReservationState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReservationState.new()
+instance = AzureRest::ReservationState.new()
 ```
 

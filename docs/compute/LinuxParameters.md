@@ -1,4 +1,4 @@
-# AzureSDK::LinuxParameters
+# AzureRest::LinuxParameters
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxParameters.new(
+instance = AzureRest::LinuxParameters.new(
   classifications_to_include: null,
   package_name_masks_to_include: null,
   package_name_masks_to_exclude: null,

@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedNetworkingSecurity
+# AzureRest::AdvancedNetworkingSecurity
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedNetworkingSecurity.new(
+instance = AzureRest::AdvancedNetworkingSecurity.new(
   enabled: null,
   advanced_network_policies: null,
   transit_encryption: null

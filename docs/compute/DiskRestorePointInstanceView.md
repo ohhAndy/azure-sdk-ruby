@@ -1,4 +1,4 @@
-# AzureSDK::DiskRestorePointInstanceView
+# AzureRest::DiskRestorePointInstanceView
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskRestorePointInstanceView.new(
+instance = AzureRest::DiskRestorePointInstanceView.new(
   id: null,
   snapshot_access_state: null,
   replication_status: null

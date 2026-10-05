@@ -1,4 +1,4 @@
-# AzureSDK::PrepareNetworkPoliciesRequest
+# AzureRest::PrepareNetworkPoliciesRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrepareNetworkPoliciesRequest.new(
+instance = AzureRest::PrepareNetworkPoliciesRequest.new(
   service_name: null,
   network_intent_policy_configurations: null
 )

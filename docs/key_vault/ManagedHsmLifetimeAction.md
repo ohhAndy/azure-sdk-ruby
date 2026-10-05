@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmLifetimeAction
+# AzureRest::ManagedHsmLifetimeAction
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmLifetimeAction.new(
+instance = AzureRest::ManagedHsmLifetimeAction.new(
   trigger: null,
   action: null
 )

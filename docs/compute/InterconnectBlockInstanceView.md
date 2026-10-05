@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectBlockInstanceView
+# AzureRest::InterconnectBlockInstanceView
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectBlockInstanceView.new(
+instance = AzureRest::InterconnectBlockInstanceView.new(
   current_capacity: null,
   statuses: null
 )

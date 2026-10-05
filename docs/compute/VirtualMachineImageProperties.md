@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineImageProperties
+# AzureRest::VirtualMachineImageProperties
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineImageProperties.new(
+instance = AzureRest::VirtualMachineImageProperties.new(
   plan: null,
   os_disk_image: null,
   data_disk_images: null,

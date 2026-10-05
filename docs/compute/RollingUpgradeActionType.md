@@ -1,4 +1,4 @@
-# AzureSDK::RollingUpgradeActionType
+# AzureRest::RollingUpgradeActionType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RollingUpgradeActionType.new()
+instance = AzureRest::RollingUpgradeActionType.new()
 ```
 

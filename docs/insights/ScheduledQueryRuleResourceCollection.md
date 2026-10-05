@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledQueryRuleResourceCollection
+# AzureRest::ScheduledQueryRuleResourceCollection
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledQueryRuleResourceCollection.new(
+instance = AzureRest::ScheduledQueryRuleResourceCollection.new(
   value: null,
   next_link: null
 )

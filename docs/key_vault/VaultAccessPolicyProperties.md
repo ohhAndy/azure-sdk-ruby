@@ -1,4 +1,4 @@
-# AzureSDK::VaultAccessPolicyProperties
+# AzureRest::VaultAccessPolicyProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultAccessPolicyProperties.new(
+instance = AzureRest::VaultAccessPolicyProperties.new(
   access_policies: null
 )
 ```

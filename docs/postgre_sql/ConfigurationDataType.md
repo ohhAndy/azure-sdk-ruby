@@ -1,4 +1,4 @@
-# AzureSDK::ConfigurationDataType
+# AzureRest::ConfigurationDataType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConfigurationDataType.new()
+instance = AzureRest::ConfigurationDataType.new()
 ```
 

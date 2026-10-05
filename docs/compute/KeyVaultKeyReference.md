@@ -1,4 +1,4 @@
-# AzureSDK::KeyVaultKeyReference
+# AzureRest::KeyVaultKeyReference
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyVaultKeyReference.new(
+instance = AzureRest::KeyVaultKeyReference.new(
   key_url: null,
   source_vault: null
 )

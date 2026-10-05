@@ -1,4 +1,4 @@
-# AzureSDK::ClusterIdentity
+# AzureRest::ClusterIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ClusterIdentity.new(
+instance = AzureRest::ClusterIdentity.new(
   principal_id: null,
   tenant_id: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ResourceIdentity
+# AzureRest::ResourceIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceIdentity.new(
+instance = AzureRest::ResourceIdentity.new(
   user_assigned_identities: null,
   principal_id: null,
   type: null,

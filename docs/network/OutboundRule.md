@@ -1,4 +1,4 @@
-# AzureSDK::OutboundRule
+# AzureRest::OutboundRule
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OutboundRule.new(
+instance = AzureRest::OutboundRule.new(
   id: null,
   name: null,
   type: null,

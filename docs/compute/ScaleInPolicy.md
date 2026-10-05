@@ -1,4 +1,4 @@
-# AzureSDK::ScaleInPolicy
+# AzureRest::ScaleInPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScaleInPolicy.new(
+instance = AzureRest::ScaleInPolicy.new(
   rules: null,
   force_deletion: null,
   prioritize_unhealthy_vms: null

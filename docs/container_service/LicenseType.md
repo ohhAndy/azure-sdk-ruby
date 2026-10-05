@@ -1,4 +1,4 @@
-# AzureSDK::LicenseType
+# AzureRest::LicenseType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LicenseType.new()
+instance = AzureRest::LicenseType.new()
 ```
 

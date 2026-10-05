@@ -1,4 +1,4 @@
-# AzureSDK::RetrieveBootDiagnosticsDataResult
+# AzureRest::RetrieveBootDiagnosticsDataResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RetrieveBootDiagnosticsDataResult.new(
+instance = AzureRest::RetrieveBootDiagnosticsDataResult.new(
   console_screenshot_blob_uri: null,
   serial_console_log_blob_uri: null
 )

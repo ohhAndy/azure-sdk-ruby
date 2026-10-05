@@ -1,4 +1,4 @@
-# AzureSDK::PublicIpAddressDnsSettingsDomainNameLabelScope
+# AzureRest::PublicIpAddressDnsSettingsDomainNameLabelScope
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIpAddressDnsSettingsDomainNameLabelScope.new()
+instance = AzureRest::PublicIpAddressDnsSettingsDomainNameLabelScope.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::BackupAndExportApi
+# AzureRest::BackupAndExportApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,25 +20,25 @@ Exports the backup of the given server by creating a backup if not existing.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BackupAndExportApi.new
+api_instance = AzureRest::BackupAndExportApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::BackupAndExportRequest.new({backup_settings: AzureSDK::BackupSettings.new({backup_name: 'backup_name_example'}), target_details: AzureSDK::BackupStoreDetails.new({object_type: 'object_type_example'})}) # BackupAndExportRequest | The required parameters for creating and exporting backup of the given server.
+parameters = AzureRest::BackupAndExportRequest.new({backup_settings: AzureRest::BackupSettings.new({backup_name: 'backup_name_example'}), target_details: AzureRest::BackupStoreDetails.new({object_type: 'object_type_example'})}) # BackupAndExportRequest | The required parameters for creating and exporting backup of the given server.
 
 begin
   
   result = api_instance.backup_and_export_create(api_version, subscription_id, resource_group_name, server_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupAndExportApi->backup_and_export_create: #{e}"
 end
 ```
@@ -56,7 +56,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BackupAndExportResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupAndExportApi->backup_and_export_create_with_http_info: #{e}"
 end
 ```
@@ -97,14 +97,14 @@ Validates if backup can be performed for given server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BackupAndExportApi.new
+api_instance = AzureRest::BackupAndExportApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -114,7 +114,7 @@ begin
   
   result = api_instance.backup_and_export_validate_backup(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupAndExportApi->backup_and_export_validate_backup: #{e}"
 end
 ```
@@ -132,7 +132,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ValidateBackupResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BackupAndExportApi->backup_and_export_validate_backup_with_http_info: #{e}"
 end
 ```

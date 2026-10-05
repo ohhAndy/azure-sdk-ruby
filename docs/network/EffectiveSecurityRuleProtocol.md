@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveSecurityRuleProtocol
+# AzureRest::EffectiveSecurityRuleProtocol
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveSecurityRuleProtocol.new()
+instance = AzureRest::EffectiveSecurityRuleProtocol.new()
 ```
 

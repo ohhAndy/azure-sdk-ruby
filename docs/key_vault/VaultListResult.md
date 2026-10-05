@@ -1,4 +1,4 @@
-# AzureSDK::VaultListResult
+# AzureRest::VaultListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultListResult.new(
+instance = AzureRest::VaultListResult.new(
   value: null,
   next_link: null
 )

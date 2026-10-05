@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkProfile
+# AzureRest::VirtualNetworkProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkProfile.new(
+instance = AzureRest::VirtualNetworkProfile.new(
   id: null,
   subnet: null
 )

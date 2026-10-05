@@ -1,4 +1,4 @@
-# AzureSDK::CustomDnsConfigPropertiesFormat
+# AzureRest::CustomDnsConfigPropertiesFormat
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CustomDnsConfigPropertiesFormat.new(
+instance = AzureRest::CustomDnsConfigPropertiesFormat.new(
   fqdn: null,
   ip_addresses: null
 )

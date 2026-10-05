@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetwork
+# AzureRest::VirtualNetwork
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetwork.new(
+instance = AzureRest::VirtualNetwork.new(
   id: null,
   name: null,
   type: null,

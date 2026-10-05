@@ -1,4 +1,4 @@
-# AzureSDK::IstioPluginCertificateAuthority
+# AzureRest::IstioPluginCertificateAuthority
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IstioPluginCertificateAuthority.new(
+instance = AzureRest::IstioPluginCertificateAuthority.new(
   key_vault_id: null,
   cert_object_name: null,
   key_object_name: null,

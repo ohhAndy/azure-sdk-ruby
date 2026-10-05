@@ -1,4 +1,4 @@
-# AzureSDK::TestExistingConnectionRequest
+# AzureRest::TestExistingConnectionRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TestExistingConnectionRequest.new(
+instance = AzureRest::TestExistingConnectionRequest.new(
   unique_id: null
 )
 ```

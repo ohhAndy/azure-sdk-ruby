@@ -1,4 +1,4 @@
-# AzureSDK::GatewayLoadBalancerTunnelInterfaceType
+# AzureRest::GatewayLoadBalancerTunnelInterfaceType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GatewayLoadBalancerTunnelInterfaceType.new()
+instance = AzureRest::GatewayLoadBalancerTunnelInterfaceType.new()
 ```
 

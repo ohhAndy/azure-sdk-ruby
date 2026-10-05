@@ -1,4 +1,4 @@
-# AzureSDK::MaintenanceOperationResultCodeTypes
+# AzureRest::MaintenanceOperationResultCodeTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MaintenanceOperationResultCodeTypes.new()
+instance = AzureRest::MaintenanceOperationResultCodeTypes.new()
 ```
 

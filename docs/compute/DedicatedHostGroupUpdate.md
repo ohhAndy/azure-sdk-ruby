@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostGroupUpdate
+# AzureRest::DedicatedHostGroupUpdate
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostGroupUpdate.new(
+instance = AzureRest::DedicatedHostGroupUpdate.new(
   tags: null,
   properties: null,
   zones: null

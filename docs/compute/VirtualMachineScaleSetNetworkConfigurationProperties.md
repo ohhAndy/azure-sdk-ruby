@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetNetworkConfigurationProperties
+# AzureRest::VirtualMachineScaleSetNetworkConfigurationProperties
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetNetworkConfigurationProperties.new(
+instance = AzureRest::VirtualMachineScaleSetNetworkConfigurationProperties.new(
   primary: null,
   enable_accelerated_networking: null,
   disable_tcp_state_tracking: null,

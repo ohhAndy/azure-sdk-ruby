@@ -1,4 +1,4 @@
-# AzureSDK::CredentialResults
+# AzureRest::CredentialResults
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CredentialResults.new(
+instance = AzureRest::CredentialResults.new(
   kubeconfigs: null
 )
 ```

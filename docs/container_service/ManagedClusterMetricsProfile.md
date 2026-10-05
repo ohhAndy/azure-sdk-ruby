@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterMetricsProfile
+# AzureRest::ManagedClusterMetricsProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterMetricsProfile.new(
+instance = AzureRest::ManagedClusterMetricsProfile.new(
   cost_analysis: null
 )
 ```

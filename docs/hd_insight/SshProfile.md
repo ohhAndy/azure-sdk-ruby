@@ -1,4 +1,4 @@
-# AzureSDK::SshProfile
+# AzureRest::SshProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SshProfile.new(
+instance = AzureRest::SshProfile.new(
   public_keys: null
 )
 ```

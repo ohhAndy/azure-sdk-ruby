@@ -1,4 +1,4 @@
-# AzureSDK::ProviderConsentDefinition
+# AzureRest::ProviderConsentDefinition
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderConsentDefinition.new(
+instance = AzureRest::ProviderConsentDefinition.new(
   consent_to_authorization: null
 )
 ```

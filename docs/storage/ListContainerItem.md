@@ -1,4 +1,4 @@
-# AzureSDK::ListContainerItem
+# AzureRest::ListContainerItem
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListContainerItem.new(
+instance = AzureRest::ListContainerItem.new(
   id: null,
   name: null,
   type: null,

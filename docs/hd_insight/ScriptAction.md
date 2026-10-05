@@ -1,4 +1,4 @@
-# AzureSDK::ScriptAction
+# AzureRest::ScriptAction
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScriptAction.new(
+instance = AzureRest::ScriptAction.new(
   name: null,
   uri: null,
   parameters: null

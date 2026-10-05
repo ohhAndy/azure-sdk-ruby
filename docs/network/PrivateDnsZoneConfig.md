@@ -1,4 +1,4 @@
-# AzureSDK::PrivateDnsZoneConfig
+# AzureRest::PrivateDnsZoneConfig
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateDnsZoneConfig.new(
+instance = AzureRest::PrivateDnsZoneConfig.new(
   name: null,
   properties: null
 )

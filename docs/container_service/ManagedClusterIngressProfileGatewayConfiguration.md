@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterIngressProfileGatewayConfiguration
+# AzureRest::ManagedClusterIngressProfileGatewayConfiguration
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterIngressProfileGatewayConfiguration.new(
+instance = AzureRest::ManagedClusterIngressProfileGatewayConfiguration.new(
   installation: null
 )
 ```

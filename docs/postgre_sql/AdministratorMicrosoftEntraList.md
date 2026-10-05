@@ -1,4 +1,4 @@
-# AzureSDK::AdministratorMicrosoftEntraList
+# AzureRest::AdministratorMicrosoftEntraList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdministratorMicrosoftEntraList.new(
+instance = AzureRest::AdministratorMicrosoftEntraList.new(
   value: null,
   next_link: null
 )

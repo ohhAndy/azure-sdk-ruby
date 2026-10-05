@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointSourceVMDataDisk
+# AzureRest::RestorePointSourceVMDataDisk
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointSourceVMDataDisk.new(
+instance = AzureRest::RestorePointSourceVMDataDisk.new(
   lun: null,
   name: null,
   caching: null,

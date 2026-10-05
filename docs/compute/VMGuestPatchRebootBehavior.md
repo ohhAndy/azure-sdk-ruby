@@ -1,4 +1,4 @@
-# AzureSDK::VMGuestPatchRebootBehavior
+# AzureRest::VMGuestPatchRebootBehavior
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMGuestPatchRebootBehavior.new()
+instance = AzureRest::VMGuestPatchRebootBehavior.new()
 ```
 

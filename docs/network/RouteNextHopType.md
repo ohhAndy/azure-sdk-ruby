@@ -1,4 +1,4 @@
-# AzureSDK::RouteNextHopType
+# AzureRest::RouteNextHopType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RouteNextHopType.new()
+instance = AzureRest::RouteNextHopType.new()
 ```
 

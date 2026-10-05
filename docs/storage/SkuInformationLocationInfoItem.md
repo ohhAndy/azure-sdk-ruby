@@ -1,4 +1,4 @@
-# AzureSDK::SkuInformationLocationInfoItem
+# AzureRest::SkuInformationLocationInfoItem
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuInformationLocationInfoItem.new(
+instance = AzureRest::SkuInformationLocationInfoItem.new(
   location: null,
   zones: null
 )

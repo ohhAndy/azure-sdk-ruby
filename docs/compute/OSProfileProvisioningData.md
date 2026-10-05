@@ -1,4 +1,4 @@
-# AzureSDK::OSProfileProvisioningData
+# AzureRest::OSProfileProvisioningData
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OSProfileProvisioningData.new(
+instance = AzureRest::OSProfileProvisioningData.new(
   admin_password: null,
   custom_data: null
 )

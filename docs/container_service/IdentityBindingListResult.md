@@ -1,4 +1,4 @@
-# AzureSDK::IdentityBindingListResult
+# AzureRest::IdentityBindingListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IdentityBindingListResult.new(
+instance = AzureRest::IdentityBindingListResult.new(
   value: null,
   next_link: null
 )

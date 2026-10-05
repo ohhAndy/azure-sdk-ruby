@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolSecurityProfile
+# AzureRest::AgentPoolSecurityProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolSecurityProfile.new(
+instance = AzureRest::AgentPoolSecurityProfile.new(
   enable_vtpm: null,
   enable_secure_boot: null,
   ssh_access: null

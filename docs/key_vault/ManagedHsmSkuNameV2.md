@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmSkuNameV2
+# AzureRest::ManagedHsmSkuNameV2
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmSkuNameV2.new()
+instance = AzureRest::ManagedHsmSkuNameV2.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::LocationBasedCapabilitySetApi
+# AzureRest::LocationBasedCapabilitySetApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,14 +20,14 @@ Get capabilities at specified location in a given subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocationBasedCapabilitySetApi.new
+api_instance = AzureRest::LocationBasedCapabilitySetApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
@@ -37,7 +37,7 @@ begin
   
   result = api_instance.location_based_capability_set_get(api_version, subscription_id, location_name, capability_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocationBasedCapabilitySetApi->location_based_capability_set_get: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Capability>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocationBasedCapabilitySetApi->location_based_capability_set_get_with_http_info: #{e}"
 end
 ```
@@ -95,14 +95,14 @@ Get capabilities at specified location in a given subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LocationBasedCapabilitySetApi.new
+api_instance = AzureRest::LocationBasedCapabilitySetApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
@@ -111,7 +111,7 @@ begin
   
   result = api_instance.location_based_capability_set_list(api_version, subscription_id, location_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocationBasedCapabilitySetApi->location_based_capability_set_list: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapabilitySetsList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LocationBasedCapabilitySetApi->location_based_capability_set_list_with_http_info: #{e}"
 end
 ```

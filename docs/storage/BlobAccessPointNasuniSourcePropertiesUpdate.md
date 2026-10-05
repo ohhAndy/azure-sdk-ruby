@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointNasuniSourcePropertiesUpdate
+# AzureRest::BlobAccessPointNasuniSourcePropertiesUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointNasuniSourcePropertiesUpdate.new(
+instance = AzureRest::BlobAccessPointNasuniSourcePropertiesUpdate.new(
   connection: null,
   auth: null
 )

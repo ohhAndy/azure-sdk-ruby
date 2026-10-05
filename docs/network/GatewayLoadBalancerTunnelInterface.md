@@ -1,4 +1,4 @@
-# AzureSDK::GatewayLoadBalancerTunnelInterface
+# AzureRest::GatewayLoadBalancerTunnelInterface
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GatewayLoadBalancerTunnelInterface.new(
+instance = AzureRest::GatewayLoadBalancerTunnelInterface.new(
   port: null,
   identifier: null,
   protocol: null,

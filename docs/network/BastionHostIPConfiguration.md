@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostIPConfiguration
+# AzureRest::BastionHostIPConfiguration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionHostIPConfiguration.new(
+instance = AzureRest::BastionHostIPConfiguration.new(
   id: null,
   properties: null,
   name: null,

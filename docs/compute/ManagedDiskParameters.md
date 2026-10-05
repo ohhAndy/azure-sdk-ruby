@@ -1,4 +1,4 @@
-# AzureSDK::ManagedDiskParameters
+# AzureRest::ManagedDiskParameters
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedDiskParameters.new(
+instance = AzureRest::ManagedDiskParameters.new(
   id: null,
   storage_account_type: null,
   disk_encryption_set: null,

@@ -1,4 +1,4 @@
-# AzureSDK::AzureADAdministrator
+# AzureRest::AzureADAdministrator
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureADAdministrator.new(
+instance = AzureRest::AzureADAdministrator.new(
   id: null,
   name: null,
   type: null,

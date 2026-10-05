@@ -1,4 +1,4 @@
-# AzureSDK::InstanceViewStatus
+# AzureRest::InstanceViewStatus
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InstanceViewStatus.new(
+instance = AzureRest::InstanceViewStatus.new(
   code: null,
   level: null,
   display_status: null,

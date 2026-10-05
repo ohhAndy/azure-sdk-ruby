@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineRunCommandProperties
+# AzureRest::VirtualMachineRunCommandProperties
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineRunCommandProperties.new(
+instance = AzureRest::VirtualMachineRunCommandProperties.new(
   source: null,
   parameters: null,
   protected_parameters: null,

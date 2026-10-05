@@ -1,4 +1,4 @@
-# AzureSDK::ResourcesMoveInfo
+# AzureRest::ResourcesMoveInfo
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourcesMoveInfo.new(
+instance = AzureRest::ResourcesMoveInfo.new(
   resources: null,
   target_resource_group: null
 )

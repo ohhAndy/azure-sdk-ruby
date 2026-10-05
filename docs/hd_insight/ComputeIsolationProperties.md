@@ -1,4 +1,4 @@
-# AzureSDK::ComputeIsolationProperties
+# AzureRest::ComputeIsolationProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ComputeIsolationProperties.new(
+instance = AzureRest::ComputeIsolationProperties.new(
   enable_compute_isolation: null,
   host_sku: null
 )

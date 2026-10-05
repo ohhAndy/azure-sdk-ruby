@@ -1,4 +1,4 @@
-# AzureSDK::BastionHostUpdate
+# AzureRest::BastionHostUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionHostUpdate.new(
+instance = AzureRest::BastionHostUpdate.new(
   identity: null,
   tags: null
 )

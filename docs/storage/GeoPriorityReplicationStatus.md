@@ -1,4 +1,4 @@
-# AzureSDK::GeoPriorityReplicationStatus
+# AzureRest::GeoPriorityReplicationStatus
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GeoPriorityReplicationStatus.new(
+instance = AzureRest::GeoPriorityReplicationStatus.new(
   is_blob_enabled: null
 )
 ```

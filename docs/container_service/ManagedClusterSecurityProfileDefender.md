@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileDefender
+# AzureRest::ManagedClusterSecurityProfileDefender
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileDefender.new(
+instance = AzureRest::ManagedClusterSecurityProfileDefender.new(
   log_analytics_workspace_resource_id: null,
   security_monitoring: null,
   security_gating: null

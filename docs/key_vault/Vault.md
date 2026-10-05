@@ -1,4 +1,4 @@
-# AzureSDK::Vault
+# AzureRest::Vault
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Vault.new(
+instance = AzureRest::Vault.new(
   id: null,
   name: null,
   type: null,

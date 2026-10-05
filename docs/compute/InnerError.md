@@ -1,4 +1,4 @@
-# AzureSDK::InnerError
+# AzureRest::InnerError
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InnerError.new(
+instance = AzureRest::InnerError.new(
   exceptiontype: null,
   errordetail: null
 )

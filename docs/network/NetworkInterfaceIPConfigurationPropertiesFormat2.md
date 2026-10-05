@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceIPConfigurationPropertiesFormat2
+# AzureRest::NetworkInterfaceIPConfigurationPropertiesFormat2
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceIPConfigurationPropertiesFormat2.new(
+instance = AzureRest::NetworkInterfaceIPConfigurationPropertiesFormat2.new(
   gateway_load_balancer: null,
   virtual_network_taps: null,
   application_gateway_backend_address_pools: null,

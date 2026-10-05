@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionScopesApi
+# AzureRest::EncryptionScopesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,14 +22,14 @@ Returns the properties for the specified encryption scope.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::EncryptionScopesApi.new
+api_instance = AzureRest::EncryptionScopesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -40,7 +40,7 @@ begin
   
   result = api_instance.encryption_scopes_get(api_version, subscription_id, resource_group_name, account_name, encryption_scope_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_get: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EncryptionScope>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_get_with_http_info: #{e}"
 end
 ```
@@ -99,14 +99,14 @@ Lists all the encryption scopes available under the specified storage account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::EncryptionScopesApi.new
+api_instance = AzureRest::EncryptionScopesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -121,7 +121,7 @@ begin
   
   result = api_instance.encryption_scopes_list(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_list: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EncryptionScopeListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_list_with_http_info: #{e}"
 end
 ```
@@ -182,26 +182,26 @@ Update encryption scope properties as specified in the request body. Update fail
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::EncryptionScopesApi.new
+api_instance = AzureRest::EncryptionScopesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 encryption_scope_name = 'encryption_scope_name_example' # String | The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-encryption_scope = AzureSDK::EncryptionScope.new # EncryptionScope | Encryption scope properties to be used for the update.
+encryption_scope = AzureRest::EncryptionScope.new # EncryptionScope | Encryption scope properties to be used for the update.
 
 begin
   
   result = api_instance.encryption_scopes_patch(api_version, subscription_id, resource_group_name, account_name, encryption_scope_name, encryption_scope)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_patch: #{e}"
 end
 ```
@@ -219,7 +219,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EncryptionScope>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_patch_with_http_info: #{e}"
 end
 ```
@@ -261,26 +261,26 @@ Synchronously creates or updates an encryption scope under the specified storage
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::EncryptionScopesApi.new
+api_instance = AzureRest::EncryptionScopesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 encryption_scope_name = 'encryption_scope_name_example' # String | The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-encryption_scope = AzureSDK::EncryptionScope.new # EncryptionScope | Encryption scope properties to be used for the create or update.
+encryption_scope = AzureRest::EncryptionScope.new # EncryptionScope | Encryption scope properties to be used for the create or update.
 
 begin
   
   result = api_instance.encryption_scopes_put(api_version, subscription_id, resource_group_name, account_name, encryption_scope_name, encryption_scope)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_put: #{e}"
 end
 ```
@@ -298,7 +298,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EncryptionScope>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling EncryptionScopesApi->encryption_scopes_put_with_http_info: #{e}"
 end
 ```

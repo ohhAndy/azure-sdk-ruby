@@ -1,4 +1,4 @@
-# AzureSDK::BootDiagnosticsInstanceView
+# AzureRest::BootDiagnosticsInstanceView
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BootDiagnosticsInstanceView.new(
+instance = AzureRest::BootDiagnosticsInstanceView.new(
   console_screenshot_blob_uri: null,
   serial_console_log_blob_uri: null,
   status: null

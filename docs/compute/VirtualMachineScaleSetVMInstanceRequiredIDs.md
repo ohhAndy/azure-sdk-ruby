@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetVMInstanceRequiredIDs
+# AzureRest::VirtualMachineScaleSetVMInstanceRequiredIDs
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetVMInstanceRequiredIDs.new(
+instance = AzureRest::VirtualMachineScaleSetVMInstanceRequiredIDs.new(
   instance_ids: null
 )
 ```

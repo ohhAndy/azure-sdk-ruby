@@ -1,4 +1,4 @@
-# AzureSDK::LegalHoldProperties
+# AzureRest::LegalHoldProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LegalHoldProperties.new(
+instance = AzureRest::LegalHoldProperties.new(
   has_legal_hold: null,
   tags: null,
   protected_append_writes_history: null

@@ -1,4 +1,4 @@
-# AzureSDK::InboundSecurityRuleProperties
+# AzureRest::InboundSecurityRuleProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundSecurityRuleProperties.new(
+instance = AzureRest::InboundSecurityRuleProperties.new(
   rule_type: null,
   rules: null,
   provisioning_state: null

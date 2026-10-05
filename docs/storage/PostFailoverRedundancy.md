@@ -1,4 +1,4 @@
-# AzureSDK::PostFailoverRedundancy
+# AzureRest::PostFailoverRedundancy
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PostFailoverRedundancy.new()
+instance = AzureRest::PostFailoverRedundancy.new()
 ```
 

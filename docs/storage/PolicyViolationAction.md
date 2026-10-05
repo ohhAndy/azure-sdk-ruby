@@ -1,4 +1,4 @@
-# AzureSDK::PolicyViolationAction
+# AzureRest::PolicyViolationAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PolicyViolationAction.new()
+instance = AzureRest::PolicyViolationAction.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountMicrosoftEndpoints
+# AzureRest::StorageAccountMicrosoftEndpoints
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountMicrosoftEndpoints.new(
+instance = AzureRest::StorageAccountMicrosoftEndpoints.new(
   blob: null,
   queue: null,
   table: null,

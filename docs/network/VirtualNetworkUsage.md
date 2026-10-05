@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkUsage
+# AzureRest::VirtualNetworkUsage
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkUsage.new(
+instance = AzureRest::VirtualNetworkUsage.new(
   current_value: null,
   id: null,
   limit: null,

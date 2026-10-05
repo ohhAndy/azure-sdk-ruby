@@ -1,4 +1,4 @@
-# AzureSDK::LocalDNSState
+# AzureRest::LocalDNSState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalDNSState.new()
+instance = AzureRest::LocalDNSState.new()
 ```
 

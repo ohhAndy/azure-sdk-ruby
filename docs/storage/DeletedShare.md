@@ -1,4 +1,4 @@
-# AzureSDK::DeletedShare
+# AzureRest::DeletedShare
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletedShare.new(
+instance = AzureRest::DeletedShare.new(
   deleted_share_name: null,
   deleted_share_version: null
 )

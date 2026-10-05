@@ -1,4 +1,4 @@
-# AzureSDK::ErrorAdditionalInfo
+# AzureRest::ErrorAdditionalInfo
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ErrorAdditionalInfo.new(
+instance = AzureRest::ErrorAdditionalInfo.new(
   type: null,
   info: null
 )

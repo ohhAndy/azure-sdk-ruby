@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionsListResult
+# AzureRest::VirtualMachineExtensionsListResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineExtensionsListResult.new(
+instance = AzureRest::VirtualMachineExtensionsListResult.new(
   value: null
 )
 ```

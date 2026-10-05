@@ -1,4 +1,4 @@
-# AzureSDK::DisablePeeringRoute
+# AzureRest::DisablePeeringRoute
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DisablePeeringRoute.new()
+instance = AzureRest::DisablePeeringRoute.new()
 ```
 

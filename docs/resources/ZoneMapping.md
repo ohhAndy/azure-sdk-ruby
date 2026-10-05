@@ -1,4 +1,4 @@
-# AzureSDK::ZoneMapping
+# AzureRest::ZoneMapping
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ZoneMapping.new(
+instance = AzureRest::ZoneMapping.new(
   location: null,
   zones: null
 )

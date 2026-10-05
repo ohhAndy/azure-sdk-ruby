@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceSkuProperties
+# AzureRest::VirtualApplianceSkuProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualApplianceSkuProperties.new(
+instance = AzureRest::VirtualApplianceSkuProperties.new(
   vendor: null,
   bundled_scale_unit: null,
   market_place_version: null

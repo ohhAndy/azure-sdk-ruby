@@ -1,4 +1,4 @@
-# AzureSDK::ServerForPatch
+# AzureRest::ServerForPatch
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerForPatch.new(
+instance = AzureRest::ServerForPatch.new(
   sku: null,
   identity: null,
   properties: null,

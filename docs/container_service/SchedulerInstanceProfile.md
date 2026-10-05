@@ -1,4 +1,4 @@
-# AzureSDK::SchedulerInstanceProfile
+# AzureRest::SchedulerInstanceProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SchedulerInstanceProfile.new(
+instance = AzureRest::SchedulerInstanceProfile.new(
   scheduler_config_mode: null
 )
 ```

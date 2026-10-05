@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointPrivateLinkConnectionProperties
+# AzureRest::BlobAccessPointPrivateLinkConnectionProperties
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointPrivateLinkConnectionProperties.new(
+instance = AzureRest::BlobAccessPointPrivateLinkConnectionProperties.new(
   private_link_id_type: null,
   private_link_id: null,
   private_link_group_id: null,

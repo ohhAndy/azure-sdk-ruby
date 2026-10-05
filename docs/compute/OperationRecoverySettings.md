@@ -1,4 +1,4 @@
-# AzureSDK::OperationRecoverySettings
+# AzureRest::OperationRecoverySettings
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OperationRecoverySettings.new(
+instance = AzureRest::OperationRecoverySettings.new(
   restart_recovery_policy: null,
   start_recovery_policy: null,
   reimage_recovery_policy: null

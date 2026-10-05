@@ -1,4 +1,4 @@
-# AzureSDK::ProviderPermission
+# AzureRest::ProviderPermission
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderPermission.new(
+instance = AzureRest::ProviderPermission.new(
   application_id: null,
   role_definition: null,
   managed_by_role_definition: null,

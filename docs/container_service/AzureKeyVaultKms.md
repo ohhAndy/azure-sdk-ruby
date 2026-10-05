@@ -1,4 +1,4 @@
-# AzureSDK::AzureKeyVaultKms
+# AzureRest::AzureKeyVaultKms
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureKeyVaultKms.new(
+instance = AzureRest::AzureKeyVaultKms.new(
   enabled: null,
   key_id: null,
   key_vault_network_access: null,

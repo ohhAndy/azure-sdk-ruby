@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHSMSecurityDomainProperties
+# AzureRest::ManagedHSMSecurityDomainProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHSMSecurityDomainProperties.new(
+instance = AzureRest::ManagedHSMSecurityDomainProperties.new(
   activation_status: null,
   activation_status_message: null
 )

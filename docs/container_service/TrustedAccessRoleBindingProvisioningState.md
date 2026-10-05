@@ -1,4 +1,4 @@
-# AzureSDK::TrustedAccessRoleBindingProvisioningState
+# AzureRest::TrustedAccessRoleBindingProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrustedAccessRoleBindingProvisioningState.new()
+instance = AzureRest::TrustedAccessRoleBindingProvisioningState.new()
 ```
 

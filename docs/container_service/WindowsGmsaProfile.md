@@ -1,4 +1,4 @@
-# AzureSDK::WindowsGmsaProfile
+# AzureRest::WindowsGmsaProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WindowsGmsaProfile.new(
+instance = AzureRest::WindowsGmsaProfile.new(
   enabled: null,
   dns_server: null,
   root_domain_name: null

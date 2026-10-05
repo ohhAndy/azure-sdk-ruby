@@ -1,4 +1,4 @@
-# AzureSDK::IPVersion
+# AzureRest::IPVersion
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPVersion.new()
+instance = AzureRest::IPVersion.new()
 ```
 

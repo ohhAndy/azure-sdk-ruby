@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolUpgradeProfile
+# AzureRest::AgentPoolUpgradeProfile
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolUpgradeProfile.new(
+instance = AzureRest::AgentPoolUpgradeProfile.new(
   id: null,
   name: null,
   type: null,

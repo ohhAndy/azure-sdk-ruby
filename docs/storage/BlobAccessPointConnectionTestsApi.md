@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointConnectionTestsApi
+# AzureRest::BlobAccessPointConnectionTestsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -19,25 +19,25 @@ Test a proposed Blob Access Point connection before the configuration is created
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConnectionTestsApi.new
+api_instance = AzureRest::BlobAccessPointConnectionTestsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-body = AzureSDK::BlobAccessPointProposedConnectionTestRequest.new({source: AzureSDK::BlobAccessPointSourceProperties.new({source_type: AzureSDK::BlobAccessPointSourceType::NET_APP_ONTAP})}) # BlobAccessPointProposedConnectionTestRequest | The content of the action request
+body = AzureRest::BlobAccessPointProposedConnectionTestRequest.new({source: AzureRest::BlobAccessPointSourceProperties.new({source_type: AzureRest::BlobAccessPointSourceType::NET_APP_ONTAP})}) # BlobAccessPointProposedConnectionTestRequest | The content of the action request
 
 begin
   
   result = api_instance.blob_access_point_connection_tests_test_proposed_connection(api_version, subscription_id, resource_group_name, account_name, body)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConnectionTestsApi->blob_access_point_connection_tests_test_proposed_connection: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConnectionTestResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConnectionTestsApi->blob_access_point_connection_tests_test_proposed_connection_with_http_info: #{e}"
 end
 ```

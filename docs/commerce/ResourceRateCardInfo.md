@@ -1,4 +1,4 @@
-# AzureSDK::ResourceRateCardInfo
+# AzureRest::ResourceRateCardInfo
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceRateCardInfo.new(
+instance = AzureRest::ResourceRateCardInfo.new(
   currency: null,
   locale: null,
   is_tax_included: null,

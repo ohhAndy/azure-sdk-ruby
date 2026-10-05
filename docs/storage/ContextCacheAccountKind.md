@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheAccountKind
+# AzureRest::ContextCacheAccountKind
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContextCacheAccountKind.new()
+instance = AzureRest::ContextCacheAccountKind.new()
 ```
 

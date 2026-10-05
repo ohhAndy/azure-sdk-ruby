@@ -1,4 +1,4 @@
-# AzureSDK::RoutingChoice
+# AzureRest::RoutingChoice
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RoutingChoice.new()
+instance = AzureRest::RoutingChoice.new()
 ```
 

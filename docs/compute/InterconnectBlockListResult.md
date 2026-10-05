@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectBlockListResult
+# AzureRest::InterconnectBlockListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectBlockListResult.new(
+instance = AzureRest::InterconnectBlockListResult.new(
   value: null,
   next_link: null
 )

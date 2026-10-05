@@ -1,4 +1,4 @@
-# AzureSDK::FileSharesApi
+# AzureRest::FileSharesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,20 +24,20 @@ Creates a new share under the specified account as described by request body. Th
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 share_name = 'share_name_example' # String | The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-file_share = AzureSDK::FileShare.new # FileShare | Properties of the file share to create.
+file_share = AzureRest::FileShare.new # FileShare | Properties of the file share to create.
 opts = {
   expand: 'expand_example' # String | Optional, used to expand the properties within share's properties. Valid values are: snapshots. Should be passed as a string with delimiter ','
 }
@@ -46,7 +46,7 @@ begin
   
   result = api_instance.file_shares_create(api_version, subscription_id, resource_group_name, account_name, share_name, file_share, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_create: #{e}"
 end
 ```
@@ -64,7 +64,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FileShare>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_create_with_http_info: #{e}"
 end
 ```
@@ -107,14 +107,14 @@ Deletes specified share under its account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -128,7 +128,7 @@ opts = {
 begin
   
   api_instance.file_shares_delete(api_version, subscription_id, resource_group_name, account_name, share_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_delete: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_delete_with_http_info: #{e}"
 end
 ```
@@ -189,14 +189,14 @@ Gets properties of a specified share.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -211,7 +211,7 @@ begin
   
   result = api_instance.file_shares_get(api_version, subscription_id, resource_group_name, account_name, share_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_get: #{e}"
 end
 ```
@@ -229,7 +229,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FileShare>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_get_with_http_info: #{e}"
 end
 ```
@@ -272,14 +272,14 @@ The Lease Share operation establishes and manages a lock on a share for delete o
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -287,14 +287,14 @@ account_name = 'account_name_example' # String | The name of the storage account
 share_name = 'share_name_example' # String | The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
 opts = {
   x_ms_snapshot: 'x_ms_snapshot_example', # String | Optional. Specify the snapshot time to lease a snapshot.
-  parameters: AzureSDK::LeaseShareRequest.new({action: AzureSDK::LeaseShareAction::ACQUIRE}) # LeaseShareRequest | The content of the action request
+  parameters: AzureRest::LeaseShareRequest.new({action: AzureRest::LeaseShareAction::ACQUIRE}) # LeaseShareRequest | The content of the action request
 }
 
 begin
   
   result = api_instance.file_shares_lease(api_version, subscription_id, resource_group_name, account_name, share_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_lease: #{e}"
 end
 ```
@@ -312,7 +312,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LeaseShareResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_lease_with_http_info: #{e}"
 end
 ```
@@ -355,25 +355,25 @@ Restore a file share within a valid retention days if share soft delete is enabl
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 share_name = 'share_name_example' # String | The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-deleted_share = AzureSDK::DeletedShare.new({deleted_share_name: 'deleted_share_name_example', deleted_share_version: 'deleted_share_version_example'}) # DeletedShare | 
+deleted_share = AzureRest::DeletedShare.new({deleted_share_name: 'deleted_share_name_example', deleted_share_version: 'deleted_share_version_example'}) # DeletedShare | 
 
 begin
   
   api_instance.file_shares_restore(api_version, subscription_id, resource_group_name, account_name, share_name, deleted_share)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_restore: #{e}"
 end
 ```
@@ -391,7 +391,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_restore_with_http_info: #{e}"
 end
 ```
@@ -433,26 +433,26 @@ Updates share properties as specified in request body. Properties not mentioned 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::FileSharesApi.new
+api_instance = AzureRest::FileSharesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 share_name = 'share_name_example' # String | The name of the file share within the specified storage account. File share names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
-file_share = AzureSDK::FileShare.new # FileShare | Properties to update for the file share.
+file_share = AzureRest::FileShare.new # FileShare | Properties to update for the file share.
 
 begin
   
   result = api_instance.file_shares_update(api_version, subscription_id, resource_group_name, account_name, share_name, file_share)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_update: #{e}"
 end
 ```
@@ -470,7 +470,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FileShare>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling FileSharesApi->file_shares_update_with_http_info: #{e}"
 end
 ```

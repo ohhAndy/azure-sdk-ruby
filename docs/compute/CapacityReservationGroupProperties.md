@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationGroupProperties
+# AzureRest::CapacityReservationGroupProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationGroupProperties.new(
+instance = AzureRest::CapacityReservationGroupProperties.new(
   capacity_reservations: null,
   virtual_machines_associated: null,
   instance_view: null,

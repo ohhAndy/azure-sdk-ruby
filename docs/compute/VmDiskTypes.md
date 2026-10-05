@@ -1,4 +1,4 @@
-# AzureSDK::VmDiskTypes
+# AzureRest::VmDiskTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VmDiskTypes.new()
+instance = AzureRest::VmDiskTypes.new()
 ```
 

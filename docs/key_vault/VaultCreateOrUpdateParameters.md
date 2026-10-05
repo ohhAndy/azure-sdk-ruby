@@ -1,4 +1,4 @@
-# AzureSDK::VaultCreateOrUpdateParameters
+# AzureRest::VaultCreateOrUpdateParameters
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultCreateOrUpdateParameters.new(
+instance = AzureRest::VaultCreateOrUpdateParameters.new(
   location: null,
   tags: null,
   properties: null

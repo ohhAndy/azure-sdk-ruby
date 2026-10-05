@@ -1,4 +1,4 @@
-# AzureSDK::AliasPatternType
+# AzureRest::AliasPatternType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AliasPatternType.new()
+instance = AzureRest::AliasPatternType.new()
 ```
 

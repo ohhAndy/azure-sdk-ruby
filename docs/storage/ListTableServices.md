@@ -1,4 +1,4 @@
-# AzureSDK::ListTableServices
+# AzureRest::ListTableServices
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListTableServices.new(
+instance = AzureRest::ListTableServices.new(
   value: null
 )
 ```

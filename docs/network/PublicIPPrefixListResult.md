@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPPrefixListResult
+# AzureRest::PublicIPPrefixListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPPrefixListResult.new(
+instance = AzureRest::PublicIPPrefixListResult.new(
   value: null,
   next_link: null
 )

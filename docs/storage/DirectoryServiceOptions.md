@@ -1,4 +1,4 @@
-# AzureSDK::DirectoryServiceOptions
+# AzureRest::DirectoryServiceOptions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DirectoryServiceOptions.new()
+instance = AzureRest::DirectoryServiceOptions.new()
 ```
 

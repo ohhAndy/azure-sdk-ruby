@@ -1,4 +1,4 @@
-# AzureSDK::AvailabilitySetListResult
+# AzureRest::AvailabilitySetListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailabilitySetListResult.new(
+instance = AzureRest::AvailabilitySetListResult.new(
   value: null,
   next_link: null
 )

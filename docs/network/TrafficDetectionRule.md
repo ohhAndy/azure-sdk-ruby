@@ -1,4 +1,4 @@
-# AzureSDK::TrafficDetectionRule
+# AzureRest::TrafficDetectionRule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrafficDetectionRule.new(
+instance = AzureRest::TrafficDetectionRule.new(
   traffic_type: null,
   packets_per_second: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::BackupRequestBase
+# AzureRest::BackupRequestBase
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupRequestBase.new(
+instance = AzureRest::BackupRequestBase.new(
   backup_settings: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmKeyReleasePolicy
+# AzureRest::ManagedHsmKeyReleasePolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmKeyReleasePolicy.new(
+instance = AzureRest::ManagedHsmKeyReleasePolicy.new(
   content_type: null,
   data: null
 )

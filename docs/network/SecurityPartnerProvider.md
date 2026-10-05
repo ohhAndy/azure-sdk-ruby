@@ -1,4 +1,4 @@
-# AzureSDK::SecurityPartnerProvider
+# AzureRest::SecurityPartnerProvider
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityPartnerProvider.new(
+instance = AzureRest::SecurityPartnerProvider.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::StorageDataShareAccessPolicy
+# AzureRest::StorageDataShareAccessPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageDataShareAccessPolicy.new(
+instance = AzureRest::StorageDataShareAccessPolicy.new(
   principal_id: null,
   tenant_id: null,
   permission: null

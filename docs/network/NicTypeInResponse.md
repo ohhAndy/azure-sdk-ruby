@@ -1,4 +1,4 @@
-# AzureSDK::NicTypeInResponse
+# AzureRest::NicTypeInResponse
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NicTypeInResponse.new()
+instance = AzureRest::NicTypeInResponse.new()
 ```
 

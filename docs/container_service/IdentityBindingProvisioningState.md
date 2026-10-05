@@ -1,4 +1,4 @@
-# AzureSDK::IdentityBindingProvisioningState
+# AzureRest::IdentityBindingProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IdentityBindingProvisioningState.new()
+instance = AzureRest::IdentityBindingProvisioningState.new()
 ```
 

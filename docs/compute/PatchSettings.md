@@ -1,4 +1,4 @@
-# AzureSDK::PatchSettings
+# AzureRest::PatchSettings
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PatchSettings.new(
+instance = AzureRest::PatchSettings.new(
   patch_mode: null,
   enable_hotpatching: null,
   assessment_mode: null,

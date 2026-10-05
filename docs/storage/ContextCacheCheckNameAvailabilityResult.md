@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheCheckNameAvailabilityResult
+# AzureRest::ContextCacheCheckNameAvailabilityResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContextCacheCheckNameAvailabilityResult.new(
+instance = AzureRest::ContextCacheCheckNameAvailabilityResult.new(
   name_available: null,
   reason: null,
   message: null

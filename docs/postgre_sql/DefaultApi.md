@@ -1,4 +1,4 @@
-# AzureSDK::DefaultApi
+# AzureRest::DefaultApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,14 +24,14 @@ Lists the capabilities available in a given location for a specific subscription
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
@@ -40,7 +40,7 @@ begin
   
   result = api_instance.capabilities_by_location_list(api_version, subscription_id, location_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->capabilities_by_location_list: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapabilityList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->capabilities_by_location_list_with_http_info: #{e}"
 end
 ```
@@ -97,23 +97,23 @@ Checks the validity and availability of the given name, to assign it to a new se
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
-parameters = AzureSDK::CheckNameAvailabilityRequest.new # CheckNameAvailabilityRequest | The request body
+parameters = AzureRest::CheckNameAvailabilityRequest.new # CheckNameAvailabilityRequest | The request body
 
 begin
   
   result = api_instance.name_availability_check_globally(api_version, subscription_id, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->name_availability_check_globally: #{e}"
 end
 ```
@@ -131,7 +131,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NameAvailabilityModel>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->name_availability_check_globally_with_http_info: #{e}"
 end
 ```
@@ -170,24 +170,24 @@ Check the availability of name for resource
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
-parameters = AzureSDK::CheckNameAvailabilityRequest.new # CheckNameAvailabilityRequest | The request body
+parameters = AzureRest::CheckNameAvailabilityRequest.new # CheckNameAvailabilityRequest | The request body
 
 begin
   
   result = api_instance.name_availability_check_with_location(api_version, subscription_id, location_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->name_availability_check_with_location: #{e}"
 end
 ```
@@ -205,7 +205,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NameAvailabilityModel>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->name_availability_check_with_location_with_http_info: #{e}"
 end
 ```
@@ -245,21 +245,21 @@ Gets the private DNS zone suffix.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 
 begin
   
   result = api_instance.private_dns_zone_suffix_get(api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->private_dns_zone_suffix_get: #{e}"
 end
 ```
@@ -277,7 +277,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => String
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->private_dns_zone_suffix_get_with_http_info: #{e}"
 end
 ```
@@ -314,14 +314,14 @@ Get quota usages at specified location in a given subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
@@ -330,7 +330,7 @@ begin
   
   result = api_instance.quota_usages_list(api_version, subscription_id, location_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->quota_usages_list: #{e}"
 end
 ```
@@ -348,7 +348,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <QuotaUsageList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->quota_usages_list_with_http_info: #{e}"
 end
 ```
@@ -387,24 +387,24 @@ Lists the virtual network subnet usage for a given virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::DefaultApi.new
+api_instance = AzureRest::DefaultApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location_name = 'location_name_example' # String | The name of the location.
-parameters = AzureSDK::VirtualNetworkSubnetUsageParameter.new # VirtualNetworkSubnetUsageParameter | The request body
+parameters = AzureRest::VirtualNetworkSubnetUsageParameter.new # VirtualNetworkSubnetUsageParameter | The request body
 
 begin
   
   result = api_instance.virtual_network_subnet_usage_list(api_version, subscription_id, location_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_network_subnet_usage_list: #{e}"
 end
 ```
@@ -422,7 +422,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkSubnetUsageModel>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling DefaultApi->virtual_network_subnet_usage_list_with_http_info: #{e}"
 end
 ```

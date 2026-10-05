@@ -1,4 +1,4 @@
-# AzureSDK::AzureEntityResource
+# AzureRest::AzureEntityResource
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureEntityResource.new(
+instance = AzureRest::AzureEntityResource.new(
   id: null,
   name: null,
   type: null,

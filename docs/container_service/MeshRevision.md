@@ -1,4 +1,4 @@
-# AzureSDK::MeshRevision
+# AzureRest::MeshRevision
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MeshRevision.new(
+instance = AzureRest::MeshRevision.new(
   revision: null,
   upgrades: null,
   compatible_with: null

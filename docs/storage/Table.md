@@ -1,4 +1,4 @@
-# AzureSDK::Table
+# AzureRest::Table
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Table.new(
+instance = AzureRest::Table.new(
   id: null,
   name: null,
   type: null,

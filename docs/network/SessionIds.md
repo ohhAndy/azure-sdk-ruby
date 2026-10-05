@@ -1,4 +1,4 @@
-# AzureSDK::SessionIds
+# AzureRest::SessionIds
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SessionIds.new(
+instance = AzureRest::SessionIds.new(
   session_ids: null
 )
 ```

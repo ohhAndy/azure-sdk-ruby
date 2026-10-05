@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineSize
+# AzureRest::VirtualMachineSize
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineSize.new(
+instance = AzureRest::VirtualMachineSize.new(
   name: null,
   number_of_cores: null,
   os_disk_size_in_mb: null,

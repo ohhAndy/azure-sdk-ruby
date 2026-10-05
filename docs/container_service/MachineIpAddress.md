@@ -1,4 +1,4 @@
-# AzureSDK::MachineIpAddress
+# AzureRest::MachineIpAddress
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MachineIpAddress.new(
+instance = AzureRest::MachineIpAddress.new(
   family: null,
   ip: null
 )

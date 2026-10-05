@@ -1,4 +1,4 @@
-# AzureSDK::TestConnectionResponse
+# AzureRest::TestConnectionResponse
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TestConnectionResponse.new(
+instance = AzureRest::TestConnectionResponse.new(
   storage_connector_method_name: null,
   storage_connector_error_message: null,
   storage_connector_request_id: null

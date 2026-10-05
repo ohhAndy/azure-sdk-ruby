@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountTypes
+# AzureRest::StorageAccountTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountTypes.new()
+instance = AzureRest::StorageAccountTypes.new()
 ```
 

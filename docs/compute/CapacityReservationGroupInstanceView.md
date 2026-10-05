@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationGroupInstanceView
+# AzureRest::CapacityReservationGroupInstanceView
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationGroupInstanceView.new(
+instance = AzureRest::CapacityReservationGroupInstanceView.new(
   capacity_reservations: null,
   shared_subscription_ids: null
 )

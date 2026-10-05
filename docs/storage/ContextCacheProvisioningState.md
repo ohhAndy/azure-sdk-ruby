@@ -1,4 +1,4 @@
-# AzureSDK::ContextCacheProvisioningState
+# AzureRest::ContextCacheProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContextCacheProvisioningState.new()
+instance = AzureRest::ContextCacheProvisioningState.new()
 ```
 

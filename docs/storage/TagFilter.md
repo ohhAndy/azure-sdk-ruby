@@ -1,4 +1,4 @@
-# AzureSDK::TagFilter
+# AzureRest::TagFilter
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TagFilter.new(
+instance = AzureRest::TagFilter.new(
   name: null,
   op: null,
   value: null

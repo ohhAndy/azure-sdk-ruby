@@ -1,4 +1,4 @@
-# AzureSDK::ZonalPlatformFaultDomainAlignMode
+# AzureRest::ZonalPlatformFaultDomainAlignMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ZonalPlatformFaultDomainAlignMode.new()
+instance = AzureRest::ZonalPlatformFaultDomainAlignMode.new()
 ```
 

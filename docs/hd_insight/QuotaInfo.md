@@ -1,4 +1,4 @@
-# AzureSDK::QuotaInfo
+# AzureRest::QuotaInfo
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::QuotaInfo.new(
+instance = AzureRest::QuotaInfo.new(
   cores_used: null
 )
 ```

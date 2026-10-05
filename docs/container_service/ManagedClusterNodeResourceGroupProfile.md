@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterNodeResourceGroupProfile
+# AzureRest::ManagedClusterNodeResourceGroupProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterNodeResourceGroupProfile.new(
+instance = AzureRest::ManagedClusterNodeResourceGroupProfile.new(
   restriction_level: null
 )
 ```

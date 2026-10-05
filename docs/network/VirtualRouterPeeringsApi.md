@@ -1,4 +1,4 @@
-# AzureSDK::VirtualRouterPeeringsApi
+# AzureRest::VirtualRouterPeeringsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates the specified Virtual Router Peering.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualRouterPeeringsApi.new
+api_instance = AzureRest::VirtualRouterPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_router_name = 'virtual_router_name_example' # String | The name of the Virtual Router.
 peering_name = 'peering_name_example' # String | The name of the resource that is unique within a resource group. This name can be used to access the resource.
-parameters = AzureSDK::VirtualRouterPeering.new # VirtualRouterPeering | Parameters supplied to the create or update Virtual Router Peering operation.
+parameters = AzureRest::VirtualRouterPeering.new # VirtualRouterPeering | Parameters supplied to the create or update Virtual Router Peering operation.
 
 begin
   
   result = api_instance.virtual_router_peerings_create_or_update(api_version, subscription_id, resource_group_name, virtual_router_name, peering_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualRouterPeering>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified peering from a Virtual Router.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualRouterPeeringsApi.new
+api_instance = AzureRest::VirtualRouterPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ peering_name = 'peering_name_example' # String | The name of the resource that i
 begin
   
   api_instance.virtual_router_peerings_delete(api_version, subscription_id, resource_group_name, virtual_router_name, peering_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the specified Virtual Router Peering.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualRouterPeeringsApi.new
+api_instance = AzureRest::VirtualRouterPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.virtual_router_peerings_get(api_version, subscription_id, resource_group_name, virtual_router_name, peering_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualRouterPeering>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Lists all Virtual Router Peerings in a Virtual Router resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualRouterPeeringsApi.new
+api_instance = AzureRest::VirtualRouterPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.virtual_router_peerings_list(api_version, subscription_id, resource_group_name, virtual_router_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualRouterPeeringListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualRouterPeeringsApi->virtual_router_peerings_list_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::SecurityProfile
+# AzureRest::SecurityProfile
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityProfile.new(
+instance = AzureRest::SecurityProfile.new(
   uefi_settings: null,
   encryption_at_host: null,
   security_type: null,

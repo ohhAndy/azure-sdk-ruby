@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointCollectionProperties
+# AzureRest::RestorePointCollectionProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointCollectionProperties.new(
+instance = AzureRest::RestorePointCollectionProperties.new(
   source: null,
   provisioning_state: null,
   restore_point_collection_id: null,

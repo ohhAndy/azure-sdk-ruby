@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledEventsPolicy
+# AzureRest::ScheduledEventsPolicy
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledEventsPolicy.new(
+instance = AzureRest::ScheduledEventsPolicy.new(
   user_initiated_redeploy: null,
   user_initiated_reboot: null,
   scheduled_events_additional_publishing_targets: null,

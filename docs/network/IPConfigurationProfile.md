@@ -1,4 +1,4 @@
-# AzureSDK::IPConfigurationProfile
+# AzureRest::IPConfigurationProfile
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPConfigurationProfile.new(
+instance = AzureRest::IPConfigurationProfile.new(
   id: null,
   properties: null,
   name: null,

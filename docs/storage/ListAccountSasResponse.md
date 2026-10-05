@@ -1,4 +1,4 @@
-# AzureSDK::ListAccountSasResponse
+# AzureRest::ListAccountSasResponse
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListAccountSasResponse.new(
+instance = AzureRest::ListAccountSasResponse.new(
   account_sas_token: null
 )
 ```

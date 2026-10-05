@@ -1,4 +1,4 @@
-# AzureSDK::MeshRevisionProfileProperties
+# AzureRest::MeshRevisionProfileProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MeshRevisionProfileProperties.new(
+instance = AzureRest::MeshRevisionProfileProperties.new(
   mesh_revisions: null
 )
 ```

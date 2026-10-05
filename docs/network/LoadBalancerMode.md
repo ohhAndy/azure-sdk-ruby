@@ -1,4 +1,4 @@
-# AzureSDK::LoadBalancerMode
+# AzureRest::LoadBalancerMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LoadBalancerMode.new()
+instance = AzureRest::LoadBalancerMode.new()
 ```
 

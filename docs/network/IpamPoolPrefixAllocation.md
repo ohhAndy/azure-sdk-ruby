@@ -1,4 +1,4 @@
-# AzureSDK::IpamPoolPrefixAllocation
+# AzureRest::IpamPoolPrefixAllocation
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpamPoolPrefixAllocation.new(
+instance = AzureRest::IpamPoolPrefixAllocation.new(
   pool: null,
   number_of_ip_addresses: null,
   allocated_address_prefixes: null

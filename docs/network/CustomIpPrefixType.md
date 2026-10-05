@@ -1,4 +1,4 @@
-# AzureSDK::CustomIpPrefixType
+# AzureRest::CustomIpPrefixType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CustomIpPrefixType.new()
+instance = AzureRest::CustomIpPrefixType.new()
 ```
 

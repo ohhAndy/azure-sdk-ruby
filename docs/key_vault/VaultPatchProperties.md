@@ -1,4 +1,4 @@
-# AzureSDK::VaultPatchProperties
+# AzureRest::VaultPatchProperties
 
 ## Properties
 
@@ -21,9 +21,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultPatchProperties.new(
+instance = AzureRest::VaultPatchProperties.new(
   tenant_id: null,
   sku: null,
   access_policies: null,

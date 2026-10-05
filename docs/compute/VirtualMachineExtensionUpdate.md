@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionUpdate
+# AzureRest::VirtualMachineExtensionUpdate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineExtensionUpdate.new(
+instance = AzureRest::VirtualMachineExtensionUpdate.new(
   tags: null,
   properties: null
 )

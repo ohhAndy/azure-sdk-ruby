@@ -1,4 +1,4 @@
-# AzureSDK::ConvertToVirtualMachineScaleSetInput
+# AzureRest::ConvertToVirtualMachineScaleSetInput
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConvertToVirtualMachineScaleSetInput.new(
+instance = AzureRest::ConvertToVirtualMachineScaleSetInput.new(
   virtual_machine_scale_set_name: null
 )
 ```

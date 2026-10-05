@@ -1,4 +1,4 @@
-# AzureSDK::RollingUpgradePolicy
+# AzureRest::RollingUpgradePolicy
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RollingUpgradePolicy.new(
+instance = AzureRest::RollingUpgradePolicy.new(
   max_batch_instance_percent: null,
   max_unhealthy_instance_percent: null,
   max_unhealthy_upgraded_instance_percent: null,

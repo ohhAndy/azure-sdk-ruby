@@ -1,4 +1,4 @@
-# AzureSDK::StorageTaskAssignmentProvisioningState
+# AzureRest::StorageTaskAssignmentProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageTaskAssignmentProvisioningState.new()
+instance = AzureRest::StorageTaskAssignmentProvisioningState.new()
 ```
 

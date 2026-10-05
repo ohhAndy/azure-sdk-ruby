@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionKeyStatus
+# AzureRest::EncryptionKeyStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionKeyStatus.new()
+instance = AzureRest::EncryptionKeyStatus.new()
 ```
 

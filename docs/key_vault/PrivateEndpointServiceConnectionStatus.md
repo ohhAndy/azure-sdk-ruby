@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointServiceConnectionStatus
+# AzureRest::PrivateEndpointServiceConnectionStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateEndpointServiceConnectionStatus.new()
+instance = AzureRest::PrivateEndpointServiceConnectionStatus.new()
 ```
 

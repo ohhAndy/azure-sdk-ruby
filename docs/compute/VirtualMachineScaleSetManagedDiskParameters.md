@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetManagedDiskParameters
+# AzureRest::VirtualMachineScaleSetManagedDiskParameters
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetManagedDiskParameters.new(
+instance = AzureRest::VirtualMachineScaleSetManagedDiskParameters.new(
   storage_account_type: null,
   disk_encryption_set: null,
   security_profile: null,

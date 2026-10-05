@@ -1,4 +1,4 @@
-# AzureSDK::ProximityPlacementGroupProperties
+# AzureRest::ProximityPlacementGroupProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProximityPlacementGroupProperties.new(
+instance = AzureRest::ProximityPlacementGroupProperties.new(
   proximity_placement_group_type: null,
   virtual_machines: null,
   virtual_machine_scale_sets: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DisallowedConfiguration
+# AzureRest::DisallowedConfiguration
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DisallowedConfiguration.new(
+instance = AzureRest::DisallowedConfiguration.new(
   vm_disk_type: null
 )
 ```

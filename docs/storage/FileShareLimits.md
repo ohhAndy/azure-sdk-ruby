@@ -1,4 +1,4 @@
-# AzureSDK::FileShareLimits
+# AzureRest::FileShareLimits
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileShareLimits.new(
+instance = AzureRest::FileShareLimits.new(
   min_provisioned_storage_gi_b: null,
   max_provisioned_storage_gi_b: null,
   min_provisioned_iops: null,

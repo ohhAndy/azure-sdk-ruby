@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineImagesApi
+# AzureRest::VirtualMachineImagesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -29,14 +29,14 @@ Gets a virtual machine image in an edge zone.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 location = 'location_example' # String | The name of Azure region.
 edge_zone = 'edge_zone_example' # String | The name of the edge zone.
@@ -50,7 +50,7 @@ begin
   
   result = api_instance.virtual_machine_images_edge_zone_get(api_version, location, edge_zone, publisher_name, offer, skus, version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_get: #{e}"
 end
 ```
@@ -68,7 +68,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineImage>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_get_with_http_info: #{e}"
 end
 ```
@@ -112,14 +112,14 @@ Gets a list of all virtual machine image versions for the specified location, ed
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -137,7 +137,7 @@ begin
   
   result = api_instance.virtual_machine_images_edge_zone_list(api_version, subscription_id, location, edge_zone, publisher_name, offer, skus, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list: #{e}"
 end
 ```
@@ -155,7 +155,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_with_http_info: #{e}"
 end
 ```
@@ -201,14 +201,14 @@ Gets a list of virtual machine image offers for the specified location, edge zon
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -219,7 +219,7 @@ begin
   
   result = api_instance.virtual_machine_images_edge_zone_list_offers(api_version, subscription_id, location, edge_zone, publisher_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_offers: #{e}"
 end
 ```
@@ -237,7 +237,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_offers_with_http_info: #{e}"
 end
 ```
@@ -278,14 +278,14 @@ Gets a list of virtual machine image publishers for the specified Azure location
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -295,7 +295,7 @@ begin
   
   result = api_instance.virtual_machine_images_edge_zone_list_publishers(api_version, subscription_id, location, edge_zone)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_publishers: #{e}"
 end
 ```
@@ -313,7 +313,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_publishers_with_http_info: #{e}"
 end
 ```
@@ -353,14 +353,14 @@ Gets a list of virtual machine image SKUs for the specified location, edge zone,
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -372,7 +372,7 @@ begin
   
   result = api_instance.virtual_machine_images_edge_zone_list_skus(api_version, subscription_id, location, edge_zone, publisher_name, offer)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_skus: #{e}"
 end
 ```
@@ -390,7 +390,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_edge_zone_list_skus_with_http_info: #{e}"
 end
 ```
@@ -432,14 +432,14 @@ Gets a virtual machine image.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 location = 'location_example' # String | The name of Azure region.
 publisher_name = 'publisher_name_example' # String | A valid image publisher.
@@ -452,7 +452,7 @@ begin
   
   result = api_instance.virtual_machine_images_get(api_version, location, publisher_name, offer, skus, version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_get: #{e}"
 end
 ```
@@ -470,7 +470,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineImage>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_get_with_http_info: #{e}"
 end
 ```
@@ -513,14 +513,14 @@ Gets a list of all virtual machine image versions for the specified location, pu
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -537,7 +537,7 @@ begin
   
   result = api_instance.virtual_machine_images_list(api_version, subscription_id, location, publisher_name, offer, skus, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list: #{e}"
 end
 ```
@@ -555,7 +555,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_with_http_info: #{e}"
 end
 ```
@@ -600,14 +600,14 @@ Gets a list of all virtual machine image versions for the specified edge zone
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -617,7 +617,7 @@ begin
   
   result = api_instance.virtual_machine_images_list_by_edge_zone(api_version, subscription_id, location, edge_zone)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_by_edge_zone: #{e}"
 end
 ```
@@ -635,7 +635,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VmImagesInEdgeZoneListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_by_edge_zone_with_http_info: #{e}"
 end
 ```
@@ -675,14 +675,14 @@ Gets a list of virtual machine image offers for the specified location and publi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -692,7 +692,7 @@ begin
   
   result = api_instance.virtual_machine_images_list_offers(api_version, subscription_id, location, publisher_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_offers: #{e}"
 end
 ```
@@ -710,7 +710,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_offers_with_http_info: #{e}"
 end
 ```
@@ -750,14 +750,14 @@ Gets a list of virtual machine image publishers for the specified Azure location
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -766,7 +766,7 @@ begin
   
   result = api_instance.virtual_machine_images_list_publishers(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_publishers: #{e}"
 end
 ```
@@ -784,7 +784,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_publishers_with_http_info: #{e}"
 end
 ```
@@ -823,14 +823,14 @@ Gets a list of virtual machine image SKUs for the specified location, publisher,
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineImagesApi.new
+api_instance = AzureRest::VirtualMachineImagesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -841,7 +841,7 @@ begin
   
   result = api_instance.virtual_machine_images_list_skus(api_version, subscription_id, location, publisher_name, offer)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_skus: #{e}"
 end
 ```
@@ -859,7 +859,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VirtualMachineImageResource>>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineImagesApi->virtual_machine_images_list_skus_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::LoadBalancerBackendAddress
+# AzureRest::LoadBalancerBackendAddress
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LoadBalancerBackendAddress.new(
+instance = AzureRest::LoadBalancerBackendAddress.new(
   properties: null,
   name: null
 )

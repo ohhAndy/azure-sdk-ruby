@@ -1,4 +1,4 @@
-# AzureSDK::ManagedNamespacesApi
+# AzureRest::ManagedNamespacesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,26 +24,26 @@ Creates or updates a namespace managed by ARM for the specified managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
 managed_namespace_name = 'managed_namespace_name_example' # String | The name of the managed namespace.
-parameters = AzureSDK::ManagedNamespace.new({location: 'location_example'}) # ManagedNamespace | The namespace to create or update.
+parameters = AzureRest::ManagedNamespace.new({location: 'location_example'}) # ManagedNamespace | The namespace to create or update.
 
 begin
   
   result = api_instance.managed_namespaces_create_or_update(api_version, subscription_id, resource_group_name, resource_name, managed_namespace_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_create_or_update: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedNamespace>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -103,14 +103,14 @@ Deletes a namespace.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -120,7 +120,7 @@ managed_namespace_name = 'managed_namespace_name_example' # String | The name of
 begin
   
   api_instance.managed_namespaces_delete(api_version, subscription_id, resource_group_name, resource_name, managed_namespace_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_delete: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_delete_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Gets the specified namespace of a managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.managed_namespaces_get(api_version, subscription_id, resource_group_name, resource_name, managed_namespace_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedNamespace>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ Gets a list of managed namespaces in the specified managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -273,7 +273,7 @@ begin
   
   result = api_instance.managed_namespaces_list_by_managed_cluster(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_list_by_managed_cluster: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedNamespaceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_list_by_managed_cluster_with_http_info: #{e}"
 end
 ```
@@ -331,14 +331,14 @@ Lists the credentials of a namespace.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -349,7 +349,7 @@ begin
   
   result = api_instance.managed_namespaces_list_credential(api_version, subscription_id, resource_group_name, resource_name, managed_namespace_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_list_credential: #{e}"
 end
 ```
@@ -367,7 +367,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CredentialResults>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_list_credential_with_http_info: #{e}"
 end
 ```
@@ -408,26 +408,26 @@ Updates tags on a managed namespace.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedNamespacesApi.new
+api_instance = AzureRest::ManagedNamespacesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
 managed_namespace_name = 'managed_namespace_name_example' # String | The name of the managed namespace.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to the patch namespace operation, we only support patch tags for now.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to the patch namespace operation, we only support patch tags for now.
 
 begin
   
   result = api_instance.managed_namespaces_update(api_version, subscription_id, resource_group_name, resource_name, managed_namespace_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_update: #{e}"
 end
 ```
@@ -445,7 +445,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedNamespace>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedNamespacesApi->managed_namespaces_update_with_http_info: #{e}"
 end
 ```

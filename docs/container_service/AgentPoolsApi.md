@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolsApi
+# AzureRest::AgentPoolsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -27,14 +27,14 @@ Aborts the currently running operation on the agent pool. The Agent Pool will be
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -44,7 +44,7 @@ agent_pool_name = 'agent_pool_name_example' # String | The name of the agent poo
 begin
   # Aborts last operation running on agent pool.
   api_instance.agent_pools_abort_latest_operation(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_abort_latest_operation: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_abort_latest_operation_with_http_info: #{e}"
 end
 ```
@@ -103,20 +103,20 @@ Creates or updates an agent pool in the specified managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
 agent_pool_name = 'agent_pool_name_example' # String | The name of the agent pool.
-parameters = AzureSDK::AgentPool.new # AgentPool | The agent pool to create or update.
+parameters = AzureRest::AgentPool.new # AgentPool | The agent pool to create or update.
 opts = {
   if_match: 'if_match_example', # String | The request should only proceed if an entity matches this string.
   if_none_match: 'if_none_match_example' # String | The request should only proceed if no entity matches this string.
@@ -126,7 +126,7 @@ begin
   
   result = api_instance.agent_pools_create_or_update(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_create_or_update: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AgentPool>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -188,14 +188,14 @@ Deletes an agent pool in the specified managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -209,7 +209,7 @@ opts = {
 begin
   
   api_instance.agent_pools_delete(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_delete: #{e}"
 end
 ```
@@ -227,7 +227,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_delete_with_http_info: #{e}"
 end
 ```
@@ -270,25 +270,25 @@ Deletes specific machines in an agent pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
 agent_pool_name = 'agent_pool_name_example' # String | The name of the agent pool.
-machines = AzureSDK::AgentPoolDeleteMachinesParameter.new({machine_names: ['machine_names_example']}) # AgentPoolDeleteMachinesParameter | A list of machines from the agent pool to be deleted.
+machines = AzureRest::AgentPoolDeleteMachinesParameter.new({machine_names: ['machine_names_example']}) # AgentPoolDeleteMachinesParameter | A list of machines from the agent pool to be deleted.
 
 begin
   
   api_instance.agent_pools_delete_machines(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name, machines)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_delete_machines: #{e}"
 end
 ```
@@ -306,7 +306,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_delete_machines_with_http_info: #{e}"
 end
 ```
@@ -348,14 +348,14 @@ Gets the specified managed cluster agent pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -366,7 +366,7 @@ begin
   
   result = api_instance.agent_pools_get(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get: #{e}"
 end
 ```
@@ -384,7 +384,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AgentPool>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get_with_http_info: #{e}"
 end
 ```
@@ -425,14 +425,14 @@ See [supported Kubernetes versions](https://docs.microsoft.com/azure/aks/support
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -442,7 +442,7 @@ begin
   # Gets a list of supported Kubernetes versions for the specified agent pool.
   result = api_instance.agent_pools_get_available_agent_pool_versions(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get_available_agent_pool_versions: #{e}"
 end
 ```
@@ -460,7 +460,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AgentPoolAvailableVersions>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get_available_agent_pool_versions_with_http_info: #{e}"
 end
 ```
@@ -500,14 +500,14 @@ Gets the upgrade profile for an agent pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -518,7 +518,7 @@ begin
   
   result = api_instance.agent_pools_get_upgrade_profile(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get_upgrade_profile: #{e}"
 end
 ```
@@ -536,7 +536,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AgentPoolUpgradeProfile>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_get_upgrade_profile_with_http_info: #{e}"
 end
 ```
@@ -577,14 +577,14 @@ Gets a list of agent pools in the specified managed cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -594,7 +594,7 @@ begin
   
   result = api_instance.agent_pools_list(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_list: #{e}"
 end
 ```
@@ -612,7 +612,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AgentPoolListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_list_with_http_info: #{e}"
 end
 ```
@@ -652,14 +652,14 @@ Upgrading the node image version of an agent pool applies the newest OS and runt
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AgentPoolsApi.new
+api_instance = AzureRest::AgentPoolsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -669,7 +669,7 @@ agent_pool_name = 'agent_pool_name_example' # String | The name of the agent poo
 begin
   # Upgrades the node image version of an agent pool to the latest.
   api_instance.agent_pools_upgrade_node_image_version(api_version, subscription_id, resource_group_name, resource_name, agent_pool_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_upgrade_node_image_version: #{e}"
 end
 ```
@@ -687,7 +687,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AgentPoolsApi->agent_pools_upgrade_node_image_version_with_http_info: #{e}"
 end
 ```

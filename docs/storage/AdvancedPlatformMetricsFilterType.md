@@ -1,4 +1,4 @@
-# AzureSDK::AdvancedPlatformMetricsFilterType
+# AzureRest::AdvancedPlatformMetricsFilterType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdvancedPlatformMetricsFilterType.new()
+instance = AzureRest::AdvancedPlatformMetricsFilterType.new()
 ```
 

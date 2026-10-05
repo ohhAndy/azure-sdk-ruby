@@ -1,4 +1,4 @@
-# AzureSDK::SkuInformation
+# AzureRest::SkuInformation
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuInformation.new(
+instance = AzureRest::SkuInformation.new(
   name: null,
   tier: null,
   resource_type: null,

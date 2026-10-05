@@ -1,4 +1,4 @@
-# AzureSDK::NvaInVnetSubnetReferenceProperties
+# AzureRest::NvaInVnetSubnetReferenceProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NvaInVnetSubnetReferenceProperties.new(
+instance = AzureRest::NvaInVnetSubnetReferenceProperties.new(
   id: null
 )
 ```

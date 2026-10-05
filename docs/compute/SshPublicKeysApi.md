@@ -1,4 +1,4 @@
-# AzureSDK::SshPublicKeysApi
+# AzureRest::SshPublicKeysApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -25,25 +25,25 @@ Creates a new SSH public key resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ssh_public_key_name = 'ssh_public_key_name_example' # String | The name of the SSH public key.
-parameters = AzureSDK::SshPublicKeyResource.new({location: 'location_example'}) # SshPublicKeyResource | Parameters supplied to create the SSH public key.
+parameters = AzureRest::SshPublicKeyResource.new({location: 'location_example'}) # SshPublicKeyResource | Parameters supplied to create the SSH public key.
 
 begin
   
   result = api_instance.ssh_public_keys_create(api_version, subscription_id, resource_group_name, ssh_public_key_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_create: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeyResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_create_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ Delete an SSH public key.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ ssh_public_key_name = 'ssh_public_key_name_example' # String | The name of the S
 begin
   
   api_instance.ssh_public_keys_delete(api_version, subscription_id, resource_group_name, ssh_public_key_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_delete_with_http_info: #{e}"
 end
 ```
@@ -176,27 +176,27 @@ Generates and returns a public/private key pair and populates the SSH public key
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ssh_public_key_name = 'ssh_public_key_name_example' # String | The name of the SSH public key.
 opts = {
-  parameters: AzureSDK::SshGenerateKeyPairInputParameters.new # SshGenerateKeyPairInputParameters | Parameters supplied to generate the SSH public key.
+  parameters: AzureRest::SshGenerateKeyPairInputParameters.new # SshGenerateKeyPairInputParameters | Parameters supplied to generate the SSH public key.
 }
 
 begin
   
   result = api_instance.ssh_public_keys_generate_key_pair(api_version, subscription_id, resource_group_name, ssh_public_key_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_generate_key_pair: #{e}"
 end
 ```
@@ -214,7 +214,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeyGenerateKeyPairResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_generate_key_pair_with_http_info: #{e}"
 end
 ```
@@ -255,14 +255,14 @@ Retrieves information about an SSH public key.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -272,7 +272,7 @@ begin
   
   result = api_instance.ssh_public_keys_get(api_version, subscription_id, resource_group_name, ssh_public_key_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_get: #{e}"
 end
 ```
@@ -290,7 +290,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeyResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_get_with_http_info: #{e}"
 end
 ```
@@ -330,14 +330,14 @@ Lists all of the SSH public keys in the specified resource group. Use the nextLi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -346,7 +346,7 @@ begin
   
   result = api_instance.ssh_public_keys_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_list_by_resource_group: #{e}"
 end
 ```
@@ -364,7 +364,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeysGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -403,14 +403,14 @@ Lists all of the SSH public keys in the subscription. Use the nextLink property 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -418,7 +418,7 @@ begin
   
   result = api_instance.ssh_public_keys_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_list_by_subscription: #{e}"
 end
 ```
@@ -436,7 +436,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeysGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -474,25 +474,25 @@ Updates a new SSH public key resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SshPublicKeysApi.new
+api_instance = AzureRest::SshPublicKeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ssh_public_key_name = 'ssh_public_key_name_example' # String | The name of the SSH public key.
-parameters = AzureSDK::SshPublicKeyUpdateResource.new # SshPublicKeyUpdateResource | Parameters supplied to update the SSH public key.
+parameters = AzureRest::SshPublicKeyUpdateResource.new # SshPublicKeyUpdateResource | Parameters supplied to update the SSH public key.
 
 begin
   
   result = api_instance.ssh_public_keys_update(api_version, subscription_id, resource_group_name, ssh_public_key_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_update: #{e}"
 end
 ```
@@ -510,7 +510,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SshPublicKeyResource>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SshPublicKeysApi->ssh_public_keys_update_with_http_info: #{e}"
 end
 ```

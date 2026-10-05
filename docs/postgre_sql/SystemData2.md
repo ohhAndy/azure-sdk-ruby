@@ -1,4 +1,4 @@
-# AzureSDK::SystemData2
+# AzureRest::SystemData2
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SystemData2.new(
+instance = AzureRest::SystemData2.new(
   created_by: null,
   created_by_type: null,
   created_at: null,

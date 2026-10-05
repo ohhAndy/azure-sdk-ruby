@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPAddressesApi
+# AzureRest::PublicIPAddressesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -27,25 +27,25 @@ Creates or updates a static or dynamic public IP address.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 public_ip_address_name = 'public_ip_address_name_example' # String | The name of the public IP address.
-parameters = AzureSDK::PublicIPAddress.new # PublicIPAddress | Parameters supplied to the create or update public IP address operation.
+parameters = AzureRest::PublicIPAddress.new # PublicIPAddress | Parameters supplied to the create or update public IP address operation.
 
 begin
   
   result = api_instance.public_ip_addresses_create_or_update(api_version, subscription_id, resource_group_name, public_ip_address_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_create_or_update: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -104,14 +104,14 @@ Gets the Ddos Protection Status of a Public IP Address
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -121,7 +121,7 @@ begin
   
   result = api_instance.public_ip_addresses_ddos_protection_status(api_version, subscription_id, resource_group_name, public_ip_address_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_ddos_protection_status: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIpDdosProtectionStatusResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_ddos_protection_status_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Deletes the specified public IP address.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ public_ip_address_name = 'public_ip_address_name_example' # String | The name of
 begin
   
   api_instance.public_ip_addresses_delete(api_version, subscription_id, resource_group_name, public_ip_address_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_delete: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_delete_with_http_info: #{e}"
 end
 ```
@@ -253,25 +253,25 @@ Disassociates the Cloud Service reserved Public IP and associates the specified 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 public_ip_address_name = 'public_ip_address_name_example' # String | The name of the public IP address.
-parameters = AzureSDK::DisassociateCloudServicePublicIpRequest.new({public_ip_arm_id: 'public_ip_arm_id_example'}) # DisassociateCloudServicePublicIpRequest | Parameter that define which Public IP Address should be associated in place of given Public IP Address.
+parameters = AzureRest::DisassociateCloudServicePublicIpRequest.new({public_ip_arm_id: 'public_ip_arm_id_example'}) # DisassociateCloudServicePublicIpRequest | Parameter that define which Public IP Address should be associated in place of given Public IP Address.
 
 begin
   
   result = api_instance.public_ip_addresses_disassociate_cloud_service_reserved_public_ip(api_version, subscription_id, resource_group_name, public_ip_address_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_disassociate_cloud_service_reserved_public_ip: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_disassociate_cloud_service_reserved_public_ip_with_http_info: #{e}"
 end
 ```
@@ -330,14 +330,14 @@ Gets the specified public IP address in a specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -350,7 +350,7 @@ begin
   
   result = api_instance.public_ip_addresses_get(api_version, subscription_id, resource_group_name, public_ip_address_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_get: #{e}"
 end
 ```
@@ -368,7 +368,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_get_with_http_info: #{e}"
 end
 ```
@@ -409,14 +409,14 @@ Gets all public IP addresses in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -425,7 +425,7 @@ begin
   
   result = api_instance.public_ip_addresses_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_list: #{e}"
 end
 ```
@@ -443,7 +443,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddressListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_list_with_http_info: #{e}"
 end
 ```
@@ -482,14 +482,14 @@ Gets all the public IP addresses in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -497,7 +497,7 @@ begin
   
   result = api_instance.public_ip_addresses_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_list_all: #{e}"
 end
 ```
@@ -515,7 +515,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddressListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_list_all_with_http_info: #{e}"
 end
 ```
@@ -553,25 +553,25 @@ Reserves the specified Cloud Service Public IP by switching its allocation metho
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 public_ip_address_name = 'public_ip_address_name_example' # String | The name of the public IP address.
-parameters = AzureSDK::ReserveCloudServicePublicIpAddressRequest.new({is_rollback: AzureSDK::IsRollback::TRUE}) # ReserveCloudServicePublicIpAddressRequest | Parameter that define which Public IP Address should be associated in place of given Public IP Address.
+parameters = AzureRest::ReserveCloudServicePublicIpAddressRequest.new({is_rollback: AzureRest::IsRollback::TRUE}) # ReserveCloudServicePublicIpAddressRequest | Parameter that define which Public IP Address should be associated in place of given Public IP Address.
 
 begin
   
   result = api_instance.public_ip_addresses_reserve_cloud_service_public_ip_address(api_version, subscription_id, resource_group_name, public_ip_address_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_reserve_cloud_service_public_ip_address: #{e}"
 end
 ```
@@ -589,7 +589,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_reserve_cloud_service_public_ip_address_with_http_info: #{e}"
 end
 ```
@@ -630,25 +630,25 @@ Updates public IP address tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PublicIPAddressesApi.new
+api_instance = AzureRest::PublicIPAddressesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 public_ip_address_name = 'public_ip_address_name_example' # String | The name of the public IP address.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update public IP address tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update public IP address tags.
 
 begin
   
   result = api_instance.public_ip_addresses_update_tags(api_version, subscription_id, resource_group_name, public_ip_address_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_update_tags: #{e}"
 end
 ```
@@ -666,7 +666,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PublicIPAddress>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PublicIPAddressesApi->public_ip_addresses_update_tags_with_http_info: #{e}"
 end
 ```

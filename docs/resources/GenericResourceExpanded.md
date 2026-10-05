@@ -1,4 +1,4 @@
-# AzureSDK::GenericResourceExpanded
+# AzureRest::GenericResourceExpanded
 
 ## Properties
 
@@ -24,9 +24,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GenericResourceExpanded.new(
+instance = AzureRest::GenericResourceExpanded.new(
   id: null,
   name: null,
   type: null,

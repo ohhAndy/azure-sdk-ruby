@@ -1,4 +1,4 @@
-# AzureSDK::LastAccessTimeTrackingPolicy
+# AzureRest::LastAccessTimeTrackingPolicy
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LastAccessTimeTrackingPolicy.new(
+instance = AzureRest::LastAccessTimeTrackingPolicy.new(
   enable: null,
   name: null,
   tracking_granularity_in_days: null,

@@ -1,4 +1,4 @@
-# AzureSDK::MySQLServerIdentity
+# AzureRest::MySQLServerIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MySQLServerIdentity.new(
+instance = AzureRest::MySQLServerIdentity.new(
   principal_id: null,
   tenant_id: null,
   type: null,

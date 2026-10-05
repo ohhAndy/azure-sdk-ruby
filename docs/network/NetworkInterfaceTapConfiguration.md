@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceTapConfiguration
+# AzureRest::NetworkInterfaceTapConfiguration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceTapConfiguration.new(
+instance = AzureRest::NetworkInterfaceTapConfiguration.new(
   id: null,
   name: null,
   type: null,

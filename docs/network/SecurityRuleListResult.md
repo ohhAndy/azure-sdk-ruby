@@ -1,4 +1,4 @@
-# AzureSDK::SecurityRuleListResult
+# AzureRest::SecurityRuleListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityRuleListResult.new(
+instance = AzureRest::SecurityRuleListResult.new(
   value: null,
   next_link: null
 )

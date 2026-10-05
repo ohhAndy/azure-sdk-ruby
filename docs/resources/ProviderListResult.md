@@ -1,4 +1,4 @@
-# AzureSDK::ProviderListResult
+# AzureRest::ProviderListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderListResult.new(
+instance = AzureRest::ProviderListResult.new(
   value: null,
   next_link: null
 )

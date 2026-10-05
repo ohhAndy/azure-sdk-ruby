@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineDiagnosticRunCommand
+# AzureRest::VirtualMachineDiagnosticRunCommand
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineDiagnosticRunCommand.new(
+instance = AzureRest::VirtualMachineDiagnosticRunCommand.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ModelAlias
+# AzureRest::ModelAlias
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ModelAlias.new(
+instance = AzureRest::ModelAlias.new(
   name: null,
   paths: null,
   type: null,

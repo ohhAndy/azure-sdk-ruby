@@ -1,4 +1,4 @@
-# AzureSDK::SshPublicKeyGenerateKeyPairResult
+# AzureRest::SshPublicKeyGenerateKeyPairResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SshPublicKeyGenerateKeyPairResult.new(
+instance = AzureRest::SshPublicKeyGenerateKeyPairResult.new(
   private_key: null,
   public_key: null,
   id: null

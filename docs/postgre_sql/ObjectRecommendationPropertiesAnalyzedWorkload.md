@@ -1,4 +1,4 @@
-# AzureSDK::ObjectRecommendationPropertiesAnalyzedWorkload
+# AzureRest::ObjectRecommendationPropertiesAnalyzedWorkload
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectRecommendationPropertiesAnalyzedWorkload.new(
+instance = AzureRest::ObjectRecommendationPropertiesAnalyzedWorkload.new(
   start_time: null,
   end_time: null,
   query_count: null

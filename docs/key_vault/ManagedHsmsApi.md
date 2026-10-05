@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmsApi
+# AzureRest::ManagedHsmsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -26,14 +26,14 @@ Gets the private link resources supported for the managed hsm pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -43,7 +43,7 @@ begin
   
   result = api_instance.m_hsm_private_link_resources_list_by_mhsm_resource(api_version, subscription_id, resource_group_name, name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->m_hsm_private_link_resources_list_by_mhsm_resource: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MHSMPrivateLinkResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->m_hsm_private_link_resources_list_by_mhsm_resource_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ The List operation gets information about the regions associated with the manage
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ begin
   
   result = api_instance.m_hsm_regions_list_by_resource(api_version, subscription_id, resource_group_name, name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->m_hsm_regions_list_by_resource: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MHSMRegionsListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->m_hsm_regions_list_by_resource_with_http_info: #{e}"
 end
 ```
@@ -176,25 +176,25 @@ Create or update a managed HSM Pool in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 name = 'name_example' # String | The name of the managed HSM Pool.
-parameters = AzureSDK::ManagedHsm.new # ManagedHsm | Parameters to create or update the managed HSM Pool
+parameters = AzureRest::ManagedHsm.new # ManagedHsm | Parameters to create or update the managed HSM Pool
 
 begin
   
   result = api_instance.managed_hsms_create_or_update(api_version, subscription_id, resource_group_name, name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_create_or_update: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedHsm>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ Deletes the specified managed HSM Pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -269,7 +269,7 @@ name = 'name_example' # String | The name of the managed HSM Pool.
 begin
   
   api_instance.managed_hsms_delete(api_version, subscription_id, resource_group_name, name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_delete: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_delete_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Gets the specified managed HSM Pool.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -344,7 +344,7 @@ begin
   
   result = api_instance.managed_hsms_get(api_version, subscription_id, resource_group_name, name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_get: #{e}"
 end
 ```
@@ -362,7 +362,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedHsm>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_get_with_http_info: #{e}"
 end
 ```
@@ -402,14 +402,14 @@ The List operation gets information about the managed HSM Pools associated with 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -421,7 +421,7 @@ begin
   
   result = api_instance.managed_hsms_list_by_resource_group(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_list_by_resource_group: #{e}"
 end
 ```
@@ -439,7 +439,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedHsmListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -479,14 +479,14 @@ The List operation gets information about the managed HSM Pools associated with 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 opts = {
@@ -497,7 +497,7 @@ begin
   
   result = api_instance.managed_hsms_list_by_subscription(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_list_by_subscription: #{e}"
 end
 ```
@@ -515,7 +515,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedHsmListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -554,25 +554,25 @@ Update a managed HSM Pool in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ManagedHsmsApi.new
+api_instance = AzureRest::ManagedHsmsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 name = 'name_example' # String | The name of the managed HSM Pool.
-parameters = AzureSDK::ManagedHsm.new # ManagedHsm | Parameters to patch the managed HSM Pool
+parameters = AzureRest::ManagedHsm.new # ManagedHsm | Parameters to patch the managed HSM Pool
 
 begin
   
   result = api_instance.managed_hsms_update(api_version, subscription_id, resource_group_name, name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_update: #{e}"
 end
 ```
@@ -590,7 +590,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ManagedHsm>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ManagedHsmsApi->managed_hsms_update_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointSourceVMStorageProfile
+# AzureRest::RestorePointSourceVMStorageProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointSourceVMStorageProfile.new(
+instance = AzureRest::RestorePointSourceVMStorageProfile.new(
   os_disk: null,
   data_disks: null,
   disk_controller_type: null

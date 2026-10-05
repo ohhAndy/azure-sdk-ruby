@@ -1,4 +1,4 @@
-# AzureSDK::ResourceSharingProfile
+# AzureRest::ResourceSharingProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceSharingProfile.new(
+instance = AzureRest::ResourceSharingProfile.new(
   subscription_ids: null
 )
 ```

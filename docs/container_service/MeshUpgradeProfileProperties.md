@@ -1,4 +1,4 @@
-# AzureSDK::MeshUpgradeProfileProperties
+# AzureRest::MeshUpgradeProfileProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MeshUpgradeProfileProperties.new(
+instance = AzureRest::MeshUpgradeProfileProperties.new(
   revision: null,
   upgrades: null,
   compatible_with: null

@@ -1,4 +1,4 @@
-# AzureSDK::ServiceSasParameters
+# AzureRest::ServiceSasParameters
 
 ## Properties
 
@@ -26,9 +26,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceSasParameters.new(
+instance = AzureRest::ServiceSasParameters.new(
   canonicalized_resource: null,
   signed_resource: null,
   signed_permission: null,

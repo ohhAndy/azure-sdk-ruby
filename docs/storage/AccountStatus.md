@@ -1,4 +1,4 @@
-# AzureSDK::AccountStatus
+# AzureRest::AccountStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccountStatus.new()
+instance = AzureRest::AccountStatus.new()
 ```
 

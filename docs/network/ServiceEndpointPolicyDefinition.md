@@ -1,4 +1,4 @@
-# AzureSDK::ServiceEndpointPolicyDefinition
+# AzureRest::ServiceEndpointPolicyDefinition
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceEndpointPolicyDefinition.new(
+instance = AzureRest::ServiceEndpointPolicyDefinition.new(
   id: null,
   name: null,
   type: null,

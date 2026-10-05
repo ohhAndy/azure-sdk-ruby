@@ -1,4 +1,4 @@
-# AzureSDK::StatusLevelTypes
+# AzureRest::StatusLevelTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StatusLevelTypes.new()
+instance = AzureRest::StatusLevelTypes.new()
 ```
 

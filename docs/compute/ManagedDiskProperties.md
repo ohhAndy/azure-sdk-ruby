@@ -1,4 +1,4 @@
-# AzureSDK::ManagedDiskProperties
+# AzureRest::ManagedDiskProperties
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedDiskProperties.new(
+instance = AzureRest::ManagedDiskProperties.new(
   tier: null,
   bursting_enabled: null,
   performance_plus: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DscpConfiguration
+# AzureRest::DscpConfiguration
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DscpConfiguration.new(
+instance = AzureRest::DscpConfiguration.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ErrorResponseBody
+# AzureRest::ErrorResponseBody
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ErrorResponseBody.new(
+instance = AzureRest::ErrorResponseBody.new(
   code: null,
   message: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::TriggerParameters
+# AzureRest::TriggerParameters
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TriggerParameters.new(
+instance = AzureRest::TriggerParameters.new(
   start_from: null,
   interval: null,
   interval_unit: null,

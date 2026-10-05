@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveRoute
+# AzureRest::EffectiveRoute
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveRoute.new(
+instance = AzureRest::EffectiveRoute.new(
   name: null,
   disable_bgp_route_propagation: null,
   source: null,

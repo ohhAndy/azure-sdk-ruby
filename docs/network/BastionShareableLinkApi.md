@@ -1,4 +1,4 @@
-# AzureSDK::BastionShareableLinkApi
+# AzureRest::BastionShareableLinkApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,24 +22,24 @@ Deletes the Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionShareableLinkApi.new
+api_instance = AzureRest::BastionShareableLinkApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   api_instance.delete_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->delete_bastion_shareable_link: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->delete_bastion_shareable_link_with_http_info: #{e}"
 end
 ```
@@ -98,24 +98,24 @@ Deletes the Bastion Shareable Links for all the tokens specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionShareableLinkApi.new
+api_instance = AzureRest::BastionShareableLinkApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_token_request = AzureSDK::BastionShareableLinkTokenListRequest.new # BastionShareableLinkTokenListRequest | Post request for Delete Bastion Shareable Link By Token endpoint.
+bsl_token_request = AzureRest::BastionShareableLinkTokenListRequest.new # BastionShareableLinkTokenListRequest | Post request for Delete Bastion Shareable Link By Token endpoint.
 
 begin
   
   api_instance.delete_bastion_shareable_link_by_token(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_token_request)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->delete_bastion_shareable_link_by_token: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->delete_bastion_shareable_link_by_token_with_http_info: #{e}"
 end
 ```
@@ -174,25 +174,25 @@ Return the Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionShareableLinkApi.new
+api_instance = AzureRest::BastionShareableLinkApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   result = api_instance.get_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->get_bastion_shareable_link: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionShareableLinkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->get_bastion_shareable_link_with_http_info: #{e}"
 end
 ```
@@ -251,25 +251,25 @@ Creates a Bastion Shareable Links for all the VMs specified in the request.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BastionShareableLinkApi.new
+api_instance = AzureRest::BastionShareableLinkApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 bastion_host_name = 'bastion_host_name_example' # String | The name of the Bastion Host.
-bsl_request = AzureSDK::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
+bsl_request = AzureRest::BastionShareableLinkListRequest.new # BastionShareableLinkListRequest | Post request for Create/Delete/Get Bastion Shareable Link endpoints.
 
 begin
   
   result = api_instance.put_bastion_shareable_link(api_version, subscription_id, resource_group_name, bastion_host_name, bsl_request)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->put_bastion_shareable_link: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BastionShareableLinkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BastionShareableLinkApi->put_bastion_shareable_link_with_http_info: #{e}"
 end
 ```

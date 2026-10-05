@@ -1,4 +1,4 @@
-# AzureSDK::RequestRateByIntervalInput
+# AzureRest::RequestRateByIntervalInput
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RequestRateByIntervalInput.new(
+instance = AzureRest::RequestRateByIntervalInput.new(
   blob_container_sas_uri: null,
   from_time: null,
   to_time: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterStorageProfileBlobCSIDriver
+# AzureRest::ManagedClusterStorageProfileBlobCSIDriver
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterStorageProfileBlobCSIDriver.new(
+instance = AzureRest::ManagedClusterStorageProfileBlobCSIDriver.new(
   enabled: null
 )
 ```

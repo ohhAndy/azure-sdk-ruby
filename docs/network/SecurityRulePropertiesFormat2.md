@@ -1,4 +1,4 @@
-# AzureSDK::SecurityRulePropertiesFormat2
+# AzureRest::SecurityRulePropertiesFormat2
 
 ## Properties
 
@@ -24,9 +24,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityRulePropertiesFormat2.new(
+instance = AzureRest::SecurityRulePropertiesFormat2.new(
   description: null,
   protocol: null,
   source_port_range: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DelegatedSubnetUsage
+# AzureRest::DelegatedSubnetUsage
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DelegatedSubnetUsage.new(
+instance = AzureRest::DelegatedSubnetUsage.new(
   subnet_name: null,
   usage: null
 )

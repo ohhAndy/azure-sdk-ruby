@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetInstanceView
+# AzureRest::VirtualMachineScaleSetInstanceView
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetInstanceView.new(
+instance = AzureRest::VirtualMachineScaleSetInstanceView.new(
   virtual_machine: null,
   extensions: null,
   statuses: null,

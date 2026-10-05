@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceSiteProperties
+# AzureRest::VirtualApplianceSiteProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualApplianceSiteProperties.new(
+instance = AzureRest::VirtualApplianceSiteProperties.new(
   address_prefix: null,
   o365_policy: null,
   provisioning_state: null

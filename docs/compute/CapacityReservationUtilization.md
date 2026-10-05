@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationUtilization
+# AzureRest::CapacityReservationUtilization
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapacityReservationUtilization.new(
+instance = AzureRest::CapacityReservationUtilization.new(
   current_capacity: null,
   virtual_machines_allocated: null,
   used_reserved_count_by_subscription: null

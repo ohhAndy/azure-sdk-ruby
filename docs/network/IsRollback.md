@@ -1,4 +1,4 @@
-# AzureSDK::IsRollback
+# AzureRest::IsRollback
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IsRollback.new()
+instance = AzureRest::IsRollback.new()
 ```
 

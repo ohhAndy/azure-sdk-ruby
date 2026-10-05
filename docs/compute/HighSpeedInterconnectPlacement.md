@@ -1,4 +1,4 @@
-# AzureSDK::HighSpeedInterconnectPlacement
+# AzureRest::HighSpeedInterconnectPlacement
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::HighSpeedInterconnectPlacement.new()
+instance = AzureRest::HighSpeedInterconnectPlacement.new()
 ```
 

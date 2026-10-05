@@ -1,4 +1,4 @@
-# AzureSDK::IPConfigurationProfilePropertiesFormat
+# AzureRest::IPConfigurationProfilePropertiesFormat
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPConfigurationProfilePropertiesFormat.new(
+instance = AzureRest::IPConfigurationProfilePropertiesFormat.new(
   subnet: null,
   provisioning_state: null
 )

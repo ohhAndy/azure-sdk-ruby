@@ -1,4 +1,4 @@
-# AzureSDK::ImpactRecord
+# AzureRest::ImpactRecord
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImpactRecord.new(
+instance = AzureRest::ImpactRecord.new(
   dimension_name: null,
   unit: null,
   query_id: null,

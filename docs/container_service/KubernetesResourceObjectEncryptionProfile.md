@@ -1,4 +1,4 @@
-# AzureSDK::KubernetesResourceObjectEncryptionProfile
+# AzureRest::KubernetesResourceObjectEncryptionProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KubernetesResourceObjectEncryptionProfile.new(
+instance = AzureRest::KubernetesResourceObjectEncryptionProfile.new(
   infrastructure_encryption: null
 )
 ```

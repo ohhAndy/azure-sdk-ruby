@@ -1,4 +1,4 @@
-# AzureSDK::DeletedAccount
+# AzureRest::DeletedAccount
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletedAccount.new(
+instance = AzureRest::DeletedAccount.new(
   id: null,
   name: null,
   type: null,

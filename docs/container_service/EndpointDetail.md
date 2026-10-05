@@ -1,4 +1,4 @@
-# AzureSDK::EndpointDetail
+# AzureRest::EndpointDetail
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EndpointDetail.new(
+instance = AzureRest::EndpointDetail.new(
   ip_address: null,
   port: null,
   protocol: null,

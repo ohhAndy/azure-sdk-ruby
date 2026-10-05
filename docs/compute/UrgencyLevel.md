@@ -1,4 +1,4 @@
-# AzureSDK::UrgencyLevel
+# AzureRest::UrgencyLevel
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UrgencyLevel.new()
+instance = AzureRest::UrgencyLevel.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ObjectReplicationPolicyFilter
+# AzureRest::ObjectReplicationPolicyFilter
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectReplicationPolicyFilter.new(
+instance = AzureRest::ObjectReplicationPolicyFilter.new(
   prefix_match: null,
   min_creation_time: null
 )

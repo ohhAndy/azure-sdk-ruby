@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountPropertiesUpdateParameters
+# AzureRest::StorageAccountPropertiesUpdateParameters
 
 ## Properties
 
@@ -36,9 +36,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountPropertiesUpdateParameters.new(
+instance = AzureRest::StorageAccountPropertiesUpdateParameters.new(
   custom_domain: null,
   encryption: null,
   sas_policy: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DeletedVaultProperties
+# AzureRest::DeletedVaultProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletedVaultProperties.new(
+instance = AzureRest::DeletedVaultProperties.new(
   vault_id: null,
   location: null,
   deletion_date: null,

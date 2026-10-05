@@ -1,4 +1,4 @@
-# AzureSDK::VirtualApplianceNetworkInterfaceConfiguration
+# AzureRest::VirtualApplianceNetworkInterfaceConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualApplianceNetworkInterfaceConfiguration.new(
+instance = AzureRest::VirtualApplianceNetworkInterfaceConfiguration.new(
   type: null,
   properties: null
 )

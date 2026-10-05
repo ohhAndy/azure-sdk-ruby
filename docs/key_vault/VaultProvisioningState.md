@@ -1,4 +1,4 @@
-# AzureSDK::VaultProvisioningState
+# AzureRest::VaultProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VaultProvisioningState.new()
+instance = AzureRest::VaultProvisioningState.new()
 ```
 

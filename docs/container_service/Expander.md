@@ -1,4 +1,4 @@
-# AzureSDK::Expander
+# AzureRest::Expander
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Expander.new()
+instance = AzureRest::Expander.new()
 ```
 

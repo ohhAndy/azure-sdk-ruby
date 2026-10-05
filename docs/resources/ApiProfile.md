@@ -1,4 +1,4 @@
-# AzureSDK::ApiProfile
+# AzureRest::ApiProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApiProfile.new(
+instance = AzureRest::ApiProfile.new(
   profile_version: null,
   api_version: null
 )

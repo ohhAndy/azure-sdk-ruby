@@ -1,4 +1,4 @@
-# AzureSDK::EffectiveNetworkSecurityGroup
+# AzureRest::EffectiveNetworkSecurityGroup
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EffectiveNetworkSecurityGroup.new(
+instance = AzureRest::EffectiveNetworkSecurityGroup.new(
   network_security_group: null,
   association: null,
   effective_security_rules: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DeletedAccountListResult
+# AzureRest::DeletedAccountListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletedAccountListResult.new(
+instance = AzureRest::DeletedAccountListResult.new(
   value: null,
   next_link: null
 )

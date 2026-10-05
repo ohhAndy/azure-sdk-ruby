@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointSourceMetadata
+# AzureRest::RestorePointSourceMetadata
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointSourceMetadata.new(
+instance = AzureRest::RestorePointSourceMetadata.new(
   hardware_profile: null,
   storage_profile: null,
   os_profile: null,

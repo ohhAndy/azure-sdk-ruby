@@ -1,4 +1,4 @@
-# AzureSDK::ClustersApi
+# AzureRest::ClustersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -31,25 +31,25 @@ Creates a new HDInsight cluster with the specified parameters.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::ClusterCreateParametersExtended.new # ClusterCreateParametersExtended | The cluster create request.
+parameters = AzureRest::ClusterCreateParametersExtended.new # ClusterCreateParametersExtended | The cluster create request.
 
 begin
   
   result = api_instance.clusters_create(subscription_id, resource_group_name, cluster_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_create: #{e}"
 end
 ```
@@ -67,7 +67,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Cluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_create_with_http_info: #{e}"
 end
 ```
@@ -108,14 +108,14 @@ Deletes the specified HDInsight cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
@@ -124,7 +124,7 @@ api_version = 'api_version_example' # String | The HDInsight client API Version.
 begin
   
   api_instance.clusters_delete(subscription_id, resource_group_name, cluster_name, api_version)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_delete: #{e}"
 end
 ```
@@ -142,7 +142,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_delete_with_http_info: #{e}"
 end
 ```
@@ -182,14 +182,14 @@ Gets the specified cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
@@ -199,7 +199,7 @@ begin
   
   result = api_instance.clusters_get(subscription_id, resource_group_name, cluster_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Cluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get_with_http_info: #{e}"
 end
 ```
@@ -257,14 +257,14 @@ The the async operation status.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
@@ -275,7 +275,7 @@ begin
   
   result = api_instance.clusters_get_azure_async_operation_status(subscription_id, resource_group_name, cluster_name, api_version, operation_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get_azure_async_operation_status: #{e}"
 end
 ```
@@ -293,7 +293,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AsyncOperationResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get_azure_async_operation_status_with_http_info: #{e}"
 end
 ```
@@ -334,14 +334,14 @@ Gets the gateway settings for the specified cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
@@ -351,7 +351,7 @@ begin
   
   result = api_instance.clusters_get_gateway_settings(subscription_id, resource_group_name, cluster_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get_gateway_settings: #{e}"
 end
 ```
@@ -369,7 +369,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GatewaySettings>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_get_gateway_settings_with_http_info: #{e}"
 end
 ```
@@ -409,14 +409,14 @@ Lists all the HDInsight clusters under the subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
 
@@ -424,7 +424,7 @@ begin
   
   result = api_instance.clusters_list(subscription_id, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_list: #{e}"
 end
 ```
@@ -442,7 +442,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ClusterListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_list_with_http_info: #{e}"
 end
 ```
@@ -480,14 +480,14 @@ Lists the HDInsight clusters in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
@@ -496,7 +496,7 @@ begin
   
   result = api_instance.clusters_list_by_resource_group(subscription_id, resource_group_name, api_version)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_list_by_resource_group: #{e}"
 end
 ```
@@ -514,7 +514,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ClusterListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -553,25 +553,25 @@ Resizes the specified HDInsight cluster to the specified size.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 role_name = 'workernode' # String | The constant value for the roleName
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::ClusterResizeParameters.new # ClusterResizeParameters | The parameters for the resize operation.
+parameters = AzureRest::ClusterResizeParameters.new # ClusterResizeParameters | The parameters for the resize operation.
 
 begin
   
   api_instance.clusters_resize(subscription_id, resource_group_name, cluster_name, role_name, api_version, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_resize: #{e}"
 end
 ```
@@ -589,7 +589,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_resize_with_http_info: #{e}"
 end
 ```
@@ -631,24 +631,24 @@ Rotate disk encryption key of the specified HDInsight cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::ClusterDiskEncryptionParameters.new # ClusterDiskEncryptionParameters | The parameters for the disk encryption operation.
+parameters = AzureRest::ClusterDiskEncryptionParameters.new # ClusterDiskEncryptionParameters | The parameters for the disk encryption operation.
 
 begin
   
   api_instance.clusters_rotate_disk_encryption_key(subscription_id, resource_group_name, cluster_name, api_version, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_rotate_disk_encryption_key: #{e}"
 end
 ```
@@ -666,7 +666,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_rotate_disk_encryption_key_with_http_info: #{e}"
 end
 ```
@@ -707,25 +707,25 @@ Patch HDInsight cluster with the specified parameters.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::ClusterPatchParameters.new # ClusterPatchParameters | The cluster patch request.
+parameters = AzureRest::ClusterPatchParameters.new # ClusterPatchParameters | The cluster patch request.
 
 begin
   
   result = api_instance.clusters_update(subscription_id, resource_group_name, cluster_name, api_version, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update: #{e}"
 end
 ```
@@ -743,7 +743,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Cluster>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_with_http_info: #{e}"
 end
 ```
@@ -784,25 +784,25 @@ Updates the Autoscale Configuration for HDInsight cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 role_name = 'workernode' # String | The constant value for the roleName
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::AutoscaleConfigurationUpdateParameter.new # AutoscaleConfigurationUpdateParameter | The parameters for the update autoscale configuration operation.
+parameters = AzureRest::AutoscaleConfigurationUpdateParameter.new # AutoscaleConfigurationUpdateParameter | The parameters for the update autoscale configuration operation.
 
 begin
   
   api_instance.clusters_update_auto_scale_configuration(subscription_id, resource_group_name, cluster_name, role_name, api_version, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_auto_scale_configuration: #{e}"
 end
 ```
@@ -820,7 +820,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_auto_scale_configuration_with_http_info: #{e}"
 end
 ```
@@ -862,24 +862,24 @@ Configures the gateway settings on the specified cluster.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::UpdateGatewaySettingsParameters.new # UpdateGatewaySettingsParameters | The cluster configurations.
+parameters = AzureRest::UpdateGatewaySettingsParameters.new # UpdateGatewaySettingsParameters | The cluster configurations.
 
 begin
   
   api_instance.clusters_update_gateway_settings(subscription_id, resource_group_name, cluster_name, api_version, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_gateway_settings: #{e}"
 end
 ```
@@ -897,7 +897,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_gateway_settings_with_http_info: #{e}"
 end
 ```
@@ -938,24 +938,24 @@ Updates the cluster identity certificate.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ClustersApi.new
+api_instance = AzureRest::ClustersApi.new
 subscription_id = 'subscription_id_example' # String | The subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group.
 cluster_name = 'cluster_name_example' # String | The name of the cluster.
 api_version = 'api_version_example' # String | The HDInsight client API Version.
-parameters = AzureSDK::UpdateClusterIdentityCertificateParameters.new # UpdateClusterIdentityCertificateParameters | The cluster configurations.
+parameters = AzureRest::UpdateClusterIdentityCertificateParameters.new # UpdateClusterIdentityCertificateParameters | The cluster configurations.
 
 begin
   
   api_instance.clusters_update_identity_certificate(subscription_id, resource_group_name, cluster_name, api_version, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_identity_certificate: #{e}"
 end
 ```
@@ -973,7 +973,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ClustersApi->clusters_update_identity_certificate_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::RecurringCharge
+# AzureRest::RecurringCharge
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RecurringCharge.new(
+instance = AzureRest::RecurringCharge.new(
   recurring_charge: null
 )
 ```

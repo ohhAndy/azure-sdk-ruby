@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineRunCommandScriptSource
+# AzureRest::VirtualMachineRunCommandScriptSource
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineRunCommandScriptSource.new(
+instance = AzureRest::VirtualMachineRunCommandScriptSource.new(
   script: null,
   script_uri: null,
   command_id: null,

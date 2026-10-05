@@ -1,4 +1,4 @@
-# AzureSDK::DscpConfigurationPropertiesFormat
+# AzureRest::DscpConfigurationPropertiesFormat
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DscpConfigurationPropertiesFormat.new(
+instance = AzureRest::DscpConfigurationPropertiesFormat.new(
   markings: null,
   source_ip_ranges: null,
   destination_ip_ranges: null,

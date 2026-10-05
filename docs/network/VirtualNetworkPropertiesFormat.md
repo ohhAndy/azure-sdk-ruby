@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkPropertiesFormat
+# AzureRest::VirtualNetworkPropertiesFormat
 
 ## Properties
 
@@ -25,9 +25,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkPropertiesFormat.new(
+instance = AzureRest::VirtualNetworkPropertiesFormat.new(
   address_space: null,
   dhcp_options: null,
   flow_timeout_in_minutes: null,

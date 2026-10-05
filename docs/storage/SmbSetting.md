@@ -1,4 +1,4 @@
-# AzureSDK::SmbSetting
+# AzureRest::SmbSetting
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SmbSetting.new(
+instance = AzureRest::SmbSetting.new(
   multichannel: null,
   versions: null,
   authentication_methods: null,

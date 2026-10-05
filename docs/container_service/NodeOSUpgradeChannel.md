@@ -1,4 +1,4 @@
-# AzureSDK::NodeOSUpgradeChannel
+# AzureRest::NodeOSUpgradeChannel
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NodeOSUpgradeChannel.new()
+instance = AzureRest::NodeOSUpgradeChannel.new()
 ```
 

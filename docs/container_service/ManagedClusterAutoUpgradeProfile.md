@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAutoUpgradeProfile
+# AzureRest::ManagedClusterAutoUpgradeProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAutoUpgradeProfile.new(
+instance = AzureRest::ManagedClusterAutoUpgradeProfile.new(
   upgrade_channel: null,
   node_os_upgrade_channel: null
 )

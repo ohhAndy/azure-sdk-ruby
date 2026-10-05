@@ -1,4 +1,4 @@
-# AzureSDK::VMSizeProperties
+# AzureRest::VMSizeProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMSizeProperties.new(
+instance = AzureRest::VMSizeProperties.new(
   v_cpus_available: null,
   v_cpus_per_core: null
 )

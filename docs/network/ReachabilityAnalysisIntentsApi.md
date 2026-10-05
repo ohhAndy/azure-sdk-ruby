@@ -1,4 +1,4 @@
-# AzureSDK::ReachabilityAnalysisIntentsApi
+# AzureRest::ReachabilityAnalysisIntentsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,27 +21,27 @@ Creates Reachability Analysis Intent.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisIntentsApi.new
+api_instance = AzureRest::ReachabilityAnalysisIntentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_manager_name = 'network_manager_name_example' # String | The name of the network manager.
 workspace_name = 'workspace_name_example' # String | The name of the resource
 reachability_analysis_intent_name = 'reachability_analysis_intent_name_example' # String | Reachability Analysis Intent name.
-body = AzureSDK::ReachabilityAnalysisIntent.new({properties: AzureSDK::ReachabilityAnalysisIntentProperties.new({source_resource_id: 'source_resource_id_example', destination_resource_id: 'destination_resource_id_example', ip_traffic: AzureSDK::IPTraffic.new({source_ips: ['source_ips_example'], destination_ips: ['destination_ips_example'], source_ports: ['source_ports_example'], destination_ports: ['destination_ports_example'], protocols: [AzureSDK::NetworkProtocol::ANY]})})}) # ReachabilityAnalysisIntent | Reachability Analysis Intent object to create/update.
+body = AzureRest::ReachabilityAnalysisIntent.new({properties: AzureRest::ReachabilityAnalysisIntentProperties.new({source_resource_id: 'source_resource_id_example', destination_resource_id: 'destination_resource_id_example', ip_traffic: AzureRest::IPTraffic.new({source_ips: ['source_ips_example'], destination_ips: ['destination_ips_example'], source_ports: ['source_ports_example'], destination_ports: ['destination_ports_example'], protocols: [AzureRest::NetworkProtocol::ANY]})})}) # ReachabilityAnalysisIntent | Reachability Analysis Intent object to create/update.
 
 begin
   # Creates Reachability Analysis Intent.
   result = api_instance.reachability_analysis_intents_create(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, reachability_analysis_intent_name, body)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_create: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisIntent>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_create_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ Get the Reachability Analysis Intent.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisIntentsApi.new
+api_instance = AzureRest::ReachabilityAnalysisIntentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -121,7 +121,7 @@ begin
   # Get the Reachability Analysis Intent.
   result = api_instance.reachability_analysis_intents_get(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, reachability_analysis_intent_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_get: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisIntent>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_get_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Gets list of Reachability Analysis Intents .
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisIntentsApi.new
+api_instance = AzureRest::ReachabilityAnalysisIntentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -206,7 +206,7 @@ begin
   # Gets list of Reachability Analysis Intents .
   result = api_instance.reachability_analysis_intents_list(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_list: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisIntentListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisIntentsApi->reachability_analysis_intents_list_with_http_info: #{e}"
 end
 ```

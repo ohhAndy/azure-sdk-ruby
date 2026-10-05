@@ -1,4 +1,4 @@
-# AzureSDK::StartDataMigration
+# AzureRest::StartDataMigration
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StartDataMigration.new()
+instance = AzureRest::StartDataMigration.new()
 ```
 

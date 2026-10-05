@@ -1,4 +1,4 @@
-# AzureSDK::SnapshotProperties
+# AzureRest::SnapshotProperties
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SnapshotProperties.new(
+instance = AzureRest::SnapshotProperties.new(
   creation_data: null,
   snapshot_type: null,
   kubernetes_version: null,

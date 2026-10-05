@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties2
+# AzureRest::NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties2
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties2.new(
+instance = AzureRest::NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties2.new(
   group_id: null,
   required_member_name: null,
   fqdns: null

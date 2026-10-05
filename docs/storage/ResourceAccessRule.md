@@ -1,4 +1,4 @@
-# AzureSDK::ResourceAccessRule
+# AzureRest::ResourceAccessRule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceAccessRule.new(
+instance = AzureRest::ResourceAccessRule.new(
   tenant_id: null,
   resource_id: null
 )

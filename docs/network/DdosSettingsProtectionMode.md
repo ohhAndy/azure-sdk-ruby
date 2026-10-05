@@ -1,4 +1,4 @@
-# AzureSDK::DdosSettingsProtectionMode
+# AzureRest::DdosSettingsProtectionMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosSettingsProtectionMode.new()
+instance = AzureRest::DdosSettingsProtectionMode.new()
 ```
 

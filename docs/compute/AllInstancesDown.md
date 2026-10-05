@@ -1,4 +1,4 @@
-# AzureSDK::AllInstancesDown
+# AzureRest::AllInstancesDown
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AllInstancesDown.new(
+instance = AzureRest::AllInstancesDown.new(
   automatically_approve: null
 )
 ```

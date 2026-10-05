@@ -1,4 +1,4 @@
-# AzureSDK::DataDisksGroups
+# AzureRest::DataDisksGroups
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataDisksGroups.new(
+instance = AzureRest::DataDisksGroups.new(
   disks_per_node: null,
   storage_account_type: null,
   disk_size_gb: null

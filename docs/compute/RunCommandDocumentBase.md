@@ -1,4 +1,4 @@
-# AzureSDK::RunCommandDocumentBase
+# AzureRest::RunCommandDocumentBase
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RunCommandDocumentBase.new(
+instance = AzureRest::RunCommandDocumentBase.new(
   schema: null,
   id: null,
   os_type: null,

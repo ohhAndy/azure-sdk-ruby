@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolUpgradeSettings
+# AzureRest::AgentPoolUpgradeSettings
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolUpgradeSettings.new(
+instance = AzureRest::AgentPoolUpgradeSettings.new(
   max_surge: null,
   max_unavailable: null,
   drain_timeout_in_minutes: null,

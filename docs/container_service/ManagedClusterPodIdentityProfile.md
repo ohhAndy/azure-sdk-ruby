@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterPodIdentityProfile
+# AzureRest::ManagedClusterPodIdentityProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterPodIdentityProfile.new(
+instance = AzureRest::ManagedClusterPodIdentityProfile.new(
   enabled: null,
   allow_network_plugin_kubenet: null,
   user_assigned_identities: null,

@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetHardwareProfile
+# AzureRest::VirtualMachineScaleSetHardwareProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetHardwareProfile.new(
+instance = AzureRest::VirtualMachineScaleSetHardwareProfile.new(
   vm_size_properties: null,
   processor_mode: null
 )

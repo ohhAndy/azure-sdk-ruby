@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineNetworkInterfaceConfiguration
+# AzureRest::VirtualMachineNetworkInterfaceConfiguration
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineNetworkInterfaceConfiguration.new(
+instance = AzureRest::VirtualMachineNetworkInterfaceConfiguration.new(
   name: null,
   properties: null,
   tags: null

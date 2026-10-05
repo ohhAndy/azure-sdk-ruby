@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualApplianceBootDiagnosticParameters
+# AzureRest::NetworkVirtualApplianceBootDiagnosticParameters
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualApplianceBootDiagnosticParameters.new(
+instance = AzureRest::NetworkVirtualApplianceBootDiagnosticParameters.new(
   instance_id: null,
   serial_console_storage_sas_url: null,
   console_screenshot_storage_sas_url: null

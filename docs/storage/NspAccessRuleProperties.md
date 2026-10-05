@@ -1,4 +1,4 @@
-# AzureSDK::NspAccessRuleProperties
+# AzureRest::NspAccessRuleProperties
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NspAccessRuleProperties.new(
+instance = AzureRest::NspAccessRuleProperties.new(
   direction: null,
   address_prefixes: null,
   subscriptions: null,

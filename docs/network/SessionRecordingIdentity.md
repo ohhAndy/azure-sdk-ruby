@@ -1,4 +1,4 @@
-# AzureSDK::SessionRecordingIdentity
+# AzureRest::SessionRecordingIdentity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SessionRecordingIdentity.new(
+instance = AzureRest::SessionRecordingIdentity.new(
   type: null,
   user_assigned_identity_id: null
 )

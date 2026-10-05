@@ -1,4 +1,4 @@
-# AzureSDK::AddressPrefixSetsApi
+# AzureRest::AddressPrefixSetsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates an address prefix set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AddressPrefixSetsApi.new
+api_instance = AzureRest::AddressPrefixSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 application_security_group_name = 'application_security_group_name_example' # String | The name of the application security group.
 address_prefix_set_name = 'address_prefix_set_name_example' # String | The name of the address prefix set.
-resource = AzureSDK::AddressPrefixSet.new # AddressPrefixSet | Parameters supplied to the create or update address prefix set operation.
+resource = AzureRest::AddressPrefixSet.new # AddressPrefixSet | Parameters supplied to the create or update address prefix set operation.
 
 begin
   
   result = api_instance.address_prefix_sets_create_or_update(api_version, subscription_id, resource_group_name, application_security_group_name, address_prefix_set_name, resource)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AddressPrefixSet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified address prefix set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AddressPrefixSetsApi.new
+api_instance = AzureRest::AddressPrefixSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ address_prefix_set_name = 'address_prefix_set_name_example' # String | The name 
 begin
   
   api_instance.address_prefix_sets_delete(api_version, subscription_id, resource_group_name, application_security_group_name, address_prefix_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the specified address prefix set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AddressPrefixSetsApi.new
+api_instance = AzureRest::AddressPrefixSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.address_prefix_sets_get(api_version, subscription_id, resource_group_name, application_security_group_name, address_prefix_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AddressPrefixSet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all address prefix sets in an application security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AddressPrefixSetsApi.new
+api_instance = AzureRest::AddressPrefixSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.address_prefix_sets_list(api_version, subscription_id, resource_group_name, application_security_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AddressPrefixSetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AddressPrefixSetsApi->address_prefix_sets_list_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ServerVersionCapabilityV2
+# AzureRest::ServerVersionCapabilityV2
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerVersionCapabilityV2.new(
+instance = AzureRest::ServerVersionCapabilityV2.new(
   name: null
 )
 ```

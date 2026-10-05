@@ -1,4 +1,4 @@
-# AzureSDK::VerifierWorkspaceProperties
+# AzureRest::VerifierWorkspaceProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VerifierWorkspaceProperties.new(
+instance = AzureRest::VerifierWorkspaceProperties.new(
   description: null,
   provisioning_state: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineIdentity
+# AzureRest::VirtualMachineIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineIdentity.new(
+instance = AzureRest::VirtualMachineIdentity.new(
   principal_id: null,
   tenant_id: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ResourceAssociationAccessMode
+# AzureRest::ResourceAssociationAccessMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceAssociationAccessMode.new()
+instance = AzureRest::ResourceAssociationAccessMode.new()
 ```
 

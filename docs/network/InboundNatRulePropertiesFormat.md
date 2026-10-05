@@ -1,4 +1,4 @@
-# AzureSDK::InboundNatRulePropertiesFormat
+# AzureRest::InboundNatRulePropertiesFormat
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InboundNatRulePropertiesFormat.new(
+instance = AzureRest::InboundNatRulePropertiesFormat.new(
   frontend_ip_configuration: null,
   backend_ip_configuration: null,
   protocol: null,

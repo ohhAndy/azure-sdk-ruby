@@ -1,4 +1,4 @@
-# AzureSDK::LeaseContainerRequestAction
+# AzureRest::LeaseContainerRequestAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LeaseContainerRequestAction.new()
+instance = AzureRest::LeaseContainerRequestAction.new()
 ```
 

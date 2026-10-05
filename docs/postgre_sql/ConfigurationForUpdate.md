@@ -1,4 +1,4 @@
-# AzureSDK::ConfigurationForUpdate
+# AzureRest::ConfigurationForUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConfigurationForUpdate.new(
+instance = AzureRest::ConfigurationForUpdate.new(
   properties: null
 )
 ```

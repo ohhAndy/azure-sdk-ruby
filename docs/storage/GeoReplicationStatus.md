@@ -1,4 +1,4 @@
-# AzureSDK::GeoReplicationStatus
+# AzureRest::GeoReplicationStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::GeoReplicationStatus.new()
+instance = AzureRest::GeoReplicationStatus.new()
 ```
 

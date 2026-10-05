@@ -1,4 +1,4 @@
-# AzureSDK::RestorePointExpandOptions
+# AzureRest::RestorePointExpandOptions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RestorePointExpandOptions.new()
+instance = AzureRest::RestorePointExpandOptions.new()
 ```
 

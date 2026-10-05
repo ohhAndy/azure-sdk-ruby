@@ -1,4 +1,4 @@
-# AzureSDK::TurboTierStatus
+# AzureRest::TurboTierStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TurboTierStatus.new()
+instance = AzureRest::TurboTierStatus.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostLicenseTypes
+# AzureRest::DedicatedHostLicenseTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostLicenseTypes.new()
+instance = AzureRest::DedicatedHostLicenseTypes.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::InfrastructureEncryption
+# AzureRest::InfrastructureEncryption
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InfrastructureEncryption.new()
+instance = AzureRest::InfrastructureEncryption.new()
 ```
 

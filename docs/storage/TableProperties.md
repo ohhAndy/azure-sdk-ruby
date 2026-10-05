@@ -1,4 +1,4 @@
-# AzureSDK::TableProperties
+# AzureRest::TableProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TableProperties.new(
+instance = AzureRest::TableProperties.new(
   table_name: null,
   signed_identifiers: null
 )

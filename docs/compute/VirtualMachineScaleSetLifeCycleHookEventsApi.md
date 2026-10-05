@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetLifeCycleHookEventsApi
+# AzureRest::VirtualMachineScaleSetLifeCycleHookEventsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,14 +21,14 @@ Gets a virtual machine scale set lifecycle hook event.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetLifeCycleHookEventsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetLifeCycleHookEventsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -39,7 +39,7 @@ begin
   
   result = api_instance.virtual_machine_scale_set_life_cycle_hook_events_get(api_version, subscription_id, resource_group_name, vm_scale_set_name, lifecycle_hook_event_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_get: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VMScaleSetLifecycleHookEvent>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_get_with_http_info: #{e}"
 end
 ```
@@ -98,14 +98,14 @@ Gets a list of virtual machine scale set lifecycle hook events created for a vir
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetLifeCycleHookEventsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetLifeCycleHookEventsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -115,7 +115,7 @@ begin
   
   result = api_instance.virtual_machine_scale_set_life_cycle_hook_events_list(api_version, subscription_id, resource_group_name, vm_scale_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_list: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VMScaleSetLifecycleHookEventListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_list_with_http_info: #{e}"
 end
 ```
@@ -173,26 +173,26 @@ The operation to update a virtual machine scale set lifecycle hook event.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetLifeCycleHookEventsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetLifeCycleHookEventsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 lifecycle_hook_event_name = 'lifecycle_hook_event_name_example' # String | The name of the VMScaleSetLifecycleHookEvent
-properties = AzureSDK::VMScaleSetLifecycleHookEventUpdate.new # VMScaleSetLifecycleHookEventUpdate | Parameters supplied to the Update virtual machine scale set lifecycle hook event operation.
+properties = AzureRest::VMScaleSetLifecycleHookEventUpdate.new # VMScaleSetLifecycleHookEventUpdate | Parameters supplied to the Update virtual machine scale set lifecycle hook event operation.
 
 begin
   
   result = api_instance.virtual_machine_scale_set_life_cycle_hook_events_update(api_version, subscription_id, resource_group_name, vm_scale_set_name, lifecycle_hook_event_name, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_update: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VMScaleSetLifecycleHookEvent>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetLifeCycleHookEventsApi->virtual_machine_scale_set_life_cycle_hook_events_update_with_http_info: #{e}"
 end
 ```

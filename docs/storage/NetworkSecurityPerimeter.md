@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityPerimeter
+# AzureRest::NetworkSecurityPerimeter
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkSecurityPerimeter.new(
+instance = AzureRest::NetworkSecurityPerimeter.new(
   id: null,
   perimeter_guid: null,
   location: null

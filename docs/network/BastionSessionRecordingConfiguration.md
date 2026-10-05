@@ -1,4 +1,4 @@
-# AzureSDK::BastionSessionRecordingConfiguration
+# AzureRest::BastionSessionRecordingConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionSessionRecordingConfiguration.new(
+instance = AzureRest::BastionSessionRecordingConfiguration.new(
   identity: null,
   blob_container_uri: null
 )

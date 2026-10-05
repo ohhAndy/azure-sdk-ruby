@@ -1,4 +1,4 @@
-# AzureSDK::SignedResource
+# AzureRest::SignedResource
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SignedResource.new()
+instance = AzureRest::SignedResource.new()
 ```
 

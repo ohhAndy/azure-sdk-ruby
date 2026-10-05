@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccount
+# AzureRest::StorageAccount
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccount.new(
+instance = AzureRest::StorageAccount.new(
   name: null,
   is_default: null,
   container: null,

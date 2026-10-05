@@ -1,4 +1,4 @@
-# AzureSDK::ConfigurationsApi
+# AzureRest::ConfigurationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,14 +22,14 @@ Gets information about a specific configuration (also known as server parameter)
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConfigurationsApi.new
+api_instance = AzureRest::ConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -40,7 +40,7 @@ begin
   
   result = api_instance.configurations_get(api_version, subscription_id, resource_group_name, server_name, configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_get: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Configuration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_get_with_http_info: #{e}"
 end
 ```
@@ -99,14 +99,14 @@ Lists all configurations (also known as server parameters) of a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConfigurationsApi.new
+api_instance = AzureRest::ConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -116,7 +116,7 @@ begin
   
   result = api_instance.configurations_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_list_by_server: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ConfigurationList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_list_by_server_with_http_info: #{e}"
 end
 ```
@@ -174,25 +174,25 @@ Updates, using Put verb, the value assigned to a specific modifiable configurati
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConfigurationsApi.new
+api_instance = AzureRest::ConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 configuration_name = 'configuration_name_example' # String | Name of the configuration (also known as server parameter).
-parameters = AzureSDK::ConfigurationForUpdate.new # ConfigurationForUpdate | Parameters required to update the value of a specific modifiable configuration (also known as server parameter).
+parameters = AzureRest::ConfigurationForUpdate.new # ConfigurationForUpdate | Parameters required to update the value of a specific modifiable configuration (also known as server parameter).
 
 begin
   
   api_instance.configurations_put(api_version, subscription_id, resource_group_name, server_name, configuration_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_put: #{e}"
 end
 ```
@@ -210,7 +210,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_put_with_http_info: #{e}"
 end
 ```
@@ -252,25 +252,25 @@ Updates the value assigned to a specific modifiable configuration (also known as
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ConfigurationsApi.new
+api_instance = AzureRest::ConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 configuration_name = 'configuration_name_example' # String | Name of the configuration (also known as server parameter).
-parameters = AzureSDK::ConfigurationForUpdate.new # ConfigurationForUpdate | Parameters required to update the value of a specific modifiable configuration (also known as server parameter).
+parameters = AzureRest::ConfigurationForUpdate.new # ConfigurationForUpdate | Parameters required to update the value of a specific modifiable configuration (also known as server parameter).
 
 begin
   
   api_instance.configurations_update(api_version, subscription_id, resource_group_name, server_name, configuration_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_update: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ConfigurationsApi->configurations_update_with_http_info: #{e}"
 end
 ```

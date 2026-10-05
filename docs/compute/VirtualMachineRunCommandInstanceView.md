@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineRunCommandInstanceView
+# AzureRest::VirtualMachineRunCommandInstanceView
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineRunCommandInstanceView.new(
+instance = AzureRest::VirtualMachineRunCommandInstanceView.new(
   execution_state: null,
   execution_message: null,
   exit_code: null,

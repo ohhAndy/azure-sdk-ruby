@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterSecurityProfileDefenderSecurityMonitoring
+# AzureRest::ManagedClusterSecurityProfileDefenderSecurityMonitoring
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterSecurityProfileDefenderSecurityMonitoring.new(
+instance = AzureRest::ManagedClusterSecurityProfileDefenderSecurityMonitoring.new(
   enabled: null
 )
 ```

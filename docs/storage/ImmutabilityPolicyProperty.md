@@ -1,4 +1,4 @@
-# AzureSDK::ImmutabilityPolicyProperty
+# AzureRest::ImmutabilityPolicyProperty
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImmutabilityPolicyProperty.new(
+instance = AzureRest::ImmutabilityPolicyProperty.new(
   immutability_period_since_creation_in_days: null,
   state: null,
   allow_protected_append_writes: null,

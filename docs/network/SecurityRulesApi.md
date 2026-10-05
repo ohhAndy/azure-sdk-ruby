@@ -1,4 +1,4 @@
-# AzureSDK::SecurityRulesApi
+# AzureRest::SecurityRulesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,14 +24,14 @@ Get the specified default network security rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -42,7 +42,7 @@ begin
   
   result = api_instance.default_security_rules_get(api_version, subscription_id, resource_group_name, network_security_group_name, default_security_rule_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->default_security_rules_get: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecurityRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->default_security_rules_get_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Gets all default security rules in a network security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ begin
   
   result = api_instance.default_security_rules_list(api_version, subscription_id, resource_group_name, network_security_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->default_security_rules_list: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecurityRuleListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->default_security_rules_list_with_http_info: #{e}"
 end
 ```
@@ -176,26 +176,26 @@ Creates or updates a security rule in the specified network security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_security_group_name = 'network_security_group_name_example' # String | The name of the network security group.
 security_rule_name = 'security_rule_name_example' # String | The name of the security rule.
-security_rule_parameters = AzureSDK::SecurityRule.new # SecurityRule | Parameters supplied to the create or update network security rule operation.
+security_rule_parameters = AzureRest::SecurityRule.new # SecurityRule | Parameters supplied to the create or update network security rule operation.
 
 begin
   
   result = api_instance.security_rules_create_or_update(api_version, subscription_id, resource_group_name, network_security_group_name, security_rule_name, security_rule_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_create_or_update: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecurityRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -255,14 +255,14 @@ Deletes the specified network security rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -272,7 +272,7 @@ security_rule_name = 'security_rule_name_example' # String | The name of the sec
 begin
   
   api_instance.security_rules_delete(api_version, subscription_id, resource_group_name, network_security_group_name, security_rule_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_delete: #{e}"
 end
 ```
@@ -290,7 +290,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_delete_with_http_info: #{e}"
 end
 ```
@@ -331,14 +331,14 @@ Get the specified network security rule.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -349,7 +349,7 @@ begin
   
   result = api_instance.security_rules_get(api_version, subscription_id, resource_group_name, network_security_group_name, security_rule_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_get: #{e}"
 end
 ```
@@ -367,7 +367,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecurityRule>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_get_with_http_info: #{e}"
 end
 ```
@@ -408,14 +408,14 @@ Gets all security rules in a network security group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SecurityRulesApi.new
+api_instance = AzureRest::SecurityRulesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -425,7 +425,7 @@ begin
   
   result = api_instance.security_rules_list(api_version, subscription_id, resource_group_name, network_security_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_list: #{e}"
 end
 ```
@@ -443,7 +443,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SecurityRuleListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SecurityRulesApi->security_rules_list_with_http_info: #{e}"
 end
 ```

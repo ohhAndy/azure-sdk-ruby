@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostGroupPropertiesAdditionalCapabilities
+# AzureRest::DedicatedHostGroupPropertiesAdditionalCapabilities
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostGroupPropertiesAdditionalCapabilities.new(
+instance = AzureRest::DedicatedHostGroupPropertiesAdditionalCapabilities.new(
   ultra_ssd_enabled: null
 )
 ```

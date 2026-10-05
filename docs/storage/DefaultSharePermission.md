@@ -1,4 +1,4 @@
-# AzureSDK::DefaultSharePermission
+# AzureRest::DefaultSharePermission
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DefaultSharePermission.new()
+instance = AzureRest::DefaultSharePermission.new()
 ```
 

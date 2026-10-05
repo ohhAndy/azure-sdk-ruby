@@ -1,4 +1,4 @@
-# AzureSDK::FirewallRuleList
+# AzureRest::FirewallRuleList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FirewallRuleList.new(
+instance = AzureRest::FirewallRuleList.new(
   value: null,
   next_link: null
 )

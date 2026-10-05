@@ -1,4 +1,4 @@
-# AzureSDK::AliasPathMetadata
+# AzureRest::AliasPathMetadata
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AliasPathMetadata.new(
+instance = AzureRest::AliasPathMetadata.new(
   type: null,
   attributes: null
 )

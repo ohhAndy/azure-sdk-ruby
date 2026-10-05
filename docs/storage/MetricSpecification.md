@@ -1,4 +1,4 @@
-# AzureSDK::MetricSpecification
+# AzureRest::MetricSpecification
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MetricSpecification.new(
+instance = AzureRest::MetricSpecification.new(
   name: null,
   display_name: null,
   display_description: null,

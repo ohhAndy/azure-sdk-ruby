@@ -1,4 +1,4 @@
-# AzureSDK::LocalUser
+# AzureRest::LocalUser
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalUser.new(
+instance = AzureRest::LocalUser.new(
   id: null,
   name: null,
   type: null,

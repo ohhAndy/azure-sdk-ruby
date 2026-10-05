@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountIpv6Endpoints
+# AzureRest::StorageAccountIpv6Endpoints
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountIpv6Endpoints.new(
+instance = AzureRest::StorageAccountIpv6Endpoints.new(
   blob: null,
   queue: null,
   table: null,

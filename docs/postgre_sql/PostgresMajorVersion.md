@@ -1,4 +1,4 @@
-# AzureSDK::PostgresMajorVersion
+# AzureRest::PostgresMajorVersion
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PostgresMajorVersion.new()
+instance = AzureRest::PostgresMajorVersion.new()
 ```
 

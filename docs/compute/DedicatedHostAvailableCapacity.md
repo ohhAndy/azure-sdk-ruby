@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostAvailableCapacity
+# AzureRest::DedicatedHostAvailableCapacity
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostAvailableCapacity.new(
+instance = AzureRest::DedicatedHostAvailableCapacity.new(
   allocatable_vms: null
 )
 ```

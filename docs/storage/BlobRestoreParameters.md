@@ -1,4 +1,4 @@
-# AzureSDK::BlobRestoreParameters
+# AzureRest::BlobRestoreParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobRestoreParameters.new(
+instance = AzureRest::BlobRestoreParameters.new(
   time_to_restore: null,
   blob_ranges: null
 )

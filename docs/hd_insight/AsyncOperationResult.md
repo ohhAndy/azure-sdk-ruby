@@ -1,4 +1,4 @@
-# AzureSDK::AsyncOperationResult
+# AzureRest::AsyncOperationResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AsyncOperationResult.new(
+instance = AzureRest::AsyncOperationResult.new(
   status: null,
   error: null
 )

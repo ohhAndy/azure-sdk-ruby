@@ -1,4 +1,4 @@
-# AzureSDK::MaintenanceListResult
+# AzureRest::MaintenanceListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MaintenanceListResult.new(
+instance = AzureRest::MaintenanceListResult.new(
   value: null,
   next_link: null
 )

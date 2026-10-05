@@ -1,4 +1,4 @@
-# AzureSDK::VaultsApi
+# AzureRest::VaultsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -26,14 +26,14 @@ Gets the private link resources supported for the key vault.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -43,7 +43,7 @@ begin
   
   result = api_instance.private_link_resources_list_by_vault(api_version, subscription_id, resource_group_name, vault_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->private_link_resources_list_by_vault: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateLinkResourceListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->private_link_resources_list_by_vault_with_http_info: #{e}"
 end
 ```
@@ -101,25 +101,25 @@ Create or update a key vault in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | The name of the vault.
-parameters = AzureSDK::VaultCreateOrUpdateParameters.new({location: 'location_example', properties: AzureSDK::VaultProperties.new({tenant_id: 'tenant_id_example', sku: AzureSDK::Sku.new({family: AzureSDK::SkuFamily::A, name: AzureSDK::SkuName::STANDARD})})}) # VaultCreateOrUpdateParameters | Parameters to create or update the vault
+parameters = AzureRest::VaultCreateOrUpdateParameters.new({location: 'location_example', properties: AzureRest::VaultProperties.new({tenant_id: 'tenant_id_example', sku: AzureRest::Sku.new({family: AzureRest::SkuFamily::A, name: AzureRest::SkuName::STANDARD})})}) # VaultCreateOrUpdateParameters | Parameters to create or update the vault
 
 begin
   
   result = api_instance.vaults_create_or_update(api_version, subscription_id, resource_group_name, vault_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_create_or_update: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Vault>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ Deletes the specified Azure key vault.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ vault_name = 'vault_name_example' # String | The name of the vault.
 begin
   
   api_instance.vaults_delete(api_version, subscription_id, resource_group_name, vault_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_delete: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_delete_with_http_info: #{e}"
 end
 ```
@@ -252,14 +252,14 @@ Gets the specified Azure key vault.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -269,7 +269,7 @@ begin
   
   result = api_instance.vaults_get(api_version, subscription_id, resource_group_name, vault_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_get: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Vault>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_get_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ The List operation gets information about the vaults associated with the subscri
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -346,7 +346,7 @@ begin
   
   result = api_instance.vaults_list_by_resource_group(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_list_by_resource_group: #{e}"
 end
 ```
@@ -364,7 +364,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VaultListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -404,14 +404,14 @@ The List operation gets information about the vaults associated with the subscri
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 opts = {
@@ -422,7 +422,7 @@ begin
   
   result = api_instance.vaults_list_by_subscription(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_list_by_subscription: #{e}"
 end
 ```
@@ -440,7 +440,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VaultListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -479,25 +479,25 @@ Update a key vault in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | The name of the vault.
-parameters = AzureSDK::VaultPatchParameters.new # VaultPatchParameters | Parameters to patch the vault
+parameters = AzureRest::VaultPatchParameters.new # VaultPatchParameters | Parameters to patch the vault
 
 begin
   
   result = api_instance.vaults_update(api_version, subscription_id, resource_group_name, vault_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_update: #{e}"
 end
 ```
@@ -515,7 +515,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Vault>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_update_with_http_info: #{e}"
 end
 ```
@@ -556,26 +556,26 @@ Update access policies in a key vault in the specified subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VaultsApi.new
+api_instance = AzureRest::VaultsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | Name of the vault
 operation_kind = 'add' # String | Name of the operation
-parameters = AzureSDK::VaultAccessPolicyParameters.new({properties: AzureSDK::VaultAccessPolicyProperties.new({access_policies: [AzureSDK::AccessPolicyEntry.new({tenant_id: 'tenant_id_example', object_id: 'object_id_example', permissions: AzureSDK::Permissions.new})]})}) # VaultAccessPolicyParameters | Access policy to merge into the vault
+parameters = AzureRest::VaultAccessPolicyParameters.new({properties: AzureRest::VaultAccessPolicyProperties.new({access_policies: [AzureRest::AccessPolicyEntry.new({tenant_id: 'tenant_id_example', object_id: 'object_id_example', permissions: AzureRest::Permissions.new})]})}) # VaultAccessPolicyParameters | Access policy to merge into the vault
 
 begin
   
   result = api_instance.vaults_update_access_policy(api_version, subscription_id, resource_group_name, vault_name, operation_kind, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_update_access_policy: #{e}"
 end
 ```
@@ -593,7 +593,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VaultAccessPolicyParameters>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VaultsApi->vaults_update_access_policy_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::LtrPreBackupRequest
+# AzureRest::LtrPreBackupRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LtrPreBackupRequest.new(
+instance = AzureRest::LtrPreBackupRequest.new(
   backup_settings: null
 )
 ```

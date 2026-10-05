@@ -1,4 +1,4 @@
-# AzureSDK::PublicIPAddressSkuName
+# AzureRest::PublicIPAddressSkuName
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PublicIPAddressSkuName.new()
+instance = AzureRest::PublicIPAddressSkuName.new()
 ```
 

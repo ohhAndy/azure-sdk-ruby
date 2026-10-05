@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineInstallPatchesResult
+# AzureRest::VirtualMachineInstallPatchesResult
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineInstallPatchesResult.new(
+instance = AzureRest::VirtualMachineInstallPatchesResult.new(
   status: null,
   installation_activity_id: null,
   reboot_status: null,

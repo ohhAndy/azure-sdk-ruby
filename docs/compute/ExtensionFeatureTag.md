@@ -1,4 +1,4 @@
-# AzureSDK::ExtensionFeatureTag
+# AzureRest::ExtensionFeatureTag
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExtensionFeatureTag.new(
+instance = AzureRest::ExtensionFeatureTag.new(
   key: null,
   value: null
 )

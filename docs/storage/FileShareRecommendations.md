@@ -1,4 +1,4 @@
-# AzureSDK::FileShareRecommendations
+# AzureRest::FileShareRecommendations
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FileShareRecommendations.new(
+instance = AzureRest::FileShareRecommendations.new(
   base_iops: null,
   io_scalar: null,
   base_bandwidth_mi_b_per_sec: null,

@@ -1,4 +1,4 @@
-# AzureSDK::LogSpecification
+# AzureRest::LogSpecification
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LogSpecification.new(
+instance = AzureRest::LogSpecification.new(
   name: null,
   display_name: null,
   blob_duration: null

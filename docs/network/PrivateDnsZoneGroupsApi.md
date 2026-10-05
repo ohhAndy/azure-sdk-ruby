@@ -1,4 +1,4 @@
-# AzureSDK::PrivateDnsZoneGroupsApi
+# AzureRest::PrivateDnsZoneGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates a private dns zone group in the specified private endpoint.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateDnsZoneGroupsApi.new
+api_instance = AzureRest::PrivateDnsZoneGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 private_endpoint_name = 'private_endpoint_name_example' # String | The name of the private endpoint.
 private_dns_zone_group_name = 'private_dns_zone_group_name_example' # String | The name of the private endpoint.
-parameters = AzureSDK::PrivateDnsZoneGroup.new # PrivateDnsZoneGroup | Parameters supplied to the create or update private dns zone group operation.
+parameters = AzureRest::PrivateDnsZoneGroup.new # PrivateDnsZoneGroup | Parameters supplied to the create or update private dns zone group operation.
 
 begin
   
   result = api_instance.private_dns_zone_groups_create_or_update(api_version, subscription_id, resource_group_name, private_endpoint_name, private_dns_zone_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateDnsZoneGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified private dns zone group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateDnsZoneGroupsApi.new
+api_instance = AzureRest::PrivateDnsZoneGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ private_dns_zone_group_name = 'private_dns_zone_group_name_example' # String | T
 begin
   
   api_instance.private_dns_zone_groups_delete(api_version, subscription_id, resource_group_name, private_endpoint_name, private_dns_zone_group_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the private dns zone group resource by specified private dns zone group nam
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateDnsZoneGroupsApi.new
+api_instance = AzureRest::PrivateDnsZoneGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.private_dns_zone_groups_get(api_version, subscription_id, resource_group_name, private_endpoint_name, private_dns_zone_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateDnsZoneGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all private dns zone groups in a private endpoint.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateDnsZoneGroupsApi.new
+api_instance = AzureRest::PrivateDnsZoneGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.private_dns_zone_groups_list(api_version, subscription_id, resource_group_name, private_endpoint_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateDnsZoneGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateDnsZoneGroupsApi->private_dns_zone_groups_list_with_http_info: #{e}"
 end
 ```

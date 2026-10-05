@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetsApi
+# AzureRest::VirtualMachineScaleSetsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -45,26 +45,26 @@ Approve upgrade on deferred rolling upgrades for OS disks in the virtual machine
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_approve_rolling_upgrade(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_approve_rolling_upgrade: #{e}"
 end
 ```
@@ -82,7 +82,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_approve_rolling_upgrade_with_http_info: #{e}"
 end
 ```
@@ -123,24 +123,24 @@ Converts SinglePlacementGroup property to false for a existing virtual machine s
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-parameters = AzureSDK::VMScaleSetConvertToSinglePlacementGroupInput.new # VMScaleSetConvertToSinglePlacementGroupInput | The input object for ConvertToSinglePlacementGroup API.
+parameters = AzureRest::VMScaleSetConvertToSinglePlacementGroupInput.new # VMScaleSetConvertToSinglePlacementGroupInput | The input object for ConvertToSinglePlacementGroup API.
 
 begin
   
   api_instance.virtual_machine_scale_sets_convert_to_single_placement_group(api_version, subscription_id, resource_group_name, vm_scale_set_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_convert_to_single_placement_group: #{e}"
 end
 ```
@@ -158,7 +158,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_convert_to_single_placement_group_with_http_info: #{e}"
 end
 ```
@@ -199,19 +199,19 @@ Create or update a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-parameters = AzureSDK::VirtualMachineScaleSet.new({location: 'location_example'}) # VirtualMachineScaleSet | The scale set object.
+parameters = AzureRest::VirtualMachineScaleSet.new({location: 'location_example'}) # VirtualMachineScaleSet | The scale set object.
 opts = {
   if_match: 'if_match_example', # String | The ETag of the transformation. Omit this value to always overwrite the current resource. Specify the last-seen ETag value to prevent accidentally overwriting concurrent changes.
   if_none_match: 'if_none_match_example' # String | Set to '*' to allow a new record set to be created, but to prevent updating an existing record set. Other values will result in error from server as they are not supported.
@@ -221,7 +221,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_create_or_update(api_version, subscription_id, resource_group_name, vm_scale_set_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_create_or_update: #{e}"
 end
 ```
@@ -239,7 +239,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -282,27 +282,27 @@ Deallocates specific virtual machines in a VM scale set. Shuts down the virtual 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
   hibernate: true, # Boolean | Optional parameter to hibernate a virtual machine from the VM scale set. (This feature is available for VMSS with Flexible OrchestrationMode only)
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_deallocate(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_deallocate: #{e}"
 end
 ```
@@ -320,7 +320,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_deallocate_with_http_info: #{e}"
 end
 ```
@@ -362,14 +362,14 @@ Deletes a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -381,7 +381,7 @@ opts = {
 begin
   
   api_instance.virtual_machine_scale_sets_delete(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_delete: #{e}"
 end
 ```
@@ -399,7 +399,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_delete_with_http_info: #{e}"
 end
 ```
@@ -440,19 +440,19 @@ Deletes virtual machines in a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-vm_instance_ids = AzureSDK::VirtualMachineScaleSetVMInstanceRequiredIDs.new({instance_ids: ['instance_ids_example']}) # VirtualMachineScaleSetVMInstanceRequiredIDs | A list of virtual machine instance IDs from the VM scale set.
+vm_instance_ids = AzureRest::VirtualMachineScaleSetVMInstanceRequiredIDs.new({instance_ids: ['instance_ids_example']}) # VirtualMachineScaleSetVMInstanceRequiredIDs | A list of virtual machine instance IDs from the VM scale set.
 opts = {
   force_deletion: true # Boolean | Optional parameter to force delete virtual machines from the VM scale set. (Feature in Preview)
 }
@@ -460,7 +460,7 @@ opts = {
 begin
   
   api_instance.virtual_machine_scale_sets_delete_instances(api_version, subscription_id, resource_group_name, vm_scale_set_name, vm_instance_ids, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_delete_instances: #{e}"
 end
 ```
@@ -478,7 +478,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_delete_instances_with_http_info: #{e}"
 end
 ```
@@ -520,14 +520,14 @@ Manual platform update domain walk to update virtual machines in a service fabri
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -542,7 +542,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_force_recovery_service_fabric_platform_update_domain_walk(api_version, subscription_id, resource_group_name, vm_scale_set_name, platform_update_domain, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_force_recovery_service_fabric_platform_update_domain_walk: #{e}"
 end
 ```
@@ -560,7 +560,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RecoveryWalkResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_force_recovery_service_fabric_platform_update_domain_walk_with_http_info: #{e}"
 end
 ```
@@ -603,14 +603,14 @@ Display information about a virtual machine scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -623,7 +623,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_get(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get: #{e}"
 end
 ```
@@ -641,7 +641,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get_with_http_info: #{e}"
 end
 ```
@@ -682,14 +682,14 @@ Gets the status of a VM scale set instance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -699,7 +699,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_get_instance_view(api_version, subscription_id, resource_group_name, vm_scale_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get_instance_view: #{e}"
 end
 ```
@@ -717,7 +717,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetInstanceView>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get_instance_view_with_http_info: #{e}"
 end
 ```
@@ -757,14 +757,14 @@ Gets list of OS upgrades on a VM scale set instance.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -774,7 +774,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_get_os_upgrade_history(api_version, subscription_id, resource_group_name, vm_scale_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get_os_upgrade_history: #{e}"
 end
 ```
@@ -792,7 +792,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetListOSUpgradeHistory>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_get_os_upgrade_history_with_http_info: #{e}"
 end
 ```
@@ -832,14 +832,14 @@ Gets a list of all VM scale sets under a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -848,7 +848,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list: #{e}"
 end
 ```
@@ -866,7 +866,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_with_http_info: #{e}"
 end
 ```
@@ -905,14 +905,14 @@ Gets a list of all VM Scale Sets in the subscription, regardless of the associat
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -920,7 +920,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_all: #{e}"
 end
 ```
@@ -938,7 +938,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetListWithLinkResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_all_with_http_info: #{e}"
 end
 ```
@@ -976,14 +976,14 @@ Gets all the VM scale sets under the specified subscription for the specified lo
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
@@ -992,7 +992,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_list_by_location(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_by_location: #{e}"
 end
 ```
@@ -1010,7 +1010,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_by_location_with_http_info: #{e}"
 end
 ```
@@ -1049,14 +1049,14 @@ Gets a list of SKUs available for your VM scale set, including the minimum and m
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1066,7 +1066,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_list_skus(api_version, subscription_id, resource_group_name, vm_scale_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_skus: #{e}"
 end
 ```
@@ -1084,7 +1084,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSetListSkusResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_list_skus_with_http_info: #{e}"
 end
 ```
@@ -1124,24 +1124,24 @@ Migrates one or more virtual machines in a VM scale set to an availability zone.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-body = AzureSDK::MigrateVMAvailabilityZoneInput.new({instance_ids: ['instance_ids_example']}) # MigrateVMAvailabilityZoneInput | The input object for the MigrateVMAvailabilityZone API.
+body = AzureRest::MigrateVMAvailabilityZoneInput.new({instance_ids: ['instance_ids_example']}) # MigrateVMAvailabilityZoneInput | The input object for the MigrateVMAvailabilityZone API.
 
 begin
   
   api_instance.virtual_machine_scale_sets_migrate_vm_availability_zone(api_version, subscription_id, resource_group_name, vm_scale_set_name, body)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_migrate_vm_availability_zone: #{e}"
 end
 ```
@@ -1159,7 +1159,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_migrate_vm_availability_zone_with_http_info: #{e}"
 end
 ```
@@ -1200,26 +1200,26 @@ Perform maintenance on one or more virtual machines in a VM scale set. Operation
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_perform_maintenance(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_perform_maintenance: #{e}"
 end
 ```
@@ -1237,7 +1237,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_perform_maintenance_with_http_info: #{e}"
 end
 ```
@@ -1278,27 +1278,27 @@ Power off (stop) one or more virtual machines in a VM scale set. Note that resou
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
   skip_shutdown: true, # Boolean | The parameter to request non-graceful VM shutdown. True value for this flag indicates non-graceful shutdown whereas false indicates otherwise. Default value for this flag is false if not specified
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_power_off(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_power_off: #{e}"
 end
 ```
@@ -1316,7 +1316,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_power_off_with_http_info: #{e}"
 end
 ```
@@ -1358,14 +1358,14 @@ Reapplies the Virtual Machine Scale Set Virtual Machine Profile to the Virtual M
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1374,7 +1374,7 @@ vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM sc
 begin
   
   api_instance.virtual_machine_scale_sets_reapply(api_version, subscription_id, resource_group_name, vm_scale_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reapply: #{e}"
 end
 ```
@@ -1392,7 +1392,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reapply_with_http_info: #{e}"
 end
 ```
@@ -1432,26 +1432,26 @@ Shuts down all the virtual machines in the virtual machine scale set, moves them
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_redeploy(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_redeploy: #{e}"
 end
 ```
@@ -1469,7 +1469,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_redeploy_with_http_info: #{e}"
 end
 ```
@@ -1510,26 +1510,26 @@ Reimages (upgrade the operating system) one or more virtual machines in a VM sca
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_scale_set_reimage_input: AzureSDK::VirtualMachineScaleSetReimageParameters.new # VirtualMachineScaleSetReimageParameters | Parameters for Reimaging VM ScaleSet.
+  vm_scale_set_reimage_input: AzureRest::VirtualMachineScaleSetReimageParameters.new # VirtualMachineScaleSetReimageParameters | Parameters for Reimaging VM ScaleSet.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_reimage(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reimage: #{e}"
 end
 ```
@@ -1547,7 +1547,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reimage_with_http_info: #{e}"
 end
 ```
@@ -1588,26 +1588,26 @@ Reimages all the disks ( including data disks ) in the virtual machines in a VM 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_reimage_all(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reimage_all: #{e}"
 end
 ```
@@ -1625,7 +1625,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_reimage_all_with_http_info: #{e}"
 end
 ```
@@ -1666,26 +1666,26 @@ Restarts one or more virtual machines in a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_restart(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_restart: #{e}"
 end
 ```
@@ -1703,7 +1703,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_restart_with_http_info: #{e}"
 end
 ```
@@ -1744,24 +1744,24 @@ Scales out one or more virtual machines in a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-parameters = AzureSDK::VMScaleSetScaleOutInput.new({capacity: 3.56}) # VMScaleSetScaleOutInput | The input object for ScaleOut API.
+parameters = AzureRest::VMScaleSetScaleOutInput.new({capacity: 3.56}) # VMScaleSetScaleOutInput | The input object for ScaleOut API.
 
 begin
   
   api_instance.virtual_machine_scale_sets_scale_out(api_version, subscription_id, resource_group_name, vm_scale_set_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_scale_out: #{e}"
 end
 ```
@@ -1779,7 +1779,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_scale_out_with_http_info: #{e}"
 end
 ```
@@ -1820,24 +1820,24 @@ Changes ServiceState property for a given service
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-parameters = AzureSDK::OrchestrationServiceStateInput.new({service_name: AzureSDK::OrchestrationServiceNames::AUTOMATIC_REPAIRS, action: AzureSDK::OrchestrationServiceStateAction::RESUME}) # OrchestrationServiceStateInput | The input object for SetOrchestrationServiceState API.
+parameters = AzureRest::OrchestrationServiceStateInput.new({service_name: AzureRest::OrchestrationServiceNames::AUTOMATIC_REPAIRS, action: AzureRest::OrchestrationServiceStateAction::RESUME}) # OrchestrationServiceStateInput | The input object for SetOrchestrationServiceState API.
 
 begin
   
   api_instance.virtual_machine_scale_sets_set_orchestration_service_state(api_version, subscription_id, resource_group_name, vm_scale_set_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_set_orchestration_service_state: #{e}"
 end
 ```
@@ -1855,7 +1855,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_set_orchestration_service_state_with_http_info: #{e}"
 end
 ```
@@ -1896,26 +1896,26 @@ Starts one or more virtual machines in a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
 opts = {
-  vm_instance_ids: AzureSDK::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
+  vm_instance_ids: AzureRest::VirtualMachineScaleSetVMInstanceIDs.new # VirtualMachineScaleSetVMInstanceIDs | A list of virtual machine instance IDs from the VM scale set.
 }
 
 begin
   
   api_instance.virtual_machine_scale_sets_start(api_version, subscription_id, resource_group_name, vm_scale_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_start: #{e}"
 end
 ```
@@ -1933,7 +1933,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_start_with_http_info: #{e}"
 end
 ```
@@ -1974,19 +1974,19 @@ Update a VM scale set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-parameters = AzureSDK::VirtualMachineScaleSetUpdate.new # VirtualMachineScaleSetUpdate | The scale set object.
+parameters = AzureRest::VirtualMachineScaleSetUpdate.new # VirtualMachineScaleSetUpdate | The scale set object.
 opts = {
   if_match: 'if_match_example', # String | The ETag of the transformation. Omit this value to always overwrite the current resource. Specify the last-seen ETag value to prevent accidentally overwriting concurrent changes.
   if_none_match: 'if_none_match_example' # String | Set to '*' to allow a new record set to be created, but to prevent updating an existing record set. Other values will result in error from server as they are not supported.
@@ -1996,7 +1996,7 @@ begin
   
   result = api_instance.virtual_machine_scale_sets_update(api_version, subscription_id, resource_group_name, vm_scale_set_name, parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_update: #{e}"
 end
 ```
@@ -2014,7 +2014,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineScaleSet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_update_with_http_info: #{e}"
 end
 ```
@@ -2057,24 +2057,24 @@ Upgrades one or more virtual machines to the latest SKU set in the VM scale set 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetsApi.new
+api_instance = AzureRest::VirtualMachineScaleSetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM scale set.
-vm_instance_ids = AzureSDK::VirtualMachineScaleSetVMInstanceRequiredIDs.new({instance_ids: ['instance_ids_example']}) # VirtualMachineScaleSetVMInstanceRequiredIDs | A list of virtual machine instance IDs from the VM scale set.
+vm_instance_ids = AzureRest::VirtualMachineScaleSetVMInstanceRequiredIDs.new({instance_ids: ['instance_ids_example']}) # VirtualMachineScaleSetVMInstanceRequiredIDs | A list of virtual machine instance IDs from the VM scale set.
 
 begin
   
   api_instance.virtual_machine_scale_sets_update_instances(api_version, subscription_id, resource_group_name, vm_scale_set_name, vm_instance_ids)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_update_instances: #{e}"
 end
 ```
@@ -2092,7 +2092,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetsApi->virtual_machine_scale_sets_update_instances_with_http_info: #{e}"
 end
 ```

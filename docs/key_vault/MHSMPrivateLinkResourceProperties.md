@@ -1,4 +1,4 @@
-# AzureSDK::MHSMPrivateLinkResourceProperties
+# AzureRest::MHSMPrivateLinkResourceProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMPrivateLinkResourceProperties.new(
+instance = AzureRest::MHSMPrivateLinkResourceProperties.new(
   group_id: null,
   required_members: null,
   required_zone_names: null

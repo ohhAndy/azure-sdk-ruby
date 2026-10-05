@@ -1,4 +1,4 @@
-# AzureSDK::AlternativeType
+# AzureRest::AlternativeType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AlternativeType.new()
+instance = AzureRest::AlternativeType.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::LeaseContainerResponse
+# AzureRest::LeaseContainerResponse
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LeaseContainerResponse.new(
+instance = AzureRest::LeaseContainerResponse.new(
   lease_id: null,
   lease_time_seconds: null
 )

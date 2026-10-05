@@ -1,4 +1,4 @@
-# AzureSDK::InterconnectInstanceView
+# AzureRest::InterconnectInstanceView
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::InterconnectInstanceView.new(
+instance = AzureRest::InterconnectInstanceView.new(
   interconnect_subgroup_id: null
 )
 ```

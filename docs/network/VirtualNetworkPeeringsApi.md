@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkPeeringsApi
+# AzureRest::VirtualNetworkPeeringsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,20 +22,20 @@ Creates or updates a peering in the specified virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworkPeeringsApi.new
+api_instance = AzureRest::VirtualNetworkPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
 virtual_network_peering_name = 'virtual_network_peering_name_example' # String | The name of the virtual network peering.
-virtual_network_peering_parameters = AzureSDK::VirtualNetworkPeering.new # VirtualNetworkPeering | Parameters supplied to the create or update virtual network peering operation.
+virtual_network_peering_parameters = AzureRest::VirtualNetworkPeering.new # VirtualNetworkPeering | Parameters supplied to the create or update virtual network peering operation.
 opts = {
   sync_remote_address_space: 'true' # String | Parameter indicates the intention to sync the peering with the current address space on the remote vNet after it's updated.
 }
@@ -44,7 +44,7 @@ begin
   
   result = api_instance.virtual_network_peerings_create_or_update(api_version, subscription_id, resource_group_name, virtual_network_name, virtual_network_peering_name, virtual_network_peering_parameters, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_create_or_update: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkPeering>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -105,14 +105,14 @@ Deletes the specified virtual network peering.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworkPeeringsApi.new
+api_instance = AzureRest::VirtualNetworkPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -122,7 +122,7 @@ virtual_network_peering_name = 'virtual_network_peering_name_example' # String |
 begin
   
   api_instance.virtual_network_peerings_delete(api_version, subscription_id, resource_group_name, virtual_network_name, virtual_network_peering_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_delete: #{e}"
 end
 ```
@@ -140,7 +140,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_delete_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Gets the specified virtual network peering.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworkPeeringsApi.new
+api_instance = AzureRest::VirtualNetworkPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -199,7 +199,7 @@ begin
   
   result = api_instance.virtual_network_peerings_get(api_version, subscription_id, resource_group_name, virtual_network_name, virtual_network_peering_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_get: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkPeering>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_get_with_http_info: #{e}"
 end
 ```
@@ -258,14 +258,14 @@ Gets all virtual network peerings in a virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworkPeeringsApi.new
+api_instance = AzureRest::VirtualNetworkPeeringsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -275,7 +275,7 @@ begin
   
   result = api_instance.virtual_network_peerings_list(api_version, subscription_id, resource_group_name, virtual_network_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_list: #{e}"
 end
 ```
@@ -293,7 +293,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkPeeringListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworkPeeringsApi->virtual_network_peerings_list_with_http_info: #{e}"
 end
 ```

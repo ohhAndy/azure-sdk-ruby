@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterOIDCIssuerProfile
+# AzureRest::ManagedClusterOIDCIssuerProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterOIDCIssuerProfile.new(
+instance = AzureRest::ManagedClusterOIDCIssuerProfile.new(
   issuer_url: null,
   enabled: null
 )

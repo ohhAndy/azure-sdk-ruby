@@ -1,4 +1,4 @@
-# AzureSDK::UndrainableNodeBehavior
+# AzureRest::UndrainableNodeBehavior
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::UndrainableNodeBehavior.new()
+instance = AzureRest::UndrainableNodeBehavior.new()
 ```
 

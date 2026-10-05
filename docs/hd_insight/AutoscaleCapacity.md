@@ -1,4 +1,4 @@
-# AzureSDK::AutoscaleCapacity
+# AzureRest::AutoscaleCapacity
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutoscaleCapacity.new(
+instance = AzureRest::AutoscaleCapacity.new(
   min_instance_count: null,
   max_instance_count: null
 )

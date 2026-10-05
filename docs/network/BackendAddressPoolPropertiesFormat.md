@@ -1,4 +1,4 @@
-# AzureSDK::BackendAddressPoolPropertiesFormat
+# AzureRest::BackendAddressPoolPropertiesFormat
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackendAddressPoolPropertiesFormat.new(
+instance = AzureRest::BackendAddressPoolPropertiesFormat.new(
   location: null,
   tunnel_interfaces: null,
   load_balancer_backend_addresses: null,

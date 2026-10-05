@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionScope
+# AzureRest::EncryptionScope
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionScope.new(
+instance = AzureRest::EncryptionScope.new(
   id: null,
   name: null,
   type: null,

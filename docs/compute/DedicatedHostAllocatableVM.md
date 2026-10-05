@@ -1,4 +1,4 @@
-# AzureSDK::DedicatedHostAllocatableVM
+# AzureRest::DedicatedHostAllocatableVM
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DedicatedHostAllocatableVM.new(
+instance = AzureRest::DedicatedHostAllocatableVM.new(
   vm_size: null,
   count: null
 )

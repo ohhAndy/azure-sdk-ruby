@@ -1,4 +1,4 @@
-# AzureSDK::IpamPoolList
+# AzureRest::IpamPoolList
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpamPoolList.new(
+instance = AzureRest::IpamPoolList.new(
   value: null,
   next_link: null
 )

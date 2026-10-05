@@ -1,4 +1,4 @@
-# AzureSDK::SecretPatchParameters
+# AzureRest::SecretPatchParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecretPatchParameters.new(
+instance = AzureRest::SecretPatchParameters.new(
   tags: null,
   properties: null
 )

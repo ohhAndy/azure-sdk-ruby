@@ -1,4 +1,4 @@
-# AzureSDK::RollingUpgradeRunningStatus
+# AzureRest::RollingUpgradeRunningStatus
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RollingUpgradeRunningStatus.new(
+instance = AzureRest::RollingUpgradeRunningStatus.new(
   code: null,
   start_time: null,
   last_action: null,

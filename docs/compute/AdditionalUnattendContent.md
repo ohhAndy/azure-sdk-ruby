@@ -1,4 +1,4 @@
-# AzureSDK::AdditionalUnattendContent
+# AzureRest::AdditionalUnattendContent
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AdditionalUnattendContent.new(
+instance = AzureRest::AdditionalUnattendContent.new(
   pass_name: null,
   component_name: null,
   setting_name: null,

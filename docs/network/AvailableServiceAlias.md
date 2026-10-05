@@ -1,4 +1,4 @@
-# AzureSDK::AvailableServiceAlias
+# AzureRest::AvailableServiceAlias
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AvailableServiceAlias.new(
+instance = AzureRest::AvailableServiceAlias.new(
   name: null,
   id: null,
   type: null,

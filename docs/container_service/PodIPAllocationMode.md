@@ -1,4 +1,4 @@
-# AzureSDK::PodIPAllocationMode
+# AzureRest::PodIPAllocationMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PodIPAllocationMode.new()
+instance = AzureRest::PodIPAllocationMode.new()
 ```
 

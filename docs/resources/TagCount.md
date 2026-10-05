@@ -1,4 +1,4 @@
-# AzureSDK::TagCount
+# AzureRest::TagCount
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TagCount.new(
+instance = AzureRest::TagCount.new(
   type: null,
   value: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationGatewayIPConfigurationPropertiesFormat
+# AzureRest::ApplicationGatewayIPConfigurationPropertiesFormat
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationGatewayIPConfigurationPropertiesFormat.new(
+instance = AzureRest::ApplicationGatewayIPConfigurationPropertiesFormat.new(
   subnet: null,
   provisioning_state: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ResourceQuota
+# AzureRest::ResourceQuota
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceQuota.new(
+instance = AzureRest::ResourceQuota.new(
   cpu_request: null,
   cpu_limit: null,
   memory_request: null,

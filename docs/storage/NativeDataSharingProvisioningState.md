@@ -1,4 +1,4 @@
-# AzureSDK::NativeDataSharingProvisioningState
+# AzureRest::NativeDataSharingProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NativeDataSharingProvisioningState.new()
+instance = AzureRest::NativeDataSharingProvisioningState.new()
 ```
 

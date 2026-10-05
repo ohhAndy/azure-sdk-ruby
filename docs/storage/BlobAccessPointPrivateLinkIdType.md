@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointPrivateLinkIdType
+# AzureRest::BlobAccessPointPrivateLinkIdType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointPrivateLinkIdType.new()
+instance = AzureRest::BlobAccessPointPrivateLinkIdType.new()
 ```
 

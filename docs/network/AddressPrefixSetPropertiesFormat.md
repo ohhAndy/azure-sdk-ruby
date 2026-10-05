@@ -1,4 +1,4 @@
-# AzureSDK::AddressPrefixSetPropertiesFormat
+# AzureRest::AddressPrefixSetPropertiesFormat
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AddressPrefixSetPropertiesFormat.new(
+instance = AzureRest::AddressPrefixSetPropertiesFormat.new(
   address_prefixes: null,
   provisioning_state: null
 )

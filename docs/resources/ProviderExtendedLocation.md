@@ -1,4 +1,4 @@
-# AzureSDK::ProviderExtendedLocation
+# AzureRest::ProviderExtendedLocation
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderExtendedLocation.new(
+instance = AzureRest::ProviderExtendedLocation.new(
   location: null,
   type: null,
   extended_locations: null

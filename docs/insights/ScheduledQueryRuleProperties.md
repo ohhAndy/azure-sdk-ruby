@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledQueryRuleProperties
+# AzureRest::ScheduledQueryRuleProperties
 
 ## Properties
 
@@ -27,9 +27,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledQueryRuleProperties.new(
+instance = AzureRest::ScheduledQueryRuleProperties.new(
   created_with_api_version: null,
   is_legacy_log_analytics_rule: null,
   description: null,

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityGroup
+# AzureRest::NetworkSecurityGroup
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkSecurityGroup.new(
+instance = AzureRest::NetworkSecurityGroup.new(
   id: null,
   name: null,
   type: null,

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterServicePrincipalProfile
+# AzureRest::ManagedClusterServicePrincipalProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterServicePrincipalProfile.new(
+instance = AzureRest::ManagedClusterServicePrincipalProfile.new(
   client_id: null,
   secret: null
 )

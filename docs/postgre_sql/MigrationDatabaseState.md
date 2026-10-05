@@ -1,4 +1,4 @@
-# AzureSDK::MigrationDatabaseState
+# AzureRest::MigrationDatabaseState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationDatabaseState.new()
+instance = AzureRest::MigrationDatabaseState.new()
 ```
 

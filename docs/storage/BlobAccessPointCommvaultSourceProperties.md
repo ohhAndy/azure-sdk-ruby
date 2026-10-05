@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointCommvaultSourceProperties
+# AzureRest::BlobAccessPointCommvaultSourceProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointCommvaultSourceProperties.new(
+instance = AzureRest::BlobAccessPointCommvaultSourceProperties.new(
   connection: null,
   auth: null
 )

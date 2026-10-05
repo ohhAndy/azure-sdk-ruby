@@ -1,4 +1,4 @@
-# AzureSDK::ExpandTypeForListVMs
+# AzureRest::ExpandTypeForListVMs
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExpandTypeForListVMs.new()
+instance = AzureRest::ExpandTypeForListVMs.new()
 ```
 

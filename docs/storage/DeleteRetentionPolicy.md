@@ -1,4 +1,4 @@
-# AzureSDK::DeleteRetentionPolicy
+# AzureRest::DeleteRetentionPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeleteRetentionPolicy.new(
+instance = AzureRest::DeleteRetentionPolicy.new(
   enabled: null,
   days: null,
   allow_permanent_delete: null

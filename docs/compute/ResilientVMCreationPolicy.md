@@ -1,4 +1,4 @@
-# AzureSDK::ResilientVMCreationPolicy
+# AzureRest::ResilientVMCreationPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResilientVMCreationPolicy.new(
+instance = AzureRest::ResilientVMCreationPolicy.new(
   enabled: null
 )
 ```

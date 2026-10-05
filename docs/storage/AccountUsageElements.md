@@ -1,4 +1,4 @@
-# AzureSDK::AccountUsageElements
+# AzureRest::AccountUsageElements
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AccountUsageElements.new(
+instance = AzureRest::AccountUsageElements.new(
   file_share_count: null,
   provisioned_storage_gi_b: null,
   provisioned_iops: null,

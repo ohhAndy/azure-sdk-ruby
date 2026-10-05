@@ -1,4 +1,4 @@
-# AzureSDK::ReachabilityAnalysisIntentListResult
+# AzureRest::ReachabilityAnalysisIntentListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ReachabilityAnalysisIntentListResult.new(
+instance = AzureRest::ReachabilityAnalysisIntentListResult.new(
   value: null,
   next_link: null
 )

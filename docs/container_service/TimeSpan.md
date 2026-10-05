@@ -1,4 +1,4 @@
-# AzureSDK::TimeSpan
+# AzureRest::TimeSpan
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TimeSpan.new(
+instance = AzureRest::TimeSpan.new(
   start: null,
   _end: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::AgentPoolStatus
+# AzureRest::AgentPoolStatus
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AgentPoolStatus.new(
+instance = AzureRest::AgentPoolStatus.new(
   provisioning_error: null
 )
 ```

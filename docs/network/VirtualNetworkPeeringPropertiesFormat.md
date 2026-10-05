@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkPeeringPropertiesFormat
+# AzureRest::VirtualNetworkPeeringPropertiesFormat
 
 ## Properties
 
@@ -28,9 +28,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkPeeringPropertiesFormat.new(
+instance = AzureRest::VirtualNetworkPeeringPropertiesFormat.new(
   allow_virtual_network_access: null,
   allow_forwarded_traffic: null,
   allow_gateway_transit: null,

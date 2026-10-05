@@ -1,4 +1,4 @@
-# AzureSDK::DataShareSource
+# AzureRest::DataShareSource
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataShareSource.new(
+instance = AzureRest::DataShareSource.new(
   connection: null,
   auth_properties: null
 )

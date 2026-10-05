@@ -1,4 +1,4 @@
-# AzureSDK::OSDiskImage
+# AzureRest::OSDiskImage
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OSDiskImage.new(
+instance = AzureRest::OSDiskImage.new(
   operating_system: null
 )
 ```

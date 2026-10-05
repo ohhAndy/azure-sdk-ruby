@@ -1,4 +1,4 @@
-# AzureSDK::IdentityBindingOidcIssuerProfile
+# AzureRest::IdentityBindingOidcIssuerProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IdentityBindingOidcIssuerProfile.new(
+instance = AzureRest::IdentityBindingOidcIssuerProfile.new(
   oidc_issuer_url: null
 )
 ```

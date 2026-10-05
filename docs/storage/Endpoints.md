@@ -1,4 +1,4 @@
-# AzureSDK::Endpoints
+# AzureRest::Endpoints
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Endpoints.new(
+instance = AzureRest::Endpoints.new(
   blob: null,
   queue: null,
   table: null,

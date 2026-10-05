@@ -1,4 +1,4 @@
-# AzureSDK::NodeProvisioningMode
+# AzureRest::NodeProvisioningMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NodeProvisioningMode.new()
+instance = AzureRest::NodeProvisioningMode.new()
 ```
 

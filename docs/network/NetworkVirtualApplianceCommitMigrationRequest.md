@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualApplianceCommitMigrationRequest
+# AzureRest::NetworkVirtualApplianceCommitMigrationRequest
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualApplianceCommitMigrationRequest.new(
+instance = AzureRest::NetworkVirtualApplianceCommitMigrationRequest.new(
   properties: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ProbeNoHealthyBackendsBehavior
+# AzureRest::ProbeNoHealthyBackendsBehavior
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProbeNoHealthyBackendsBehavior.new()
+instance = AzureRest::ProbeNoHealthyBackendsBehavior.new()
 ```
 

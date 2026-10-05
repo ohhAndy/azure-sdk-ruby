@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledEventsAdditionalPublishingTargets
+# AzureRest::ScheduledEventsAdditionalPublishingTargets
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledEventsAdditionalPublishingTargets.new(
+instance = AzureRest::ScheduledEventsAdditionalPublishingTargets.new(
   event_grid_and_resource_graph: null
 )
 ```

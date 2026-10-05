@@ -1,4 +1,4 @@
-# AzureSDK::TimeInWeek
+# AzureRest::TimeInWeek
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TimeInWeek.new(
+instance = AzureRest::TimeInWeek.new(
   day: null,
   hour_slots: null
 )

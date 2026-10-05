@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfacePropertiesFormat2
+# AzureRest::NetworkInterfacePropertiesFormat2
 
 ## Properties
 
@@ -31,9 +31,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfacePropertiesFormat2.new(
+instance = AzureRest::NetworkInterfacePropertiesFormat2.new(
   virtual_machine: null,
   network_security_group: null,
   private_endpoint: null,

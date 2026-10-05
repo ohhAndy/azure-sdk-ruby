@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmProperties
+# AzureRest::ManagedHsmProperties
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmProperties.new(
+instance = AzureRest::ManagedHsmProperties.new(
   tenant_id: null,
   initial_admin_object_ids: null,
   hsm_uri: null,

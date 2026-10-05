@@ -1,4 +1,4 @@
-# AzureSDK::ServerGtidSetParameter
+# AzureRest::ServerGtidSetParameter
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerGtidSetParameter.new(
+instance = AzureRest::ServerGtidSetParameter.new(
   gtid_set: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::NetworkRuleAction
+# AzureRest::NetworkRuleAction
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkRuleAction.new()
+instance = AzureRest::NetworkRuleAction.new()
 ```
 

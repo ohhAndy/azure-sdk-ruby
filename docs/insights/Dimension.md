@@ -1,4 +1,4 @@
-# AzureSDK::Dimension
+# AzureRest::Dimension
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Dimension.new(
+instance = AzureRest::Dimension.new(
   name: null,
   operator: null,
   values: null

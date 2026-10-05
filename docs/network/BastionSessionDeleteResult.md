@@ -1,4 +1,4 @@
-# AzureSDK::BastionSessionDeleteResult
+# AzureRest::BastionSessionDeleteResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionSessionDeleteResult.new(
+instance = AzureRest::BastionSessionDeleteResult.new(
   value: null,
   next_link: null
 )

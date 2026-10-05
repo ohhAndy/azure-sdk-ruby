@@ -1,4 +1,4 @@
-# AzureSDK::MigrationPropertiesForPatch
+# AzureRest::MigrationPropertiesForPatch
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationPropertiesForPatch.new(
+instance = AzureRest::MigrationPropertiesForPatch.new(
   source_db_server_resource_id: null,
   source_db_server_fully_qualified_domain_name: null,
   target_db_server_fully_qualified_domain_name: null,

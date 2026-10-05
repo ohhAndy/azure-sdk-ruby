@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityGroupPropertiesFormat2
+# AzureRest::NetworkSecurityGroupPropertiesFormat2
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkSecurityGroupPropertiesFormat2.new(
+instance = AzureRest::NetworkSecurityGroupPropertiesFormat2.new(
   flush_connection: null,
   security_rules: null,
   default_security_rules: null,

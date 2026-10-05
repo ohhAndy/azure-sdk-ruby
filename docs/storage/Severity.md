@@ -1,4 +1,4 @@
-# AzureSDK::Severity
+# AzureRest::Severity
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Severity.new()
+instance = AzureRest::Severity.new()
 ```
 

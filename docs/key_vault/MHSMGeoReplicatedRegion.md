@@ -1,4 +1,4 @@
-# AzureSDK::MHSMGeoReplicatedRegion
+# AzureRest::MHSMGeoReplicatedRegion
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MHSMGeoReplicatedRegion.new(
+instance = AzureRest::MHSMGeoReplicatedRegion.new(
   name: null,
   provisioning_state: null,
   is_primary: null

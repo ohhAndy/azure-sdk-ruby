@@ -1,4 +1,4 @@
-# AzureSDK::AzureFilesIdentityBasedAuthentication
+# AzureRest::AzureFilesIdentityBasedAuthentication
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureFilesIdentityBasedAuthentication.new(
+instance = AzureRest::AzureFilesIdentityBasedAuthentication.new(
   directory_service_options: null,
   active_directory_properties: null,
   default_share_permission: null,

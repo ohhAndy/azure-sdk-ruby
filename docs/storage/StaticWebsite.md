@@ -1,4 +1,4 @@
-# AzureSDK::StaticWebsite
+# AzureRest::StaticWebsite
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StaticWebsite.new(
+instance = AzureRest::StaticWebsite.new(
   enabled: null,
   index_document: null,
   default_index_document_path: null,

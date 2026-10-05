@@ -1,4 +1,4 @@
-# AzureSDK::ServiceDelegationPropertiesFormat
+# AzureRest::ServiceDelegationPropertiesFormat
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceDelegationPropertiesFormat.new(
+instance = AzureRest::ServiceDelegationPropertiesFormat.new(
   service_name: null,
   actions: null,
   provisioning_state: null

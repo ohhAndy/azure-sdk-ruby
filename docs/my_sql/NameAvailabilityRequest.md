@@ -1,4 +1,4 @@
-# AzureSDK::NameAvailabilityRequest
+# AzureRest::NameAvailabilityRequest
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NameAvailabilityRequest.new(
+instance = AzureRest::NameAvailabilityRequest.new(
   name: null,
   type: null
 )

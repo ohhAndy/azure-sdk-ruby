@@ -1,4 +1,4 @@
-# AzureSDK::DdosDetectionRulePropertiesFormat
+# AzureRest::DdosDetectionRulePropertiesFormat
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosDetectionRulePropertiesFormat.new(
+instance = AzureRest::DdosDetectionRulePropertiesFormat.new(
   provisioning_state: null,
   detection_mode: null,
   traffic_detection_rule: null

@@ -1,4 +1,4 @@
-# AzureSDK::MigrateVMAvailabilityZoneInput
+# AzureRest::MigrateVMAvailabilityZoneInput
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrateVMAvailabilityZoneInput.new(
+instance = AzureRest::MigrateVMAvailabilityZoneInput.new(
   instance_ids: null,
   target_zone: null
 )

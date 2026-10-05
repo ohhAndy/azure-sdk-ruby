@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualApplianceSkuPropertiesFormat
+# AzureRest::NetworkVirtualApplianceSkuPropertiesFormat
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualApplianceSkuPropertiesFormat.new(
+instance = AzureRest::NetworkVirtualApplianceSkuPropertiesFormat.new(
   vendor: null,
   available_versions: null,
   available_scale_units: null

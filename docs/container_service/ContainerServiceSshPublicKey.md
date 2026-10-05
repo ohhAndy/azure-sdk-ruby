@@ -1,4 +1,4 @@
-# AzureSDK::ContainerServiceSshPublicKey
+# AzureRest::ContainerServiceSshPublicKey
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ContainerServiceSshPublicKey.new(
+instance = AzureRest::ContainerServiceSshPublicKey.new(
   key_data: null
 )
 ```

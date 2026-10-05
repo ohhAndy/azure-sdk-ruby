@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetNetworkProfile
+# AzureRest::VirtualMachineScaleSetNetworkProfile
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetNetworkProfile.new(
+instance = AzureRest::VirtualMachineScaleSetNetworkProfile.new(
   health_probe: null,
   network_interface_configurations: null,
   network_api_version: null,

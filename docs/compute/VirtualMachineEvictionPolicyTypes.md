@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineEvictionPolicyTypes
+# AzureRest::VirtualMachineEvictionPolicyTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineEvictionPolicyTypes.new()
+instance = AzureRest::VirtualMachineEvictionPolicyTypes.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::TagDetails
+# AzureRest::TagDetails
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TagDetails.new(
+instance = AzureRest::TagDetails.new(
   id: null,
   tag_name: null,
   count: null,

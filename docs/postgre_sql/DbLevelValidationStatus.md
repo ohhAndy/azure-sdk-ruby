@@ -1,4 +1,4 @@
-# AzureSDK::DbLevelValidationStatus
+# AzureRest::DbLevelValidationStatus
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DbLevelValidationStatus.new(
+instance = AzureRest::DbLevelValidationStatus.new(
   database_name: null,
   started_on: null,
   ended_on: null,

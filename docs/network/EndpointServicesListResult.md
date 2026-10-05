@@ -1,4 +1,4 @@
-# AzureSDK::EndpointServicesListResult
+# AzureRest::EndpointServicesListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EndpointServicesListResult.new(
+instance = AzureRest::EndpointServicesListResult.new(
   value: null,
   next_link: null
 )

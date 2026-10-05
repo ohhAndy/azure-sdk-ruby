@@ -1,4 +1,4 @@
-# AzureSDK::BackupAndExportResponseProperties
+# AzureRest::BackupAndExportResponseProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupAndExportResponseProperties.new(
+instance = AzureRest::BackupAndExportResponseProperties.new(
   datasource_size_in_bytes: null,
   data_transferred_in_bytes: null,
   backup_metadata: null

@@ -1,4 +1,4 @@
-# AzureSDK::ConnectivityEndpoint
+# AzureRest::ConnectivityEndpoint
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ConnectivityEndpoint.new(
+instance = AzureRest::ConnectivityEndpoint.new(
   name: null,
   protocol: null,
   location: null,

@@ -1,4 +1,4 @@
-# AzureSDK::FastProvisioningEditionCapability
+# AzureRest::FastProvisioningEditionCapability
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FastProvisioningEditionCapability.new(
+instance = AzureRest::FastProvisioningEditionCapability.new(
   status: null,
   reason: null,
   supported_tier: null,

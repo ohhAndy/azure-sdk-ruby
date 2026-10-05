@@ -1,4 +1,4 @@
-# AzureSDK::AllocationStrategy
+# AzureRest::AllocationStrategy
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AllocationStrategy.new()
+instance = AzureRest::AllocationStrategy.new()
 ```
 

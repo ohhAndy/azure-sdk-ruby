@@ -1,4 +1,4 @@
-# AzureSDK::MeterInfo
+# AzureRest::MeterInfo
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MeterInfo.new(
+instance = AzureRest::MeterInfo.new(
   meter_id: null,
   meter_name: null,
   meter_category: null,

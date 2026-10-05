@@ -1,4 +1,4 @@
-# AzureSDK::CustomIpPrefixPropertiesFormat
+# AzureRest::CustomIpPrefixPropertiesFormat
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CustomIpPrefixPropertiesFormat.new(
+instance = AzureRest::CustomIpPrefixPropertiesFormat.new(
   asn: null,
   cidr: null,
   signed_message: null,

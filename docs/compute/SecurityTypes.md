@@ -1,4 +1,4 @@
-# AzureSDK::SecurityTypes
+# AzureRest::SecurityTypes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecurityTypes.new()
+instance = AzureRest::SecurityTypes.new()
 ```
 

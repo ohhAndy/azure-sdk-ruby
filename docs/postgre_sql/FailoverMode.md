@@ -1,4 +1,4 @@
-# AzureSDK::FailoverMode
+# AzureRest::FailoverMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::FailoverMode.new()
+instance = AzureRest::FailoverMode.new()
 ```
 

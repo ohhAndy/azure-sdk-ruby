@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetRollingUpgradesApi
+# AzureRest::VirtualMachineScaleSetRollingUpgradesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,14 +22,14 @@ Cancels the current virtual machine scale set rolling upgrade.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetRollingUpgradesApi.new
+api_instance = AzureRest::VirtualMachineScaleSetRollingUpgradesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -38,7 +38,7 @@ vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM sc
 begin
   
   api_instance.virtual_machine_scale_set_rolling_upgrades_cancel(api_version, subscription_id, resource_group_name, vm_scale_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_cancel: #{e}"
 end
 ```
@@ -56,7 +56,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_cancel_with_http_info: #{e}"
 end
 ```
@@ -96,14 +96,14 @@ Gets the status of the latest virtual machine scale set rolling upgrade.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetRollingUpgradesApi.new
+api_instance = AzureRest::VirtualMachineScaleSetRollingUpgradesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -113,7 +113,7 @@ begin
   
   result = api_instance.virtual_machine_scale_set_rolling_upgrades_get_latest(api_version, subscription_id, resource_group_name, vm_scale_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_get_latest: #{e}"
 end
 ```
@@ -131,7 +131,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RollingUpgradeStatusInfo>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_get_latest_with_http_info: #{e}"
 end
 ```
@@ -171,14 +171,14 @@ Starts a rolling upgrade to move all extensions for all virtual machine scale se
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetRollingUpgradesApi.new
+api_instance = AzureRest::VirtualMachineScaleSetRollingUpgradesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -187,7 +187,7 @@ vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM sc
 begin
   
   api_instance.virtual_machine_scale_set_rolling_upgrades_start_extension_upgrade(api_version, subscription_id, resource_group_name, vm_scale_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_start_extension_upgrade: #{e}"
 end
 ```
@@ -205,7 +205,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_start_extension_upgrade_with_http_info: #{e}"
 end
 ```
@@ -245,14 +245,14 @@ Starts a rolling upgrade to move all virtual machine scale set instances to the 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualMachineScaleSetRollingUpgradesApi.new
+api_instance = AzureRest::VirtualMachineScaleSetRollingUpgradesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -261,7 +261,7 @@ vm_scale_set_name = 'vm_scale_set_name_example' # String | The name of the VM sc
 begin
   
   api_instance.virtual_machine_scale_set_rolling_upgrades_start_os_upgrade(api_version, subscription_id, resource_group_name, vm_scale_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_start_os_upgrade: #{e}"
 end
 ```
@@ -279,7 +279,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualMachineScaleSetRollingUpgradesApi->virtual_machine_scale_set_rolling_upgrades_start_os_upgrade_with_http_info: #{e}"
 end
 ```

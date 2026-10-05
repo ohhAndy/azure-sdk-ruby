@@ -1,4 +1,4 @@
-# AzureSDK::ComponentNames
+# AzureRest::ComponentNames
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ComponentNames.new()
+instance = AzureRest::ComponentNames.new()
 ```
 

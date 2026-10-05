@@ -1,4 +1,4 @@
-# AzureSDK::TrafficAnalyticsConfigurationProperties
+# AzureRest::TrafficAnalyticsConfigurationProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TrafficAnalyticsConfigurationProperties.new(
+instance = AzureRest::TrafficAnalyticsConfigurationProperties.new(
   enabled: null,
   workspace_id: null,
   workspace_region: null,

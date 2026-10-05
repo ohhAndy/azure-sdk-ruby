@@ -1,4 +1,4 @@
-# AzureSDK::IpTag
+# AzureRest::IpTag
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IpTag.new(
+instance = AzureRest::IpTag.new(
   ip_tag_type: null,
   tag: null,
   first_party_service_tag_id: null

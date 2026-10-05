@@ -1,4 +1,4 @@
-# AzureSDK::KubernetesSupportPlan
+# AzureRest::KubernetesSupportPlan
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KubernetesSupportPlan.new()
+instance = AzureRest::KubernetesSupportPlan.new()
 ```
 

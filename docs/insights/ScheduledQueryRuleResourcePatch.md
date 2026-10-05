@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledQueryRuleResourcePatch
+# AzureRest::ScheduledQueryRuleResourcePatch
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledQueryRuleResourcePatch.new(
+instance = AzureRest::ScheduledQueryRuleResourcePatch.new(
   identity: null,
   tags: null,
   properties: null

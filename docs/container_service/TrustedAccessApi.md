@@ -1,4 +1,4 @@
-# AzureSDK::TrustedAccessApi
+# AzureRest::TrustedAccessApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,26 +23,26 @@ Create or update a trusted access role binding
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TrustedAccessApi.new
+api_instance = AzureRest::TrustedAccessApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 resource_name = 'resource_name_example' # String | The name of the managed cluster resource.
 trusted_access_role_binding_name = 'trusted_access_role_binding_name_example' # String | The name of trusted access role binding.
-trusted_access_role_binding = AzureSDK::TrustedAccessRoleBinding.new({properties: AzureSDK::TrustedAccessRoleBindingProperties.new({source_resource_id: 'source_resource_id_example', roles: ['roles_example']})}) # TrustedAccessRoleBinding | A trusted access role binding
+trusted_access_role_binding = AzureRest::TrustedAccessRoleBinding.new({properties: AzureRest::TrustedAccessRoleBindingProperties.new({source_resource_id: 'source_resource_id_example', roles: ['roles_example']})}) # TrustedAccessRoleBinding | A trusted access role binding
 
 begin
   
   result = api_instance.trusted_access_role_bindings_create_or_update(api_version, subscription_id, resource_group_name, resource_name, trusted_access_role_binding_name, trusted_access_role_binding)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TrustedAccessRoleBinding>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ Delete a trusted access role binding.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TrustedAccessApi.new
+api_instance = AzureRest::TrustedAccessApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -119,7 +119,7 @@ trusted_access_role_binding_name = 'trusted_access_role_binding_name_example' # 
 begin
   
   api_instance.trusted_access_role_bindings_delete(api_version, subscription_id, resource_group_name, resource_name, trusted_access_role_binding_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_delete: #{e}"
 end
 ```
@@ -137,7 +137,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_delete_with_http_info: #{e}"
 end
 ```
@@ -178,14 +178,14 @@ Get a trusted access role binding.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TrustedAccessApi.new
+api_instance = AzureRest::TrustedAccessApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -196,7 +196,7 @@ begin
   
   result = api_instance.trusted_access_role_bindings_get(api_version, subscription_id, resource_group_name, resource_name, trusted_access_role_binding_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_get: #{e}"
 end
 ```
@@ -214,7 +214,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TrustedAccessRoleBinding>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_get_with_http_info: #{e}"
 end
 ```
@@ -255,14 +255,14 @@ List trusted access role bindings.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TrustedAccessApi.new
+api_instance = AzureRest::TrustedAccessApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -272,7 +272,7 @@ begin
   
   result = api_instance.trusted_access_role_bindings_list(api_version, subscription_id, resource_group_name, resource_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_list: #{e}"
 end
 ```
@@ -290,7 +290,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TrustedAccessRoleBindingListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_role_bindings_list_with_http_info: #{e}"
 end
 ```
@@ -330,14 +330,14 @@ List supported trusted access roles.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::TrustedAccessApi.new
+api_instance = AzureRest::TrustedAccessApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 location = 'location_example' # String | The name of the Azure region.
@@ -346,7 +346,7 @@ begin
   
   result = api_instance.trusted_access_roles_list(api_version, subscription_id, location)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_roles_list: #{e}"
 end
 ```
@@ -364,7 +364,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <TrustedAccessRoleListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling TrustedAccessApi->trusted_access_roles_list_with_http_info: #{e}"
 end
 ```

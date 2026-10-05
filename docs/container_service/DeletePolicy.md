@@ -1,4 +1,4 @@
-# AzureSDK::DeletePolicy
+# AzureRest::DeletePolicy
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DeletePolicy.new()
+instance = AzureRest::DeletePolicy.new()
 ```
 

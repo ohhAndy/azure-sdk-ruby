@@ -1,4 +1,4 @@
-# AzureSDK::IPAddressAvailabilityResult
+# AzureRest::IPAddressAvailabilityResult
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IPAddressAvailabilityResult.new(
+instance = AzureRest::IPAddressAvailabilityResult.new(
   available: null,
   available_ip_addresses: null,
   is_platform_reserved: null

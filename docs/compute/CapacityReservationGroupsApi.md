@@ -1,4 +1,4 @@
-# AzureSDK::CapacityReservationGroupsApi
+# AzureRest::CapacityReservationGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ The operation to create or update a capacity reservation group. When updating a 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 capacity_reservation_group_name = 'capacity_reservation_group_name_example' # String | The name of the capacity reservation group.
-parameters = AzureSDK::CapacityReservationGroup.new({location: 'location_example'}) # CapacityReservationGroup | Parameters supplied to the Create capacity reservation Group.
+parameters = AzureRest::CapacityReservationGroup.new({location: 'location_example'}) # CapacityReservationGroup | Parameters supplied to the Create capacity reservation Group.
 
 begin
   
   result = api_instance.capacity_reservation_groups_create_or_update(api_version, subscription_id, resource_group_name, capacity_reservation_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapacityReservationGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ The operation to delete a capacity reservation group. This operation is allowed 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ capacity_reservation_group_name = 'capacity_reservation_group_name_example' # St
 begin
   
   api_instance.capacity_reservation_groups_delete(api_version, subscription_id, resource_group_name, capacity_reservation_group_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ The operation that retrieves information about a capacity reservation group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.capacity_reservation_groups_get(api_version, subscription_id, resource_group_name, capacity_reservation_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapacityReservationGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Lists all of the capacity reservation groups in the specified resource group. Us
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -273,7 +273,7 @@ begin
   
   result = api_instance.capacity_reservation_groups_list_by_resource_group(api_version, subscription_id, resource_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_list_by_resource_group: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapacityReservationGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -331,14 +331,14 @@ Lists all of the capacity reservation groups in the subscription. Use the nextLi
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -350,7 +350,7 @@ begin
   
   result = api_instance.capacity_reservation_groups_list_by_subscription(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_list_by_subscription: #{e}"
 end
 ```
@@ -368,7 +368,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapacityReservationGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -408,25 +408,25 @@ The operation to update a capacity reservation group. When updating a capacity r
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CapacityReservationGroupsApi.new
+api_instance = AzureRest::CapacityReservationGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 capacity_reservation_group_name = 'capacity_reservation_group_name_example' # String | The name of the capacity reservation group.
-parameters = AzureSDK::CapacityReservationGroupUpdate.new # CapacityReservationGroupUpdate | Parameters supplied to the Update capacity reservation Group operation.
+parameters = AzureRest::CapacityReservationGroupUpdate.new # CapacityReservationGroupUpdate | Parameters supplied to the Update capacity reservation Group operation.
 
 begin
   
   result = api_instance.capacity_reservation_groups_update(api_version, subscription_id, resource_group_name, capacity_reservation_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_update: #{e}"
 end
 ```
@@ -444,7 +444,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapacityReservationGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CapacityReservationGroupsApi->capacity_reservation_groups_update_with_http_info: #{e}"
 end
 ```

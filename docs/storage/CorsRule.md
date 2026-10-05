@@ -1,4 +1,4 @@
-# AzureSDK::CorsRule
+# AzureRest::CorsRule
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CorsRule.new(
+instance = AzureRest::CorsRule.new(
   allowed_origins: null,
   allowed_methods: null,
   max_age_in_seconds: null,

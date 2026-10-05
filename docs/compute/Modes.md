@@ -1,4 +1,4 @@
-# AzureSDK::Modes
+# AzureRest::Modes
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Modes.new()
+instance = AzureRest::Modes.new()
 ```
 

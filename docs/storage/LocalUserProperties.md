@@ -1,4 +1,4 @@
-# AzureSDK::LocalUserProperties
+# AzureRest::LocalUserProperties
 
 ## Properties
 
@@ -20,9 +20,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalUserProperties.new(
+instance = AzureRest::LocalUserProperties.new(
   permission_scopes: null,
   home_directory: null,
   ssh_authorized_keys: null,

@@ -1,4 +1,4 @@
-# AzureSDK::QosDefinition
+# AzureRest::QosDefinition
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::QosDefinition.new(
+instance = AzureRest::QosDefinition.new(
   markings: null,
   source_ip_ranges: null,
   destination_ip_ranges: null,

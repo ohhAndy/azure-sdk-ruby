@@ -1,4 +1,4 @@
-# AzureSDK::SubnetsApi
+# AzureRest::SubnetsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,26 +22,26 @@ Creates or updates a subnet in the specified virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SubnetsApi.new
+api_instance = AzureRest::SubnetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
 subnet_name = 'subnet_name_example' # String | The name of the subnet.
-subnet_parameters = AzureSDK::Subnet.new # Subnet | Parameters supplied to the create or update subnet operation.
+subnet_parameters = AzureRest::Subnet.new # Subnet | Parameters supplied to the create or update subnet operation.
 
 begin
   
   result = api_instance.subnets_create_or_update(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name, subnet_parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Subnet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified subnet.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SubnetsApi.new
+api_instance = AzureRest::SubnetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ subnet_name = 'subnet_name_example' # String | The name of the subnet.
 begin
   
   api_instance.subnets_delete(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_delete_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Gets the specified subnet by virtual network and resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SubnetsApi.new
+api_instance = AzureRest::SubnetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -198,7 +198,7 @@ begin
   
   result = api_instance.subnets_get(api_version, subscription_id, resource_group_name, virtual_network_name, subnet_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_get: #{e}"
 end
 ```
@@ -216,7 +216,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Subnet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_get_with_http_info: #{e}"
 end
 ```
@@ -258,14 +258,14 @@ Gets all subnets in a virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::SubnetsApi.new
+api_instance = AzureRest::SubnetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -275,7 +275,7 @@ begin
   
   result = api_instance.subnets_list(api_version, subscription_id, resource_group_name, virtual_network_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_list: #{e}"
 end
 ```
@@ -293,7 +293,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SubnetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling SubnetsApi->subnets_list_with_http_info: #{e}"
 end
 ```

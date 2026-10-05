@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetNetworkConfiguration
+# AzureRest::VirtualMachineScaleSetNetworkConfiguration
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetNetworkConfiguration.new(
+instance = AzureRest::VirtualMachineScaleSetNetworkConfiguration.new(
   name: null,
   properties: null,
   tags: null

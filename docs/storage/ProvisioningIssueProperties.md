@@ -1,4 +1,4 @@
-# AzureSDK::ProvisioningIssueProperties
+# AzureRest::ProvisioningIssueProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProvisioningIssueProperties.new(
+instance = AzureRest::ProvisioningIssueProperties.new(
   issue_type: null,
   severity: null,
   description: null

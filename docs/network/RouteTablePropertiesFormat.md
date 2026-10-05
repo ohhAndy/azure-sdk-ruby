@@ -1,4 +1,4 @@
-# AzureSDK::RouteTablePropertiesFormat
+# AzureRest::RouteTablePropertiesFormat
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RouteTablePropertiesFormat.new(
+instance = AzureRest::RouteTablePropertiesFormat.new(
   routes: null,
   subnets: null,
   disable_bgp_route_propagation: null,

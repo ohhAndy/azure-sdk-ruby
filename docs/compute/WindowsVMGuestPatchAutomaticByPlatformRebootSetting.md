@@ -1,4 +1,4 @@
-# AzureSDK::WindowsVMGuestPatchAutomaticByPlatformRebootSetting
+# AzureRest::WindowsVMGuestPatchAutomaticByPlatformRebootSetting
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::WindowsVMGuestPatchAutomaticByPlatformRebootSetting.new()
+instance = AzureRest::WindowsVMGuestPatchAutomaticByPlatformRebootSetting.new()
 ```
 

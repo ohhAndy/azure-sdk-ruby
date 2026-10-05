@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterWebAppRoutingGatewayAPIImplementations
+# AzureRest::ManagedClusterWebAppRoutingGatewayAPIImplementations
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterWebAppRoutingGatewayAPIImplementations.new(
+instance = AzureRest::ManagedClusterWebAppRoutingGatewayAPIImplementations.new(
   app_routing_istio: null
 )
 ```

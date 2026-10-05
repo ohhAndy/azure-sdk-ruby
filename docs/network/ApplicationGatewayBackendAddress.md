@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationGatewayBackendAddress
+# AzureRest::ApplicationGatewayBackendAddress
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationGatewayBackendAddress.new(
+instance = AzureRest::ApplicationGatewayBackendAddress.new(
   fqdn: null,
   ip_address: null
 )

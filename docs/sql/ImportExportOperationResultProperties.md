@@ -1,4 +1,4 @@
-# AzureSDK::ImportExportOperationResultProperties
+# AzureRest::ImportExportOperationResultProperties
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ImportExportOperationResultProperties.new(
+instance = AzureRest::ImportExportOperationResultProperties.new(
   request_id: null,
   request_type: null,
   queued_time: null,

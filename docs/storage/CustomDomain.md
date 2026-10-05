@@ -1,4 +1,4 @@
-# AzureSDK::CustomDomain
+# AzureRest::CustomDomain
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CustomDomain.new(
+instance = AzureRest::CustomDomain.new(
   name: null,
   use_sub_domain_name: null
 )

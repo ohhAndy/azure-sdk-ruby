@@ -1,4 +1,4 @@
-# AzureSDK::BastionShareableLinkListResult
+# AzureRest::BastionShareableLinkListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BastionShareableLinkListResult.new(
+instance = AzureRest::BastionShareableLinkListResult.new(
   value: null,
   next_link: null
 )

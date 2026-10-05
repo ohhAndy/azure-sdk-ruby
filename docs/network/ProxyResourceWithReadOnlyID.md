@@ -1,4 +1,4 @@
-# AzureSDK::ProxyResourceWithReadOnlyID
+# AzureRest::ProxyResourceWithReadOnlyID
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProxyResourceWithReadOnlyID.new(
+instance = AzureRest::ProxyResourceWithReadOnlyID.new(
   id: null,
   name: null,
   type: null

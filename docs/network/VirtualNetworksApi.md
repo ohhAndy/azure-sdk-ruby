@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworksApi
+# AzureRest::VirtualNetworksApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -25,25 +25,25 @@ Creates or updates a virtual network in the specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
-parameters = AzureSDK::VirtualNetwork.new # VirtualNetwork | Parameters supplied to the create or update virtual network operation.
+parameters = AzureRest::VirtualNetwork.new # VirtualNetwork | Parameters supplied to the create or update virtual network operation.
 
 begin
   
   result = api_instance.virtual_networks_create_or_update(api_version, subscription_id, resource_group_name, virtual_network_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_create_or_update: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetwork>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -102,14 +102,14 @@ Deletes the specified virtual network.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ virtual_network_name = 'virtual_network_name_example' # String | The name of the
 begin
   
   api_instance.virtual_networks_delete(api_version, subscription_id, resource_group_name, virtual_network_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_delete: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_delete_with_http_info: #{e}"
 end
 ```
@@ -176,14 +176,14 @@ Gets the specified virtual network by resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -196,7 +196,7 @@ begin
   
   result = api_instance.virtual_networks_get(api_version, subscription_id, resource_group_name, virtual_network_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_get: #{e}"
 end
 ```
@@ -214,7 +214,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetwork>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_get_with_http_info: #{e}"
 end
 ```
@@ -255,14 +255,14 @@ Gets all virtual networks in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -271,7 +271,7 @@ begin
   
   result = api_instance.virtual_networks_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_list: #{e}"
 end
 ```
@@ -289,7 +289,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_list_with_http_info: #{e}"
 end
 ```
@@ -328,14 +328,14 @@ Gets all virtual networks in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -343,7 +343,7 @@ begin
   
   result = api_instance.virtual_networks_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_list_all: #{e}"
 end
 ```
@@ -361,7 +361,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetworkListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_list_all_with_http_info: #{e}"
 end
 ```
@@ -399,24 +399,24 @@ Move IP configurations from one virtual network to another.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
-body = AzureSDK::MoveIpConfigurationsRequest.new({move_ip_configuration_items: [AzureSDK::MoveIpConfigurationItem.new({source_ip_configuration: AzureSDK::MoveIpConfigurationResourceReference.new({id: 'id_example'}), target_ip_configuration: AzureSDK::MoveIpConfigurationResourceReference.new({id: 'id_example'})})]}) # MoveIpConfigurationsRequest | Parameters supplied to move IP configurations from one virtual network to another.
+body = AzureRest::MoveIpConfigurationsRequest.new({move_ip_configuration_items: [AzureRest::MoveIpConfigurationItem.new({source_ip_configuration: AzureRest::MoveIpConfigurationResourceReference.new({id: 'id_example'}), target_ip_configuration: AzureRest::MoveIpConfigurationResourceReference.new({id: 'id_example'})})]}) # MoveIpConfigurationsRequest | Parameters supplied to move IP configurations from one virtual network to another.
 
 begin
   
   api_instance.virtual_networks_move_ip_configurations(api_version, subscription_id, resource_group_name, virtual_network_name, body)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_move_ip_configurations: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_move_ip_configurations_with_http_info: #{e}"
 end
 ```
@@ -475,25 +475,25 @@ Updates a virtual network tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::VirtualNetworksApi.new
+api_instance = AzureRest::VirtualNetworksApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 virtual_network_name = 'virtual_network_name_example' # String | The name of the virtual network.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update virtual network tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update virtual network tags.
 
 begin
   
   result = api_instance.virtual_networks_update_tags(api_version, subscription_id, resource_group_name, virtual_network_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_update_tags: #{e}"
 end
 ```
@@ -511,7 +511,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualNetwork>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling VirtualNetworksApi->virtual_networks_update_tags_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::StartRecoveryPolicy
+# AzureRest::StartRecoveryPolicy
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StartRecoveryPolicy.new(
+instance = AzureRest::StartRecoveryPolicy.new(
   enabled: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::KeyAttributes
+# AzureRest::KeyAttributes
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyAttributes.new(
+instance = AzureRest::KeyAttributes.new(
   enabled: null,
   nbf: null,
   exp: null,

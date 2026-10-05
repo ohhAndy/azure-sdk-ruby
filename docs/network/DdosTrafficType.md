@@ -1,4 +1,4 @@
-# AzureSDK::DdosTrafficType
+# AzureRest::DdosTrafficType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DdosTrafficType.new()
+instance = AzureRest::DdosTrafficType.new()
 ```
 

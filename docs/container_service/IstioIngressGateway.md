@@ -1,4 +1,4 @@
-# AzureSDK::IstioIngressGateway
+# AzureRest::IstioIngressGateway
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IstioIngressGateway.new(
+instance = AzureRest::IstioIngressGateway.new(
   mode: null,
   enabled: null
 )

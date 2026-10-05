@@ -1,4 +1,4 @@
-# AzureSDK::ValidationState
+# AzureRest::ValidationState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ValidationState.new()
+instance = AzureRest::ValidationState.new()
 ```
 

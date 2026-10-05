@@ -1,4 +1,4 @@
-# AzureSDK::ProximityPlacementGroupsApi
+# AzureRest::ProximityPlacementGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Create or update a proximity placement group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 proximity_placement_group_name = 'proximity_placement_group_name_example' # String | The name of the proximity placement group.
-parameters = AzureSDK::ProximityPlacementGroup.new({location: 'location_example'}) # ProximityPlacementGroup | Parameters supplied to the Create Proximity Placement Group operation.
+parameters = AzureRest::ProximityPlacementGroup.new({location: 'location_example'}) # ProximityPlacementGroup | Parameters supplied to the Create Proximity Placement Group operation.
 
 begin
   
   result = api_instance.proximity_placement_groups_create_or_update(api_version, subscription_id, resource_group_name, proximity_placement_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProximityPlacementGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Delete a proximity placement group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ proximity_placement_group_name = 'proximity_placement_group_name_example' # Stri
 begin
   
   api_instance.proximity_placement_groups_delete(api_version, subscription_id, resource_group_name, proximity_placement_group_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Retrieves information about a proximity placement group .
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.proximity_placement_groups_get(api_version, subscription_id, resource_group_name, proximity_placement_group_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProximityPlacementGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Lists all proximity placement groups in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.proximity_placement_groups_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_list_by_resource_group: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProximityPlacementGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Lists all proximity placement groups in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 
@@ -342,7 +342,7 @@ begin
   
   result = api_instance.proximity_placement_groups_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_list_by_subscription: #{e}"
 end
 ```
@@ -360,7 +360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProximityPlacementGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Update a proximity placement group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ProximityPlacementGroupsApi.new
+api_instance = AzureRest::ProximityPlacementGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 proximity_placement_group_name = 'proximity_placement_group_name_example' # String | The name of the proximity placement group.
-parameters = AzureSDK::ProximityPlacementGroupUpdate.new # ProximityPlacementGroupUpdate | Parameters supplied to the Update Proximity Placement Group operation.
+parameters = AzureRest::ProximityPlacementGroupUpdate.new # ProximityPlacementGroupUpdate | Parameters supplied to the Update Proximity Placement Group operation.
 
 begin
   
   result = api_instance.proximity_placement_groups_update(api_version, subscription_id, resource_group_name, proximity_placement_group_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_update: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ProximityPlacementGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ProximityPlacementGroupsApi->proximity_placement_groups_update_with_http_info: #{e}"
 end
 ```

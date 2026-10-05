@@ -1,4 +1,4 @@
-# AzureSDK::LinuxVMGuestPatchMode
+# AzureRest::LinuxVMGuestPatchMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxVMGuestPatchMode.new()
+instance = AzureRest::LinuxVMGuestPatchMode.new()
 ```
 

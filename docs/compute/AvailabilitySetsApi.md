@@ -1,4 +1,4 @@
-# AzureSDK::AvailabilitySetsApi
+# AzureRest::AvailabilitySetsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -29,14 +29,14 @@ Cancel the migration operation on an Availability Set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -45,7 +45,7 @@ availability_set_name = 'availability_set_name_example' # String | The name of t
 begin
   
   api_instance.availability_sets_cancel_migration_to_virtual_machine_scale_set(api_version, subscription_id, resource_group_name, availability_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_cancel_migration_to_virtual_machine_scale_set: #{e}"
 end
 ```
@@ -63,7 +63,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_cancel_migration_to_virtual_machine_scale_set_with_http_info: #{e}"
 end
 ```
@@ -103,26 +103,26 @@ Create a new Flexible Virtual Machine Scale Set and migrate all the Virtual Mach
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 availability_set_name = 'availability_set_name_example' # String | The name of the availability set.
 opts = {
-  parameters: AzureSDK::ConvertToVirtualMachineScaleSetInput.new # ConvertToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
+  parameters: AzureRest::ConvertToVirtualMachineScaleSetInput.new # ConvertToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
 }
 
 begin
   
   api_instance.availability_sets_convert_to_virtual_machine_scale_set(api_version, subscription_id, resource_group_name, availability_set_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_convert_to_virtual_machine_scale_set: #{e}"
 end
 ```
@@ -140,7 +140,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_convert_to_virtual_machine_scale_set_with_http_info: #{e}"
 end
 ```
@@ -181,25 +181,25 @@ Create or update an availability set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 availability_set_name = 'availability_set_name_example' # String | The name of the availability set.
-parameters = AzureSDK::AvailabilitySet.new({location: 'location_example'}) # AvailabilitySet | Parameters supplied to the Create Availability Set operation.
+parameters = AzureRest::AvailabilitySet.new({location: 'location_example'}) # AvailabilitySet | Parameters supplied to the Create Availability Set operation.
 
 begin
   
   result = api_instance.availability_sets_create_or_update(api_version, subscription_id, resource_group_name, availability_set_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_create_or_update: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailabilitySet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -258,14 +258,14 @@ Delete an availability set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -274,7 +274,7 @@ availability_set_name = 'availability_set_name_example' # String | The name of t
 begin
   
   api_instance.availability_sets_delete(api_version, subscription_id, resource_group_name, availability_set_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_delete: #{e}"
 end
 ```
@@ -292,7 +292,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_delete_with_http_info: #{e}"
 end
 ```
@@ -332,14 +332,14 @@ Retrieves information about an availability set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -349,7 +349,7 @@ begin
   
   result = api_instance.availability_sets_get(api_version, subscription_id, resource_group_name, availability_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_get: #{e}"
 end
 ```
@@ -367,7 +367,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailabilitySet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_get_with_http_info: #{e}"
 end
 ```
@@ -407,14 +407,14 @@ Lists all availability sets in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -423,7 +423,7 @@ begin
   
   result = api_instance.availability_sets_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list: #{e}"
 end
 ```
@@ -441,7 +441,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailabilitySetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list_with_http_info: #{e}"
 end
 ```
@@ -480,14 +480,14 @@ Lists all available virtual machine sizes that can be used to create a new virtu
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -497,7 +497,7 @@ begin
   
   result = api_instance.availability_sets_list_available_sizes(api_version, subscription_id, resource_group_name, availability_set_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list_available_sizes: #{e}"
 end
 ```
@@ -515,7 +515,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VirtualMachineSizeListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list_available_sizes_with_http_info: #{e}"
 end
 ```
@@ -555,14 +555,14 @@ Lists all availability sets in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 opts = {
@@ -573,7 +573,7 @@ begin
   
   result = api_instance.availability_sets_list_by_subscription(api_version, subscription_id, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list_by_subscription: #{e}"
 end
 ```
@@ -591,7 +591,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailabilitySetListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -630,24 +630,24 @@ Start migration operation on an Availability Set to move its Virtual Machines to
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 availability_set_name = 'availability_set_name_example' # String | The name of the availability set.
-parameters = AzureSDK::MigrateToVirtualMachineScaleSetInput.new({virtual_machine_scale_set_flexible: AzureSDK::SubResource.new}) # MigrateToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
+parameters = AzureRest::MigrateToVirtualMachineScaleSetInput.new({virtual_machine_scale_set_flexible: AzureRest::SubResource.new}) # MigrateToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
 
 begin
   
   api_instance.availability_sets_start_migration_to_virtual_machine_scale_set(api_version, subscription_id, resource_group_name, availability_set_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_start_migration_to_virtual_machine_scale_set: #{e}"
 end
 ```
@@ -665,7 +665,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_start_migration_to_virtual_machine_scale_set_with_http_info: #{e}"
 end
 ```
@@ -706,25 +706,25 @@ Update an availability set.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 availability_set_name = 'availability_set_name_example' # String | The name of the availability set.
-parameters = AzureSDK::AvailabilitySetUpdate.new # AvailabilitySetUpdate | Parameters supplied to the Update Availability Set operation.
+parameters = AzureRest::AvailabilitySetUpdate.new # AvailabilitySetUpdate | Parameters supplied to the Update Availability Set operation.
 
 begin
   
   result = api_instance.availability_sets_update(api_version, subscription_id, resource_group_name, availability_set_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_update: #{e}"
 end
 ```
@@ -742,7 +742,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AvailabilitySet>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_update_with_http_info: #{e}"
 end
 ```
@@ -783,24 +783,24 @@ Validates that the Virtual Machines in the Availability Set can be migrated to t
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::AvailabilitySetsApi.new
+api_instance = AzureRest::AvailabilitySetsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 availability_set_name = 'availability_set_name_example' # String | The name of the availability set.
-parameters = AzureSDK::MigrateToVirtualMachineScaleSetInput.new({virtual_machine_scale_set_flexible: AzureSDK::SubResource.new}) # MigrateToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
+parameters = AzureRest::MigrateToVirtualMachineScaleSetInput.new({virtual_machine_scale_set_flexible: AzureRest::SubResource.new}) # MigrateToVirtualMachineScaleSetInput | Parameters supplied to the migrate operation on the availability set.
 
 begin
   
   api_instance.availability_sets_validate_migration_to_virtual_machine_scale_set(api_version, subscription_id, resource_group_name, availability_set_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_validate_migration_to_virtual_machine_scale_set: #{e}"
 end
 ```
@@ -818,7 +818,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling AvailabilitySetsApi->availability_sets_validate_migration_to_virtual_machine_scale_set_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::Network
+# AzureRest::Network
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Network.new(
+instance = AzureRest::Network.new(
   public_network_access: null,
   delegated_subnet_resource_id: null,
   private_dns_zone_resource_id: null

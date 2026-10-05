@@ -1,4 +1,4 @@
-# AzureSDK::LocalUserRegeneratePasswordResult
+# AzureRest::LocalUserRegeneratePasswordResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LocalUserRegeneratePasswordResult.new(
+instance = AzureRest::LocalUserRegeneratePasswordResult.new(
   ssh_password: null
 )
 ```

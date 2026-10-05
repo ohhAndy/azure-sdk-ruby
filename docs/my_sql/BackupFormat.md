@@ -1,4 +1,4 @@
-# AzureSDK::BackupFormat
+# AzureRest::BackupFormat
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BackupFormat.new()
+instance = AzureRest::BackupFormat.new()
 ```
 

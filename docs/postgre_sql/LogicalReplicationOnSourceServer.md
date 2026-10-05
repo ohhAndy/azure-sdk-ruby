@@ -1,4 +1,4 @@
-# AzureSDK::LogicalReplicationOnSourceServer
+# AzureRest::LogicalReplicationOnSourceServer
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LogicalReplicationOnSourceServer.new()
+instance = AzureRest::LogicalReplicationOnSourceServer.new()
 ```
 

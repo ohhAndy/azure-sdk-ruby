@@ -1,4 +1,4 @@
-# AzureSDK::StorageAccountRegenerateKeyParameters
+# AzureRest::StorageAccountRegenerateKeyParameters
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAccountRegenerateKeyParameters.new(
+instance = AzureRest::StorageAccountRegenerateKeyParameters.new(
   key_name: null
 )
 ```

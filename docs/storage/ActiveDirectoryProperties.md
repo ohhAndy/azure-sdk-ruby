@@ -1,4 +1,4 @@
-# AzureSDK::ActiveDirectoryProperties
+# AzureRest::ActiveDirectoryProperties
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ActiveDirectoryProperties.new(
+instance = AzureRest::ActiveDirectoryProperties.new(
   domain_name: null,
   net_bios_domain_name: null,
   forest_name: null,

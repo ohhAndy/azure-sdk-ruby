@@ -1,4 +1,4 @@
-# AzureSDK::BlobRestoreProgressStatus
+# AzureRest::BlobRestoreProgressStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobRestoreProgressStatus.new()
+instance = AzureRest::BlobRestoreProgressStatus.new()
 ```
 

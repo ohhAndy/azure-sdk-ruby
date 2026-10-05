@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationGatewayBackendAddressPoolPropertiesFormat
+# AzureRest::ApplicationGatewayBackendAddressPoolPropertiesFormat
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationGatewayBackendAddressPoolPropertiesFormat.new(
+instance = AzureRest::ApplicationGatewayBackendAddressPoolPropertiesFormat.new(
   backend_ip_configurations: null,
   backend_addresses: null,
   provisioning_state: null

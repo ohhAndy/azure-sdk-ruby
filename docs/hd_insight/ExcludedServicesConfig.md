@@ -1,4 +1,4 @@
-# AzureSDK::ExcludedServicesConfig
+# AzureRest::ExcludedServicesConfig
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExcludedServicesConfig.new(
+instance = AzureRest::ExcludedServicesConfig.new(
   excluded_services_config_id: null,
   excluded_services_list: null
 )

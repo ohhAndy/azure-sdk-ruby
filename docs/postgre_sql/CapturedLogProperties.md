@@ -1,4 +1,4 @@
-# AzureSDK::CapturedLogProperties
+# AzureRest::CapturedLogProperties
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::CapturedLogProperties.new(
+instance = AzureRest::CapturedLogProperties.new(
   created_time: null,
   last_modified_time: null,
   size_in_kb: null,

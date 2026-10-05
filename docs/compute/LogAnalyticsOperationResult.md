@@ -1,4 +1,4 @@
-# AzureSDK::LogAnalyticsOperationResult
+# AzureRest::LogAnalyticsOperationResult
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LogAnalyticsOperationResult.new(
+instance = AzureRest::LogAnalyticsOperationResult.new(
   properties: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::LinuxPatchAssessmentMode
+# AzureRest::LinuxPatchAssessmentMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LinuxPatchAssessmentMode.new()
+instance = AzureRest::LinuxPatchAssessmentMode.new()
 ```
 

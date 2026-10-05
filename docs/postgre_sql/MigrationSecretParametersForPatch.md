@@ -1,4 +1,4 @@
-# AzureSDK::MigrationSecretParametersForPatch
+# AzureRest::MigrationSecretParametersForPatch
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationSecretParametersForPatch.new(
+instance = AzureRest::MigrationSecretParametersForPatch.new(
   admin_credentials: null,
   source_server_username: null,
   target_server_username: null

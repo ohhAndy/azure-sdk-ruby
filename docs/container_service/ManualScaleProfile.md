@@ -1,4 +1,4 @@
-# AzureSDK::ManualScaleProfile
+# AzureRest::ManualScaleProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManualScaleProfile.new(
+instance = AzureRest::ManualScaleProfile.new(
   size: null,
   count: null
 )

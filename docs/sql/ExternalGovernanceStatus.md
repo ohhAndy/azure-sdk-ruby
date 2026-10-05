@@ -1,4 +1,4 @@
-# AzureSDK::ExternalGovernanceStatus
+# AzureRest::ExternalGovernanceStatus
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ExternalGovernanceStatus.new()
+instance = AzureRest::ExternalGovernanceStatus.new()
 ```
 

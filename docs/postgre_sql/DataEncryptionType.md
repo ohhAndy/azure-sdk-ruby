@@ -1,4 +1,4 @@
-# AzureSDK::DataEncryptionType
+# AzureRest::DataEncryptionType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DataEncryptionType.new()
+instance = AzureRest::DataEncryptionType.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterStatus
+# AzureRest::ManagedClusterStatus
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterStatus.new(
+instance = AzureRest::ManagedClusterStatus.new(
   provisioning_error: null
 )
 ```

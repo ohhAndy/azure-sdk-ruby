@@ -1,4 +1,4 @@
-# AzureSDK::ServersApi
+# AzureRest::ServersApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -33,25 +33,25 @@ Performs all checks required for a long term retention backup operation to succe
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::LtrPreBackupRequest.new({backup_settings: AzureSDK::BackupSettings.new({backup_name: 'backup_name_example'})}) # LtrPreBackupRequest | Request body for operation
+parameters = AzureRest::LtrPreBackupRequest.new({backup_settings: AzureRest::BackupSettings.new({backup_name: 'backup_name_example'})}) # LtrPreBackupRequest | Request body for operation
 
 begin
   
   result = api_instance.backups_long_term_retention_check_prerequisites(api_version, subscription_id, resource_group_name, server_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->backups_long_term_retention_check_prerequisites: #{e}"
 end
 ```
@@ -69,7 +69,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LtrPreBackupResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->backups_long_term_retention_check_prerequisites_with_http_info: #{e}"
 end
 ```
@@ -110,25 +110,25 @@ Initiates a long term retention backup.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::BackupsLongTermRetentionRequest.new({backup_settings: AzureSDK::BackupSettings.new({backup_name: 'backup_name_example'}), target_details: AzureSDK::BackupStoreDetails.new({sas_uri_list: ['sas_uri_list_example']})}) # BackupsLongTermRetentionRequest | Request body for operation
+parameters = AzureRest::BackupsLongTermRetentionRequest.new({backup_settings: AzureRest::BackupSettings.new({backup_name: 'backup_name_example'}), target_details: AzureRest::BackupStoreDetails.new({sas_uri_list: ['sas_uri_list_example']})}) # BackupsLongTermRetentionRequest | Request body for operation
 
 begin
   
   result = api_instance.backups_long_term_retention_start(api_version, subscription_id, resource_group_name, server_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->backups_long_term_retention_start: #{e}"
 end
 ```
@@ -146,7 +146,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BackupsLongTermRetentionResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->backups_long_term_retention_start_with_http_info: #{e}"
 end
 ```
@@ -187,14 +187,14 @@ Lists the capabilities available for a given server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -204,7 +204,7 @@ begin
   
   result = api_instance.capabilities_by_server_list(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->capabilities_by_server_list: #{e}"
 end
 ```
@@ -222,7 +222,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapabilityList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->capabilities_by_server_list_with_http_info: #{e}"
 end
 ```
@@ -262,14 +262,14 @@ Lists all captured logs for download in a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -279,7 +279,7 @@ begin
   
   result = api_instance.captured_logs_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->captured_logs_list_by_server: #{e}"
 end
 ```
@@ -297,7 +297,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapturedLogList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->captured_logs_list_by_server_with_http_info: #{e}"
 end
 ```
@@ -337,25 +337,25 @@ Checks if a proposed migration name is valid and available.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::MigrationNameAvailability.new({name: 'name_example', type: 'type_example'}) # MigrationNameAvailability | Parameters required to check if a migration name is valid and available.
+parameters = AzureRest::MigrationNameAvailability.new({name: 'name_example', type: 'type_example'}) # MigrationNameAvailability | Parameters required to check if a migration name is valid and available.
 
 begin
   # Check the validity and availability of the given name, to assign it to a new migration.
   result = api_instance.migrations_check_name_availability(api_version, subscription_id, resource_group_name, server_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->migrations_check_name_availability: #{e}"
 end
 ```
@@ -373,7 +373,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MigrationNameAvailability>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->migrations_check_name_availability_with_http_info: #{e}"
 end
 ```
@@ -414,14 +414,14 @@ Lists all read replicas of a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -431,7 +431,7 @@ begin
   
   result = api_instance.replicas_list_by_server(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->replicas_list_by_server: #{e}"
 end
 ```
@@ -449,7 +449,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServerList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->replicas_list_by_server_with_http_info: #{e}"
 end
 ```
@@ -489,24 +489,24 @@ Creates a new server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::Server.new({location: 'location_example'}) # Server | Parameters required to create a new server or to update an existing server.
+parameters = AzureRest::Server.new({location: 'location_example'}) # Server | Parameters required to create a new server or to update an existing server.
 
 begin
   
   api_instance.servers_create_or_update(api_version, subscription_id, resource_group_name, server_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_create_or_update: #{e}"
 end
 ```
@@ -524,7 +524,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -565,14 +565,14 @@ Deletes or drops an existing server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -581,7 +581,7 @@ server_name = 'server_name_example' # String | The name of the server.
 begin
   
   api_instance.servers_delete(api_version, subscription_id, resource_group_name, server_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_delete: #{e}"
 end
 ```
@@ -599,7 +599,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_delete_with_http_info: #{e}"
 end
 ```
@@ -639,14 +639,14 @@ Gets information about an existing server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -656,7 +656,7 @@ begin
   
   result = api_instance.servers_get(api_version, subscription_id, resource_group_name, server_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_get: #{e}"
 end
 ```
@@ -674,7 +674,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Server>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_get_with_http_info: #{e}"
 end
 ```
@@ -714,14 +714,14 @@ Lists all servers in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -730,7 +730,7 @@ begin
   
   result = api_instance.servers_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_list_by_resource_group: #{e}"
 end
 ```
@@ -748,7 +748,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServerList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -787,14 +787,14 @@ Lists all servers in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -802,7 +802,7 @@ begin
   
   result = api_instance.servers_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_list_by_subscription: #{e}"
 end
 ```
@@ -820,7 +820,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServerList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_list_by_subscription_with_http_info: #{e}"
 end
 ```
@@ -858,26 +858,26 @@ Restarts PostgreSQL database engine in a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
 opts = {
-  parameters: AzureSDK::RestartParameter.new # RestartParameter | Parameters to restart a server.
+  parameters: AzureRest::RestartParameter.new # RestartParameter | Parameters to restart a server.
 }
 
 begin
   
   api_instance.servers_restart(api_version, subscription_id, resource_group_name, server_name, opts)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_restart: #{e}"
 end
 ```
@@ -895,7 +895,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_restart_with_http_info: #{e}"
 end
 ```
@@ -936,14 +936,14 @@ Starts a stopped server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -952,7 +952,7 @@ server_name = 'server_name_example' # String | The name of the server.
 begin
   
   api_instance.servers_start(api_version, subscription_id, resource_group_name, server_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_start: #{e}"
 end
 ```
@@ -970,7 +970,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_start_with_http_info: #{e}"
 end
 ```
@@ -1010,14 +1010,14 @@ Stops a server.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -1026,7 +1026,7 @@ server_name = 'server_name_example' # String | The name of the server.
 begin
   
   api_instance.servers_stop(api_version, subscription_id, resource_group_name, server_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_stop: #{e}"
 end
 ```
@@ -1044,7 +1044,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_stop_with_http_info: #{e}"
 end
 ```
@@ -1084,24 +1084,24 @@ Updates an existing server. The request body can contain one or multiple of the 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ServersApi.new
+api_instance = AzureRest::ServersApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 server_name = 'server_name_example' # String | The name of the server.
-parameters = AzureSDK::ServerForPatch.new # ServerForPatch | Parameters required to update a server.
+parameters = AzureRest::ServerForPatch.new # ServerForPatch | Parameters required to update a server.
 
 begin
   
   api_instance.servers_update(api_version, subscription_id, resource_group_name, server_name, parameters)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_update: #{e}"
 end
 ```
@@ -1119,7 +1119,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ServersApi->servers_update_with_http_info: #{e}"
 end
 ```

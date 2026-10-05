@@ -1,4 +1,4 @@
-# AzureSDK::SecretListResult
+# AzureRest::SecretListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SecretListResult.new(
+instance = AzureRest::SecretListResult.new(
   value: null,
   next_link: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::Restriction
+# AzureRest::Restriction
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Restriction.new(
+instance = AzureRest::Restriction.new(
   type: null,
   values: null,
   reason_code: null

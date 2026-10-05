@@ -1,4 +1,4 @@
-# AzureSDK::ZoneMovement
+# AzureRest::ZoneMovement
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ZoneMovement.new(
+instance = AzureRest::ZoneMovement.new(
   is_enabled: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::KeyCreateParameters
+# AzureRest::KeyCreateParameters
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyCreateParameters.new(
+instance = AzureRest::KeyCreateParameters.new(
   tags: null,
   properties: null
 )

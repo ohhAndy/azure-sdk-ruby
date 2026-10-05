@@ -1,4 +1,4 @@
-# AzureSDK::ResourceBasics
+# AzureRest::ResourceBasics
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ResourceBasics.new(
+instance = AzureRest::ResourceBasics.new(
   resource_id: null,
   address_prefixes: null
 )

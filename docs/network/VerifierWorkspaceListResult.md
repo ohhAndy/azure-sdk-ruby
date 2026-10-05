@@ -1,4 +1,4 @@
-# AzureSDK::VerifierWorkspaceListResult
+# AzureRest::VerifierWorkspaceListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VerifierWorkspaceListResult.new(
+instance = AzureRest::VerifierWorkspaceListResult.new(
   value: null,
   next_link: null
 )

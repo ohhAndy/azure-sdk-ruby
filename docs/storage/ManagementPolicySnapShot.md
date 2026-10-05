@@ -1,4 +1,4 @@
-# AzureSDK::ManagementPolicySnapShot
+# AzureRest::ManagementPolicySnapShot
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagementPolicySnapShot.new(
+instance = AzureRest::ManagementPolicySnapShot.new(
   tier_to_cool: null,
   tier_to_archive: null,
   tier_to_cold: null,

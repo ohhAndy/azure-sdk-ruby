@@ -1,4 +1,4 @@
-# AzureSDK::NetworkSecurityPerimeterConfigurationProvisioningState
+# AzureRest::NetworkSecurityPerimeterConfigurationProvisioningState
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkSecurityPerimeterConfigurationProvisioningState.new()
+instance = AzureRest::NetworkSecurityPerimeterConfigurationProvisioningState.new()
 ```
 

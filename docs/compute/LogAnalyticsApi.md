@@ -1,4 +1,4 @@
-# AzureSDK::LogAnalyticsApi
+# AzureRest::LogAnalyticsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -20,24 +20,24 @@ Export logs that show Api requests made by this subscription in the given time w
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LogAnalyticsApi.new
+api_instance = AzureRest::LogAnalyticsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
-parameters = AzureSDK::RequestRateByIntervalInput.new({blob_container_sas_uri: 'blob_container_sas_uri_example', from_time: Time.now, to_time: Time.now, interval_length: AzureSDK::IntervalInMins::THREE_MINS}) # RequestRateByIntervalInput | Parameters supplied to the LogAnalytics getRequestRateByInterval Api.
+parameters = AzureRest::RequestRateByIntervalInput.new({blob_container_sas_uri: 'blob_container_sas_uri_example', from_time: Time.now, to_time: Time.now, interval_length: AzureRest::IntervalInMins::THREE_MINS}) # RequestRateByIntervalInput | Parameters supplied to the LogAnalytics getRequestRateByInterval Api.
 
 begin
   
   result = api_instance.log_analytics_export_request_rate_by_interval(api_version, subscription_id, location, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LogAnalyticsApi->log_analytics_export_request_rate_by_interval: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LogAnalyticsOperationResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LogAnalyticsApi->log_analytics_export_request_rate_by_interval_with_http_info: #{e}"
 end
 ```
@@ -95,24 +95,24 @@ Export logs that show total throttled Api requests for this subscription in the 
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::LogAnalyticsApi.new
+api_instance = AzureRest::LogAnalyticsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = 'subscription_id_example' # String | The ID of the target subscription.
 location = 'location_example' # String | The name of Azure region.
-parameters = AzureSDK::ThrottledRequestsInput.new({blob_container_sas_uri: 'blob_container_sas_uri_example', from_time: Time.now, to_time: Time.now}) # ThrottledRequestsInput | The request body
+parameters = AzureRest::ThrottledRequestsInput.new({blob_container_sas_uri: 'blob_container_sas_uri_example', from_time: Time.now, to_time: Time.now}) # ThrottledRequestsInput | The request body
 
 begin
   
   result = api_instance.log_analytics_export_throttled_requests(api_version, subscription_id, location, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LogAnalyticsApi->log_analytics_export_throttled_requests: #{e}"
 end
 ```
@@ -130,7 +130,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <LogAnalyticsOperationResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling LogAnalyticsApi->log_analytics_export_throttled_requests_with_http_info: #{e}"
 end
 ```

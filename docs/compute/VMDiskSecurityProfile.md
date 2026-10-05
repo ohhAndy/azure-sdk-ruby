@@ -1,4 +1,4 @@
-# AzureSDK::VMDiskSecurityProfile
+# AzureRest::VMDiskSecurityProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VMDiskSecurityProfile.new(
+instance = AzureRest::VMDiskSecurityProfile.new(
   security_encryption_type: null,
   disk_encryption_set: null
 )

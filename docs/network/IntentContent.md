@@ -1,4 +1,4 @@
-# AzureSDK::IntentContent
+# AzureRest::IntentContent
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::IntentContent.new(
+instance = AzureRest::IntentContent.new(
   description: null,
   source_resource_id: null,
   destination_resource_id: null,

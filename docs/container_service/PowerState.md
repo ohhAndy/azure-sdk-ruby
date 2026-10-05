@@ -1,4 +1,4 @@
-# AzureSDK::PowerState
+# AzureRest::PowerState
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PowerState.new(
+instance = AzureRest::PowerState.new(
   code: null
 )
 ```

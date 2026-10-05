@@ -1,4 +1,4 @@
-# AzureSDK::ListVersionsExpandOptions
+# AzureRest::ListVersionsExpandOptions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ListVersionsExpandOptions.new()
+instance = AzureRest::ListVersionsExpandOptions.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::ValidationMessage
+# AzureRest::ValidationMessage
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ValidationMessage.new(
+instance = AzureRest::ValidationMessage.new(
   state: null,
   message: null
 )

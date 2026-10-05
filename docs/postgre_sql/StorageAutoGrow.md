@@ -1,4 +1,4 @@
-# AzureSDK::StorageAutoGrow
+# AzureRest::StorageAutoGrow
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageAutoGrow.new()
+instance = AzureRest::StorageAutoGrow.new()
 ```
 

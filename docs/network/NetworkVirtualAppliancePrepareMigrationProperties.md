@@ -1,4 +1,4 @@
-# AzureSDK::NetworkVirtualAppliancePrepareMigrationProperties
+# AzureRest::NetworkVirtualAppliancePrepareMigrationProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkVirtualAppliancePrepareMigrationProperties.new(
+instance = AzureRest::NetworkVirtualAppliancePrepareMigrationProperties.new(
   migration_type: null,
   market_place_version: null
 )

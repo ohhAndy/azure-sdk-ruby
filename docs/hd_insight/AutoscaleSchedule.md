@@ -1,4 +1,4 @@
-# AzureSDK::AutoscaleSchedule
+# AzureRest::AutoscaleSchedule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AutoscaleSchedule.new(
+instance = AzureRest::AutoscaleSchedule.new(
   days: null,
   time_and_capacity: null
 )

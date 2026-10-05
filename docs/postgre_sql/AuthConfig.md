@@ -1,4 +1,4 @@
-# AzureSDK::AuthConfig
+# AzureRest::AuthConfig
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AuthConfig.new(
+instance = AzureRest::AuthConfig.new(
   active_directory_auth: null,
   password_auth: null,
   tenant_id: null

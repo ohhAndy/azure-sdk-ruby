@@ -1,4 +1,4 @@
-# AzureSDK::MigrationOption
+# AzureRest::MigrationOption
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrationOption.new()
+instance = AzureRest::MigrationOption.new()
 ```
 

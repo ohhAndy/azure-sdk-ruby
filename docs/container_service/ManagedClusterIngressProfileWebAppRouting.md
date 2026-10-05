@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterIngressProfileWebAppRouting
+# AzureRest::ManagedClusterIngressProfileWebAppRouting
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterIngressProfileWebAppRouting.new(
+instance = AzureRest::ManagedClusterIngressProfileWebAppRouting.new(
   enabled: null,
   gateway_api_implementations: null,
   dns_zone_resource_ids: null,

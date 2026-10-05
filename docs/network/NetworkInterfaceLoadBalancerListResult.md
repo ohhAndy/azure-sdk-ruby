@@ -1,4 +1,4 @@
-# AzureSDK::NetworkInterfaceLoadBalancerListResult
+# AzureRest::NetworkInterfaceLoadBalancerListResult
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::NetworkInterfaceLoadBalancerListResult.new(
+instance = AzureRest::NetworkInterfaceLoadBalancerListResult.new(
   value: null,
   next_link: null
 )

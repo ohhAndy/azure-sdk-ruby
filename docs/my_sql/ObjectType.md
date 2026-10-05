@@ -1,4 +1,4 @@
-# AzureSDK::ObjectType
+# AzureRest::ObjectType
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectType.new()
+instance = AzureRest::ObjectType.new()
 ```
 

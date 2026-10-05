@@ -1,4 +1,4 @@
-# AzureSDK::AzureResourceManagerCommonTypesKeyEncryptionKeyIdentity
+# AzureRest::AzureResourceManagerCommonTypesKeyEncryptionKeyIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AzureResourceManagerCommonTypesKeyEncryptionKeyIdentity.new(
+instance = AzureRest::AzureResourceManagerCommonTypesKeyEncryptionKeyIdentity.new(
   identity_type: null,
   user_assigned_identity_resource_id: null,
   federated_client_id: null,

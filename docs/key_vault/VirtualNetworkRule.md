@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkRule
+# AzureRest::VirtualNetworkRule
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkRule.new(
+instance = AzureRest::VirtualNetworkRule.new(
   id: null,
   ignore_missing_vnet_service_endpoint: null
 )

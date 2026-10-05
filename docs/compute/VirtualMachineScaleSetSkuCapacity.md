@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetSkuCapacity
+# AzureRest::VirtualMachineScaleSetSkuCapacity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetSkuCapacity.new(
+instance = AzureRest::VirtualMachineScaleSetSkuCapacity.new(
   minimum: null,
   maximum: null,
   default_capacity: null,

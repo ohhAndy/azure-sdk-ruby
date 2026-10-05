@@ -1,4 +1,4 @@
-# AzureSDK::PasswordBasedAuth
+# AzureRest::PasswordBasedAuth
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PasswordBasedAuth.new()
+instance = AzureRest::PasswordBasedAuth.new()
 ```
 

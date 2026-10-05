@@ -1,4 +1,4 @@
-# AzureSDK::VirtualRouter
+# AzureRest::VirtualRouter
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualRouter.new(
+instance = AzureRest::VirtualRouter.new(
   id: null,
   name: null,
   type: null,

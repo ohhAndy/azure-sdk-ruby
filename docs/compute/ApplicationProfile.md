@@ -1,4 +1,4 @@
-# AzureSDK::ApplicationProfile
+# AzureRest::ApplicationProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApplicationProfile.new(
+instance = AzureRest::ApplicationProfile.new(
   gallery_applications: null
 )
 ```

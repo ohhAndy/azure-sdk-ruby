@@ -1,4 +1,4 @@
-# AzureSDK::MachineNetworkProperties
+# AzureRest::MachineNetworkProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MachineNetworkProperties.new(
+instance = AzureRest::MachineNetworkProperties.new(
   ip_addresses: null
 )
 ```

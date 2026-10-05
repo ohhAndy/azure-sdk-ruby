@@ -1,4 +1,4 @@
-# AzureSDK::OperationStatusResult
+# AzureRest::OperationStatusResult
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::OperationStatusResult.new(
+instance = AzureRest::OperationStatusResult.new(
   id: null,
   resource_id: null,
   name: null,

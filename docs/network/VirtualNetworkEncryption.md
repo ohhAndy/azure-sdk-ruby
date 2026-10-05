@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkEncryption
+# AzureRest::VirtualNetworkEncryption
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkEncryption.new(
+instance = AzureRest::VirtualNetworkEncryption.new(
   enabled: null,
   enforcement: null
 )

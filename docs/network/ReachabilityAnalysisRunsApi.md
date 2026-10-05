@@ -1,4 +1,4 @@
-# AzureSDK::ReachabilityAnalysisRunsApi
+# AzureRest::ReachabilityAnalysisRunsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -22,27 +22,27 @@ Creates Reachability Analysis Runs.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisRunsApi.new
+api_instance = AzureRest::ReachabilityAnalysisRunsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 network_manager_name = 'network_manager_name_example' # String | The name of the network manager.
 workspace_name = 'workspace_name_example' # String | The name of the resource
 reachability_analysis_run_name = 'reachability_analysis_run_name_example' # String | Reachability Analysis Run name.
-body = AzureSDK::ReachabilityAnalysisRun.new({properties: AzureSDK::ReachabilityAnalysisRunProperties.new({intent_id: 'intent_id_example'})}) # ReachabilityAnalysisRun | Analysis Run resource object to create/update.
+body = AzureRest::ReachabilityAnalysisRun.new({properties: AzureRest::ReachabilityAnalysisRunProperties.new({intent_id: 'intent_id_example'})}) # ReachabilityAnalysisRun | Analysis Run resource object to create/update.
 
 begin
   # Creates Reachability Analysis Runs.
   result = api_instance.reachability_analysis_runs_create(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, reachability_analysis_run_name, body)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_create: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisRun>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_create_with_http_info: #{e}"
 end
 ```
@@ -103,14 +103,14 @@ Deletes Reachability Analysis Run.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisRunsApi.new
+api_instance = AzureRest::ReachabilityAnalysisRunsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -121,7 +121,7 @@ reachability_analysis_run_name = 'reachability_analysis_run_name_example' # Stri
 begin
   # Deletes Reachability Analysis Run.
   api_instance.reachability_analysis_runs_delete(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, reachability_analysis_run_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_delete: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_delete_with_http_info: #{e}"
 end
 ```
@@ -181,14 +181,14 @@ Gets Reachability Analysis Run.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisRunsApi.new
+api_instance = AzureRest::ReachabilityAnalysisRunsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -200,7 +200,7 @@ begin
   # Gets Reachability Analysis Run.
   result = api_instance.reachability_analysis_runs_get(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, reachability_analysis_run_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_get: #{e}"
 end
 ```
@@ -218,7 +218,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisRun>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_get_with_http_info: #{e}"
 end
 ```
@@ -260,14 +260,14 @@ Gets list of Reachability Analysis Runs.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::ReachabilityAnalysisRunsApi.new
+api_instance = AzureRest::ReachabilityAnalysisRunsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -285,7 +285,7 @@ begin
   # Gets list of Reachability Analysis Runs.
   result = api_instance.reachability_analysis_runs_list(api_version, subscription_id, resource_group_name, network_manager_name, workspace_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_list: #{e}"
 end
 ```
@@ -303,7 +303,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ReachabilityAnalysisRunListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling ReachabilityAnalysisRunsApi->reachability_analysis_runs_list_with_http_info: #{e}"
 end
 ```

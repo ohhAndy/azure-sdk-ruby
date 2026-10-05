@@ -1,4 +1,4 @@
-# AzureSDK::SpotRestorePolicy
+# AzureRest::SpotRestorePolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SpotRestorePolicy.new(
+instance = AzureRest::SpotRestorePolicy.new(
   enabled: null,
   restore_timeout: null
 )

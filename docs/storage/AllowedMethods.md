@@ -1,4 +1,4 @@
-# AzureSDK::AllowedMethods
+# AzureRest::AllowedMethods
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AllowedMethods.new()
+instance = AzureRest::AllowedMethods.new()
 ```
 

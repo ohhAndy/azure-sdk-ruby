@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterPropertiesAutoScalerProfile
+# AzureRest::ManagedClusterPropertiesAutoScalerProfile
 
 ## Properties
 
@@ -28,9 +28,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterPropertiesAutoScalerProfile.new(
+instance = AzureRest::ManagedClusterPropertiesAutoScalerProfile.new(
   balance_similar_node_groups: null,
   daemonset_eviction_for_empty_nodes: null,
   daemonset_eviction_for_occupied_nodes: null,

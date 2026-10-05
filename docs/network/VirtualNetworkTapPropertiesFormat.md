@@ -1,4 +1,4 @@
-# AzureSDK::VirtualNetworkTapPropertiesFormat
+# AzureRest::VirtualNetworkTapPropertiesFormat
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualNetworkTapPropertiesFormat.new(
+instance = AzureRest::VirtualNetworkTapPropertiesFormat.new(
   network_interface_tap_configurations: null,
   resource_guid: null,
   provisioning_state: null,

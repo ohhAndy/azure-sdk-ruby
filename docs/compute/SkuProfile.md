@@ -1,4 +1,4 @@
-# AzureSDK::SkuProfile
+# AzureRest::SkuProfile
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::SkuProfile.new(
+instance = AzureRest::SkuProfile.new(
   vm_sizes: null,
   allocation_strategy: null,
   automatic_sku_migration_policy: null

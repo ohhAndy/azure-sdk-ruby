@@ -1,4 +1,4 @@
-# AzureSDK::ObjectRecommendationDetails
+# AzureRest::ObjectRecommendationDetails
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ObjectRecommendationDetails.new(
+instance = AzureRest::ObjectRecommendationDetails.new(
   database_name: null,
   schema: null,
   table: null,

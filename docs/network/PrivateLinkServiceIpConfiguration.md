@@ -1,4 +1,4 @@
-# AzureSDK::PrivateLinkServiceIpConfiguration
+# AzureRest::PrivateLinkServiceIpConfiguration
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::PrivateLinkServiceIpConfiguration.new(
+instance = AzureRest::PrivateLinkServiceIpConfiguration.new(
   id: null,
   properties: null,
   name: null,

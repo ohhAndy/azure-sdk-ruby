@@ -1,4 +1,4 @@
-# AzureSDK::RuleResolveConfiguration
+# AzureRest::RuleResolveConfiguration
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::RuleResolveConfiguration.new(
+instance = AzureRest::RuleResolveConfiguration.new(
   auto_resolved: null,
   time_to_resolve: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ProviderResourceType
+# AzureRest::ProviderResourceType
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProviderResourceType.new(
+instance = AzureRest::ProviderResourceType.new(
   resource_type: null,
   locations: null,
   location_mappings: null,

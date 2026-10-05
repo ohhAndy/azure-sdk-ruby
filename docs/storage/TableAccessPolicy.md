@@ -1,4 +1,4 @@
-# AzureSDK::TableAccessPolicy
+# AzureRest::TableAccessPolicy
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::TableAccessPolicy.new(
+instance = AzureRest::TableAccessPolicy.new(
   start_time: null,
   expiry_time: null,
   permission: null

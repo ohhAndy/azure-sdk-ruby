@@ -1,4 +1,4 @@
-# AzureSDK::ServiceSharedKeyAccessProperties
+# AzureRest::ServiceSharedKeyAccessProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServiceSharedKeyAccessProperties.new(
+instance = AzureRest::ServiceSharedKeyAccessProperties.new(
   enabled: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ScheduledEventsProfile
+# AzureRest::ScheduledEventsProfile
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ScheduledEventsProfile.new(
+instance = AzureRest::ScheduledEventsProfile.new(
   terminate_notification_profile: null,
   os_image_notification_profile: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::Format
+# AzureRest::Format
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Format.new()
+instance = AzureRest::Format.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::StorageTaskAssignmentsApi
+# AzureRest::StorageTaskAssignmentsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -25,14 +25,14 @@ Fetch the report summary of a single storage task assignment's instances
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -47,7 +47,7 @@ begin
   
   result = api_instance.storage_task_assignment_instances_report_list(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignment_instances_report_list: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskReportSummary>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignment_instances_report_list_with_http_info: #{e}"
 end
 ```
@@ -108,26 +108,26 @@ Asynchronously creates a new storage task assignment sub-resource with the speci
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 storage_task_assignment_name = 'storage_task_assignment_name_example' # String | The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::StorageTaskAssignment.new # StorageTaskAssignment | The parameters to create a Storage Task Assignment.
+parameters = AzureRest::StorageTaskAssignment.new # StorageTaskAssignment | The parameters to create a Storage Task Assignment.
 
 begin
   
   result = api_instance.storage_task_assignments_create(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_create: #{e}"
 end
 ```
@@ -145,7 +145,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_create_with_http_info: #{e}"
 end
 ```
@@ -187,14 +187,14 @@ Delete the storage task assignment sub-resource
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -204,7 +204,7 @@ storage_task_assignment_name = 'storage_task_assignment_name_example' # String |
 begin
   
   api_instance.storage_task_assignments_delete(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_delete: #{e}"
 end
 ```
@@ -222,7 +222,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_delete_with_http_info: #{e}"
 end
 ```
@@ -263,14 +263,14 @@ Get the storage task assignment properties
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -281,7 +281,7 @@ begin
   
   result = api_instance.storage_task_assignments_get(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_get: #{e}"
 end
 ```
@@ -299,7 +299,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_get_with_http_info: #{e}"
 end
 ```
@@ -340,14 +340,14 @@ List all the storage task assignments in an account
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -360,7 +360,7 @@ begin
   
   result = api_instance.storage_task_assignments_list(api_version, subscription_id, resource_group_name, account_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_list: #{e}"
 end
 ```
@@ -378,7 +378,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskAssignmentsList>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_list_with_http_info: #{e}"
 end
 ```
@@ -419,14 +419,14 @@ Stops any active running storage action for the storage task assignment
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -436,7 +436,7 @@ storage_task_assignment_name = 'storage_task_assignment_name_example' # String |
 begin
   
   api_instance.storage_task_assignments_stop_assignment(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_stop_assignment: #{e}"
 end
 ```
@@ -454,7 +454,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_stop_assignment_with_http_info: #{e}"
 end
 ```
@@ -495,26 +495,26 @@ Update storage task assignment properties
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::StorageTaskAssignmentsApi.new
+api_instance = AzureRest::StorageTaskAssignmentsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 storage_task_assignment_name = 'storage_task_assignment_name_example' # String | The name of the storage task assignment within the specified resource group. Storage task assignment names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
-parameters = AzureSDK::StorageTaskAssignmentUpdateParameters.new # StorageTaskAssignmentUpdateParameters | The parameters to update a Storage Task Assignment.
+parameters = AzureRest::StorageTaskAssignmentUpdateParameters.new # StorageTaskAssignmentUpdateParameters | The parameters to update a Storage Task Assignment.
 
 begin
   
   result = api_instance.storage_task_assignments_update(api_version, subscription_id, resource_group_name, account_name, storage_task_assignment_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_update: #{e}"
 end
 ```
@@ -532,7 +532,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageTaskAssignment>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling StorageTaskAssignmentsApi->storage_task_assignments_update_with_http_info: #{e}"
 end
 ```

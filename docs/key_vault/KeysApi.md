@@ -1,4 +1,4 @@
-# AzureSDK::KeysApi
+# AzureRest::KeysApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -21,26 +21,26 @@ Creates the first version of a new key if it does not exist. If it already exist
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::KeysApi.new
+api_instance = AzureRest::KeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 vault_name = 'vault_name_example' # String | The name of the vault which contains the key to be retrieved.
 key_name = 'key_name_example' # String | The name of the key to be retrieved.
-parameters = AzureSDK::KeyCreateParameters.new({properties: AzureSDK::KeyProperties.new}) # KeyCreateParameters | The parameters used to create the specified key.
+parameters = AzureRest::KeyCreateParameters.new({properties: AzureRest::KeyProperties.new}) # KeyCreateParameters | The parameters used to create the specified key.
 
 begin
   
   result = api_instance.keys_create_if_not_exist(api_version, subscription_id, resource_group_name, vault_name, key_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_create_if_not_exist: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Key>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_create_if_not_exist_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Gets the current version of the specified key from the specified key vault.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::KeysApi.new
+api_instance = AzureRest::KeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -118,7 +118,7 @@ begin
   
   result = api_instance.keys_get(api_version, subscription_id, resource_group_name, vault_name, key_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_get: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Key>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_get_with_http_info: #{e}"
 end
 ```
@@ -177,14 +177,14 @@ Lists the keys in the specified key vault.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::KeysApi.new
+api_instance = AzureRest::KeysApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ begin
   
   result = api_instance.keys_list(api_version, subscription_id, resource_group_name, vault_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_list: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <KeyListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling KeysApi->keys_list_with_http_info: #{e}"
 end
 ```

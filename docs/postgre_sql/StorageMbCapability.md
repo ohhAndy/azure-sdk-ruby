@@ -1,4 +1,4 @@
-# AzureSDK::StorageMbCapability
+# AzureRest::StorageMbCapability
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::StorageMbCapability.new(
+instance = AzureRest::StorageMbCapability.new(
   status: null,
   reason: null,
   supported_iops: null,

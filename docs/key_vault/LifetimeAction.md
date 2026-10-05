@@ -1,4 +1,4 @@
-# AzureSDK::LifetimeAction
+# AzureRest::LifetimeAction
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::LifetimeAction.new(
+instance = AzureRest::LifetimeAction.new(
   trigger: null,
   action: null
 )

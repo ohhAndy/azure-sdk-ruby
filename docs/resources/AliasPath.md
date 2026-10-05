@@ -1,4 +1,4 @@
-# AzureSDK::AliasPath
+# AzureRest::AliasPath
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::AliasPath.new(
+instance = AzureRest::AliasPath.new(
   path: null,
   api_versions: null,
   pattern: null,

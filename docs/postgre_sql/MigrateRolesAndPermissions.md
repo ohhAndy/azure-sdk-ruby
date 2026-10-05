@@ -1,4 +1,4 @@
-# AzureSDK::MigrateRolesAndPermissions
+# AzureRest::MigrateRolesAndPermissions
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::MigrateRolesAndPermissions.new()
+instance = AzureRest::MigrateRolesAndPermissions.new()
 ```
 

@@ -1,4 +1,4 @@
-# AzureSDK::KeyRotationPolicyAttributes
+# AzureRest::KeyRotationPolicyAttributes
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KeyRotationPolicyAttributes.new(
+instance = AzureRest::KeyRotationPolicyAttributes.new(
   created: null,
   updated: null,
   expiry_time: null

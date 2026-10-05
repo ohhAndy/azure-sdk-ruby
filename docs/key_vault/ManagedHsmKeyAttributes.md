@@ -1,4 +1,4 @@
-# AzureSDK::ManagedHsmKeyAttributes
+# AzureRest::ManagedHsmKeyAttributes
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedHsmKeyAttributes.new(
+instance = AzureRest::ManagedHsmKeyAttributes.new(
   enabled: null,
   nbf: null,
   exp: null,

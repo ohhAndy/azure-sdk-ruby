@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetVMInstanceView
+# AzureRest::VirtualMachineScaleSetVMInstanceView
 
 ## Properties
 
@@ -26,9 +26,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetVMInstanceView.new(
+instance = AzureRest::VirtualMachineScaleSetVMInstanceView.new(
   platform_update_domain: null,
   platform_fault_domain: null,
   rdp_thumb_print: null,

@@ -1,4 +1,4 @@
-# AzureSDK::DatabaseProperties
+# AzureRest::DatabaseProperties
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DatabaseProperties.new(
+instance = AzureRest::DatabaseProperties.new(
   charset: null,
   collation: null
 )

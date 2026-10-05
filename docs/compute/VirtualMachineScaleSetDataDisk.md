@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineScaleSetDataDisk
+# AzureRest::VirtualMachineScaleSetDataDisk
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineScaleSetDataDisk.new(
+instance = AzureRest::VirtualMachineScaleSetDataDisk.new(
   name: null,
   lun: null,
   caching: null,

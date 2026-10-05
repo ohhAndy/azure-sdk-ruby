@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointSourceProperties
+# AzureRest::BlobAccessPointSourceProperties
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::BlobAccessPointSourceProperties.new(
+instance = AzureRest::BlobAccessPointSourceProperties.new(
   source_type: null
 )
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::BlobAccessPointConfigurationsApi
+# AzureRest::BlobAccessPointConfigurationsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,26 +24,26 @@ Creates or updates a Blob Access Point configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 blob_access_point_configuration_name = 'blob_access_point_configuration_name_example' # String | The name of the Blob Access Point configuration.
-resource = AzureSDK::BlobAccessPointConfiguration.new({location: 'location_example', properties: AzureSDK::BlobAccessPointConfigurationProperties.new({source: AzureSDK::BlobAccessPointSourceProperties.new({source_type: AzureSDK::BlobAccessPointSourceType::NET_APP_ONTAP})})}) # BlobAccessPointConfiguration | Resource create parameters.
+resource = AzureRest::BlobAccessPointConfiguration.new({location: 'location_example', properties: AzureRest::BlobAccessPointConfigurationProperties.new({source: AzureRest::BlobAccessPointSourceProperties.new({source_type: AzureRest::BlobAccessPointSourceType::NET_APP_ONTAP})})}) # BlobAccessPointConfiguration | Resource create parameters.
 
 begin
   
   result = api_instance.blob_access_point_configurations_create(api_version, subscription_id, resource_group_name, account_name, blob_access_point_configuration_name, resource)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_create: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_create_with_http_info: #{e}"
 end
 ```
@@ -103,14 +103,14 @@ Delete a Blob Access Point configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -120,7 +120,7 @@ blob_access_point_configuration_name = 'blob_access_point_configuration_name_exa
 begin
   
   api_instance.blob_access_point_configurations_delete(api_version, subscription_id, resource_group_name, account_name, blob_access_point_configuration_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_delete: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_delete_with_http_info: #{e}"
 end
 ```
@@ -179,14 +179,14 @@ Get the specified Blob Access Point configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -197,7 +197,7 @@ begin
   
   result = api_instance.blob_access_point_configurations_get(api_version, subscription_id, resource_group_name, account_name, blob_access_point_configuration_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_get: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_get_with_http_info: #{e}"
 end
 ```
@@ -256,14 +256,14 @@ List all Blob Access Point configurations in a Storage Account.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -273,7 +273,7 @@ begin
   
   result = api_instance.blob_access_point_configurations_list_by_storage_account(api_version, subscription_id, resource_group_name, account_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_list_by_storage_account: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConfigurationListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_list_by_storage_account_with_http_info: #{e}"
 end
 ```
@@ -331,26 +331,26 @@ Test the connection configured on an existing Blob Access Point configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 blob_access_point_configuration_name = 'blob_access_point_configuration_name_example' # String | The name of the Blob Access Point configuration.
-body = AzureSDK::BlobAccessPointConnectionTestRequest.new({unique_id: 'unique_id_example'}) # BlobAccessPointConnectionTestRequest | The content of the action request
+body = AzureRest::BlobAccessPointConnectionTestRequest.new({unique_id: 'unique_id_example'}) # BlobAccessPointConnectionTestRequest | The content of the action request
 
 begin
   
   result = api_instance.blob_access_point_configurations_test_existing_connection(api_version, subscription_id, resource_group_name, account_name, blob_access_point_configuration_name, body)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_test_existing_connection: #{e}"
 end
 ```
@@ -368,7 +368,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConnectionTestResponse>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_test_existing_connection_with_http_info: #{e}"
 end
 ```
@@ -410,26 +410,26 @@ Update a Blob Access Point configuration.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::BlobAccessPointConfigurationsApi.new
+api_instance = AzureRest::BlobAccessPointConfigurationsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 account_name = 'account_name_example' # String | The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 blob_access_point_configuration_name = 'blob_access_point_configuration_name_example' # String | The name of the Blob Access Point configuration.
-properties = AzureSDK::BlobAccessPointConfigurationUpdate.new # BlobAccessPointConfigurationUpdate | The resource properties to be updated.
+properties = AzureRest::BlobAccessPointConfigurationUpdate.new # BlobAccessPointConfigurationUpdate | The resource properties to be updated.
 
 begin
   
   result = api_instance.blob_access_point_configurations_update(api_version, subscription_id, resource_group_name, account_name, blob_access_point_configuration_name, properties)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_update: #{e}"
 end
 ```
@@ -447,7 +447,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <BlobAccessPointConfiguration>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling BlobAccessPointConfigurationsApi->blob_access_point_configurations_update_with_http_info: #{e}"
 end
 ```

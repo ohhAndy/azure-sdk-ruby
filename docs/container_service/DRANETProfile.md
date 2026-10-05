@@ -1,4 +1,4 @@
-# AzureSDK::DRANETProfile
+# AzureRest::DRANETProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DRANETProfile.new(
+instance = AzureRest::DRANETProfile.new(
   mode: null
 )
 ```

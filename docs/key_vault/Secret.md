@@ -1,4 +1,4 @@
-# AzureSDK::Secret
+# AzureRest::Secret
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::Secret.new(
+instance = AzureRest::Secret.new(
   id: null,
   name: null,
   type: null,

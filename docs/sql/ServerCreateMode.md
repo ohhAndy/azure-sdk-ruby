@@ -1,4 +1,4 @@
-# AzureSDK::ServerCreateMode
+# AzureRest::ServerCreateMode
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ServerCreateMode.new()
+instance = AzureRest::ServerCreateMode.new()
 ```
 

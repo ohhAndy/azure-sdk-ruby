@@ -1,4 +1,4 @@
-# AzureSDK::EncryptionScopeKeyVaultProperties
+# AzureRest::EncryptionScopeKeyVaultProperties
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::EncryptionScopeKeyVaultProperties.new(
+instance = AzureRest::EncryptionScopeKeyVaultProperties.new(
   key_uri: null,
   current_versioned_key_identifier: null,
   last_key_rotation_timestamp: null

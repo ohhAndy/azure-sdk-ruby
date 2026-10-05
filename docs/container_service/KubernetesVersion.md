@@ -1,4 +1,4 @@
-# AzureSDK::KubernetesVersion
+# AzureRest::KubernetesVersion
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::KubernetesVersion.new(
+instance = AzureRest::KubernetesVersion.new(
   version: null,
   capabilities: null,
   is_default: null,

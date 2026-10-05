@@ -1,4 +1,4 @@
-# AzureSDK::VirtualMachineExtensionImageProperties
+# AzureRest::VirtualMachineExtensionImageProperties
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::VirtualMachineExtensionImageProperties.new(
+instance = AzureRest::VirtualMachineExtensionImageProperties.new(
   operating_system: null,
   compute_role: null,
   handler_schema: null,

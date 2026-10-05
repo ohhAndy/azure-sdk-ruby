@@ -1,4 +1,4 @@
-# AzureSDK::DiskRestorePointReplicationStatus
+# AzureRest::DiskRestorePointReplicationStatus
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiskRestorePointReplicationStatus.new(
+instance = AzureRest::DiskRestorePointReplicationStatus.new(
   status: null,
   completion_percent: null
 )

@@ -1,4 +1,4 @@
-# AzureSDK::ProbePropertiesFormat
+# AzureRest::ProbePropertiesFormat
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProbePropertiesFormat.new(
+instance = AzureRest::ProbePropertiesFormat.new(
   load_balancing_rules: null,
   protocol: null,
   port: null,

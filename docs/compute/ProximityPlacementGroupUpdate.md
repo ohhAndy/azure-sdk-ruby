@@ -1,4 +1,4 @@
-# AzureSDK::ProximityPlacementGroupUpdate
+# AzureRest::ProximityPlacementGroupUpdate
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ProximityPlacementGroupUpdate.new(
+instance = AzureRest::ProximityPlacementGroupUpdate.new(
   tags: null
 )
 ```

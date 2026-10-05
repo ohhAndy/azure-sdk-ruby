@@ -1,4 +1,4 @@
-# AzureSDK::IpGroupsApi
+# AzureRest::IpGroupsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates an ipGroups in a specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ip_groups_name = 'ip_groups_name_example' # String | The name of the ipGroups.
-parameters = AzureSDK::IpGroup.new # IpGroup | Parameters supplied to the create or update IpGroups operation.
+parameters = AzureRest::IpGroup.new # IpGroup | Parameters supplied to the create or update IpGroups operation.
 
 begin
   
   result = api_instance.ip_groups_create_or_update(api_version, subscription_id, resource_group_name, ip_groups_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified ipGroups.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ ip_groups_name = 'ip_groups_name_example' # String | The name of the ipGroups.
 begin
   
   api_instance.ip_groups_delete(api_version, subscription_id, resource_group_name, ip_groups_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets the specified ipGroups.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.ip_groups_get(api_version, subscription_id, resource_group_name, ip_groups_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all IpGroups in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -269,7 +269,7 @@ begin
   
   result = api_instance.ip_groups_list(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_list: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_list_with_http_info: #{e}"
 end
 ```
@@ -325,14 +325,14 @@ Gets all IpGroups in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -341,7 +341,7 @@ begin
   
   result = api_instance.ip_groups_list_by_resource_group(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_list_by_resource_group: #{e}"
 end
 ```
@@ -359,7 +359,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpGroupListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_list_by_resource_group_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Updates tags of an IpGroups resource.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::IpGroupsApi.new
+api_instance = AzureRest::IpGroupsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 ip_groups_name = 'ip_groups_name_example' # String | The name of the ipGroups.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to the update ipGroups operation.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to the update ipGroups operation.
 
 begin
   
   result = api_instance.ip_groups_update_groups(api_version, subscription_id, resource_group_name, ip_groups_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_update_groups: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IpGroup>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling IpGroupsApi->ip_groups_update_groups_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::ManagedClusterAIToolchainOperatorProfile
+# AzureRest::ManagedClusterAIToolchainOperatorProfile
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedClusterAIToolchainOperatorProfile.new(
+instance = AzureRest::ManagedClusterAIToolchainOperatorProfile.new(
   enabled: null
 )
 ```

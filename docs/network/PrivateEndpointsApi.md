@@ -1,4 +1,4 @@
-# AzureSDK::PrivateEndpointsApi
+# AzureRest::PrivateEndpointsApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -23,25 +23,25 @@ Creates or updates an private endpoint in the specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateEndpointsApi.new
+api_instance = AzureRest::PrivateEndpointsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 private_endpoint_name = 'private_endpoint_name_example' # String | The name of the private endpoint.
-parameters = AzureSDK::PrivateEndpoint.new # PrivateEndpoint | Parameters supplied to the create or update private endpoint operation.
+parameters = AzureRest::PrivateEndpoint.new # PrivateEndpoint | Parameters supplied to the create or update private endpoint operation.
 
 begin
   
   result = api_instance.private_endpoints_create_or_update(api_version, subscription_id, resource_group_name, private_endpoint_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_create_or_update: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpoint>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -100,14 +100,14 @@ Deletes the specified private endpoint.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateEndpointsApi.new
+api_instance = AzureRest::PrivateEndpointsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -116,7 +116,7 @@ private_endpoint_name = 'private_endpoint_name_example' # String | The name of t
 begin
   
   api_instance.private_endpoints_delete(api_version, subscription_id, resource_group_name, private_endpoint_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_delete: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_delete_with_http_info: #{e}"
 end
 ```
@@ -174,14 +174,14 @@ Gets the specified private endpoint by resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateEndpointsApi.new
+api_instance = AzureRest::PrivateEndpointsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -194,7 +194,7 @@ begin
   
   result = api_instance.private_endpoints_get(api_version, subscription_id, resource_group_name, private_endpoint_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_get: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpoint>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_get_with_http_info: #{e}"
 end
 ```
@@ -253,14 +253,14 @@ Gets all private endpoints in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateEndpointsApi.new
+api_instance = AzureRest::PrivateEndpointsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -269,7 +269,7 @@ begin
   
   result = api_instance.private_endpoints_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_list: #{e}"
 end
 ```
@@ -287,7 +287,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpointListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_list_with_http_info: #{e}"
 end
 ```
@@ -326,14 +326,14 @@ Gets all private endpoints in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::PrivateEndpointsApi.new
+api_instance = AzureRest::PrivateEndpointsApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -341,7 +341,7 @@ begin
   
   result = api_instance.private_endpoints_list_by_subscription(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_list_by_subscription: #{e}"
 end
 ```
@@ -359,7 +359,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <PrivateEndpointListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling PrivateEndpointsApi->private_endpoints_list_by_subscription_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# AzureSDK::DiffDiskPlacement
+# AzureRest::DiffDiskPlacement
 
 ## Properties
 
@@ -8,8 +8,8 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::DiffDiskPlacement.new()
+instance = AzureRest::DiffDiskPlacement.new()
 ```
 

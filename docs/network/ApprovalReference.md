@@ -1,4 +1,4 @@
-# AzureSDK::ApprovalReference
+# AzureRest::ApprovalReference
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ApprovalReference.new(
+instance = AzureRest::ApprovalReference.new(
   private_endpoint_id: null
 )
 ```

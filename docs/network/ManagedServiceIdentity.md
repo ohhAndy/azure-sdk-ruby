@@ -1,4 +1,4 @@
-# AzureSDK::ManagedServiceIdentity
+# AzureRest::ManagedServiceIdentity
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'azure_sdk'
+require 'azure_rest'
 
-instance = AzureSDK::ManagedServiceIdentity.new(
+instance = AzureRest::ManagedServiceIdentity.new(
   principal_id: null,
   tenant_id: null,
   type: null,

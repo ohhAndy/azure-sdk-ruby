@@ -1,4 +1,4 @@
-# AzureSDK::CustomIpPrefixesApi
+# AzureRest::CustomIpPrefixesApi
 
 All URIs are relative to *https://management.azure.com*
 
@@ -24,25 +24,25 @@ Creates or updates a custom IP prefix.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 custom_ip_prefix_name = 'custom_ip_prefix_name_example' # String | The name of the custom IP prefix.
-parameters = AzureSDK::CustomIpPrefix.new # CustomIpPrefix | Parameters supplied to the create or update custom IP prefix operation.
+parameters = AzureRest::CustomIpPrefix.new # CustomIpPrefix | Parameters supplied to the create or update custom IP prefix operation.
 
 begin
   
   result = api_instance.custom_ip_prefixes_create_or_update(api_version, subscription_id, resource_group_name, custom_ip_prefix_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_create_or_update: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CustomIpPrefix>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_create_or_update_with_http_info: #{e}"
 end
 ```
@@ -101,14 +101,14 @@ Deletes the specified custom IP prefix.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -117,7 +117,7 @@ custom_ip_prefix_name = 'custom_ip_prefix_name_example' # String | The name of t
 begin
   
   api_instance.custom_ip_prefixes_delete(api_version, subscription_id, resource_group_name, custom_ip_prefix_name)
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_delete: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_delete_with_http_info: #{e}"
 end
 ```
@@ -175,14 +175,14 @@ Gets the specified custom IP prefix in a specified resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -195,7 +195,7 @@ begin
   
   result = api_instance.custom_ip_prefixes_get(api_version, subscription_id, resource_group_name, custom_ip_prefix_name, opts)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_get: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CustomIpPrefix>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_get_with_http_info: #{e}"
 end
 ```
@@ -254,14 +254,14 @@ Gets all custom IP prefixes in a resource group.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
@@ -270,7 +270,7 @@ begin
   
   result = api_instance.custom_ip_prefixes_list(api_version, subscription_id, resource_group_name)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_list: #{e}"
 end
 ```
@@ -288,7 +288,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CustomIpPrefixListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_list_with_http_info: #{e}"
 end
 ```
@@ -327,14 +327,14 @@ Gets all the custom IP prefixes in a subscription.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 
@@ -342,7 +342,7 @@ begin
   
   result = api_instance.custom_ip_prefixes_list_all(api_version, subscription_id)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_list_all: #{e}"
 end
 ```
@@ -360,7 +360,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CustomIpPrefixListResult>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_list_all_with_http_info: #{e}"
 end
 ```
@@ -398,25 +398,25 @@ Updates custom IP prefix tags.
 
 ```ruby
 require 'time'
-require 'azure_sdk'
+require 'azure_rest'
 # setup authorization
-AzureSDK.configure do |config|
+AzureRest.configure do |config|
   # Configure OAuth2 access token for authorization: azure_auth
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = AzureSDK::CustomIpPrefixesApi.new
+api_instance = AzureRest::CustomIpPrefixesApi.new
 api_version = 'api_version_example' # String | The API version to use for this operation.
 subscription_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The ID of the target subscription. The value must be an UUID.
 resource_group_name = 'resource_group_name_example' # String | The name of the resource group. The name is case insensitive.
 custom_ip_prefix_name = 'custom_ip_prefix_name_example' # String | The name of the custom IP prefix.
-parameters = AzureSDK::TagsObject.new # TagsObject | Parameters supplied to update custom IP prefix tags.
+parameters = AzureRest::TagsObject.new # TagsObject | Parameters supplied to update custom IP prefix tags.
 
 begin
   
   result = api_instance.custom_ip_prefixes_update_tags(api_version, subscription_id, resource_group_name, custom_ip_prefix_name, parameters)
   p result
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_update_tags: #{e}"
 end
 ```
@@ -434,7 +434,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CustomIpPrefix>
-rescue AzureSDK::ApiError => e
+rescue AzureRest::ApiError => e
   puts "Error when calling CustomIpPrefixesApi->custom_ip_prefixes_update_tags_with_http_info: #{e}"
 end
 ```
