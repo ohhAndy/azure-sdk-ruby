@@ -25,7 +25,9 @@ module AzureRest
         elsif @credentials.is_a?(String)
           @credentials
         else
-          raise ArgumentError, "Unsupported credentials type: #{@credentials.class}. Expected ClientCredentialToken, PasswordToken, or token String."
+          raise ArgumentError,
+                "Unsupported credentials type: #{@credentials.class}. " \
+                'Expected ClientCredentialToken, PasswordToken, or token String.'
         end
       end
     end

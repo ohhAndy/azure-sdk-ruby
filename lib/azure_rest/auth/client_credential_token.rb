@@ -27,9 +27,7 @@ module AzureRest
       # @return [String]
       def token
         @mutex.synchronize do
-          if @token.nil? || @token.expired?
-            @token = acquire_token
-          end
+          @token = acquire_token if @token.nil? || @token.expired?
           @token.access_token
         end
       end
@@ -53,7 +51,8 @@ module AzureRest
         response = conn.post(token_url, body_params)
         unless response.success?
           raise UnauthorizedError.new(
-            "Authentication failed for tenant #{@tenant} and client_id #{@client_id}: #{response.status} - #{response.body}",
+            "Authentication failed for tenant #{@tenant} and client_id #{@client_id}: " \
+            "#{response.status} - #{response.body}",
             status: response.status,
             response_headers: response.headers,
             response_body: response.body

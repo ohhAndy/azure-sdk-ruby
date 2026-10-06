@@ -10,13 +10,14 @@ module AzureRest
     class PasswordToken
       attr_reader :tenant, :client_id, :username, :password, :authentication_endpoint, :resource, :proxy
 
-      def initialize(tenant:, username:, password:, client_id: nil, authentication_endpoint: nil, resource: nil, proxy: nil)
+      def initialize(tenant:, username:, password:, client_id: nil, authentication_endpoint: nil, resource: nil,
+                     proxy: nil)
         @tenant = tenant
         @username = username
         @password = password
         # Default to well-known Azure Stack client ID if none provided
         @client_id = client_id || MetadataDiscovery::AZURE_STACK_CLIENT_ID
-        @authentication_endpoint = authentication_endpoint ? authentication_endpoint.sub(%r{/+\z}, '') : nil
+        @authentication_endpoint = authentication_endpoint&.sub(%r{/+\z}, '')
         @resource = resource
         @proxy = proxy
         @token = nil
@@ -36,9 +37,7 @@ module AzureRest
       # @return [String]
       def token
         @mutex.synchronize do
-          if @token.nil? || @token.expired?
-            @token = acquire_token
-          end
+          @token = acquire_token if @token.nil? || @token.expired?
           @token.access_token
         end
       end
@@ -46,7 +45,9 @@ module AzureRest
 
       def acquire_token
         unless @authentication_endpoint && @resource
-          raise ArgumentError, "Authentication endpoint and resource must be set before acquiring token. Run discovery or provide them at initialization."
+          raise ArgumentError,
+                'Authentication endpoint and resource must be set before acquiring token. ' \
+                'Run discovery or provide them at initialization.'
         end
 
         token_url = "#{@authentication_endpoint}/#{@tenant}/oauth2/token"

@@ -43,7 +43,7 @@ module AzureRest
 
         loop do
           if Time.now.utc - start_time > timeout
-            raise AzureApiError.new("Long Running Operation timed out after #{timeout} seconds (URL: #{poll_url})")
+            raise AzureApiError, "Long Running Operation timed out after #{timeout} seconds (URL: #{poll_url})"
           end
 
           uri = URI.parse(poll_url)
@@ -73,13 +73,13 @@ module AzureRest
             if headers_down['location'] && headers_down['location'] != poll_url
               final_uri = URI.parse(headers_down['location'])
               final_path = final_uri.query ? "#{final_uri.path}?#{final_uri.query}" : final_uri.path
-              final_data, _, _ = @api_client.call_api(:GET, final_path, opts)
+              final_data, = @api_client.call_api(:GET, final_path, opts)
               return final_data
             end
             return data
           when 'failed', 'canceled', 'cancelled'
             error_msg = data.is_a?(Hash) ? (data[:error] || data['error'] || @status) : @status
-            raise AzureApiError.new("Long Running Operation #{@status}: #{error_msg}")
+            raise AzureApiError, "Long Running Operation #{@status}: #{error_msg}"
           end
 
           # Retry-After header support

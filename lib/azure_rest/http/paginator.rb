@@ -27,7 +27,7 @@ module AzureRest
           break unless current_page
 
           items, next_link = extract_items_and_next_link(current_page)
-          items.each(&block) if items
+          items&.each(&block)
 
           break if next_link.nil? || next_link.empty?
 
@@ -66,26 +66,28 @@ module AzureRest
         # ARM always returns same-host nextLinks, but a mismatch indicates something
         # unexpected and would silently send the request to the wrong server.
         if uri.host && @api_client
-          configured_host = URI.parse(@api_client.config.base_url).host rescue nil
+          configured_host = begin
+            URI.parse(@api_client.config.base_url).host
+          rescue URI::InvalidURIError
+            nil
+          end
           if configured_host && uri.host != configured_host
             warn "[AzureRest] nextLink host mismatch: expected '#{configured_host}', got '#{uri.host}'. " \
-                 "Pagination will follow the configured base URL, not the nextLink host."
+                 'Pagination will follow the configured base URL, not the nextLink host.'
           end
         end
 
         # If next_link is a relative or absolute URL, call API with the path + query
         full_path = query ? "#{path}?#{query}" : path
 
-        if @api_client
-          opts = {
-            header_params: { 'Accept' => 'application/json' },
-            return_type:   'Object'
-          }
-          data, _status, _headers = @api_client.call_api(:GET, full_path, opts)
-          data
-        else
-          nil
-        end
+        return unless @api_client
+
+        opts = {
+          header_params: { 'Accept' => 'application/json' },
+          return_type:   'Object'
+        }
+        data, _status, _headers = @api_client.call_api(:GET, full_path, opts)
+        data
       end
     end
   end
