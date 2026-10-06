@@ -64,7 +64,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, vnet_name, parameters, opts = {})
-          @api.virtual_networks_create_or_update(version, @client.subscription_id, resource_group_name, vnet_name, parameters, opts)
+          @api.virtual_networks_create_or_update(version, @client.subscription_id, resource_group_name, vnet_name,
+                                                 parameters, opts)
         end
 
         def delete(resource_group_name, vnet_name, opts = {})
@@ -101,7 +102,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, nic_name, parameters, opts = {})
-          @api.network_interfaces_create_or_update(version, @client.subscription_id, resource_group_name, nic_name, parameters, opts)
+          @api.network_interfaces_create_or_update(version, @client.subscription_id, resource_group_name, nic_name,
+                                                   parameters, opts)
         end
 
         def delete(resource_group_name, nic_name, opts = {})
@@ -138,7 +140,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, nsg_name, parameters, opts = {})
-          @api.network_security_groups_create_or_update(version, @client.subscription_id, resource_group_name, nsg_name, parameters, opts)
+          @api.network_security_groups_create_or_update(version, @client.subscription_id, resource_group_name,
+                                                        nsg_name, parameters, opts)
         end
 
         def delete(resource_group_name, nsg_name, opts = {})
@@ -175,7 +178,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, ip_name, parameters, opts = {})
-          @api.public_ip_addresses_create_or_update(version, @client.subscription_id, resource_group_name, ip_name, parameters, opts)
+          @api.public_ip_addresses_create_or_update(version, @client.subscription_id, resource_group_name, ip_name,
+                                                    parameters, opts)
         end
 
         def delete(resource_group_name, ip_name, opts = {})
@@ -194,9 +198,9 @@ module AzureRest
           @client = client
         end
 
-        def list_all(opts = {})
+        def list_all(_opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/providers/Microsoft.Network/loadBalancers",
               query_params: { 'api-version' => version }
@@ -205,8 +209,8 @@ module AzureRest
           end
         end
 
-        def get(resource_group_name, lb_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def get(resource_group_name, lb_name, _opts = {})
+          data, = @client.api_client.call_api(
             :GET,
             "/subscriptions/#{@client.subscription_id}/resourceGroups/#{resource_group_name}/providers/Microsoft.Network/loadBalancers/#{lb_name}",
             query_params: { 'api-version' => version }

@@ -40,15 +40,18 @@ module AzureRest
         end
 
         def get(resource_group_name, account_name, opts = {})
-          @api.storage_accounts_get_properties(version, @client.subscription_id, resource_group_name, account_name, opts)
+          @api.storage_accounts_get_properties(version, @client.subscription_id, resource_group_name, account_name,
+                                               opts)
         end
 
         def create(resource_group_name, account_name, parameters, opts = {})
-          @api.storage_accounts_create(version, @client.subscription_id, resource_group_name, account_name, parameters, opts)
+          @api.storage_accounts_create(version, @client.subscription_id, resource_group_name, account_name, parameters,
+                                       opts)
         end
 
         def update(resource_group_name, account_name, parameters, opts = {})
-          @api.storage_accounts_update(version, @client.subscription_id, resource_group_name, account_name, parameters, opts)
+          @api.storage_accounts_update(version, @client.subscription_id, resource_group_name, account_name, parameters,
+                                       opts)
         end
 
         def delete(resource_group_name, account_name, opts = {})

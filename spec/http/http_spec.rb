@@ -25,8 +25,7 @@ RSpec.describe AzureRest::Http::Paginator do
       page1
     end
 
-    all_items = []
-    paginator.each { |item| all_items << item[:id] }
+    all_items = paginator.map { |item| item[:id] }
     expect(all_items).to eq([1, 2, 3, 4])
   end
 end

@@ -49,7 +49,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, server_name, parameters, opts = {})
-          @api.servers_create_or_update(version, @client.subscription_id, resource_group_name, server_name, parameters, opts)
+          @api.servers_create_or_update(version, @client.subscription_id, resource_group_name, server_name, parameters,
+                                        opts)
         end
 
         def update(resource_group_name, server_name, parameters, opts = {})
@@ -72,9 +73,9 @@ module AzureRest
           @client = client
         end
 
-        def list_by_server(resource_group_name, server_name, opts = {})
+        def list_by_server(resource_group_name, server_name, _opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/resourceGroups/#{resource_group_name}/providers/Microsoft.Sql/servers/#{server_name}/databases",
               query_params: { 'api-version' => version }
@@ -84,8 +85,8 @@ module AzureRest
         end
         alias list list_by_server
 
-        def get(resource_group_name, server_name, database_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def get(resource_group_name, server_name, database_name, _opts = {})
+          data, = @client.api_client.call_api(
             :GET,
             "/subscriptions/#{@client.subscription_id}/resourceGroups/#{resource_group_name}/providers/Microsoft.Sql/servers/#{server_name}/databases/#{database_name}",
             query_params: { 'api-version' => version }
@@ -93,8 +94,8 @@ module AzureRest
           data
         end
 
-        def create_or_update(resource_group_name, server_name, database_name, parameters, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def create_or_update(resource_group_name, server_name, database_name, parameters, _opts = {})
+          data, = @client.api_client.call_api(
             :PUT,
             "/subscriptions/#{@client.subscription_id}/resourceGroups/#{resource_group_name}/providers/Microsoft.Sql/servers/#{server_name}/databases/#{database_name}",
             query_params: { 'api-version' => version },
@@ -104,8 +105,8 @@ module AzureRest
           data
         end
 
-        def delete(resource_group_name, server_name, database_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def delete(resource_group_name, server_name, database_name, _opts = {})
+          data, = @client.api_client.call_api(
             :DELETE,
             "/subscriptions/#{@client.subscription_id}/resourceGroups/#{resource_group_name}/providers/Microsoft.Sql/servers/#{server_name}/databases/#{database_name}",
             query_params: { 'api-version' => version }

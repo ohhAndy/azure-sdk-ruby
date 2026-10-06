@@ -44,7 +44,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, resource_name, parameters, opts = {})
-          @api.managed_clusters_create_or_update(version, @client.subscription_id, resource_group_name, resource_name, parameters, opts)
+          @api.managed_clusters_create_or_update(version, @client.subscription_id, resource_group_name, resource_name,
+                                                 parameters, opts)
         end
 
         def delete(resource_group_name, resource_name, opts = {})

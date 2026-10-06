@@ -43,7 +43,8 @@ module AzureRest
 
         def list_by_resource_group(resource_group_name, opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            @api.scheduled_query_rules_list_by_resource_group(version, @client.subscription_id, resource_group_name, opts)
+            @api.scheduled_query_rules_list_by_resource_group(version, @client.subscription_id, resource_group_name,
+                                                              opts)
           end
         end
 
@@ -52,7 +53,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, rule_name, parameters, opts = {})
-          @api.scheduled_query_rules_create_or_update(version, @client.subscription_id, resource_group_name, rule_name, parameters, opts)
+          @api.scheduled_query_rules_create_or_update(version, @client.subscription_id, resource_group_name, rule_name,
+                                                      parameters, opts)
         end
 
         def delete(resource_group_name, rule_name, opts = {})
@@ -77,7 +79,7 @@ module AzureRest
           query_params.merge!(opts[:query_params]) if opts[:query_params]
 
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/providers/Microsoft.Insights/eventtypes/management/values",
               query_params: query_params
@@ -103,7 +105,7 @@ module AzureRest
           query_params = { 'api-version' => version }
           query_params.merge!(opts[:query_params]) if opts[:query_params]
 
-          data, _, _ = @client.api_client.call_api(
+          data, = @client.api_client.call_api(
             :GET,
             "/#{uri}/providers/Microsoft.Insights/metrics",
             query_params: query_params

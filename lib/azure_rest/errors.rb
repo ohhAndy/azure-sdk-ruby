@@ -6,7 +6,8 @@ module AzureRest
   class AzureApiError < StandardError
     attr_reader :error_code, :error_message, :status, :response_headers, :response_body
 
-    def initialize(msg = nil, status: nil, error_code: nil, error_message: nil, response_headers: nil, response_body: nil)
+    def initialize(msg = nil, status: nil, error_code: nil, error_message: nil, response_headers: nil,
+                   response_body: nil)
       @status = status
       @error_code = error_code
       @error_message = error_message
@@ -40,7 +41,7 @@ module AzureRest
               end
 
       klass.new(
-        "#{code ? "[#{code}] " : ''}#{msg}",
+        "#{"[#{code}] " if code}#{msg}",
         status: status,
         error_code: code,
         error_message: msg,

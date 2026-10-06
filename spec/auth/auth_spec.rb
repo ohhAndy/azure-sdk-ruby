@@ -31,10 +31,10 @@ RSpec.describe 'AzureRest::Auth' do
         Faraday::Response,
         success?: true,
         body: JSON.dump({
-          'access_token' => 'sample_access_token',
+                          'access_token' => 'sample_access_token',
           'token_type'   => 'Bearer',
           'expires_in'   => 3600
-        })
+                        })
       )
 
       allow_any_instance_of(Faraday::Connection).to receive(:post).and_return(faraday_response)
@@ -79,10 +79,10 @@ RSpec.describe 'AzureRest::Auth' do
         Faraday::Response,
         success?: true,
         body: JSON.dump({
-          'access_token' => 'password_grant_token',
+                          'access_token' => 'password_grant_token',
           'token_type'   => 'Bearer',
           'expires_in'   => 3600
-        })
+                        })
       )
 
       allow_any_instance_of(Faraday::Connection).to receive(:post).and_return(faraday_response)
@@ -98,12 +98,12 @@ RSpec.describe 'AzureRest::Auth' do
         Faraday::Response,
         success?: true,
         body: JSON.dump({
-          'authentication' => {
-            'loginEndpoint' => 'https://adfs.stack.local/adfs',
-            'audiences'     => ['https://management.stack.local/']
-          },
+                          'authentication' => {
+                            'loginEndpoint' => 'https://adfs.stack.local/adfs',
+                            'audiences'     => ['https://management.stack.local/']
+                          },
           'graphEndpoint' => 'https://graph.stack.local/'
-        })
+                        })
       )
 
       allow_any_instance_of(Faraday::Connection).to receive(:get).and_return(faraday_response)

@@ -83,7 +83,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, server_name, database_name, parameters, opts = {})
-          @api.databases_create(version, @client.subscription_id, resource_group_name, server_name, database_name, parameters, opts)
+          @api.databases_create(version, @client.subscription_id, resource_group_name, server_name, database_name,
+                                parameters, opts)
         end
 
         def delete(resource_group_name, server_name, database_name, opts = {})

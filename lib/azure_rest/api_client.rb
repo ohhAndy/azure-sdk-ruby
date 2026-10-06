@@ -76,7 +76,7 @@ module AzureRest
     end
 
     def build_connection(_opts = {})
-      @faraday_conn ||= Faraday.new(url: @config.base_url) do |builder|
+      @build_connection ||= Faraday.new(url: @config.base_url) do |builder|
         builder.request :multipart
         builder.request :url_encoded
         builder.adapter Faraday.default_adapter

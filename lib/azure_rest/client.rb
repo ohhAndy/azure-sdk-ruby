@@ -54,7 +54,12 @@ module AzureRest
         )
       end
 
-      @token_mgr = credentials.is_a?(Auth::TokenManager) ? credentials : Auth::TokenManager.new(credentials, proxy: @proxy)
+      @token_mgr = if credentials.is_a?(Auth::TokenManager)
+                     credentials
+                   else
+                     Auth::TokenManager.new(credentials,
+                                            proxy: @proxy)
+                   end
 
       @api_client = ApiClient.new(Configuration.new) do |config|
         config.host = effective_base_url

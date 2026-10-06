@@ -44,7 +44,8 @@ module AzureRest
         end
 
         def create_or_update(resource_group_name, vault_name, parameters, opts = {})
-          @api.vaults_create_or_update(version, @client.subscription_id, resource_group_name, vault_name, parameters, opts)
+          @api.vaults_create_or_update(version, @client.subscription_id, resource_group_name, vault_name, parameters,
+                                       opts)
         end
 
         def update(resource_group_name, vault_name, parameters, opts = {})

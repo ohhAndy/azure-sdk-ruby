@@ -114,9 +114,9 @@ module AzureRest
           @client = client
         end
 
-        def list_all(opts = {})
+        def list_all(_opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/providers/Microsoft.Resources/deployments",
               query_params: { 'api-version' => version }
@@ -125,9 +125,9 @@ module AzureRest
           end
         end
 
-        def list_by_resource_group(resource_group_name, opts = {})
+        def list_by_resource_group(resource_group_name, _opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments",
               query_params: { 'api-version' => version }
@@ -137,8 +137,8 @@ module AzureRest
         end
         alias list list_by_resource_group
 
-        def get(resource_group_name, deployment_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def get(resource_group_name, deployment_name, _opts = {})
+          data, = @client.api_client.call_api(
             :GET,
             "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments/#{deployment_name}",
             query_params: { 'api-version' => version }
@@ -146,8 +146,8 @@ module AzureRest
           data
         end
 
-        def create_or_update(resource_group_name, deployment_name, parameters, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def create_or_update(resource_group_name, deployment_name, parameters, _opts = {})
+          data, = @client.api_client.call_api(
             :PUT,
             "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments/#{deployment_name}",
             query_params: { 'api-version' => version },
@@ -157,8 +157,8 @@ module AzureRest
           data
         end
 
-        def delete(resource_group_name, deployment_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def delete(resource_group_name, deployment_name, _opts = {})
+          data, = @client.api_client.call_api(
             :DELETE,
             "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments/#{deployment_name}",
             query_params: { 'api-version' => version }
@@ -166,8 +166,8 @@ module AzureRest
           data
         end
 
-        def get_template(resource_group_name, deployment_name, opts = {})
-          data, _, _ = @client.api_client.call_api(
+        def get_template(resource_group_name, deployment_name, _opts = {})
+          data, = @client.api_client.call_api(
             :POST,
             "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments/#{deployment_name}/exportTemplate",
             query_params: { 'api-version' => version }
@@ -187,9 +187,9 @@ module AzureRest
           @client = client
         end
 
-        def list(resource_group_name, deployment_name, opts = {})
+        def list(resource_group_name, deployment_name, _opts = {})
           Http::Paginator.new(api_client: @client.api_client) do
-            data, _, _ = @client.api_client.call_api(
+            data, = @client.api_client.call_api(
               :GET,
               "/subscriptions/#{@client.subscription_id}/resourcegroups/#{resource_group_name}/providers/Microsoft.Resources/deployments/#{deployment_name}/operations",
               query_params: { 'api-version' => version }
@@ -223,7 +223,7 @@ module AzureRest
 
         def list_api_versions(resource_provider_namespace, resource_type)
           provider = get(resource_provider_namespace)
-          return [] unless provider && provider.resource_types
+          return [] unless provider&.resource_types
 
           matched_type = provider.resource_types.find do |rt|
             rt.resource_type.to_s.casecmp(resource_type.to_s).zero?
