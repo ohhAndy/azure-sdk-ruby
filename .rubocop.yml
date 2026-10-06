@@ -1,0 +1,136 @@
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  # Exclude generated OpenAPI files — only the handwritten files listed in
+  # .openapi-generator-ignore are linted by this config.
+  Exclude:
+    - 'lib/azure_rest/*/api/**/*.rb'
+    - 'lib/azure_rest/*/models/**/*.rb'
+    - 'lib/azure_rest/authorization.rb'
+    - 'lib/azure_rest/commerce.rb'
+    - 'lib/azure_rest/compute.rb'
+    - 'lib/azure_rest/container_service.rb'
+    - 'lib/azure_rest/hd_insight.rb'
+    - 'lib/azure_rest/insights.rb'
+    - 'lib/azure_rest/key_vault.rb'
+    - 'lib/azure_rest/maria_db.rb'
+    - 'lib/azure_rest/my_sql.rb'
+    - 'lib/azure_rest/network.rb'
+    - 'lib/azure_rest/postgre_sql.rb'
+    - 'lib/azure_rest/resources.rb'
+    - 'lib/azure_rest/sql.rb'
+    - 'lib/azure_rest/storage.rb'
+    - 'spec/api/**/*.rb'
+    - 'spec/models/**/*.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'bin/**/*'
+
+# ── Style ──────────────────────────────────────────────────────────────────────
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+# @@default is used in ApiClient and Configuration for the global default
+# instance pattern — a deliberate design choice carried over from the
+# OpenAPI generator scaffolding.
+Style/ClassVars:
+  Enabled: false
+
+# ── Layout ─────────────────────────────────────────────────────────────────────
+Layout/LineLength:
+  Max: 120
+  AllowedPatterns:
+    - '^\s*raise '
+    - '^\s*#'
+    # ARM resource path strings are inherently long and can't be meaningfully split.
+    - '"/subscriptions/'
+
+Layout/HashAlignment:
+  Enabled: false
+
+# ── Metrics ────────────────────────────────────────────────────────────────────
+# Metrics cops are disabled per-file for the OpenAPI scaffolding (api_client.rb,
+# configuration.rb) and the dense HTTP helpers (lro_poller.rb, paginator.rb)
+# which follow generator conventions. All other handwritten code uses defaults.
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/azure_rest/api_client.rb'
+    - 'lib/azure_rest/configuration.rb'
+    - 'lib/azure_rest/client.rb'
+    - 'lib/azure_rest/auth/client_credential_token.rb'
+    - 'lib/azure_rest/auth/metadata_discovery.rb'
+    - 'lib/azure_rest/auth/password_token.rb'
+    - 'lib/azure_rest/auth/token.rb'
+    - 'lib/azure_rest/auth/token_manager.rb'
+    - 'lib/azure_rest/errors.rb'
+    - 'lib/azure_rest/http/lro_poller.rb'
+    - 'lib/azure_rest/http/paginator.rb'
+    - 'lib/azure_rest/profiles/profile.rb'
+    - 'lib/azure_rest/*/client.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/azure_rest/api_client.rb'
+    - 'lib/azure_rest/client.rb'
+    - 'lib/azure_rest/auth/client_credential_token.rb'
+    - 'lib/azure_rest/auth/metadata_discovery.rb'
+    - 'lib/azure_rest/auth/password_token.rb'
+    - 'lib/azure_rest/http/lro_poller.rb'
+    - 'lib/azure_rest/*/client.rb'
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'lib/azure_rest/api_client.rb'
+    - 'lib/azure_rest/client.rb'
+    - 'lib/azure_rest/errors.rb'
+    - 'lib/azure_rest/http/lro_poller.rb'
+    - 'lib/azure_rest/http/paginator.rb'
+    - 'lib/azure_rest/*/client.rb'
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'lib/azure_rest/api_client.rb'
+    - 'lib/azure_rest/client.rb'
+    - 'lib/azure_rest/errors.rb'
+    - 'lib/azure_rest/http/lro_poller.rb'
+    - 'lib/azure_rest/http/paginator.rb'
+    - 'lib/azure_rest/*/client.rb'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'lib/azure_rest/api_client.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'lib/azure_rest/profiles/profile.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/azure_rest/http/lro_poller.rb'
+    - 'spec/**/*_spec.rb'
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'lib/azure_rest/auth/client_credential_token.rb'
+    - 'lib/azure_rest/auth/password_token.rb'
+    - 'lib/azure_rest/errors.rb'
+
+# ── Gemspec ────────────────────────────────────────────────────────────────────
+# Dev dependencies live in the gemspec — standard practice for libraries
+# so `gem install` from source works without bundler.
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# ── Lint ───────────────────────────────────────────────────────────────────────
+# ApiModelBase is an intentional empty base class for generated model classes.
+Lint/EmptyClass:
+  Enabled: false
