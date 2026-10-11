@@ -1,4 +1,3 @@
-.gitignore
 docs/AggregationGranularity.md
 docs/ErrorObjectResponse.md
 docs/ErrorResponse.md
